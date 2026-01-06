@@ -311,7 +311,16 @@
                 "allow_unspecified_artifacts": true,
                 "is_ordered": false
             },
-            "publications": {}
+            "publications": {
+                "supplementary/math_review": {
+                    "metadata": {},
+                    "artifacts": {
+                        "slides.pdf": {
+                            "path": "materials/default/supplementary/math_review/slides.pdf"
+                        }
+                    }
+                }
+            }
         }
     }
 }
