@@ -1,0 +1,317 @@
+{
+    "collections": {
+        "lectures/schedules/tr": {
+            "publication_schema": {
+                "required_artifacts": [
+                    "slides.pdf"
+                ],
+                "optional_artifacts": [
+                    "notes.pdf",
+                    "marked.pdf",
+                    "notebook"
+                ],
+                "metadata_schema": {
+                    "required_keys": {
+                        "videos": {
+                            "type": "any",
+                            "nullable": true
+                        },
+                        "date": {
+                            "type": "date"
+                        },
+                        "topic": {
+                            "type": "string"
+                        },
+                        "number": {
+                            "type": "integer"
+                        }
+                    }
+                },
+                "allow_unspecified_artifacts": false,
+                "is_ordered": true
+            },
+            "publications": {
+                "01-intro": {
+                    "metadata": {
+                        "videos": null,
+                        "date": "2026-01-06",
+                        "topic": "Introduction",
+                        "number": 1
+                    },
+                    "artifacts": {
+                        "slides.pdf": {
+                            "path": "materials/lectures/schedules/tr/01-intro/slides.pdf"
+                        }
+                    }
+                },
+                "02-linear_algebra-I": {
+                    "metadata": {
+                        "videos": null,
+                        "date": "2026-01-08",
+                        "topic": "Linear Algrebra",
+                        "number": 2
+                    },
+                    "artifacts": {}
+                },
+                "03-linear_algebra-II": {
+                    "metadata": {
+                        "videos": null,
+                        "date": "2026-01-13",
+                        "topic": "Matrices",
+                        "number": 3
+                    },
+                    "artifacts": {}
+                },
+                "04-linear_algebra-III": {
+                    "metadata": {
+                        "videos": null,
+                        "date": "2026-01-15",
+                        "topic": "Eigenvectors",
+                        "number": 4
+                    },
+                    "artifacts": {}
+                },
+                "05-linear_algebra-IV": {
+                    "metadata": {
+                        "videos": null,
+                        "date": "2026-01-20",
+                        "topic": "Diagonalization and PCA",
+                        "number": 5
+                    },
+                    "artifacts": {}
+                },
+                "06-pca-I": {
+                    "metadata": {
+                        "videos": null,
+                        "date": "2026-01-22",
+                        "topic": "PCA",
+                        "number": 6
+                    },
+                    "artifacts": {}
+                },
+                "07-pca-II": {
+                    "metadata": {
+                        "videos": null,
+                        "date": "2026-01-27",
+                        "topic": "PCA II",
+                        "number": 7
+                    },
+                    "artifacts": {}
+                },
+                "08-pca-III": {
+                    "metadata": {
+                        "videos": null,
+                        "date": "2026-01-29",
+                        "topic": "PCA III",
+                        "number": 8
+                    },
+                    "artifacts": {}
+                },
+                "09-laplacian_eigenmaps": {
+                    "metadata": {
+                        "videos": null,
+                        "date": "2026-02-03",
+                        "topic": "Laplacian Eigenmaps",
+                        "number": 9
+                    },
+                    "artifacts": {}
+                },
+                "10-linear_models": {
+                    "metadata": {
+                        "videos": null,
+                        "date": "2026-02-10",
+                        "topic": "Linear Models",
+                        "number": 10
+                    },
+                    "artifacts": {}
+                },
+                "11-feature_maps": {
+                    "metadata": {
+                        "videos": null,
+                        "date": "2026-02-12",
+                        "topic": "Feature Maps",
+                        "number": 11
+                    },
+                    "artifacts": {}
+                },
+                "12-rbf_networks": {
+                    "metadata": {
+                        "videos": null,
+                        "date": "2026-02-17",
+                        "topic": "RBF Networks and Neural Networks",
+                        "number": 12
+                    },
+                    "artifacts": {}
+                },
+                "13-neural_networks": {
+                    "metadata": {
+                        "videos": null,
+                        "date": "2026-02-19",
+                        "topic": "Training Neural Networks",
+                        "number": 13
+                    },
+                    "artifacts": {}
+                },
+                "14-training_nns": {
+                    "metadata": {
+                        "videos": null,
+                        "date": "2026-02-24",
+                        "topic": "Backpropagation",
+                        "number": 14
+                    },
+                    "artifacts": {}
+                },
+                "15-sgd": {
+                    "metadata": {
+                        "videos": null,
+                        "date": "2026-02-26",
+                        "topic": "SGD",
+                        "number": 15
+                    },
+                    "artifacts": {}
+                },
+                "16-cnn": {
+                    "metadata": {
+                        "videos": null,
+                        "date": "2026-03-03",
+                        "topic": "Convolutional Neural Networks",
+                        "number": 16
+                    },
+                    "artifacts": {}
+                },
+                "17-autoencoders": {
+                    "metadata": {
+                        "videos": null,
+                        "date": "2026-03-10",
+                        "topic": "Autoencoders",
+                        "number": 17
+                    },
+                    "artifacts": {}
+                }
+            }
+        },
+        "homeworks": {
+            "publication_schema": {
+                "required_artifacts": [
+                    "homework.pdf",
+                    "solution.pdf",
+                    "template.zip"
+                ],
+                "optional_artifacts": [
+                    "starter_code.zip"
+                ],
+                "metadata_schema": {
+                    "required_keys": {
+                        "due": {
+                            "type": "datetime"
+                        },
+                        "released": {
+                            "type": "datetime"
+                        },
+                        "topic": {
+                            "type": "string"
+                        },
+                        "number": {
+                            "type": "integer"
+                        }
+                    }
+                },
+                "allow_unspecified_artifacts": false,
+                "is_ordered": true
+            },
+            "publications": {
+                "01-linear_transformations": {
+                    "metadata": {
+                        "due": "2026-01-14 23:59:00",
+                        "released": "2026-01-06 00:00:00",
+                        "topic": "Linear Transformations",
+                        "number": 1
+                    },
+                    "artifacts": {}
+                },
+                "02-matrices_and_eigenvectors": {
+                    "metadata": {
+                        "due": "2026-01-21 23:59:00",
+                        "released": "2026-01-13 00:00:00",
+                        "topic": "Eigenvectors",
+                        "number": 2
+                    },
+                    "artifacts": {}
+                },
+                "03-pca-I": {
+                    "metadata": {
+                        "due": "2026-01-28 23:59:00",
+                        "released": "2026-01-20 00:00:00",
+                        "topic": "PCA",
+                        "number": 3
+                    },
+                    "artifacts": {}
+                },
+                "04-pca-II": {
+                    "metadata": {
+                        "due": "2026-02-04 23:59:00",
+                        "released": "2026-01-27 00:00:00",
+                        "topic": "PCA",
+                        "number": 4
+                    },
+                    "artifacts": {}
+                },
+                "05-eigenmaps": {
+                    "metadata": {
+                        "due": "2026-02-11 23:59:00",
+                        "released": "2026-02-03 00:00:00",
+                        "topic": "Laplacian Eigenmaps",
+                        "number": 5
+                    },
+                    "artifacts": {}
+                },
+                "06-basis_functions": {
+                    "metadata": {
+                        "due": "2026-02-18 23:59:00",
+                        "released": "2026-02-10 00:00:00",
+                        "topic": "Basis Functions",
+                        "number": 6
+                    },
+                    "artifacts": {}
+                },
+                "07-neural_networks": {
+                    "metadata": {
+                        "due": "2026-02-25 23:59:00",
+                        "released": "2026-02-17 00:00:00",
+                        "topic": "Neural Networks",
+                        "number": 7
+                    },
+                    "artifacts": {}
+                },
+                "08-neural_networks-II": {
+                    "metadata": {
+                        "due": "2026-03-04 23:59:00",
+                        "released": "2026-02-24 00:00:00",
+                        "topic": "Neural Networks",
+                        "number": 8
+                    },
+                    "artifacts": {}
+                },
+                "09-super_hw": {
+                    "metadata": {
+                        "due": "2023-06-14 23:59:00",
+                        "released": "2023-06-02 21:00:00",
+                        "topic": "Super Homework",
+                        "number": 9
+                    },
+                    "artifacts": {}
+                }
+            }
+        },
+        "default": {
+            "publication_schema": {
+                "required_artifacts": [],
+                "optional_artifacts": null,
+                "metadata_schema": null,
+                "allow_unspecified_artifacts": true,
+                "is_ordered": false
+            },
+            "publications": {}
+        }
+    }
+}
