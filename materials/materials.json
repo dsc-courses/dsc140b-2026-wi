@@ -1,5 +1,39 @@
 {
     "collections": {
+        "quizzes": {
+            "publication_schema": {
+                "required_artifacts": [
+                    "quiz.pdf",
+                    "solution.pdf"
+                ],
+                "optional_artifacts": [],
+                "metadata_schema": {
+                    "required_keys": {
+                        "date": {
+                            "type": "date"
+                        },
+                        "topic": {
+                            "type": "string"
+                        },
+                        "number": {
+                            "type": "integer"
+                        }
+                    }
+                },
+                "allow_unspecified_artifacts": false,
+                "is_ordered": true
+            },
+            "publications": {
+                "01-math_review": {
+                    "metadata": {
+                        "date": "2026-01-08",
+                        "topic": "Basic Math Review",
+                        "number": 1
+                    },
+                    "artifacts": {}
+                }
+            }
+        },
         "lectures/schedules/tr": {
             "publication_schema": {
                 "required_artifacts": [
@@ -227,7 +261,11 @@
                         "topic": "Linear Transformations",
                         "number": 1
                     },
-                    "artifacts": {}
+                    "artifacts": {
+                        "homework.pdf": {
+                            "path": "materials/homeworks/01-linear_transformations/homework.pdf"
+                        }
+                    }
                 },
                 "02-matrices_and_eigenvectors": {
                     "metadata": {
