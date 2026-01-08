@@ -82,10 +82,14 @@
                     "metadata": {
                         "videos": null,
                         "date": "2026-01-08",
-                        "topic": "Linear Algrebra",
+                        "topic": "Linear Transformations",
                         "number": 2
                     },
-                    "artifacts": {}
+                    "artifacts": {
+                        "slides.pdf": {
+                            "path": "materials/lectures/schedules/tr/02-linear_algebra-I/slides.pdf"
+                        }
+                    }
                 },
                 "03-linear_algebra-II": {
                     "metadata": {
