@@ -30,7 +30,14 @@
                         "topic": "Basic Math Review",
                         "number": 1
                     },
-                    "artifacts": {}
+                    "artifacts": {
+                        "quiz.pdf": {
+                            "path": "materials/quizzes/01-math_review/quiz.pdf"
+                        },
+                        "solution.pdf": {
+                            "path": "materials/quizzes/01-math_review/solution.pdf"
+                        }
+                    }
                 }
             }
         },
