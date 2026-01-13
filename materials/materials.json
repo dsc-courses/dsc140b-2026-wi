@@ -111,6 +111,9 @@
                     "artifacts": {
                         "slides.pdf": {
                             "path": "materials/lectures/schedules/tr/03-linear_algebra-II/slides.pdf"
+                        },
+                        "marked.pdf": {
+                            "path": "materials/lectures/schedules/tr/03-linear_algebra-II/marked.pdf"
                         }
                     }
                 },
