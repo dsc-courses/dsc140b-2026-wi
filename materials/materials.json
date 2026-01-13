@@ -108,7 +108,11 @@
                         "topic": "Matrices",
                         "number": 3
                     },
-                    "artifacts": {}
+                    "artifacts": {
+                        "slides.pdf": {
+                            "path": "materials/lectures/schedules/tr/03-linear_algebra-II/slides.pdf"
+                        }
+                    }
                 },
                 "04-linear_algebra-III": {
                     "metadata": {
@@ -284,7 +288,7 @@
                 "02-matrices_and_eigenvectors": {
                     "metadata": {
                         "due": "2026-01-21 23:59:00",
-                        "released": "2026-01-13 00:00:00",
+                        "released": "2026-01-14 00:00:00",
                         "topic": "Eigenvectors",
                         "number": 2
                     },

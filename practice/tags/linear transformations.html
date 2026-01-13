@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head data-automata-theme="default">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>DSC 140B</title>
+    <link href="/static/style.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+
+    <!-- Mobile menu button -->
+    <div class="mobile-navbar lg:hidden fixed top-0 left-0 right-0 bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 z-50">
+        <button id="mobile-menu-button" class="py-5 pl-4 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
+            <i data-lucide="menu" class="w-6 h-5"></i>
+        </button>
+    </div>
+
+    <!-- Overlay for mobile -->
+    <div id="overlay" class="fixed inset-0 bg-black opacity-60 dark:opacity-70 z-30 hidden"></div>
+
+
+    <div class="flex min-h-screen">
+        <!-- Left Navigation Column -->
+        <nav id="sidebar" class="
+    w-64 flex-none
+    fixed lg:sticky
+    top-0 left-0 h-screen
+    transform -translate-x-full lg:translate-x-0 transition-transform duration-200 ease-in-out
+    bg-gray-50 dark:bg-gray-900
+    z-40
+    sidebar-mobile-spacing lg:pt-6
+    flex flex-col items-end
+    ">
+
+    <div class="pt-6 pr-6 flex">
+        <ul class="space-y-2">
+            
+            <li>
+                <a href="/index.html" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="home" class="mr-2 text-slate-400"></i>
+Home
+                </a>
+            </li>
+            
+            <li>
+                <a href="/syllabus.html" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="scale" class="mr-2 text-slate-400"></i>
+Syllabus
+                </a>
+            </li>
+            
+            <li>
+                <a href="/office_hours.html" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="briefcase-business" class="mr-2 text-slate-400"></i>
+Office Hours
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://campuswire.com/p/G7C157AD2" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="message-circle-more" class="mr-2 text-slate-400"></i>
+Campuswire
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://www.gradescope.com/courses/1212103" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="spell-check" class="mr-2 text-slate-400"></i>
+Gradescope
+                </a>
+            </li>
+            
+            <li>
+                <a href="/practice/index.html" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="dumbbell" class="mr-2 text-slate-400"></i>
+Practice
+                </a>
+            </li>
+            
+            <li>
+                <a href="http://sierra.ucsd.edu/qa/dsc140b" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="message-circle-question-mark" class="mr-2 text-slate-400"></i>
+Live Q&A
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <div class="flex mr-9 pt-3 pb-6">
+        <button id="theme-toggle" class="inline-flex items-center px-3 py-1.5 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded-full transition-colors">
+            <span id="theme-icon" class="mr-1.5">☾</span>
+            <span id="theme-text">Dark</span>
+        </button>
+    </div>
+</nav>
+
+        <!-- Main Content Column -->
+        
+<!-- Main Content Column -->
+<div class="
+    w-full
+    bg-white dark:bg-gray-800
+    md:border-l
+    border-gray-200 dark:border-gray-700
+    md:min-w-180
+    px-4 md:px-12
+    pt-20 lg:pt-12
+    pb-24
+    ">
+
+    <div class="
+    text-xl font-semibold
+    fixed top-0 left-12 right-12
+    py-4 lg:pt-0 lg:pb-0 lg:mb-10
+    z-50
+    lg:static
+    truncate
+    flex
+    ">
+    <div class="
+        shrink
+        lg:border-b border-gray-200 dark:border-gray-700
+        ">
+        <span>DSC 140B</span>
+        <span class="hidden md:inline">
+            &ndash;
+            Representation Learning
+        </span>
+    </div>
+</div>
+
+    <div class="prose dark:prose-invert">
+    <!DOCTYPE html> <html> <head> <meta
+                          charset="utf-8"> <title>Problems tagged with linear transformations</title>
+
+           <!-- MathJax -->
+           <script type="text/x-mathjax-config">
+             MathJax.Hub.Config({
+               tex: {
+                 inlineMath: [ ['$$','$$'], ["\\(","\\)"] ],
+                 displayMath: [             // start/end delimiter pairs for display math
+                     ['\\[', '\\]']
+                 ],
+                 processEscapes: true
+               }
+           });
+           </script>
+
+           <!-- highlightjs -->
+           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+           <!-- and it's easy to individually load additional languages -->
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+
+           <script>hljs.highlightAll();</script>
+
+           <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+           <script type="text/javascript" id="MathJax-script" async
+             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+           </script>
+
+       </head>
+       <body>
+           
+<h1>Problems tagged with "linear transformations"</h1>
+
+
+        <div class="problem-outer">
+        <h2>Problem #009</h2>
+        <p>Tags: <a href='../tags/linear transformations.html'>linear transformations</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(\vec f(\vec x) = (2x_1 - x_2, \, x_1 + 3x_2)^T\)</span>. Is <span class="math">\(\vec f\)</span> a linear transformation? Justify your answer.</p>
+<details>
+    <summary>Solution</summary>
+<p><b>Yes</b>, <span class="math">\(\vec f\)</span> is a linear transformation.</p>
+<p>To verify linearity, we must show that for all vectors <span class="math">\(\vec x, \vec y\)</span> and scalars <span class="math">\(\alpha, \beta\)</span>:</p>
+<div class="math">\[\vec f(\alpha\vec x + \beta\vec y) = \alpha\vec f(\vec x) + \beta\vec f(\vec y)\]</div>
+<p>Let <span class="math">\(\vec x = (x_1, x_2)^T\)</span> and <span class="math">\(\vec y = (y_1, y_2)^T\)</span>. Then:</p>
+<div class="math">$$\begin{align*}\vec f(\alpha\vec x + \beta\vec y) &= \vec f((\alpha x_1 + \beta y_1, \,\alpha x_2 + \beta y_2)^T) \\&= (2(\alpha x_1 + \beta y_1) - (\alpha x_2 + \beta y_2), \,(\alpha x_1 + \beta y_1) + 3(\alpha x_2 + \beta y_2))^T \\&= (\alpha(2x_1 - x_2) + \beta(2y_1 - y_2), \,\alpha(x_1 + 3x_2) + \beta(y_1 + 3y_2))^T \\&= \alpha(2x_1 - x_2, x_1 + 3x_2)^T + \beta(2y_1 - y_2, y_1 + 3y_2)^T \\&= \alpha\vec f(\vec x) + \beta\vec f(\vec y)
+        \end{align*}$$</div>
+<p>Therefore, <span class="math">\(\vec f\)</span> is linear.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #010</h2>
+        <p>Tags: <a href='../tags/linear transformations.html'>linear transformations</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(\vec f(\vec x) = (x_1 x_2, \, x_2)^T\)</span>. Is <span class="math">\(\vec f\)</span> a linear transformation? Justify your answer.</p>
+<details>
+    <summary>Solution</summary>
+<p><b>No</b>, <span class="math">\(\vec f\)</span> is not a linear transformation.</p>
+<p>To show this, we find a counterexample. Consider <span class="math">\(\vec x = (1, 1)^T\)</span> and <span class="math">\(\vec y = (1, 1)^T\)</span>, and let <span class="math">\(\alpha = \beta = 1\)</span>.</p>
+<p>First, compute <span class="math">\(\vec f(\vec x + \vec y) = \vec f((2, 2)^T)\)</span>:</p>
+<p><span class="math">\(\vec f((2, 2)^T) = (2 \cdot 2, \, 2)^T = (4, 2)^T\)</span> Now compute <span class="math">\(\vec f(\vec x) + \vec f(\vec y)\)</span>:</p>
+<div class="math">\[\vec f((1, 1)^T) = (1 \cdot 1, \, 1)^T = (1, 1)^T\]</div>
+<div class="math">\[\vec f(\vec x) + \vec f(\vec y) = (1, 1)^T + (1, 1)^T = (2, 2)^T\]</div>
+<p>Since <span class="math">\((4, 2)^T \neq(2, 2)^T\)</span>, we have <span class="math">\(\vec f(\vec x + \vec y) \neq\vec f(\vec x) + \vec f(\vec y)\)</span>.</p>
+<p>Therefore, <span class="math">\(\vec f\)</span> is not linear. (The product <span class="math">\(x_1 x_2\)</span> in the first component makes the function nonlinear.)</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #011</h2>
+        <p>Tags: <a href='../tags/linear transformations.html'>linear transformations</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(\vec f(\vec x) = (x_1^2, \, x_2)^T\)</span>. Is <span class="math">\(\vec f\)</span> a linear transformation? Justify your answer.</p>
+<details>
+    <summary>Solution</summary>
+<p><b>No</b>, <span class="math">\(\vec f\)</span> is not a linear transformation.</p>
+<p>A quick way to check: for any linear transformation, we must have <span class="math">\(\vec f(c\vec x) = c \vec f(\vec x)\)</span> for any scalar <span class="math">\(c\)</span>.</p>
+<p>Let us check the scaling property with <span class="math">\(\vec x = (1, 0)^T\)</span> and <span class="math">\(c = 2\)</span>:</p>
+<div class="math">$$\begin{align*}\vec f(2\vec x) &= \vec f((2, 0)^T) \\&= (2^2, 0)^T \\&= (4, 0)^T
+        \end{align*}$$</div>
+<div class="math">$$\begin{align*}
+        2 \vec f(\vec x) &= 2 \vec f((1, 0)^T) \\&= 2(1^2, 0)^T \\&= 2(1, 0)^T \\&= (2, 0)^T
+        \end{align*}$$</div>
+<p>Since <span class="math">\((4, 0)^T \neq(2, 0)^T\)</span>, we have <span class="math">\(\vec f(2\vec x) \neq 2\vec f(\vec x)\)</span>.</p>
+<p>Therefore, <span class="math">\(\vec f\)</span> is not linear. (The squared term <span class="math">\(x_1^2\)</span> makes the function nonlinear.)</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #012</h2>
+        <p>Tags: <a href='../tags/linear transformations.html'>linear transformations</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(\vec f(\vec x) = (-x_2, \, x_1)^T\)</span>. Is <span class="math">\(\vec f\)</span> a linear transformation? Justify your answer.</p>
+<details>
+    <summary>Solution</summary>
+<p>Yes, <span class="math">\(\vec f\)</span> is a linear transformation.</p>
+<p>To verify linearity, we must show that for all vectors <span class="math">\(\vec x, \vec y\)</span> and scalars <span class="math">\(\alpha, \beta\)</span>:</p>
+<div class="math">\[\vec f(\alpha\vec x + \beta\vec y) = \alpha\vec f(\vec x) + \beta\vec f(\vec y)\]</div>
+<p>Let <span class="math">\(\vec x = (x_1, x_2)^T\)</span> and <span class="math">\(\vec y = (y_1, y_2)^T\)</span>. Then:</p>
+<div class="math">$$\begin{align*}\vec f(\alpha\vec x + \beta\vec y) &= \vec f((\alpha x_1 + \beta y_1, \,\alpha x_2 + \beta y_2)^T) \\&= (-(\alpha x_2 + \beta y_2), \,\alpha x_1 + \beta y_1)^T \\&= (-\alpha x_2 - \beta y_2, \,\alpha x_1 + \beta y_1)^T \\&= \alpha(-x_2, x_1)^T + \beta(-y_2, y_1)^T \\&= \alpha\vec f(\vec x) + \beta\vec f(\vec y)
+        \end{align*}$$</div>
+<p>Therefore, <span class="math">\(\vec f\)</span> is linear.</p>
+<p>By the way, this transformation does something interesting geometrically: it rotates vectors by <span class="math">\(90°\)</span> counterclockwise.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #013</h2>
+        <p>Tags: <a href='../tags/linear transformations.html'>linear transformations</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Suppose <span class="math">\(\vec f\)</span> is a linear transformation with:</p>
+<div class="math">\[\vec f(\hat{e}^{(1)}) = \begin{pmatrix} 1 \\ 2 \end{pmatrix}, \quad\vec f(\hat{e}^{(2)}) = \begin{pmatrix} 3 \\ -1 \end{pmatrix}\]</div>
+<p>Let <span class="math">\(\vec x = (2, 5)^T\)</span>. Compute <span class="math">\(\vec f(\vec x)\)</span>.</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\vec f(\vec x) = (17, -1)^T\)</span>.</p>
+<p>Since <span class="math">\(\vec f\)</span> is linear, we can write:</p>
+<div class="math">\[\vec f(\vec x) = \vec f(x_1 \hat{e}^{(1)} + x_2 \hat{e}^{(2)}) = x_1 \vec f(\hat{e}^{(1)}) + x_2 \vec f(\hat{e}^{(2)})\]</div>
+<p>Here, <span class="math">\(x_1 = 2\)</span> and <span class="math">\(x_2 = 5\)</span>. Substituting the given values:</p>
+<div class="math">$$\begin{align*}\vec f(\vec x) &= 2 \vec f(\hat{e}^{(1)}) + 5 \vec f(\hat{e}^{(2)}) \\&= 2 (1, 2)^T + 5 (3, -1)^T \\&= (2, 4)^T + (15, -5)^T \\&= (17, -1)^T
+        \end{align*}$$</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #014</h2>
+        <p>Tags: <a href='../tags/linear transformations.html'>linear transformations</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Suppose <span class="math">\(\vec f\)</span> is a linear transformation with:</p>
+<div class="math">\[\vec f(\hat{e}^{(1)}) = \begin{pmatrix} -1 \\ 3 \end{pmatrix}, \quad\vec f(\hat{e}^{(2)}) = \begin{pmatrix} 2 \\ 1 \end{pmatrix}\]</div>
+<p>Let <span class="math">\(\vec x = (4, -2)^T\)</span>. Compute <span class="math">\(\vec f(\vec x)\)</span>.</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\vec f(\vec x) = (-8, 10)^T\)</span>.</p>
+<p>Since <span class="math">\(\vec f\)</span> is linear, we can write:</p>
+<div class="math">\[\vec f(\vec x) = \vec f(x_1 \hat{e}^{(1)} + x_2 \hat{e}^{(2)}) = x_1 \vec f(\hat{e}^{(1)}) + x_2 \vec f(\hat{e}^{(2)})\]</div>
+<p>Substituting the given values:</p>
+<div class="math">$$\begin{align*}\vec f(\vec x) &= 4 \vec f(\hat{e}^{(1)}) + (-2) \vec f(\hat{e}^{(2)}) \\&= 4 (-1, 3)^T - 2 (2, 1)^T \\&= (-4, 12)^T + (-4, -2)^T \\&= (-8, 10)^T
+        \end{align*}$$</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+       </body>
+   </html>
+    </div>
+</div>
+
+    </div>
+
+    <script>
+        // Restore saved theme on page load
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else if (savedTheme === 'light') {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // Dark mode toggle
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const themeText = document.getElementById('theme-text');
+
+        // Update button to reflect current theme
+        function updateThemeButton() {
+            const isDark = document.documentElement.classList.contains('dark');
+            themeIcon.textContent = isDark ? '☀' : '☾';
+            themeText.textContent = isDark ? 'Light' : 'Dark';
+        }
+
+        // Initialize button state
+        updateThemeButton();
+
+        // Toggle theme on button click
+        themeToggleBtn.addEventListener('click', () => {
+            const isDark = document.documentElement.classList.contains('dark');
+
+            if (isDark) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+
+            updateThemeButton();
+        });
+
+        // Mobile menu toggle
+        const menuButton = document.getElementById('mobile-menu-button');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+
+        menuButton.addEventListener('click', () => {
+            sidebar.classList.toggle('-translate-x-full');
+            overlay.classList.toggle('hidden');
+        });
+
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>

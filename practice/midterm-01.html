@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head data-automata-theme="default">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>DSC 140B</title>
+    <link href="/static/style.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+
+    <!-- Mobile menu button -->
+    <div class="mobile-navbar lg:hidden fixed top-0 left-0 right-0 bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 z-50">
+        <button id="mobile-menu-button" class="py-5 pl-4 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
+            <i data-lucide="menu" class="w-6 h-5"></i>
+        </button>
+    </div>
+
+    <!-- Overlay for mobile -->
+    <div id="overlay" class="fixed inset-0 bg-black opacity-60 dark:opacity-70 z-30 hidden"></div>
+
+
+    <div class="flex min-h-screen">
+        <!-- Left Navigation Column -->
+        <nav id="sidebar" class="
+    w-64 flex-none
+    fixed lg:sticky
+    top-0 left-0 h-screen
+    transform -translate-x-full lg:translate-x-0 transition-transform duration-200 ease-in-out
+    bg-gray-50 dark:bg-gray-900
+    z-40
+    sidebar-mobile-spacing lg:pt-6
+    flex flex-col items-end
+    ">
+
+    <div class="pt-6 pr-6 flex">
+        <ul class="space-y-2">
+            
+            <li>
+                <a href="/index.html" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="home" class="mr-2 text-slate-400"></i>
+Home
+                </a>
+            </li>
+            
+            <li>
+                <a href="/syllabus.html" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="scale" class="mr-2 text-slate-400"></i>
+Syllabus
+                </a>
+            </li>
+            
+            <li>
+                <a href="/office_hours.html" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="briefcase-business" class="mr-2 text-slate-400"></i>
+Office Hours
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://campuswire.com/p/G7C157AD2" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="message-circle-more" class="mr-2 text-slate-400"></i>
+Campuswire
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://www.gradescope.com/courses/1212103" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="spell-check" class="mr-2 text-slate-400"></i>
+Gradescope
+                </a>
+            </li>
+            
+            <li>
+                <a href="/practice/index.html" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="dumbbell" class="mr-2 text-slate-400"></i>
+Practice
+                </a>
+            </li>
+            
+            <li>
+                <a href="http://sierra.ucsd.edu/qa/dsc140b" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="message-circle-question-mark" class="mr-2 text-slate-400"></i>
+Live Q&A
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <div class="flex mr-9 pt-3 pb-6">
+        <button id="theme-toggle" class="inline-flex items-center px-3 py-1.5 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded-full transition-colors">
+            <span id="theme-icon" class="mr-1.5">☾</span>
+            <span id="theme-text">Dark</span>
+        </button>
+    </div>
+</nav>
+
+        <!-- Main Content Column -->
+        
+<!-- Main Content Column -->
+<div class="
+    w-full
+    bg-white dark:bg-gray-800
+    md:border-l
+    border-gray-200 dark:border-gray-700
+    md:min-w-180
+    px-4 md:px-12
+    pt-20 lg:pt-12
+    pb-24
+    ">
+
+    <div class="
+    text-xl font-semibold
+    fixed top-0 left-12 right-12
+    py-4 lg:pt-0 lg:pb-0 lg:mb-10
+    z-50
+    lg:static
+    truncate
+    flex
+    ">
+    <div class="
+        shrink
+        lg:border-b border-gray-200 dark:border-gray-700
+        ">
+        <span>DSC 140B</span>
+        <span class="hidden md:inline">
+            &ndash;
+            Representation Learning
+        </span>
+    </div>
+</div>
+
+    <div class="prose dark:prose-invert">
+    <!DOCTYPE html> <html> <head> <meta
+                          charset="utf-8"> <title>Midterm 01</title>
+
+           <!-- MathJax -->
+           <script type="text/x-mathjax-config">
+             MathJax.Hub.Config({
+               tex: {
+                 inlineMath: [ ['$$','$$'], ["\\(","\\)"] ],
+                 displayMath: [             // start/end delimiter pairs for display math
+                     ['\\[', '\\]']
+                 ],
+                 processEscapes: true
+               }
+           });
+           </script>
+
+           <!-- highlightjs -->
+           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+           <!-- and it's easy to individually load additional languages -->
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+
+           <script>hljs.highlightAll();</script>
+
+           <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+           <script type="text/javascript" id="MathJax-script" async
+             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+           </script>
+
+       </head>
+       <body>
+           
+<h1>Midterm 01</h1>
+<p>Practice problems for topics on Midterm 01.</p>
+<p>Tags in this problem set:</p>
+<ul>
+<ul>
+<li><a href='./tags/linear algebra.html'>linear algebra</a></li>
+<li><a href='./tags/linear transformations.html'>linear transformations</a></li>
+</ul>
+</ul>
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #001</h2>
+        <p>Tags: <a href='./tags/linear algebra.html'>linear algebra</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(\vec x = (1, -2, 5, 0, 3, -1, 4)^T \in\mathbb{R}^7\)</span>. What is <span class="math">\(\vec x \cdot\hat{e}^{(3)}\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p>5.</p>
+<p>The "right" way to do this problem is not to calculate the entire dot product, but to recognize that The dot product <span class="math">\(\vec x \cdot\hat{e}^{(3)}\)</span> extracts the third component of <span class="math">\(\vec x\)</span>(which is 5).</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #002</h2>
+        <p>Tags: <a href='./tags/linear algebra.html'>linear algebra</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(\hat{u}^{(1)} = \frac{1}{\sqrt{2}}(1, 1)^T\)</span> and <span class="math">\(\hat{u}^{(2)} =
+    \frac{1}{\sqrt{2}}(-1, 1)^T\)</span> form an orthonormal basis <span class="math">\(\mathcal{U}\)</span> for <span class="math">\(\mathbb{R}^2\)</span>.</p>
+<p>Given <span class="math">\(\vec x = (4, 2)^T\)</span>, compute <span class="math">\([\vec x]_{\mathcal{U}}\)</span>. That is, compute the coordinates of <span class="math">\(\vec x\)</span> in the new basis.</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\([\vec x]_{\mathcal{U}} = (3\sqrt{2}, -\sqrt{2})^T\)</span>.</p>
+<p>To find the coordinates of <span class="math">\(\vec x\)</span> in the basis <span class="math">\(\mathcal{U}\)</span>, we compute the dot product of <span class="math">\(\vec x\)</span> with each basis vector:</p>
+<div class="math">$$\begin{align*}\vec x \cdot\hat{u}^{(1)}&= (4, 2)^T \cdot\frac{1}{\sqrt{2}}(1, 1)^T \\&= \frac{1}{\sqrt{2}}(4 + 2) \\&= \frac{6}{\sqrt{2}}\\&= 3\sqrt{2}\end{align*}$$</div>
+<div class="math">$$\begin{align*}\vec x \cdot\hat{u}^{(2)}&= (4, 2)^T \cdot\frac{1}{\sqrt{2}}(-1, 1)^T \\&= \frac{1}{\sqrt{2}}(-4 + 2) \\&= \frac{-2}{\sqrt{2}}\\&= -\sqrt{2}\end{align*}$$</div>
+<p>Therefore, the coordinates of <span class="math">\(\vec x\)</span> in the basis <span class="math">\(\mathcal{U}\)</span> are:</p>
+<div class="math">\[[\vec x]_{\mathcal{U}} = (3\sqrt{2}, -\sqrt{2})^T\]</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #003</h2>
+        <p>Tags: <a href='./tags/linear algebra.html'>linear algebra</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(\hat{u}^{(1)} = \frac{1}{\sqrt{3}}(1, 1, 1)^T\)</span>, <span class="math">\(\hat{u}^{(2)} =
+    \frac{1}{\sqrt{2}}(1, -1, 0)^T\)</span>, and <span class="math">\(\hat{u}^{(3)} =
+    \frac{1}{\sqrt{6}}(1, 1, -2)^T\)</span> form an orthonormal basis <span class="math">\(\mathcal{U}\)</span> for <span class="math">\(\mathbb{R}^3\)</span>.</p>
+<p>Given <span class="math">\(\vec x = (3, 1, 2)^T\)</span>, compute <span class="math">\([\vec x]_{\mathcal{U}}\)</span>. That is, compute the coordinates of <span class="math">\(\vec x\)</span> in the new basis.</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\([\vec x]_{\mathcal{U}} = (2\sqrt{3}, \sqrt{2}, 0)^T\)</span>.</p>
+<p>To find the coordinates of <span class="math">\(\vec x\)</span> in the basis <span class="math">\(\mathcal{U}\)</span>, we compute the dot product of <span class="math">\(\vec x\)</span> with each basis vector:</p>
+<div class="math">$$\begin{align*}\vec x \cdot\hat{u}^{(1)}&= (3, 1, 2)^T \cdot\frac{1}{\sqrt{3}}(1, 1, 1)^T \\&= \frac{1}{\sqrt{3}}(3 + 1 + 2) \\&= \frac{6}{\sqrt{3}}\\&= 2\sqrt{3}\end{align*}$$</div>
+<div class="math">$$\begin{align*}\vec x \cdot\hat{u}^{(2)}&= (3, 1, 2)^T \cdot\frac{1}{\sqrt{2}}(1, -1, 0)^T \\&= \frac{1}{\sqrt{2}}(3 - 1 + 0) \\&= \frac{2}{\sqrt{2}}\\&= \sqrt{2}\end{align*}$$</div>
+<div class="math">$$\begin{align*}\vec x \cdot\hat{u}^{(3)}&= (3, 1, 2)^T \cdot\frac{1}{\sqrt{6}}(1, 1, -2)^T \\&= \frac{1}{\sqrt{6}}(3 + 1 - 4) \\&= \frac{0}{\sqrt{6}}\\&= 0
+        \end{align*}$$</div>
+<p>Therefore, the coordinates of <span class="math">\(\vec x\)</span> in the basis <span class="math">\(\mathcal{U}\)</span> are:</p>
+<div class="math">\[[\vec x]_{\mathcal{U}} = (2\sqrt{3}, \sqrt{2}, 0)^T\]</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #004</h2>
+        <p>Tags: <a href='./tags/linear algebra.html'>linear algebra</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(\hat{u}^{(1)} = \frac{1}{\sqrt{2}}(1, 0, 1)^T\)</span>, <span class="math">\(\hat{u}^{(2)} =
+    (0, 1, 0)^T\)</span>, and <span class="math">\(\hat{u}^{(3)} =
+    \frac{1}{\sqrt{2}}(1, 0, -1)^T\)</span> form an orthonormal basis <span class="math">\(\mathcal{U}\)</span> for <span class="math">\(\mathbb{R}^3\)</span>.</p>
+<p>Given <span class="math">\(\vec x = (2, 3, 4)^T\)</span>, compute <span class="math">\([\vec x]_{\mathcal{U}}\)</span>. That is, compute the coordinates of <span class="math">\(\vec x\)</span> in the new basis.</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\([\vec x]_{\mathcal{U}} = (3\sqrt{2}, 3, -\sqrt{2})^T\)</span>.</p>
+<p>To find the coordinates of <span class="math">\(\vec x\)</span> in the basis <span class="math">\(\mathcal{U}\)</span>, we compute the dot product of <span class="math">\(\vec x\)</span> with each basis vector:</p>
+<div class="math">$$\begin{align*}\vec x \cdot\hat{u}^{(1)}&= (2, 3, 4)^T \cdot\frac{1}{\sqrt{2}}(1, 0, 1)^T \\&= \frac{1}{\sqrt{2}}(2 + 0 + 4) \\&= \frac{6}{\sqrt{2}}\\&= 3\sqrt{2}\end{align*}$$</div>
+<div class="math">$$\begin{align*}\vec x \cdot\hat{u}^{(2)}&= (2, 3, 4)^T \cdot(0, 1, 0)^T \\&= 0 + 3 + 0 \\&= 3
+        \end{align*}$$</div>
+<div class="math">$$\begin{align*}\vec x \cdot\hat{u}^{(3)}&= (2, 3, 4)^T \cdot\frac{1}{\sqrt{2}}(1, 0, -1)^T \\&= \frac{1}{\sqrt{2}}(2 + 0 - 4) \\&= \frac{-2}{\sqrt{2}}\\&= -\sqrt{2}\end{align*}$$</div>
+<p>Therefore, the coordinates of <span class="math">\(\vec x\)</span> in the basis <span class="math">\(\mathcal{U}\)</span> are:</p>
+<div class="math">\[[\vec x]_{\mathcal{U}} = (3\sqrt{2}, 3, -\sqrt{2})^T\]</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #005</h2>
+        <p>Tags: <a href='./tags/linear algebra.html'>linear algebra</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(\vec x = (2, -3)^T\)</span> and let <span class="math">\(\mathcal{U} = \{\hat{u}^{(1)}, \hat{u}^{(2)}\}\)</span> be an orthonormal basis for <span class="math">\(\mathbb{R}^2\)</span>. You are given the following information about the basis vectors:</p>
+<div class="math">\[\hat{u}^{(1)}\cdot\hat{e}^{(1)} = 1\]</div>
+<div class="math">\[\hat{u}^{(1)}\cdot\hat{e}^{(2)} = 2\]</div>
+<div class="math">\[\hat{u}^{(2)}\cdot\hat{e}^{(1)} = -2\]</div>
+<div class="math">\[\hat{u}^{(2)}\cdot\hat{e}^{(2)} = 1\]</div>
+<p>Compute the coordinates of <span class="math">\(\vec x\)</span> in the basis <span class="math">\(\mathcal{U}\)</span>, i.e., compute <span class="math">\([\vec x]_{\mathcal{U}}\)</span>.</p>
+<details>
+    <summary>Solution</summary>
+<p>The coordinates of <span class="math">\(\vec x\)</span> in basis <span class="math">\(\mathcal{U}\)</span> are given by <span class="math">\([\vec x]_{\mathcal{U}} = (\vec x \cdot\hat{u}^{(1)}, \vec x \cdot\hat{u}^{(2)})^T\)</span>.</p>
+<p>We can compute each dot product using the given information:</p>
+<div class="math">$$\begin{align*}\vec x \cdot\hat{u}^{(1)}&= (2, -3)^T \cdot\hat{u}^{(1)}\\&= (2 \hat{e}^{(1)} - 3 \hat{e}^{(2)}) \cdot\hat{u}^{(1)}\\&= 2(\hat{u}^{(1)}\cdot\hat{e}^{(1)}) - 3(\hat{u}^{(1)}\cdot\hat{e}^{(2)}) \\&= 2(1) - 3(2) \\&= 2 - 6 \\&= -4
+        \end{align*}$$</div>
+<div class="math">$$\begin{align*}\vec x \cdot\hat{u}^{(2)}&= (2, -3)^T \cdot\hat{u}^{(2)}\\&= (2 \hat{e}^{(1)} - 3 \hat{e}^{(2)}) \cdot\hat{u}^{(2)}\\&= 2(\hat{u}^{(2)}\cdot\hat{e}^{(1)}) - 3(\hat{u}^{(2)}\cdot\hat{e}^{(2)}) \\&= 2(-2) - 3(1) \\&= -4 - 3 \\&= -7
+        \end{align*}$$</div>
+<p>Therefore, <span class="math">\([\vec x]_{\mathcal{U}} = (-4, -7)^T\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #006</h2>
+        <p>Tags: <a href='./tags/linear algebra.html'>linear algebra</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Do the following three vectors form an orthonormal basis for <span class="math">\(\mathbb{R}^3\)</span>? Justify your answer.</p>
+<div class="math">\[\vec v_1 = \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix}, \quad\vec v_2 = \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}, \quad\vec v_3 = \begin{pmatrix} \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} \\ 0 \end{pmatrix}\]</div>
+<details>
+    <summary>Solution</summary>
+<p>Nope, they don't. The problem is that the second and third vectors are not orthogonal. To be an orthonormal basis, all pairs of vectors must be orthogonal (dot product zero) and each vector must have unit length.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #007</h2>
+        <p>Tags: <a href='./tags/linear algebra.html'>linear algebra</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Do the following three vectors form an orthonormal basis for <span class="math">\(\mathbb{R}^3\)</span>? Justify your answer.</p>
+<div class="math">\[\vec v_1 = \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix}, \quad\vec v_2 = \begin{pmatrix} 0 \\ 2 \\ 0 \end{pmatrix}, \quad\vec v_3 = \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}\]</div>
+<details>
+    <summary>Solution</summary>
+<p>Nope, they don't. While they are all orthogonal to each other, the second vector does not have unit length (its length is 2). To be an orthonormal basis, all vectors must have unit length.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #008</h2>
+        <p>Tags: <a href='./tags/linear algebra.html'>linear algebra</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Do the following three vectors form an orthonormal basis for <span class="math">\(\mathbb{R}^3\)</span>? Justify your answer.</p>
+<div class="math">\[\vec v_1 = \begin{pmatrix} \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} \\ 0 \end{pmatrix}, \quad\vec v_2 = \begin{pmatrix} \frac{1}{\sqrt{2}} \\ -\frac{1}{\sqrt{2}} \\ 0 \end{pmatrix}, \quad\vec v_3 = \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}\]</div>
+<details>
+    <summary>Solution</summary>
+<p>Yes.</p>
+<p>You can check that all vectors have unit length, and that each pair of vectors is orthogonal (dot product zero).</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #009</h2>
+        <p>Tags: <a href='./tags/linear transformations.html'>linear transformations</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(\vec f(\vec x) = (2x_1 - x_2, \, x_1 + 3x_2)^T\)</span>. Is <span class="math">\(\vec f\)</span> a linear transformation? Justify your answer.</p>
+<details>
+    <summary>Solution</summary>
+<p><b>Yes</b>, <span class="math">\(\vec f\)</span> is a linear transformation.</p>
+<p>To verify linearity, we must show that for all vectors <span class="math">\(\vec x, \vec y\)</span> and scalars <span class="math">\(\alpha, \beta\)</span>:</p>
+<div class="math">\[\vec f(\alpha\vec x + \beta\vec y) = \alpha\vec f(\vec x) + \beta\vec f(\vec y)\]</div>
+<p>Let <span class="math">\(\vec x = (x_1, x_2)^T\)</span> and <span class="math">\(\vec y = (y_1, y_2)^T\)</span>. Then:</p>
+<div class="math">$$\begin{align*}\vec f(\alpha\vec x + \beta\vec y) &= \vec f((\alpha x_1 + \beta y_1, \,\alpha x_2 + \beta y_2)^T) \\&= (2(\alpha x_1 + \beta y_1) - (\alpha x_2 + \beta y_2), \,(\alpha x_1 + \beta y_1) + 3(\alpha x_2 + \beta y_2))^T \\&= (\alpha(2x_1 - x_2) + \beta(2y_1 - y_2), \,\alpha(x_1 + 3x_2) + \beta(y_1 + 3y_2))^T \\&= \alpha(2x_1 - x_2, x_1 + 3x_2)^T + \beta(2y_1 - y_2, y_1 + 3y_2)^T \\&= \alpha\vec f(\vec x) + \beta\vec f(\vec y)
+        \end{align*}$$</div>
+<p>Therefore, <span class="math">\(\vec f\)</span> is linear.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #010</h2>
+        <p>Tags: <a href='./tags/linear transformations.html'>linear transformations</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(\vec f(\vec x) = (x_1 x_2, \, x_2)^T\)</span>. Is <span class="math">\(\vec f\)</span> a linear transformation? Justify your answer.</p>
+<details>
+    <summary>Solution</summary>
+<p><b>No</b>, <span class="math">\(\vec f\)</span> is not a linear transformation.</p>
+<p>To show this, we find a counterexample. Consider <span class="math">\(\vec x = (1, 1)^T\)</span> and <span class="math">\(\vec y = (1, 1)^T\)</span>, and let <span class="math">\(\alpha = \beta = 1\)</span>.</p>
+<p>First, compute <span class="math">\(\vec f(\vec x + \vec y) = \vec f((2, 2)^T)\)</span>:</p>
+<p><span class="math">\(\vec f((2, 2)^T) = (2 \cdot 2, \, 2)^T = (4, 2)^T\)</span> Now compute <span class="math">\(\vec f(\vec x) + \vec f(\vec y)\)</span>:</p>
+<div class="math">\[\vec f((1, 1)^T) = (1 \cdot 1, \, 1)^T = (1, 1)^T\]</div>
+<div class="math">\[\vec f(\vec x) + \vec f(\vec y) = (1, 1)^T + (1, 1)^T = (2, 2)^T\]</div>
+<p>Since <span class="math">\((4, 2)^T \neq(2, 2)^T\)</span>, we have <span class="math">\(\vec f(\vec x + \vec y) \neq\vec f(\vec x) + \vec f(\vec y)\)</span>.</p>
+<p>Therefore, <span class="math">\(\vec f\)</span> is not linear. (The product <span class="math">\(x_1 x_2\)</span> in the first component makes the function nonlinear.)</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #011</h2>
+        <p>Tags: <a href='./tags/linear transformations.html'>linear transformations</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(\vec f(\vec x) = (x_1^2, \, x_2)^T\)</span>. Is <span class="math">\(\vec f\)</span> a linear transformation? Justify your answer.</p>
+<details>
+    <summary>Solution</summary>
+<p><b>No</b>, <span class="math">\(\vec f\)</span> is not a linear transformation.</p>
+<p>A quick way to check: for any linear transformation, we must have <span class="math">\(\vec f(c\vec x) = c \vec f(\vec x)\)</span> for any scalar <span class="math">\(c\)</span>.</p>
+<p>Let us check the scaling property with <span class="math">\(\vec x = (1, 0)^T\)</span> and <span class="math">\(c = 2\)</span>:</p>
+<div class="math">$$\begin{align*}\vec f(2\vec x) &= \vec f((2, 0)^T) \\&= (2^2, 0)^T \\&= (4, 0)^T
+        \end{align*}$$</div>
+<div class="math">$$\begin{align*}
+        2 \vec f(\vec x) &= 2 \vec f((1, 0)^T) \\&= 2(1^2, 0)^T \\&= 2(1, 0)^T \\&= (2, 0)^T
+        \end{align*}$$</div>
+<p>Since <span class="math">\((4, 0)^T \neq(2, 0)^T\)</span>, we have <span class="math">\(\vec f(2\vec x) \neq 2\vec f(\vec x)\)</span>.</p>
+<p>Therefore, <span class="math">\(\vec f\)</span> is not linear. (The squared term <span class="math">\(x_1^2\)</span> makes the function nonlinear.)</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #012</h2>
+        <p>Tags: <a href='./tags/linear transformations.html'>linear transformations</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(\vec f(\vec x) = (-x_2, \, x_1)^T\)</span>. Is <span class="math">\(\vec f\)</span> a linear transformation? Justify your answer.</p>
+<details>
+    <summary>Solution</summary>
+<p>Yes, <span class="math">\(\vec f\)</span> is a linear transformation.</p>
+<p>To verify linearity, we must show that for all vectors <span class="math">\(\vec x, \vec y\)</span> and scalars <span class="math">\(\alpha, \beta\)</span>:</p>
+<div class="math">\[\vec f(\alpha\vec x + \beta\vec y) = \alpha\vec f(\vec x) + \beta\vec f(\vec y)\]</div>
+<p>Let <span class="math">\(\vec x = (x_1, x_2)^T\)</span> and <span class="math">\(\vec y = (y_1, y_2)^T\)</span>. Then:</p>
+<div class="math">$$\begin{align*}\vec f(\alpha\vec x + \beta\vec y) &= \vec f((\alpha x_1 + \beta y_1, \,\alpha x_2 + \beta y_2)^T) \\&= (-(\alpha x_2 + \beta y_2), \,\alpha x_1 + \beta y_1)^T \\&= (-\alpha x_2 - \beta y_2, \,\alpha x_1 + \beta y_1)^T \\&= \alpha(-x_2, x_1)^T + \beta(-y_2, y_1)^T \\&= \alpha\vec f(\vec x) + \beta\vec f(\vec y)
+        \end{align*}$$</div>
+<p>Therefore, <span class="math">\(\vec f\)</span> is linear.</p>
+<p>By the way, this transformation does something interesting geometrically: it rotates vectors by <span class="math">\(90°\)</span> counterclockwise.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #013</h2>
+        <p>Tags: <a href='./tags/linear transformations.html'>linear transformations</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Suppose <span class="math">\(\vec f\)</span> is a linear transformation with:</p>
+<div class="math">\[\vec f(\hat{e}^{(1)}) = \begin{pmatrix} 1 \\ 2 \end{pmatrix}, \quad\vec f(\hat{e}^{(2)}) = \begin{pmatrix} 3 \\ -1 \end{pmatrix}\]</div>
+<p>Let <span class="math">\(\vec x = (2, 5)^T\)</span>. Compute <span class="math">\(\vec f(\vec x)\)</span>.</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\vec f(\vec x) = (17, -1)^T\)</span>.</p>
+<p>Since <span class="math">\(\vec f\)</span> is linear, we can write:</p>
+<div class="math">\[\vec f(\vec x) = \vec f(x_1 \hat{e}^{(1)} + x_2 \hat{e}^{(2)}) = x_1 \vec f(\hat{e}^{(1)}) + x_2 \vec f(\hat{e}^{(2)})\]</div>
+<p>Here, <span class="math">\(x_1 = 2\)</span> and <span class="math">\(x_2 = 5\)</span>. Substituting the given values:</p>
+<div class="math">$$\begin{align*}\vec f(\vec x) &= 2 \vec f(\hat{e}^{(1)}) + 5 \vec f(\hat{e}^{(2)}) \\&= 2 (1, 2)^T + 5 (3, -1)^T \\&= (2, 4)^T + (15, -5)^T \\&= (17, -1)^T
+        \end{align*}$$</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #014</h2>
+        <p>Tags: <a href='./tags/linear transformations.html'>linear transformations</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Suppose <span class="math">\(\vec f\)</span> is a linear transformation with:</p>
+<div class="math">\[\vec f(\hat{e}^{(1)}) = \begin{pmatrix} -1 \\ 3 \end{pmatrix}, \quad\vec f(\hat{e}^{(2)}) = \begin{pmatrix} 2 \\ 1 \end{pmatrix}\]</div>
+<p>Let <span class="math">\(\vec x = (4, -2)^T\)</span>. Compute <span class="math">\(\vec f(\vec x)\)</span>.</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\vec f(\vec x) = (-8, 10)^T\)</span>.</p>
+<p>Since <span class="math">\(\vec f\)</span> is linear, we can write:</p>
+<div class="math">\[\vec f(\vec x) = \vec f(x_1 \hat{e}^{(1)} + x_2 \hat{e}^{(2)}) = x_1 \vec f(\hat{e}^{(1)}) + x_2 \vec f(\hat{e}^{(2)})\]</div>
+<p>Substituting the given values:</p>
+<div class="math">$$\begin{align*}\vec f(\vec x) &= 4 \vec f(\hat{e}^{(1)}) + (-2) \vec f(\hat{e}^{(2)}) \\&= 4 (-1, 3)^T - 2 (2, 1)^T \\&= (-4, 12)^T + (-4, -2)^T \\&= (-8, 10)^T
+        \end{align*}$$</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #015</h2>
+        <p>Tags: <a href='./tags/linear algebra.html'>linear algebra</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Recall that <span class="math">\(\vec x\)</span> is a <i>unit coordinate vector</i> if the sum of the squares of its entries is 1. That is, if <span class="math">\(x_i\)</span> is the <span class="math">\(i\)</span>-th entry of <span class="math">\(\vec
+    x\)</span>, then <span class="math">\(\vec x\)</span> is a unit coordinate vector if <span class="math">\(\sum_i x_i^2 = 1\)</span>.</p>
+<p>True or False: If <span class="math">\(\vec x\)</span> is a unit coordinate vector when expressed in the standard basis, then <span class="math">\([\vec x]_{\mathcal{U}}\)</span> is also a unit coordinate vector when expressed in an orthonormal basis <span class="math">\(\mathcal{U}\)</span>.</p>
+<details>
+    <summary>Solution</summary>
+<p>True.</p>
+<p>The sum of squared entries of a vector is equal to the length of the vector squared. If we express <span class="math">\(\vec x\)</span> in a different basis, we get different coordinates, but it doesn't change the length of the vector itself. So whatever those new coordinates are, their sum of squares must still equal 1.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #016</h2>
+        <p>Tags: <a href='./tags/linear algebra.html'>linear algebra</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>True or False: If we express <span class="math">\(\vec x\)</span> in an orthonormal basis <span class="math">\(\mathcal{U}\)</span>, the sum of the absolute values of the entries must stay the same. That is, <span class="math">\(\sum_i |x_i| = \sum_i |[\vec x]_{\mathcal{U},i}|\)</span>.</p>
+<details>
+    <summary>Solution</summary>
+<p>False.</p>
+<p>The sum of absolute values (the <span class="math">\(\ell_1\)</span> norm) is <i>not</i> preserved under a change of orthonormal basis. Only the sum of squares (the <span class="math">\(\ell_2\)</span> norm squared) is preserved.</p>
+<p>As a counterexample, consider <span class="math">\(\vec x = (1, 0)^T\)</span> in <span class="math">\(\mathbb{R}^2\)</span>. The sum of absolute values is <span class="math">\(1\)</span>. Now consider the orthonormal basis <span class="math">\(\mathcal{U} = \{\frac{1}{\sqrt{2}}(1, 1)^T, \frac{1}{\sqrt{2}}(-1,
+        1)^T\}\)</span>. Then:</p>
+<div class="math">\[[\vec x]_{\mathcal{U}} = \left(\frac{1}{\sqrt{2}}, -\frac{1}{\sqrt{2}}\right)^T\]</div>
+<p>The sum of absolute values is now <span class="math">\(\frac{1}{\sqrt{2}} +
+        \frac{1}{\sqrt{2}} = \sqrt{2}\neq 1\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+       </body>
+   </html>
+    </div>
+</div>
+
+    </div>
+
+    <script>
+        // Restore saved theme on page load
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else if (savedTheme === 'light') {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // Dark mode toggle
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const themeText = document.getElementById('theme-text');
+
+        // Update button to reflect current theme
+        function updateThemeButton() {
+            const isDark = document.documentElement.classList.contains('dark');
+            themeIcon.textContent = isDark ? '☀' : '☾';
+            themeText.textContent = isDark ? 'Light' : 'Dark';
+        }
+
+        // Initialize button state
+        updateThemeButton();
+
+        // Toggle theme on button click
+        themeToggleBtn.addEventListener('click', () => {
+            const isDark = document.documentElement.classList.contains('dark');
+
+            if (isDark) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+
+            updateThemeButton();
+        });
+
+        // Mobile menu toggle
+        const menuButton = document.getElementById('mobile-menu-button');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+
+        menuButton.addEventListener('click', () => {
+            sidebar.classList.toggle('-translate-x-full');
+            overlay.classList.toggle('hidden');
+        });
+
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>
