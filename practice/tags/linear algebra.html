@@ -173,7 +173,7 @@ Live Q&A
 
         <div class="problem-outer">
         <h2>Problem #001</h2>
-        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a></p>
+        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/lecture-02.html'>lecture-02</a>, <a href='../tags/quiz-02.html'>quiz-02</a></p>
         <div class="problem">
     <div class="problem-body">
 <p>Let <span class="math">\(\vec x = (1, -2, 5, 0, 3, -1, 4)^T \in\mathbb{R}^7\)</span>. What is <span class="math">\(\vec x \cdot\hat{e}^{(3)}\)</span>?</p>
@@ -193,7 +193,7 @@ Live Q&A
 
         <div class="problem-outer">
         <h2>Problem #002</h2>
-        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a></p>
+        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/lecture-02.html'>lecture-02</a>, <a href='../tags/quiz-02.html'>quiz-02</a></p>
         <div class="problem">
     <div class="problem-body">
 <p>Let <span class="math">\(\hat{u}^{(1)} = \frac{1}{\sqrt{2}}(1, 1)^T\)</span> and <span class="math">\(\hat{u}^{(2)} =
@@ -219,7 +219,7 @@ Live Q&A
 
         <div class="problem-outer">
         <h2>Problem #003</h2>
-        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a></p>
+        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/lecture-02.html'>lecture-02</a>, <a href='../tags/quiz-02.html'>quiz-02</a></p>
         <div class="problem">
     <div class="problem-body">
 <p>Let <span class="math">\(\hat{u}^{(1)} = \frac{1}{\sqrt{3}}(1, 1, 1)^T\)</span>, <span class="math">\(\hat{u}^{(2)} =
@@ -248,7 +248,7 @@ Live Q&A
 
         <div class="problem-outer">
         <h2>Problem #004</h2>
-        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a></p>
+        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/lecture-02.html'>lecture-02</a>, <a href='../tags/quiz-02.html'>quiz-02</a></p>
         <div class="problem">
     <div class="problem-body">
 <p>Let <span class="math">\(\hat{u}^{(1)} = \frac{1}{\sqrt{2}}(1, 0, 1)^T\)</span>, <span class="math">\(\hat{u}^{(2)} =
@@ -277,24 +277,21 @@ Live Q&A
 
         <div class="problem-outer">
         <h2>Problem #005</h2>
-        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a></p>
+        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/lecture-02.html'>lecture-02</a>, <a href='../tags/quiz-02.html'>quiz-02</a></p>
         <div class="problem">
     <div class="problem-body">
 <p>Let <span class="math">\(\vec x = (2, -3)^T\)</span> and let <span class="math">\(\mathcal{U} = \{\hat{u}^{(1)}, \hat{u}^{(2)}\}\)</span> be an orthonormal basis for <span class="math">\(\mathbb{R}^2\)</span>. You are given the following information about the basis vectors:</p>
-<div class="math">\[\hat{u}^{(1)}\cdot\hat{e}^{(1)} = 1\]</div>
-<div class="math">\[\hat{u}^{(1)}\cdot\hat{e}^{(2)} = 2\]</div>
-<div class="math">\[\hat{u}^{(2)}\cdot\hat{e}^{(1)} = -2\]</div>
-<div class="math">\[\hat{u}^{(2)}\cdot\hat{e}^{(2)} = 1\]</div>
+<div class="math">\[\hat{u}^{(1)}\cdot\hat{e}^{(1)} = \frac{3}{5}\]</div>
+<div class="math">\[\hat{u}^{(1)}\cdot\hat{e}^{(2)} = \frac{4}{5}\]</div>
+<div class="math">\[\hat{u}^{(2)}\cdot\hat{e}^{(1)} = -\frac{4}{5}\]</div>
+<div class="math">\[\hat{u}^{(2)}\cdot\hat{e}^{(2)} = \frac{3}{5}\]</div>
 <p>Compute the coordinates of <span class="math">\(\vec x\)</span> in the basis <span class="math">\(\mathcal{U}\)</span>, i.e., compute <span class="math">\([\vec x]_{\mathcal{U}}\)</span>.</p>
 <details>
     <summary>Solution</summary>
-<p>The coordinates of <span class="math">\(\vec x\)</span> in basis <span class="math">\(\mathcal{U}\)</span> are given by <span class="math">\([\vec x]_{\mathcal{U}} = (\vec x \cdot\hat{u}^{(1)}, \vec x \cdot\hat{u}^{(2)})^T\)</span>.</p>
-<p>We can compute each dot product using the given information:</p>
-<div class="math">$$\begin{align*}\vec x \cdot\hat{u}^{(1)}&= (2, -3)^T \cdot\hat{u}^{(1)}\\&= (2 \hat{e}^{(1)} - 3 \hat{e}^{(2)}) \cdot\hat{u}^{(1)}\\&= 2(\hat{u}^{(1)}\cdot\hat{e}^{(1)}) - 3(\hat{u}^{(1)}\cdot\hat{e}^{(2)}) \\&= 2(1) - 3(2) \\&= 2 - 6 \\&= -4
-        \end{align*}$$</div>
-<div class="math">$$\begin{align*}\vec x \cdot\hat{u}^{(2)}&= (2, -3)^T \cdot\hat{u}^{(2)}\\&= (2 \hat{e}^{(1)} - 3 \hat{e}^{(2)}) \cdot\hat{u}^{(2)}\\&= 2(\hat{u}^{(2)}\cdot\hat{e}^{(1)}) - 3(\hat{u}^{(2)}\cdot\hat{e}^{(2)}) \\&= 2(-2) - 3(1) \\&= -4 - 3 \\&= -7
-        \end{align*}$$</div>
-<p>Therefore, <span class="math">\([\vec x]_{\mathcal{U}} = (-4, -7)^T\)</span>.</p>
+<p><span class="math">\([\vec x]_{\mathcal{U}} = \left(-\frac{6}{5}, -\frac{17}{5}\right)^T\)</span>.</p>
+<p>The coordinates of <span class="math">\(\vec x\)</span> in basis <span class="math">\(\mathcal{U}\)</span> are given by <span class="math">\([\vec x]_{\mathcal{U}} = (\vec x \cdot\hat{u}^{(1)}, \vec x \cdot\hat{u}^{(2)})^T\)</span>. We can compute each dot product using the given information:</p>
+<div class="math">$$\begin{align*}\vec x \cdot\hat{u}^{(1)}&= (2, -3)^T \cdot\hat{u}^{(1)}\\&= (2 \hat{e}^{(1)} - 3 \hat{e}^{(2)}) \cdot\hat{u}^{(1)}\\&= 2(\hat{u}^{(1)}\cdot\hat{e}^{(1)}) - 3(\hat{u}^{(1)}\cdot\hat{e}^{(2)}) \\&= 2\left(\frac{3}{5}\right)- 3\left(\frac{4}{5}\right)\\&= \frac{6}{5} - \frac{12}{5}\\&= -\frac{6}{5}\end{align*}$$</div>
+<div class="math">$$\begin{align*}\vec x \cdot\hat{u}^{(2)}&= (2, -3)^T \cdot\hat{u}^{(2)}\\&= (2 \hat{e}^{(1)} - 3 \hat{e}^{(2)}) \cdot\hat{u}^{(2)}\\&= 2(\hat{u}^{(2)}\cdot\hat{e}^{(1)}) - 3(\hat{u}^{(2)}\cdot\hat{e}^{(2)}) \\&= 2\left(-\frac{4}{5}\right)- 3\left(\frac{3}{5}\right)\\&= -\frac{8}{5} - \frac{9}{5}\\&= -\frac{17}{5}\end{align*}$$</div>
 </details>
 
     </div>
@@ -307,7 +304,7 @@ Live Q&A
 
         <div class="problem-outer">
         <h2>Problem #006</h2>
-        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a></p>
+        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/lecture-02.html'>lecture-02</a>, <a href='../tags/quiz-02.html'>quiz-02</a></p>
         <div class="problem">
     <div class="problem-body">
 <p>Do the following three vectors form an orthonormal basis for <span class="math">\(\mathbb{R}^3\)</span>? Justify your answer.</p>
@@ -327,7 +324,7 @@ Live Q&A
 
         <div class="problem-outer">
         <h2>Problem #007</h2>
-        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a></p>
+        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/lecture-02.html'>lecture-02</a>, <a href='../tags/quiz-02.html'>quiz-02</a></p>
         <div class="problem">
     <div class="problem-body">
 <p>Do the following three vectors form an orthonormal basis for <span class="math">\(\mathbb{R}^3\)</span>? Justify your answer.</p>
@@ -347,7 +344,7 @@ Live Q&A
 
         <div class="problem-outer">
         <h2>Problem #008</h2>
-        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a></p>
+        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/lecture-02.html'>lecture-02</a>, <a href='../tags/quiz-02.html'>quiz-02</a></p>
         <div class="problem">
     <div class="problem-body">
 <p>Do the following three vectors form an orthonormal basis for <span class="math">\(\mathbb{R}^3\)</span>? Justify your answer.</p>
@@ -368,7 +365,7 @@ Live Q&A
 
         <div class="problem-outer">
         <h2>Problem #015</h2>
-        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a></p>
+        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/lecture-02.html'>lecture-02</a>, <a href='../tags/quiz-02.html'>quiz-02</a></p>
         <div class="problem">
     <div class="problem-body">
 <p>Recall that <span class="math">\(\vec x\)</span> is a <i>unit coordinate vector</i> if the sum of the squares of its entries is 1. That is, if <span class="math">\(x_i\)</span> is the <span class="math">\(i\)</span>-th entry of <span class="math">\(\vec
@@ -390,7 +387,7 @@ Live Q&A
 
         <div class="problem-outer">
         <h2>Problem #016</h2>
-        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a></p>
+        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/lecture-02.html'>lecture-02</a>, <a href='../tags/quiz-02.html'>quiz-02</a></p>
         <div class="problem">
     <div class="problem-body">
 <p>True or False: If we express <span class="math">\(\vec x\)</span> in an orthonormal basis <span class="math">\(\mathcal{U}\)</span>, the sum of the absolute values of the entries must stay the same. That is, <span class="math">\(\sum_i |x_i| = \sum_i |[\vec x]_{\mathcal{U},i}|\)</span>.</p>
@@ -403,6 +400,361 @@ Live Q&A
 <div class="math">\[[\vec x]_{\mathcal{U}} = \left(\frac{1}{\sqrt{2}}, -\frac{1}{\sqrt{2}}\right)^T\]</div>
 <p>The sum of absolute values is now <span class="math">\(\frac{1}{\sqrt{2}} +
         \frac{1}{\sqrt{2}} = \sqrt{2}\neq 1\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #017</h2>
+        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/linear transformations.html'>linear transformations</a>, <a href='../tags/quiz-02.html'>quiz-02</a>, <a href='../tags/lecture-03.html'>lecture-03</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(\vec f(\vec x) = (x_2, -x_1)^T\)</span> be a linear transformation, and let <span class="math">\(\mathcal{U} = \{\hat{u}^{(1)}, \hat{u}^{(2)}\}\)</span> be an orthonormal basis for <span class="math">\(\mathbb{R}^2\)</span> with:</p>
+<div class="math">\[\hat{u}^{(1)} = \left(\frac{3}{5}, \frac{4}{5}\right)^T, \quad\hat{u}^{(2)} = \left(-\frac{4}{5}, \frac{3}{5}\right)^T
+    \]</div>
+<p>Express the transformation <span class="math">\(\vec f\)</span> in the basis <span class="math">\(\mathcal{U}\)</span>. That is, if <span class="math">\([\vec x]_{\mathcal{U}} = (z_1, z_2)^T\)</span>, find <span class="math">\([\vec f(\vec x)]_{\mathcal{U}}\)</span> in terms of <span class="math">\(z_1\)</span> and <span class="math">\(z_2\)</span>.</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\([\vec f(\vec x)]_{\mathcal{U}} = (z_2, -z_1)^T
+        \)</span>.</p>
+<p>To express <span class="math">\(\vec f\)</span> in the basis <span class="math">\(\mathcal{U}\)</span>, we first need to find what <span class="math">\(\vec f\)</span> does to the basis vectors <span class="math">\(\hat{u}^{(1)}\)</span> and <span class="math">\(\hat{u}^{(2)}\)</span>, then express the results in the <span class="math">\(\mathcal{U}\)</span> basis.</p>
+<p>To start, we compute <span class="math">\(\vec f(\hat{u}^{(1)})\)</span> and <span class="math">\(\vec f(\hat{u}^{(2)})\)</span>.</p>
+<div class="math">$$\begin{align*}\vec f(\hat{u}^{(1)}) &= \vec f\left(\frac{3}{5}, \frac{4}{5}\right)^T = \left(\frac{4}{5}, -\frac{3}{5}\right)^T \\\vec f(\hat{u}^{(2)}) &= \vec f\left(-\frac{4}{5}, \frac{3}{5}\right)^T = \left(\frac{3}{5}, \frac{4}{5}\right)^T
+        \end{align*}$$</div>
+<p>However, notice that this is <span class="math">\(\vec f(\hat{u}^{(1)})\)</span> and <span class="math">\(\vec f(\hat{u}^{(2)})\)</span> expressed in the <i>standard</i> basis. Therefore, we need to do a change of basis to express these vectors in the <span class="math">\(\mathcal{U}\)</span> basis. We do the change of basis just like we would for any vector: by dotting with each basis vector. That is:</p>
+<div class="math">\[[\vec f(\hat{u}^{(1)})]_{\mathcal{U}} = \begin{pmatrix}
+                \vec f(\hat{u}^{(1)}) \cdot \hat{u}^{(1)} \\
+                \vec f(\hat{u}^{(1)}) \cdot \hat{u}^{(2)}
+            \end{pmatrix}, \quad[\vec f(\hat{u}^{(2)})]_{\mathcal{U}} = \begin{pmatrix}
+                \vec f(\hat{u}^{(2)}) \cdot \hat{u}^{(1)} \\
+                \vec f(\hat{u}^{(2)}) \cdot \hat{u}^{(2)}
+            \end{pmatrix}\]</div>
+<p>We need to calculate all of these dot products:</p>
+<div class="math">$$\begin{align*}\vec f(\hat{u}^{(1)}) \cdot\hat{u}^{(1)}&= \left(\frac{4}{5}, -\frac{3}{5}\right)^T \cdot\left(\frac{3}{5}, \frac{4}{5}\right)^T 
+                                                      = \frac{12}{25} - \frac{12}{25} = 0 \\\vec f(\hat{u}^{(1)}) \cdot\hat{u}^{(2)}&= \left(\frac{4}{5}, -\frac{3}{5}\right)^T \cdot\left(-\frac{4}{5}, \frac{3}{5}\right)^T
+                                                        = -\frac{16}{25} - \frac{9}{25} = -1 \\\vec f(\hat{u}^{(2)}) \cdot\hat{u}^{(1)}&= \left(\frac{3}{5}, \frac{4}{5}\right)^T \cdot\left(\frac{3}{5}, \frac{4}{5}\right)^T
+                                                      = \frac{9}{25} + \frac{16}{25} = 1 \\\vec f(\hat{u}^{(2)}) \cdot\hat{u}^{(2)}&= \left(\frac{3}{5}, \frac{4}{5}\right)^T \cdot\left(-\frac{4}{5}, \frac{3}{5}\right)^T
+                                                        = -\frac{12}{25} + \frac{12}{25} = 0
+        \end{align*}$$</div>
+<p>Therefore, we have:</p>
+<div class="math">\[[\vec f(\hat{u}^{(1)})]_{\mathcal{U}} = \begin{pmatrix} 0 \\ -1 \end{pmatrix}, \quad[\vec f(\hat{u}^{(2)})]_{\mathcal{U}} = \begin{pmatrix} 1 \\ 0 \end{pmatrix}\]</div>
+<p>Finally, since <span class="math">\(\vec f\)</span> is linear, we can express <span class="math">\(\vec f(\vec x)\)</span> in the <span class="math">\(\mathcal{U}\)</span> basis as:</p>
+<div class="math">$$\begin{align*}[\vec f(\vec x)]_{\mathcal{U}}&= z_1 [\vec f(\hat{u}^{(1)})]_{\mathcal{U}} + z_2 [\vec f(\hat{u}^{(2)})]_{\mathcal{U}}\\&= z_1 \begin{pmatrix} 0 \\ -1 \end{pmatrix} + z_2 \begin{pmatrix} 1 \\ 0 \end{pmatrix}\\&= \begin{pmatrix} z_2 \\ -z_1 \end{pmatrix}\end{align*}$$</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #018</h2>
+        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/linear transformations.html'>linear transformations</a>, <a href='../tags/quiz-02.html'>quiz-02</a>, <a href='../tags/lecture-03.html'>lecture-03</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(\vec f(\vec x) = (x_1, -x_2, x_3)^T\)</span> be a linear transformation, and let <span class="math">\(\mathcal{U} = \{\hat{u}^{(1)}, \hat{u}^{(2)}, \hat{u}^{(3)}\}\)</span> be an orthonormal basis for <span class="math">\(\mathbb{R}^3\)</span> with:</p>
+<div class="math">\[\hat{u}^{(1)} = \frac{1}{\sqrt{2}}(1, 1, 0)^T, \quad\hat{u}^{(2)} = \frac{1}{\sqrt{2}}(-1, 1, 0)^T, \quad\hat{u}^{(3)} = (0, 0, 1)^T
+    \]</div>
+<p>Express the transformation <span class="math">\(\vec f\)</span> in the basis <span class="math">\(\mathcal{U}\)</span>. That is, if <span class="math">\([\vec x]_{\mathcal{U}} = (z_1, z_2, z_3)^T\)</span>, find <span class="math">\([\vec f(\vec x)]_{\mathcal{U}}\)</span> in terms of <span class="math">\(z_1\)</span>, <span class="math">\(z_2\)</span>, and <span class="math">\(z_3\)</span>.</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\([\vec f(\vec x)]_{\mathcal{U}} = (-z_2, -z_1, z_3)^T
+        \)</span>.</p>
+<p>To express <span class="math">\(\vec f\)</span> in the basis <span class="math">\(\mathcal{U}\)</span>, we first need to find what <span class="math">\(\vec f\)</span> does to the basis vectors <span class="math">\(\hat{u}^{(1)}\)</span>, <span class="math">\(\hat{u}^{(2)}\)</span>, and <span class="math">\(\hat{u}^{(3)}\)</span>, then express the results in the <span class="math">\(\mathcal{U}\)</span> basis.</p>
+<p>To start, we compute <span class="math">\(\vec f(\hat{u}^{(1)})\)</span>, <span class="math">\(\vec f(\hat{u}^{(2)})\)</span>, and <span class="math">\(\vec f(\hat{u}^{(3)})\)</span>.</p>
+<div class="math">$$\begin{align*}\vec f(\hat{u}^{(1)}) &= \vec f\left(\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}, 0\right)^T = \left(\frac{1}{\sqrt{2}}, -\frac{1}{\sqrt{2}}, 0\right)^T \\\vec f(\hat{u}^{(2)}) &= \vec f\left(-\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}, 0\right)^T = \left(-\frac{1}{\sqrt{2}}, -\frac{1}{\sqrt{2}}, 0\right)^T \\\vec f(\hat{u}^{(3)}) &= \vec f(0, 0, 1)^T = (0, 0, 1)^T
+        \end{align*}$$</div>
+<p>However, notice that these are expressed in the <i>standard</i> basis. Therefore, we need to do a change of basis to express these vectors in the <span class="math">\(\mathcal{U}\)</span> basis. We do the change of basis just like we would for any vector: by dotting with each basis vector. That is:</p>
+<div class="math">\[[\vec f(\hat{u}^{(i)})]_{\mathcal{U}} = \begin{pmatrix}
+                \vec f(\hat{u}^{(i)}) \cdot \hat{u}^{(1)} \\
+                \vec f(\hat{u}^{(i)}) \cdot \hat{u}^{(2)} \\
+                \vec f(\hat{u}^{(i)}) \cdot \hat{u}^{(3)}
+            \end{pmatrix}\]</div>
+<p>We calculate the dot products for <span class="math">\(\vec f(\hat{u}^{(1)})\)</span>:</p>
+<div class="math">$$\begin{align*}\vec f(\hat{u}^{(1)}) \cdot\hat{u}^{(1)}&= \left(\frac{1}{\sqrt{2}}, -\frac{1}{\sqrt{2}}, 0\right)\cdot\frac{1}{\sqrt{2}}(1, 1, 0)
+                                                      = \frac{1}{2}(1 - 1) = 0 \\\vec f(\hat{u}^{(1)}) \cdot\hat{u}^{(2)}&= \left(\frac{1}{\sqrt{2}}, -\frac{1}{\sqrt{2}}, 0\right)\cdot\frac{1}{\sqrt{2}}(-1, 1, 0)
+                                                      = \frac{1}{2}(-1 - 1) = -1 \\\vec f(\hat{u}^{(1)}) \cdot\hat{u}^{(3)}&= \left(\frac{1}{\sqrt{2}}, -\frac{1}{\sqrt{2}}, 0\right)\cdot(0, 0, 1) = 0
+        \end{align*}$$</div>
+<p>We calculate the dot products for <span class="math">\(\vec f(\hat{u}^{(2)})\)</span>:</p>
+<div class="math">$$\begin{align*}\vec f(\hat{u}^{(2)}) \cdot\hat{u}^{(1)}&= \left(-\frac{1}{\sqrt{2}}, -\frac{1}{\sqrt{2}}, 0\right)\cdot\frac{1}{\sqrt{2}}(1, 1, 0)
+                                                      = \frac{1}{2}(-1 - 1) = -1 \\\vec f(\hat{u}^{(2)}) \cdot\hat{u}^{(2)}&= \left(-\frac{1}{\sqrt{2}}, -\frac{1}{\sqrt{2}}, 0\right)\cdot\frac{1}{\sqrt{2}}(-1, 1, 0)
+                                                      = \frac{1}{2}(1 - 1) = 0 \\\vec f(\hat{u}^{(2)}) \cdot\hat{u}^{(3)}&= \left(-\frac{1}{\sqrt{2}}, -\frac{1}{\sqrt{2}}, 0\right)\cdot(0, 0, 1) = 0
+        \end{align*}$$</div>
+<p>For <span class="math">\(\vec f(\hat{u}^{(3)})\)</span>, we note that <span class="math">\(\vec f(\hat{u}^{(3)}) = (0, 0, 1)^T = \hat{u}^{(3)}\)</span>, so:</p>
+<div class="math">\[[\vec f(\hat{u}^{(3)})]_{\mathcal{U}} = (0, 0, 1)^T
+        \]</div>
+<p>Therefore, we have:</p>
+<div class="math">\[[\vec f(\hat{u}^{(1)})]_{\mathcal{U}} = \begin{pmatrix} 0 \\ -1 \\ 0 \end{pmatrix}, \quad[\vec f(\hat{u}^{(2)})]_{\mathcal{U}} = \begin{pmatrix} -1 \\ 0 \\ 0 \end{pmatrix}, \quad[\vec f(\hat{u}^{(3)})]_{\mathcal{U}} = \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}\]</div>
+<p>Finally, since <span class="math">\(\vec f\)</span> is linear, we can express <span class="math">\(\vec f(\vec x)\)</span> in the <span class="math">\(\mathcal{U}\)</span> basis as:</p>
+<div class="math">$$\begin{align*}[\vec f(\vec x)]_{\mathcal{U}}&= z_1 [\vec f(\hat{u}^{(1)})]_{\mathcal{U}} + z_2 [\vec f(\hat{u}^{(2)})]_{\mathcal{U}} + z_3 [\vec f(\hat{u}^{(3)})]_{\mathcal{U}}\\&= z_1 \begin{pmatrix} 0 \\ -1 \\ 0 \end{pmatrix} + z_2 \begin{pmatrix} -1 \\ 0 \\ 0 \end{pmatrix} + z_3 \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}\\&= \begin{pmatrix} -z_2 \\ -z_1 \\ z_3 \end{pmatrix}\end{align*}$$</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #019</h2>
+        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/linear transformations.html'>linear transformations</a>, <a href='../tags/quiz-02.html'>quiz-02</a>, <a href='../tags/lecture-03.html'>lecture-03</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(\vec f(\vec x) = (x_2, x_1)^T\)</span> be a linear transformation, and let <span class="math">\(\mathcal{U} = \{\hat{u}^{(1)}, \hat{u}^{(2)}\}\)</span> be an orthonormal basis for <span class="math">\(\mathbb{R}^2\)</span> with:</p>
+<div class="math">\[\hat{u}^{(1)} = \frac{1}{\sqrt{2}}(1, 1)^T, \quad\hat{u}^{(2)} = \frac{1}{\sqrt{2}}(1, -1)^T
+    \]</div>
+<p>Express the transformation <span class="math">\(\vec f\)</span> in the basis <span class="math">\(\mathcal{U}\)</span>. That is, if <span class="math">\([\vec x]_{\mathcal{U}} = (z_1, z_2)^T\)</span>, find <span class="math">\([\vec f(\vec x)]_{\mathcal{U}}\)</span> in terms of <span class="math">\(z_1\)</span> and <span class="math">\(z_2\)</span>.</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\([\vec f(\vec x)]_{\mathcal{U}} = (z_1, -z_2)^T
+        \)</span>.</p>
+<p>To express <span class="math">\(\vec f\)</span> in the basis <span class="math">\(\mathcal{U}\)</span>, we first compute what <span class="math">\(\vec f\)</span> does to the basis vectors <span class="math">\(\hat{u}^{(1)}\)</span> and <span class="math">\(\hat{u}^{(2)}\)</span>.</p>
+<div class="math">$$\begin{align*}\vec f(\hat{u}^{(1)}) &= \vec f\left(\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}\right)^T
+            = \left(\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}\right)^T
+            \vec f(\hat{u}^{(2)}) &= \vec f\left(\frac{1}{\sqrt{2}}, -\frac{1}{\sqrt{2}}\right)^T
+            = \left(-\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}\right)^T
+        \end{align*}$$</div>
+<p>Now, these results are expressed in the standard basis, and we need to convert them to the <span class="math">\(\mathcal{U}\)</span> basis. In principle, we could do this by dotting with each basis vector, but we can also notice that:</p>
+<div class="math">\[\vec f(\hat{u}^{(1)}) = \hat{u}^{(1)}, \quad\vec f(\hat{u}^{(2)}) = -\hat{u}^{(2)}\]</div>
+<p>This means we can immediately write:</p>
+<div class="math">\[[\vec f(\hat{u}^{(1)})]_{\mathcal{U}} = (1, 0)^T, \quad[\vec f(\hat{u}^{(2)})]_{\mathcal{U}} = (0, -1)^T
+        \]</div>
+<p>Finally, since <span class="math">\(\vec f\)</span> is linear:</p>
+<div class="math">$$\begin{align*}[\vec f(\vec x)]_{\mathcal{U}}&= z_1 [\vec f(\hat{u}^{(1)})]_{\mathcal{U}} + z_2 [\vec f(\hat{u}^{(2)})]_{\mathcal{U}}\\&= z_1 (1, 0)^T + z_2 (0, -1)^T \\&= (z_1, -z_2)^T
+        \end{align*}$$</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #020</h2>
+        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/linear transformations.html'>linear transformations</a>, <a href='../tags/quiz-02.html'>quiz-02</a>, <a href='../tags/lecture-03.html'>lecture-03</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Suppose <span class="math">\(\vec f\)</span> is a linear transformation with:</p>
+<div class="math">\[\vec f(\hat{e}^{(1)}) = \begin{pmatrix} 3 \\ -1 \end{pmatrix}, \quad\vec f(\hat{e}^{(2)}) = \begin{pmatrix} 2 \\ 4 \end{pmatrix}\]</div>
+<p>Write the matrix <span class="math">\(A\)</span> that represents <span class="math">\(\vec f\)</span> with respect to the standard basis.</p>
+<details>
+    <summary>Solution</summary>
+<div class="math">\[
+            A = \begin{pmatrix} 3 & 2 \\ -1 & 4 \end{pmatrix}\]</div>
+<p>To make the matrix representing the linear transformation <span class="math">\(\vec f\)</span> with respect to the standard basis, we simply place <span class="math">\(f(\hat{e}^{(1)})\)</span> and <span class="math">\(\vec f(\hat{e}^{(2)})\)</span> as the first and second columns of the matrix, respectively. That is:</p>
+<div class="math">\[
+            A = \begin{pmatrix}
+                \uparrow & \uparrow \\
+                \vec f(\hat{e}^{(1)}) & \vec f(\hat{e}^{(2)}) \\
+                \downarrow & \downarrow
+            \end{pmatrix}
+            = \begin{pmatrix} 3 & 2 \\ -1 & 4 \end{pmatrix}\]</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #021</h2>
+        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/linear transformations.html'>linear transformations</a>, <a href='../tags/quiz-02.html'>quiz-02</a>, <a href='../tags/lecture-03.html'>lecture-03</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Suppose <span class="math">\(\vec f\)</span> is a linear transformation with:</p>
+<div class="math">\[\vec f(\hat{e}^{(1)}) = \begin{pmatrix} 2 \\ 0 \\ -1 \end{pmatrix}, \quad\vec f(\hat{e}^{(2)}) = \begin{pmatrix} 1 \\ 3 \\ 0 \end{pmatrix}, \quad\vec f(\hat{e}^{(3)}) = \begin{pmatrix} -1 \\ 2 \\ 4 \end{pmatrix}\]</div>
+<p>Write the matrix <span class="math">\(A\)</span> that represents <span class="math">\(\vec f\)</span> with respect to the standard basis.</p>
+<details>
+    <summary>Solution</summary>
+<div class="math">\[
+            A = \begin{pmatrix} 2 & 1 & -1 \\ 0 & 3 & 2 \\ -1 & 0 & 4 \end{pmatrix}\]</div>
+<p>To make the matrix representing the linear transformation <span class="math">\(\vec f\)</span> with respect to the standard basis, we simply place <span class="math">\(\vec f(\hat{e}^{(1)})\)</span>, <span class="math">\(\vec f(\hat{e}^{(2)})\)</span>, and <span class="math">\(\vec f(\hat{e}^{(3)})\)</span> as the columns of the matrix. That is:</p>
+<div class="math">\[
+            A = \begin{pmatrix}
+                \uparrow & \uparrow & \uparrow \\
+                \vec f(\hat{e}^{(1)}) & \vec f(\hat{e}^{(2)}) & \vec f(\hat{e}^{(3)}) \\
+                \downarrow & \downarrow & \downarrow
+            \end{pmatrix}
+            = \begin{pmatrix} 2 & 1 & -1 \\ 0 & 3 & 2 \\ -1 & 0 & 4 \end{pmatrix}\]</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #022</h2>
+        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/linear transformations.html'>linear transformations</a>, <a href='../tags/quiz-02.html'>quiz-02</a>, <a href='../tags/lecture-03.html'>lecture-03</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider the linear transformation <span class="math">\(\vec f : \mathbb{R}^3 \to\mathbb{R}^3\)</span> that takes in a vector <span class="math">\(\vec x\)</span> and simply outputs that same vector. That is, <span class="math">\(\vec f(\vec x) = \vec x\)</span> for all <span class="math">\(\vec x\)</span>.</p>
+<p>What is the matrix <span class="math">\(A\)</span> that represents <span class="math">\(\vec f\)</span> with respect to the standard basis?</p>
+<details>
+    <summary>Solution</summary>
+<div class="math">\[
+            A = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix}\]</div>
+<p>You probably could have written down the answer immediately, since this is a very well-known transformation called the <i>identity transformation</i> and the matrix is the <i>identity matrix</i>. But here's why the identity matrix is what it is:</p>
+<p>To find the matrix, we need to determine what <span class="math">\(\vec f\)</span> does to each basis vector:</p>
+<div class="math">$$\begin{align*}\vec f(\hat{e}^{(1)}) &= \hat{e}^{(1)} = (1, 0, 0)^T \\\vec f(\hat{e}^{(2)}) &= \hat{e}^{(2)} = (0, 1, 0)^T \\\vec f(\hat{e}^{(3)}) &= \hat{e}^{(3)} = (0, 0, 1)^T
+        \end{align*}$$</div>
+<p>Placing these as columns:</p>
+<div class="math">\[
+            A = \begin{pmatrix}
+                \uparrow & \uparrow & \uparrow \\
+                \vec f(\hat{e}^{(1)}) & \vec f(\hat{e}^{(2)}) & \vec f(\hat{e}^{(3)}) \\
+                \downarrow & \downarrow & \downarrow
+            \end{pmatrix}
+            = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix}\]</div>
+<p>That is the identity matrix we were expecting.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #023</h2>
+        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/linear transformations.html'>linear transformations</a>, <a href='../tags/quiz-02.html'>quiz-02</a>, <a href='../tags/lecture-03.html'>lecture-03</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Suppose <span class="math">\(\vec f\)</span> is represented by the following matrix:</p>
+<div class="math">\[
+        A = \begin{pmatrix} 2 & -1 \\ 3 & 4 \end{pmatrix}\]</div>
+<p>Let <span class="math">\(\vec x = (5, 2)^T\)</span>. What is <span class="math">\(\vec f(\vec x)\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\vec f(\vec x) = (8, 23)^T\)</span>.</p>
+<p>Since the matrix <span class="math">\(A\)</span> represents <span class="math">\(\vec f\)</span>, we have <span class="math">\(\vec f(\vec x) = A \vec x\)</span>. We compute:</p>
+<div class="math">$$\begin{align*}\vec f(\vec x) = A \vec x &= \begin{pmatrix} 2 & -1 \\ 3 & 4 \end{pmatrix}\begin{pmatrix} 5 \\ 2 \end{pmatrix}\\&= 5 \begin{pmatrix} 2 \\ 3 \end{pmatrix} + 2 \begin{pmatrix} -1 \\ 4 \end{pmatrix}\\&= \begin{pmatrix} 10 \\ 15 \end{pmatrix} + \begin{pmatrix} -2 \\ 8 \end{pmatrix}\\&= \begin{pmatrix} 8 \\ 23 \end{pmatrix}\end{align*}$$</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #024</h2>
+        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/linear transformations.html'>linear transformations</a>, <a href='../tags/quiz-02.html'>quiz-02</a>, <a href='../tags/lecture-03.html'>lecture-03</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Suppose <span class="math">\(\vec f\)</span> is represented by the following matrix:</p>
+<div class="math">\[
+        A = \begin{pmatrix} 1 & 2 & 0 \\ 0 & 1 & 3 \\ 2 & 0 & 1 \end{pmatrix}\]</div>
+<p>Let <span class="math">\(\vec x = (2, 1, -1)^T\)</span>. What is <span class="math">\(\vec f(\vec x)\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\vec f(\vec x) = (4, -2, 3)^T\)</span>.</p>
+<p>Since the matrix <span class="math">\(A\)</span> represents <span class="math">\(\vec f\)</span>, we have <span class="math">\(\vec f(\vec x) = A \vec x\)</span>. We compute:</p>
+<div class="math">$$\begin{align*}\vec f(\vec x) = A \vec x &= \begin{pmatrix} 1 & 2 & 0 \\ 0 & 1 & 3 \\ 2 & 0 & 1 \end{pmatrix}\begin{pmatrix} 2 \\ 1 \\ -1 \end{pmatrix}\\&= 2 \begin{pmatrix} 1 \\ 0 \\ 2 \end{pmatrix} + 1 \begin{pmatrix} 2 \\ 1 \\ 0 \end{pmatrix} + (-1) \begin{pmatrix} 0 \\ 3 \\ 1 \end{pmatrix}\\&= \begin{pmatrix} 2 \\ 0 \\ 4 \end{pmatrix} + \begin{pmatrix} 2 \\ 1 \\ 0 \end{pmatrix} + \begin{pmatrix} 0 \\ -3 \\ -1 \end{pmatrix}\\&= \begin{pmatrix} 4 \\ -2 \\ 3 \end{pmatrix}\end{align*}$$</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #025</h2>
+        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/linear transformations.html'>linear transformations</a>, <a href='../tags/quiz-02.html'>quiz-02</a>, <a href='../tags/lecture-03.html'>lecture-03</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider the linear transformation <span class="math">\(\vec f : \mathbb{R}^2 \to\mathbb{R}^2\)</span> that rotates vectors by <span class="math">\(90^\circ\)</span> clockwise.</p>
+<p>Let <span class="math">\(\mathcal{U} = \{\hat{u}^{(1)}, \hat{u}^{(2)}\}\)</span> be an orthonormal basis with:</p>
+<div class="math">\[\hat{u}^{(1)} = \frac{1}{\sqrt{2}}(1, 1)^T, \quad\hat{u}^{(2)} = \frac{1}{\sqrt{2}}(1, -1)^T
+    \]</div>
+<p>What is the matrix <span class="math">\(A\)</span> that represents <span class="math">\(\vec f\)</span> with respect to the basis <span class="math">\(\mathcal{U}\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<div class="math">\[
+            A = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}\]</div>
+<p>Remember that the columns of this matrix are:</p>
+<div class="math">\[
+            A = \begin{pmatrix}
+                \uparrow & \uparrow  \\
+                \vec[f(\hat{u}^{(1)})]_{\mathcal{U}} & \vec[f(\hat{u}^{(2)})]_{\mathcal{U}} \\
+                \downarrow & \downarrow
+            \end{pmatrix}\]</div>
+<p>So we need to compute <span class="math">\(\vec f(\hat{u}^{(1)})\)</span> and <span class="math">\(\vec f(\hat{u}^{(2)})\)</span>, then express those results in the <span class="math">\(\mathcal{U}\)</span> basis.</p>
+<p>Let's start with <span class="math">\(\vec f(\hat{u}^{(1)})\)</span>. <span class="math">\(\vec f\)</span> takes the vector <span class="math">\(\hat{u}^{(1)} = \frac{1}{\sqrt{2}}(1, 1)^T\)</span>, which points up and to the right at a <span class="math">\(45^\circ\)</span> angle, and rotates it <span class="math">\(90^\circ\)</span> clockwise, resulting in the vector <span class="math">\(\frac{1}{\sqrt{2}}(1, -1)^T = \hat{u}^{(2)}\)</span>(that is, the unit vector pointing down and to the right at a <span class="math">\(45^\circ\)</span> angle). As it so happens, this is exactly the second basis vector. That is, <span class="math">\(\vec f(\hat{u}^{(1)}) = \hat{u}^{(2)}\)</span>.</p>
+<p>Now for <span class="math">\(\vec f(\hat{u}^{(2)})\)</span>. <span class="math">\(\vec f\)</span> takes the vector <span class="math">\(\hat{u}^{(2)} = \frac{1}{\sqrt{2}}(1, -1)^T\)</span>, which points down and to the right at a <span class="math">\(45^\circ\)</span> angle, and rotates it <span class="math">\(90^\circ\)</span> clockwise, resulting in the vector <span class="math">\(\frac{1}{\sqrt{2}}(-1, -1)^T\)</span>. This isn't <span class="math">\(\vec f(\hat{u}^{(1)})\)</span>, exactly, but it is <span class="math">\(-1\)</span> times <span class="math">\(\hat{u}^{(1)}\)</span>. That is, <span class="math">\(\vec f(\hat{u}^{(2)}) = -\hat{u}^{(1)}\)</span>.</p>
+<p>What we have found is:</p>
+<div class="math">$$\begin{align*}[\vec f(\hat{u}^{(1)})]_{\mathcal{U}}&= [\hat{u}^{(2)}]_{\mathcal{U}} = (0, 1)^T \\{}[\vec f(\hat{u}^{(2)})]_{\mathcal{U}}&= [-\hat{u}^{(1)}]_{\mathcal{U}} = (-1, 0)^T
+        \end{align*}$$</div>
+<p>Therefore, the matrix is:</p>
+<div class="math">\[
+            A = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}\]</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #026</h2>
+        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/linear transformations.html'>linear transformations</a>, <a href='../tags/quiz-02.html'>quiz-02</a>, <a href='../tags/lecture-03.html'>lecture-03</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider the linear transformation <span class="math">\(\vec f : \mathbb{R}^2 \to\mathbb{R}^2\)</span> that reflects vectors over the <span class="math">\(x\)</span>-axis.</p>
+<p>Let <span class="math">\(\mathcal{U} = \{\hat{u}^{(1)}, \hat{u}^{(2)}\}\)</span> be an orthonormal basis with:</p>
+<div class="math">\[\hat{u}^{(1)} = \frac{1}{\sqrt{2}}(1, 1)^T, \quad\hat{u}^{(2)} = \frac{1}{\sqrt{2}}(1, -1)^T
+    \]</div>
+<p>What is the matrix <span class="math">\(A\)</span> that represents <span class="math">\(\vec f\)</span> with respect to the basis <span class="math">\(\mathcal{U}\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<div class="math">\[
+            A = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}\]</div>
+<p>Remember that the columns of this matrix are:</p>
+<div class="math">\[
+            A = \begin{pmatrix}
+                \uparrow & \uparrow  \\
+                [\vec f(\hat{u}^{(1)})]_{\mathcal{U}} & [\vec f(\hat{u}^{(2)})]_{\mathcal{U}} \\
+                \downarrow & \downarrow
+            \end{pmatrix}\]</div>
+<p>So we need to compute <span class="math">\(\vec f(\hat{u}^{(1)})\)</span> and <span class="math">\(\vec f(\hat{u}^{(2)})\)</span>, then express those results in the <span class="math">\(\mathcal{U}\)</span> basis.</p>
+<p>Let's start with <span class="math">\(\vec f(\hat{u}^{(1)})\)</span>. <span class="math">\(\vec f\)</span> takes the vector <span class="math">\(\hat{u}^{(1)} = \frac{1}{\sqrt{2}}(1, 1)^T\)</span>, which points up and to the right at a <span class="math">\(45^\circ\)</span> angle, and reflects it over the <span class="math">\(x\)</span>-axis, resulting in the vector <span class="math">\(\frac{1}{\sqrt{2}}(1, -1)^T = \hat{u}^{(2)}\)</span>(the unit vector pointing down and to the right at a <span class="math">\(45^\circ\)</span> angle). That is, <span class="math">\(\vec f(\hat{u}^{(1)}) = \hat{u}^{(2)}\)</span>.</p>
+<p>Now for <span class="math">\(\vec f(\hat{u}^{(2)})\)</span>. <span class="math">\(\vec f\)</span> takes the vector <span class="math">\(\hat{u}^{(2)} = \frac{1}{\sqrt{2}}(1, -1)^T\)</span>, which points down and to the right at a <span class="math">\(45^\circ\)</span> angle, and reflects it over the <span class="math">\(x\)</span>-axis, resulting in the vector <span class="math">\(\frac{1}{\sqrt{2}}(1, 1)^T = \hat{u}^{(1)}\)</span>. That is, <span class="math">\(\vec f(\hat{u}^{(2)}) = \hat{u}^{(1)}\)</span>.</p>
+<p>What we have found is:</p>
+<div class="math">$$\begin{align*}[\vec f(\hat{u}^{(1)})]_{\mathcal{U}}&= [\hat{u}^{(2)}]_{\mathcal{U}} = (0, 1)^T \\{}[\vec f(\hat{u}^{(2)})]_{\mathcal{U}}&= [\hat{u}^{(1)}]_{\mathcal{U}} = (1, 0)^T
+        \end{align*}$$</div>
+<p>Therefore, the matrix is:</p>
+<div class="math">\[
+            A = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}\]</div>
 </details>
 
     </div>
