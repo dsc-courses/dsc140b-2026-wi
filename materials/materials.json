@@ -38,6 +38,14 @@
                             "path": "materials/quizzes/01-math_review/solution.pdf"
                         }
                     }
+                },
+                "02-linear_transformations": {
+                    "metadata": {
+                        "date": "2026-01-15",
+                        "topic": "Linear Transformations",
+                        "number": 2
+                    },
+                    "artifacts": {}
                 }
             }
         },
