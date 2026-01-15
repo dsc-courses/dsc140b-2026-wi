@@ -299,7 +299,11 @@
                         "topic": "Eigenvectors",
                         "number": 2
                     },
-                    "artifacts": {}
+                    "artifacts": {
+                        "homework.pdf": {
+                            "path": "materials/homeworks/02-matrices_and_eigenvectors/homework.pdf"
+                        }
+                    }
                 },
                 "03-pca-I": {
                     "metadata": {
