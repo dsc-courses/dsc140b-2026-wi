@@ -136,7 +136,7 @@ Live Q&A
 
     <div class="prose dark:prose-invert">
     <!DOCTYPE html> <html> <head> <meta
-                          charset="utf-8"> <title>Practice Problems</title>
+                          charset="utf-8"> <title>Problems tagged with quadratic forms</title>
 
            <!-- MathJax -->
            <script type="text/x-mathjax-config">
@@ -167,53 +167,70 @@ Live Q&A
 
        </head>
        <body>
-           <div>
-<h1>Practice Problems</h1>
+           
+<h1>Problems tagged with "quadratic forms"</h1>
 
 
-<div class="tagset">
-    <h2>Midterm 01</h2>
-    <p>Practice problems for topics on Midterm 01.</p>
-    <p>
-        <a href="./midterm-01.html">See all problems in this set</a>, or
-        choose a tag below to view only those problems.
-    </p>
-<ul>
-<li><a href='./tags/linear algebra.html'>linear algebra</a></li>
-<li><a href='./tags/linear transformations.html'>linear transformations</a></li>
-</ul>
-</div>
-
-
-<div class="tagset">
-    <h2>Quiz 02</h2>
-    <p>Practice problems for topics on Quiz 02.</p>
-    <p>
-        <a href="./quiz-02.html">See all problems in this set</a>, or
-        choose a tag below to view only those problems.
-    </p>
-<ul>
-<li><a href='./tags/lecture-02.html'>lecture-02</a></li>
-<li><a href='./tags/lecture-03.html'>lecture-03</a></li>
-<li><a href='./tags/quiz-02.html'>quiz-02</a></li>
-</ul>
-</div>
-
-
-<div class="tagset">
-    <h2>Quiz 03</h2>
-    <p>Practice problems for topics on Quiz 03.</p>
-    <p>
-        <a href="./quiz-03.html">See all problems in this set</a>, or
-        choose a tag below to view only those problems.
-    </p>
-<ul>
-<li><a href='./tags/lecture-04.html'>lecture-04</a></li>
-<li><a href='./tags/quiz-03.html'>quiz-03</a></li>
-</ul>
-</div>
+        <div class="problem-outer">
+        <h2>Problem #48</h2>
+        <p>Tags: <a href='../tags/optimization.html'>optimization</a>, <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/quiz-03.html'>quiz-03</a>, <a href='../tags/eigenvalues.html'>eigenvalues</a>, <a href='../tags/eigenvectors.html'>eigenvectors</a>, <a href='../tags/quadratic forms.html'>quadratic forms</a>, <a href='../tags/lecture-04.html'>lecture-04</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(A\)</span> be a <span class="math">\(3 \times 3\)</span> symmetric matrix with the following eigenvectors and corresponding eigenvalues: <span class="math">\(\vec{u}^{(1)} = \frac{1}{3}(1, 2, 2)^T\)</span> has eigenvalue <span class="math">\(4\)</span>, <span class="math">\(\vec{u}^{(2)} = \frac{1}{3}(2, 1, -2)^T\)</span> has eigenvalue <span class="math">\(1\)</span>, and <span class="math">\(\vec{u}^{(3)} = \frac{1}{3}(2, -2, 1)^T\)</span> has eigenvalue <span class="math">\(-10\)</span>.</p>
+<p>Consider the quadratic form <span class="math">\(\vec{x}\cdot A\vec{x}\)</span>.</p>
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 1)</h3>
+<p>What unit vector <span class="math">\(\vec{x}\)</span> maximizes <span class="math">\(\vec{x}\cdot A\vec{x}\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\vec{u}^{(1)} = \frac{1}{3}(1, 2, 2)^T\)</span> The quadratic form <span class="math">\(\vec{x}\cdot A\vec{x}\)</span> is maximized by the eigenvector with the largest eigenvalue. Among <span class="math">\(4\)</span>, <span class="math">\(1\)</span>, and <span class="math">\(-10\)</span>, the largest is <span class="math">\(4\)</span>, so the maximizer is <span class="math">\(\vec{u}^{(1)}\)</span>.</p>
+</details>
 
 </div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 2)</h3>
+<p>What is the maximum value of <span class="math">\(\vec{x}\cdot A\vec{x}\)</span> over all unit vectors?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(4\)</span> The maximum value equals the largest eigenvalue. We can verify:</p>
+<div class="math">\[\vec{u}^{(1)}\cdot A\vec{u}^{(1)} = \vec{u}^{(1)}\cdot(4\vec{u}^{(1)})
+                    = 4(\vec{u}^{(1)}\cdot\vec{u}^{(1)}) = 4 \cdot 1 = 4
+                \]</div>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 3)</h3>
+<p>What unit vector <span class="math">\(\vec{x}\)</span> minimizes <span class="math">\(\vec{x}\cdot A\vec{x}\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\vec{u}^{(3)} = \frac{1}{3}(2, -2, 1)^T\)</span> The quadratic form is minimized by the eigenvector with the smallest eigenvalue. Among <span class="math">\(4\)</span>, <span class="math">\(1\)</span>, and <span class="math">\(-10\)</span>, the smallest is <span class="math">\(-10\)</span>, so the minimizer is <span class="math">\(\vec{u}^{(3)}\)</span>.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 4)</h3>
+<p>What is the minimum value of <span class="math">\(\vec{x}\cdot A\vec{x}\)</span> over all unit vectors?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(-10\)</span> The minimum value equals the smallest eigenvalue. We can verify:</p>
+<div class="math">\[\vec{u}^{(3)}\cdot A\vec{u}^{(3)} = \vec{u}^{(3)}\cdot(-10\vec{u}^{(3)})
+                    = -10(\vec{u}^{(3)}\cdot\vec{u}^{(3)}) = -10 \cdot 1 = -10
+                \]</div>
+</details>
+
+</div>
+
+    </div>
+</div>
+
+        </div>
+
+
+
        </body>
    </html>
     </div>

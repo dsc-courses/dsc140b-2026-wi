@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head data-automata-theme="default">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>DSC 140B</title>
+    <link href="/static/style.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+
+    <!-- Mobile menu button -->
+<div class="mobile-navbar lg:hidden fixed top-0 left-0 right-0 bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 z-50 flex items-center">
+    <button id="mobile-menu-button" class="py-5 pl-4 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
+        <i data-lucide="menu" class="w-6 h-5"></i>
+    </button>
+    <span class="ml-2 font-semibold">DSC 140B</span>
+</div>
+
+    <div class="flex min-h-screen">
+        <!-- Left Navigation Column -->
+        <nav id="sidebar" class="
+    w-64 flex-none
+    fixed lg:sticky
+    top-0 left-0 h-screen
+    transform -translate-x-full lg:translate-x-0 transition-transform duration-200 ease-in-out
+    bg-gray-50 dark:bg-gray-900
+    z-40
+    sidebar-mobile-spacing lg:pt-6
+    flex flex-col items-end
+    border-r lg:border-r-0 border-gray-200 dark:border-gray-700
+    ">
+
+    <div class="pt-6 pr-6 flex">
+        <ul class="space-y-2">
+            
+            <li>
+                <a href="/index.html" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="home" class="mr-2 text-slate-400"></i>
+Home
+                </a>
+            </li>
+            
+            <li>
+                <a href="/syllabus.html" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="scale" class="mr-2 text-slate-400"></i>
+Syllabus
+                </a>
+            </li>
+            
+            <li>
+                <a href="/office_hours.html" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="briefcase-business" class="mr-2 text-slate-400"></i>
+Office Hours
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://campuswire.com/p/G7C157AD2" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="message-circle-more" class="mr-2 text-slate-400"></i>
+Campuswire
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://www.gradescope.com/courses/1212103" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="spell-check" class="mr-2 text-slate-400"></i>
+Gradescope
+                </a>
+            </li>
+            
+            <li>
+                <a href="/practice/index.html" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="dumbbell" class="mr-2 text-slate-400"></i>
+Practice
+                </a>
+            </li>
+            
+            <li>
+                <a href="http://sierra.ucsd.edu/qa/dsc140b" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="message-circle-question-mark" class="mr-2 text-slate-400"></i>
+Live Q&A
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <div class="flex mr-9 pt-3 pb-6">
+        <button id="theme-toggle" class="inline-flex items-center px-3 py-1.5 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded-full transition-colors">
+            <span id="theme-icon" class="mr-1.5">☾</span>
+            <span id="theme-text">Dark</span>
+        </button>
+    </div>
+</nav>
+
+<!-- Overlay for mobile -->
+<div id="overlay" class="fixed inset-0 bg-gray-200/40 dark:bg-black/50 backdrop-blur-[2px] z-30 hidden"></div>
+
+        <!-- Main Content Column -->
+        
+<!-- Main Content Column -->
+<div class="
+    w-full
+    bg-white dark:bg-gray-800
+    md:border-l
+    border-gray-200 dark:border-gray-700
+    md:min-w-180
+    px-4 md:px-12
+    pt-20 lg:pt-12
+    pb-24
+    ">
+
+    <div class="
+    text-xl font-semibold
+    left-12 right-12
+    py-4 lg:pt-0 lg:pb-0 lg:mb-10
+    lg:static
+    truncate
+    flex
+    ">
+    <div class="
+        shrink
+        lg:border-b border-gray-200 dark:border-gray-700
+        ">
+        <span class="hidden lg:inline">
+            DSC 140B
+            &ndash;
+            Representation Learning
+        </span>
+    </div>
+</div>
+
+    <div class="prose dark:prose-invert">
+    <!DOCTYPE html> <html> <head> <meta
+                          charset="utf-8"> <title>Problems tagged with eigenvalues</title>
+
+           <!-- MathJax -->
+           <script type="text/x-mathjax-config">
+             MathJax.Hub.Config({
+               tex: {
+                 inlineMath: [ ['$$','$$'], ["\\(","\\)"] ],
+                 displayMath: [             // start/end delimiter pairs for display math
+                     ['\\[', '\\]']
+                 ],
+                 processEscapes: true
+               }
+           });
+           </script>
+
+           <!-- highlightjs -->
+           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+           <!-- and it's easy to individually load additional languages -->
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+
+           <script>hljs.highlightAll();</script>
+
+           <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+           <script type="text/javascript" id="MathJax-script" async
+             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+           </script>
+
+       </head>
+       <body>
+           
+<h1>Problems tagged with "eigenvalues"</h1>
+
+
+        <div class="problem-outer">
+        <h2>Problem #28</h2>
+        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/quiz-03.html'>quiz-03</a>, <a href='../tags/eigenvalues.html'>eigenvalues</a>, <a href='../tags/eigenvectors.html'>eigenvectors</a>, <a href='../tags/lecture-04.html'>lecture-04</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(A = \begin{pmatrix} 3 & 1 \\ 1 & 3 \end{pmatrix}\)</span> and let <span class="math">\(\vec v = (1, 1)^T\)</span>.</p>
+<p>True or False: <span class="math">\(\vec v\)</span> is an eigenvector of <span class="math">\(A\)</span>. If true, what is the corresponding eigenvalue?</p>
+<details>
+    <summary>Solution</summary>
+<p>True, with eigenvalue <span class="math">\(\lambda = 4\)</span>.</p>
+<p>We compute:</p>
+<div class="math">\[
+            A \vec v = \begin{pmatrix} 3 & 1 \\ 1 & 3 \end{pmatrix}\begin{pmatrix} 1 \\ 1 \end{pmatrix}
+            = \begin{pmatrix} 4 \\ 4 \end{pmatrix}
+            = 4 \begin{pmatrix} 1 \\ 1 \end{pmatrix}
+            = 4 \vec v
+        \]</div>
+<p>Since <span class="math">\(A \vec v = 4 \vec v\)</span>, the vector <span class="math">\(\vec v\)</span> is an eigenvector with eigenvalue <span class="math">\(4\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #29</h2>
+        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/quiz-03.html'>quiz-03</a>, <a href='../tags/eigenvalues.html'>eigenvalues</a>, <a href='../tags/eigenvectors.html'>eigenvectors</a>, <a href='../tags/lecture-04.html'>lecture-04</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(A = \begin{pmatrix} 2 & 1 \\ 1 & 2 \end{pmatrix}\)</span> and let <span class="math">\(\vec v = (1, 2)^T\)</span>.</p>
+<p>True or False: <span class="math">\(\vec v\)</span> is an eigenvector of <span class="math">\(A\)</span>. If true, what is the corresponding eigenvalue?</p>
+<details>
+    <summary>Solution</summary>
+<p>False.</p>
+<p>We compute:</p>
+<div class="math">\[
+            A \vec v = \begin{pmatrix} 2 & 1 \\ 1 & 2 \end{pmatrix}\begin{pmatrix} 1 \\ 2 \end{pmatrix}
+            = \begin{pmatrix} 4 \\ 5 \end{pmatrix}\]</div>
+<p>For <span class="math">\(\vec v\)</span> to be an eigenvector, we would need <span class="math">\(A \vec v = \lambda\vec v\)</span> for some scalar <span class="math">\(\lambda\)</span>. This would require:</p>
+<div class="math">\[\begin{pmatrix} 4 \\ 5 \end{pmatrix} = \lambda\begin{pmatrix} 1 \\ 2 \end{pmatrix}\]</div>
+<p>From the first component, we would need <span class="math">\(\lambda = 4\)</span>. From the second component, we would need <span class="math">\(\lambda = \frac{5}{2}\)</span>. Since these two values are not equal, there is no such <span class="math">\(\lambda\)</span> that satisfies both equations. Therefore, <span class="math">\(\vec v\)</span> is not an eigenvector of <span class="math">\(A\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #30</h2>
+        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/quiz-03.html'>quiz-03</a>, <a href='../tags/eigenvalues.html'>eigenvalues</a>, <a href='../tags/eigenvectors.html'>eigenvectors</a>, <a href='../tags/lecture-04.html'>lecture-04</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(A = \begin{pmatrix} 1 & 1 & 3 \\ 1 & 2 & 1 \\ 3 & 1 & 9 \end{pmatrix}\)</span> and let <span class="math">\(\vec v = (1, 4, -1)^T\)</span>.</p>
+<p>True or False: <span class="math">\(\vec v\)</span> is an eigenvector of <span class="math">\(A\)</span>. If true, what is the corresponding eigenvalue?</p>
+<details>
+    <summary>Solution</summary>
+<p>True, with eigenvalue <span class="math">\(\lambda = 2\)</span>.</p>
+<p>We compute:</p>
+<div class="math">\[
+            A \vec v = \begin{pmatrix} 1 & 1 & 3 \\ 1 & 2 & 1 \\ 3 & 1 & 9 \end{pmatrix}\begin{pmatrix} 1 \\ 4 \\ -1 \end{pmatrix}
+            = \begin{pmatrix} 1 + 4 - 3 \\ 1 + 8 - 1 \\ 3 + 4 - 9 \end{pmatrix}
+            = \begin{pmatrix} 2 \\ 8 \\ -2 \end{pmatrix}
+            = 2 \begin{pmatrix} 1 \\ 4 \\ -1 \end{pmatrix}
+            = 2 \vec v
+        \]</div>
+<p>Since <span class="math">\(A \vec v = 2 \vec v\)</span>, the vector <span class="math">\(\vec v\)</span> is an eigenvector with eigenvalue <span class="math">\(2\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #31</h2>
+        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/quiz-03.html'>quiz-03</a>, <a href='../tags/eigenvalues.html'>eigenvalues</a>, <a href='../tags/eigenvectors.html'>eigenvectors</a>, <a href='../tags/lecture-04.html'>lecture-04</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(A = \begin{pmatrix} 5 & 1 & 1 & 1 \\ 1 & 5 & 1 & 1 \\ 1 & 1 & 5 & 1 \\ 1 & 1 & 1 & 5 \end{pmatrix}\)</span> and let <span class="math">\(\vec v = (1, 2, -2, -1)^T\)</span>.</p>
+<p>True or False: <span class="math">\(\vec v\)</span> is an eigenvector of <span class="math">\(A\)</span>. If true, what is the corresponding eigenvalue?</p>
+<details>
+    <summary>Solution</summary>
+<p>True, with eigenvalue <span class="math">\(\lambda = 4\)</span>.</p>
+<p>We compute:</p>
+<div class="math">\[
+            A \vec v = \begin{pmatrix} 5 & 1 & 1 & 1 \\ 1 & 5 & 1 & 1 \\ 1 & 1 & 5 & 1 \\ 1 & 1 & 1 & 5 \end{pmatrix}\begin{pmatrix} 1 \\ 2 \\ -2 \\ -1 \end{pmatrix}
+            = \begin{pmatrix} 5 + 2 - 2 - 1 \\ 1 + 10 - 2 - 1 \\ 1 + 2 - 10 - 1 \\ 1 + 2 - 2 - 5 \end{pmatrix}
+            = \begin{pmatrix} 4 \\ 8 \\ -8 \\ -4 \end{pmatrix}
+            = 4 \vec v
+        \]</div>
+<p>Since <span class="math">\(A \vec v = 4 \vec v\)</span>, the vector <span class="math">\(\vec v\)</span> is an eigenvector with eigenvalue <span class="math">\(4\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #32</h2>
+        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/quiz-03.html'>quiz-03</a>, <a href='../tags/eigenvalues.html'>eigenvalues</a>, <a href='../tags/eigenvectors.html'>eigenvectors</a>, <a href='../tags/lecture-04.html'>lecture-04</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(A = \begin{pmatrix} 1 & 6 \\ 6 & 6 \end{pmatrix}\)</span> and let <span class="math">\(\vec v = (3, -2)^T\)</span>.</p>
+<p>True or False: <span class="math">\(\vec v\)</span> is an eigenvector of <span class="math">\(A\)</span>. If true, what is the corresponding eigenvalue?</p>
+<details>
+    <summary>Solution</summary>
+<p>True, with eigenvalue <span class="math">\(\lambda = -3\)</span>.</p>
+<p>We compute:</p>
+<div class="math">\[
+            A \vec v = \begin{pmatrix} 1 & 6 \\ 6 & 6 \end{pmatrix}\begin{pmatrix} 3 \\ -2 \end{pmatrix}
+            = \begin{pmatrix} 3 - 12 \\ 18 - 12 \end{pmatrix}
+            = \begin{pmatrix} -9 \\ 6 \end{pmatrix}
+            = -3 \begin{pmatrix} 3 \\ -2 \end{pmatrix}
+            = -3 \vec v
+        \]</div>
+<p>Since <span class="math">\(A \vec v = -3 \vec v\)</span>, the vector <span class="math">\(\vec v\)</span> is an eigenvector with eigenvalue <span class="math">\(-3\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #33</h2>
+        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/quiz-03.html'>quiz-03</a>, <a href='../tags/eigenvalues.html'>eigenvalues</a>, <a href='../tags/eigenvectors.html'>eigenvectors</a>, <a href='../tags/lecture-04.html'>lecture-04</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(\vec v\)</span> be a unit vector in <span class="math">\(\mathbb R^d\)</span>, and let <span class="math">\(I\)</span> be the <span class="math">\(d \times d\)</span> identity matrix. Consider the matrix <span class="math">\(P\)</span> defined as:</p>
+<div class="math">\[
+        P = I - 2 \vec v \vec v^T
+    \]</div>
+<p>True or False: <span class="math">\(\vec v\)</span> is an eigenvector of <span class="math">\(P\)</span>.</p>
+<details>
+    <summary>Solution</summary>
+<p>True.</p>
+<p>To verify this, we compute <span class="math">\(P \vec v\)</span>:</p>
+<div class="math">$$\begin{align*}
+            P \vec v &= (I - 2 \vec v \vec v^T) \vec v \\&= I \vec v - 2 \vec v \vec v^T \vec v \\&= \vec v - 2 \vec v (\vec v^T \vec v) \\&= \vec v - 2 \vec v (1) \quad\text{($\vec v^T \vec v = \|\vec v\|^2$, and $\vec v$ is a unit vector)}\\&= \vec v - 2 \vec v \\&= -\vec v
+        \end{align*}$$</div>
+<p>Since <span class="math">\(P \vec v = -\vec v = (-1) \vec v\)</span>, we see that <span class="math">\(\vec v\)</span> is an eigenvector of <span class="math">\(P\)</span> with eigenvalue <span class="math">\(-1\)</span>.</p>
+<p>Note: The matrix <span class="math">\(P = I - 2 \vec v \vec v^T\)</span> is called a Householder reflection matrix, which reflects vectors across the hyperplane orthogonal to <span class="math">\(\vec v\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #34</h2>
+        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/quiz-03.html'>quiz-03</a>, <a href='../tags/eigenvalues.html'>eigenvalues</a>, <a href='../tags/eigenvectors.html'>eigenvectors</a>, <a href='../tags/lecture-04.html'>lecture-04</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(A\)</span> be the matrix:</p>
+<div class="math">\[
+        A = \begin{pmatrix} 5 & 2 \\ 2 & 2 \end{pmatrix}\]</div>
+<p>It can be verified that the vector <span class="math">\(\vec{u}^{(1)} = (2, 1)^T\)</span> is an eigenvector of <span class="math">\(A\)</span>.</p>
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 1)</h3>
+<p>What is the eigenvalue associated with <span class="math">\(\vec{u}^{(1)}\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p>The eigenvalue is <span class="math">\(\lambda_1 = 6\)</span>.</p>
+<p>To find the eigenvalue, we compute <span class="math">\(A \vec{u}^{(1)}\)</span>:</p>
+<div class="math">$$\begin{align*}
+                    A \vec{u}^{(1)}&= \begin{pmatrix} 5 & 2 \\ 2 & 2 \end{pmatrix}\begin{pmatrix} 2 \\ 1 \end{pmatrix}\\&= \begin{pmatrix} 5 \cdot 2 + 2 \cdot 1 \\ 2 \cdot 2 + 2 \cdot 1 \end{pmatrix}\\&= \begin{pmatrix} 12 \\ 6 \end{pmatrix}\\&= 6 \begin{pmatrix} 2 \\ 1 \end{pmatrix} = 6 \vec{u}^{(1)}\end{align*}$$</div>
+<p>Therefore, <span class="math">\(\lambda_1 = 6\)</span>.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 2)</h3>
+<p>Find another eigenvector <span class="math">\(\vec{u}^{(2)}\)</span> of <span class="math">\(A\)</span>. Your eigenvector should have an eigenvalue that is different from <span class="math">\(\vec{u}^{(1)}\)</span>'s eigenvalue. It does not need to be normalized.</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\vec{u}^{(2)} = (1, -2)^T\)</span>(or any scalar multiple).</p>
+<p>Since <span class="math">\(A\)</span> is symmetric, we know that we can always find two orthogonal eigenvectors. This suggests that we should find a vector orthogonal to <span class="math">\(\vec{u}^{(1)} = (2, 1)^T\)</span> and make sure that it is indeed an eigenvector.</p>
+<p>We know from the math review in Week 01 that the vector <span class="math">\((1, -2)^T\)</span> is orthogonal to <span class="math">\((2, 1)^T\)</span>(in general, <span class="math">\((a, b)^T\)</span> is orthogonal to <span class="math">\((-b, a)^T\)</span>).</p>
+<p>We can verify:</p>
+<div class="math">\[
+                    A \vec{u}^{(2)} = \begin{pmatrix} 5 & 2 \\ 2 & 2 \end{pmatrix}\begin{pmatrix} 1 \\ -2 \end{pmatrix} = \begin{pmatrix} 5 - 4 \\ 2 - 4 \end{pmatrix}
+                    = \begin{pmatrix} 1 \\ -2 \end{pmatrix}
+                    = 1 \cdot\vec{u}^{(2)}\]</div>
+<p>So the eigenvalue is <span class="math">\(\lambda_2 = 1\)</span>, which is indeed different from <span class="math">\(\lambda_1 = 6\)</span>.</p>
+</details>
+
+</div>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #35</h2>
+        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/quiz-03.html'>quiz-03</a>, <a href='../tags/eigenvalues.html'>eigenvalues</a>, <a href='../tags/eigenvectors.html'>eigenvectors</a>, <a href='../tags/lecture-04.html'>lecture-04</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(D\)</span> be the diagonal matrix:</p>
+<div class="math">\[
+        D = \begin{pmatrix} 2 & 0 & 0 \\ 0 & -5 & 0 \\ 0 & 0 & 7 \end{pmatrix}\]</div>
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 1)</h3>
+<p>What is the top eigenvalue of <span class="math">\(D\)</span>? What eigenvector corresponds to this eigenvalue?</p>
+<details>
+    <summary>Solution</summary>
+<p>The top eigenvalue is <span class="math">\(7\)</span>.</p>
+<p>For a diagonal matrix, the eigenvalues are exactly the diagonal entries. The diagonal entries are <span class="math">\(2, -5, 7\)</span>, and the largest is <span class="math">\(7\)</span>.</p>
+<p>An eigenvector corresponding to this eigenvalue is <span class="math">\(\vec v = (0, 0, 1)^T\)</span>.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 2)</h3>
+<p>What is the bottom (smallest) eigenvalue of <span class="math">\(D\)</span>? What eigenvector corresponds to this eigenvalue?</p>
+<details>
+    <summary>Solution</summary>
+<p>The bottom eigenvalue is <span class="math">\(-5\)</span>.</p>
+<p>An eigenvector corresponding to this eigenvalue is <span class="math">\(\vec w = (0, 1, 0)^T\)</span>.</p>
+</details>
+
+</div>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #36</h2>
+        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/quiz-03.html'>quiz-03</a>, <a href='../tags/eigenvalues.html'>eigenvalues</a>, <a href='../tags/eigenvectors.html'>eigenvectors</a>, <a href='../tags/lecture-04.html'>lecture-04</a>, <a href='../tags/linear transformations.html'>linear transformations</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider the linear transformation <span class="math">\(\vec f : \mathbb{R}^2 \to\mathbb{R}^2\)</span> that reflects vectors over the line <span class="math">\(y = -x\)</span>.</p>
+<p>Find two orthogonal eigenvectors of this transformation and their corresponding eigenvalues.</p>
+<details>
+    <summary>Solution</summary>
+<p>The eigenvectors are <span class="math">\((1, -1)^T\)</span> with <span class="math">\(\lambda = 1\)</span>, and <span class="math">\((1, 1)^T\)</span> with <span class="math">\(\lambda = -1\)</span>.</p>
+<p>Geometrically, vectors along the line <span class="math">\(y = -x\)</span>(i.e., multiples of <span class="math">\((1, -1)^T\)</span>) are unchanged by reflection over that line, so they have eigenvalue <span class="math">\(1\)</span>. Vectors perpendicular to the line <span class="math">\(y = -x\)</span>(i.e., multiples of <span class="math">\((1, 1)^T\)</span>) are flipped to point in the opposite direction, so they have eigenvalue <span class="math">\(-1\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #37</h2>
+        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/quiz-03.html'>quiz-03</a>, <a href='../tags/eigenvalues.html'>eigenvalues</a>, <a href='../tags/eigenvectors.html'>eigenvectors</a>, <a href='../tags/lecture-04.html'>lecture-04</a>, <a href='../tags/linear transformations.html'>linear transformations</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider the linear transformation <span class="math">\(\vec f : \mathbb{R}^2 \to\mathbb{R}^2\)</span> that scales vectors along the line <span class="math">\(y = x\)</span> by a factor of 2, and scales vectors along the line <span class="math">\(y = -x\)</span> by a factor of 3.</p>
+<p>Find two orthogonal eigenvectors of this transformation and their corresponding eigenvalues.</p>
+<details>
+    <summary>Solution</summary>
+<p>The eigenvectors are <span class="math">\((1, 1)^T\)</span> with <span class="math">\(\lambda = 2\)</span>, and <span class="math">\((1, -1)^T\)</span> with <span class="math">\(\lambda = 3\)</span>.</p>
+<p>Geometrically, vectors along the line <span class="math">\(y = x\)</span>(i.e., multiples of <span class="math">\((1, 1)^T\)</span>) are scaled by a factor of 2, so they have eigenvalue <span class="math">\(2\)</span>. Vectors along the line <span class="math">\(y = -x\)</span>(i.e., multiples of <span class="math">\((1, -1)^T\)</span>) are scaled by a factor of 3, so they have eigenvalue <span class="math">\(3\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #38</h2>
+        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/quiz-03.html'>quiz-03</a>, <a href='../tags/eigenvalues.html'>eigenvalues</a>, <a href='../tags/eigenvectors.html'>eigenvectors</a>, <a href='../tags/lecture-04.html'>lecture-04</a>, <a href='../tags/linear transformations.html'>linear transformations</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider the linear transformation <span class="math">\(\vec f : \mathbb{R}^2 \to\mathbb{R}^2\)</span> that rotates vectors by <span class="math">\(180°\)</span>.</p>
+<p>Find two orthogonal eigenvectors of this transformation and their corresponding eigenvalues.</p>
+<details>
+    <summary>Solution</summary>
+<p>Any pair of orthogonal vectors works, such as <span class="math">\((1, 0)^T\)</span> and <span class="math">\((0, 1)^T\)</span>. Both have eigenvalue <span class="math">\(\lambda = -1\)</span>.</p>
+<p>Geometrically, rotating any vector by <span class="math">\(180°\)</span> reverses its direction, so <span class="math">\(\vec f(\vec v) = -\vec v\)</span> for all <span class="math">\(\vec v\)</span>. This means every nonzero vector is an eigenvector with eigenvalue <span class="math">\(-1\)</span>.</p>
+<p>Since we need two orthogonal eigenvectors, any orthogonal pair will do.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #39</h2>
+        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/quiz-03.html'>quiz-03</a>, <a href='../tags/eigenvalues.html'>eigenvalues</a>, <a href='../tags/eigenvectors.html'>eigenvectors</a>, <a href='../tags/lecture-04.html'>lecture-04</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider the diagonal matrix:</p>
+<div class="math">\[
+        A = \begin{pmatrix}
+            1 & 0 & 0 \\
+            0 & 1 & 0 \\
+            0 & 0 & 5
+        \end{pmatrix}\]</div>
+<p>How many unit length eigenvectors does <span class="math">\(A\)</span> have?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\infty\)</span> The upper-left <span class="math">\(2 \times 2\)</span> block of <span class="math">\(A\)</span> is the identity matrix. Recall from lecture that the identity matrix has infinitely many eigenvectors: <i>every</i> nonzero vector is an eigenvector of the identity with eigenvalue 1.</p>
+<p>Similarly, any vector of the form <span class="math">\((a, b, 0)^T\)</span> where <span class="math">\(a\)</span> and <span class="math">\(b\)</span> are not both zero satisfies:</p>
+<div class="math">\[
+            A \begin{pmatrix} a \\ b \\ 0 \end{pmatrix}
+            = \begin{pmatrix} a \\ b \\ 0 \end{pmatrix}
+            = 1 \cdot\begin{pmatrix} a \\ b \\ 0 \end{pmatrix}\]</div>
+<p>So any such vector is an eigenvector with eigenvalue 1. There are infinitely many unit vectors of this form (they form a circle in the <span class="math">\(x\)</span>-<span class="math">\(y\)</span> plane), so <span class="math">\(A\)</span> has infinitely many unit length eigenvectors.</p>
+<p>Additionally, <span class="math">\((0, 0, 1)^T\)</span> is an eigenvector with eigenvalue 5.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #45</h2>
+        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/eigenbasis.html'>eigenbasis</a>, <a href='../tags/quiz-03.html'>quiz-03</a>, <a href='../tags/eigenvalues.html'>eigenvalues</a>, <a href='../tags/eigenvectors.html'>eigenvectors</a>, <a href='../tags/lecture-04.html'>lecture-04</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(\vec{u}^{(1)}, \vec{u}^{(2)}, \vec{u}^{(3)}\)</span> be three unit length orthonormal eigenvectors of a linear transformation <span class="math">\(\vec{f}\)</span>, with eigenvalues <span class="math">\(8\)</span>, <span class="math">\(4\)</span>, and <span class="math">\(-3\)</span> respectively.</p>
+<p>Suppose a vector <span class="math">\(\vec{x}\)</span> can be written as:</p>
+<div class="math">\[\vec{x} = 2\vec{u}^{(1)} - 3\vec{u}^{(2)} + \vec{u}^{(3)}\]</div>
+<p>What is <span class="math">\(\vec{f}(\vec{x})\)</span>, expressed in coordinates with respect to the eigenbasis <span class="math">\(\{\vec{u}^{(1)}, \vec{u}^{(2)}, \vec{u}^{(3)}\}\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\([\vec{f}(\vec{x})]_{\mathcal{U}} = (16, -12, -3)^T\)</span> Using linearity and the eigenvector property:</p>
+<div class="math">$$\begin{align*}\vec{f}(\vec{x})
+            &= \vec{f}(2\vec{u}^{(1)} - 3\vec{u}^{(2)} + \vec{u}^{(3)}) \\&= 2\vec{f}(\vec{u}^{(1)}) - 3\vec{f}(\vec{u}^{(2)}) + \vec{f}(\vec{u}^{(3)}) \\\end{align*}$$</div>
+<p>Since <span class="math">\(\vec{u}^{(1)}\)</span> is an eigenvector with eigenvalue <span class="math">\(8\)</span>, we have <span class="math">\(\vec{f}(\vec{u}^{(1)}) = 8\vec{u}^{(1)}\)</span>. Similarly, <span class="math">\(\vec{f}(\vec{u}^{(2)}) = 4\vec{u}^{(2)}\)</span> and <span class="math">\(\vec{f}(\vec{u}^{(3)}) = -3\vec{u}^{(3)}\)</span>:</p>
+<div class="math">$$\begin{align*}&= 2(8\vec{u}^{(1)}) - 3(4\vec{u}^{(2)}) + (-3)\vec{u}^{(3)}\\&= 16\vec{u}^{(1)} - 12\vec{u}^{(2)} - 3\vec{u}^{(3)}\end{align*}$$</div>
+<p>In the eigenbasis, this is simply <span class="math">\((16, -12, -3)^T\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #46</h2>
+        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/eigenbasis.html'>eigenbasis</a>, <a href='../tags/quiz-03.html'>quiz-03</a>, <a href='../tags/eigenvalues.html'>eigenvalues</a>, <a href='../tags/eigenvectors.html'>eigenvectors</a>, <a href='../tags/lecture-04.html'>lecture-04</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(\vec{u}^{(1)}, \vec{u}^{(2)}, \vec{u}^{(3)}\)</span> be three unit length orthonormal eigenvectors of a linear transformation <span class="math">\(\vec{f}\)</span>, with eigenvalues <span class="math">\(5\)</span>, <span class="math">\(-2\)</span>, and <span class="math">\(3\)</span> respectively.</p>
+<p>Suppose a vector <span class="math">\(\vec{x}\)</span> can be written as:</p>
+<div class="math">\[\vec{x} = 4\vec{u}^{(1)} + \vec{u}^{(2)} - 2\vec{u}^{(3)}\]</div>
+<p>What is <span class="math">\(\vec{f}(\vec{x})\)</span>, expressed in coordinates with respect to the eigenbasis <span class="math">\(\{\vec{u}^{(1)}, \vec{u}^{(2)}, \vec{u}^{(3)}\}\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\([\vec{f}(\vec{x})]_{\mathcal{U}} = (20, -2, -6)^T\)</span> Using linearity and the eigenvector property:</p>
+<div class="math">$$\begin{align*}\vec{f}(\vec{x})
+            &= \vec{f}(4\vec{u}^{(1)} + \vec{u}^{(2)} - 2\vec{u}^{(3)}) \\&= 4\vec{f}(\vec{u}^{(1)}) + \vec{f}(\vec{u}^{(2)}) - 2\vec{f}(\vec{u}^{(3)}) \\\end{align*}$$</div>
+<p>Since <span class="math">\(\vec{u}^{(1)}\)</span> is an eigenvector with eigenvalue <span class="math">\(5\)</span>, we have <span class="math">\(\vec{f}(\vec{u}^{(1)}) = 5\vec{u}^{(1)}\)</span>. Similarly, <span class="math">\(\vec{f}(\vec{u}^{(2)}) = -2\vec{u}^{(2)}\)</span> and <span class="math">\(\vec{f}(\vec{u}^{(3)}) = 3\vec{u}^{(3)}\)</span>:</p>
+<div class="math">$$\begin{align*}&= 4(5\vec{u}^{(1)}) + (-2)\vec{u}^{(2)} - 2(3\vec{u}^{(3)}) \\&= 20\vec{u}^{(1)} - 2\vec{u}^{(2)} - 6\vec{u}^{(3)}\end{align*}$$</div>
+<p>In the eigenbasis, this is simply <span class="math">\((20, -2, -6)^T\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #47</h2>
+        <p>Tags: <a href='../tags/optimization.html'>optimization</a>, <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/quiz-03.html'>quiz-03</a>, <a href='../tags/eigenvalues.html'>eigenvalues</a>, <a href='../tags/eigenvectors.html'>eigenvectors</a>, <a href='../tags/lecture-04.html'>lecture-04</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(A\)</span> be a symmetric matrix with eigenvalues <span class="math">\(6\)</span> and <span class="math">\(-9\)</span>.</p>
+<p>True or False: The maximum value of <span class="math">\(\|A\vec{x}\|\)</span> over all unit vectors <span class="math">\(\vec{x}\)</span> is <span class="math">\(6\)</span>.</p>
+<details>
+    <summary>Solution</summary>
+<p>False. The maximum is <span class="math">\(9\)</span>.</p>
+<p>The maximum of <span class="math">\(\|A\vec{x}\|\)</span> over unit vectors is achieved when <span class="math">\(\vec{x}\)</span> is an eigenvector corresponding to the eigenvalue with the largest <i>absolute value</i>.</p>
+<p>Here, <span class="math">\(|-9| = 9 > 6 = |6|\)</span>, so the maximum is achieved at the eigenvector with eigenvalue <span class="math">\(-9\)</span>.</p>
+<p>If <span class="math">\(\vec{u}\)</span> is a unit eigenvector with eigenvalue <span class="math">\(-9\)</span>, then:</p>
+<div class="math">\[\|A\vec{u}\| = \|(-9)\vec{u}\| = |-9| \cdot\|\vec{u}\| = 9 \cdot 1 = 9
+        \]</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #48</h2>
+        <p>Tags: <a href='../tags/optimization.html'>optimization</a>, <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/quiz-03.html'>quiz-03</a>, <a href='../tags/eigenvalues.html'>eigenvalues</a>, <a href='../tags/eigenvectors.html'>eigenvectors</a>, <a href='../tags/quadratic forms.html'>quadratic forms</a>, <a href='../tags/lecture-04.html'>lecture-04</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(A\)</span> be a <span class="math">\(3 \times 3\)</span> symmetric matrix with the following eigenvectors and corresponding eigenvalues: <span class="math">\(\vec{u}^{(1)} = \frac{1}{3}(1, 2, 2)^T\)</span> has eigenvalue <span class="math">\(4\)</span>, <span class="math">\(\vec{u}^{(2)} = \frac{1}{3}(2, 1, -2)^T\)</span> has eigenvalue <span class="math">\(1\)</span>, and <span class="math">\(\vec{u}^{(3)} = \frac{1}{3}(2, -2, 1)^T\)</span> has eigenvalue <span class="math">\(-10\)</span>.</p>
+<p>Consider the quadratic form <span class="math">\(\vec{x}\cdot A\vec{x}\)</span>.</p>
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 1)</h3>
+<p>What unit vector <span class="math">\(\vec{x}\)</span> maximizes <span class="math">\(\vec{x}\cdot A\vec{x}\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\vec{u}^{(1)} = \frac{1}{3}(1, 2, 2)^T\)</span> The quadratic form <span class="math">\(\vec{x}\cdot A\vec{x}\)</span> is maximized by the eigenvector with the largest eigenvalue. Among <span class="math">\(4\)</span>, <span class="math">\(1\)</span>, and <span class="math">\(-10\)</span>, the largest is <span class="math">\(4\)</span>, so the maximizer is <span class="math">\(\vec{u}^{(1)}\)</span>.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 2)</h3>
+<p>What is the maximum value of <span class="math">\(\vec{x}\cdot A\vec{x}\)</span> over all unit vectors?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(4\)</span> The maximum value equals the largest eigenvalue. We can verify:</p>
+<div class="math">\[\vec{u}^{(1)}\cdot A\vec{u}^{(1)} = \vec{u}^{(1)}\cdot(4\vec{u}^{(1)})
+                    = 4(\vec{u}^{(1)}\cdot\vec{u}^{(1)}) = 4 \cdot 1 = 4
+                \]</div>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 3)</h3>
+<p>What unit vector <span class="math">\(\vec{x}\)</span> minimizes <span class="math">\(\vec{x}\cdot A\vec{x}\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\vec{u}^{(3)} = \frac{1}{3}(2, -2, 1)^T\)</span> The quadratic form is minimized by the eigenvector with the smallest eigenvalue. Among <span class="math">\(4\)</span>, <span class="math">\(1\)</span>, and <span class="math">\(-10\)</span>, the smallest is <span class="math">\(-10\)</span>, so the minimizer is <span class="math">\(\vec{u}^{(3)}\)</span>.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 4)</h3>
+<p>What is the minimum value of <span class="math">\(\vec{x}\cdot A\vec{x}\)</span> over all unit vectors?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(-10\)</span> The minimum value equals the smallest eigenvalue. We can verify:</p>
+<div class="math">\[\vec{u}^{(3)}\cdot A\vec{u}^{(3)} = \vec{u}^{(3)}\cdot(-10\vec{u}^{(3)})
+                    = -10(\vec{u}^{(3)}\cdot\vec{u}^{(3)}) = -10 \cdot 1 = -10
+                \]</div>
+</details>
+
+</div>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #49</h2>
+        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/quiz-03.html'>quiz-03</a>, <a href='../tags/eigenvalues.html'>eigenvalues</a>, <a href='../tags/eigenvectors.html'>eigenvectors</a>, <a href='../tags/lecture-04.html'>lecture-04</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(A\)</span> be a symmetric matrix with top eigenvalue <span class="math">\(\lambda\)</span>. Let <span class="math">\(B = A + 5I\)</span>, where <span class="math">\(I\)</span> is the identity matrix.</p>
+<p>True or False: The top eigenvalue of <span class="math">\(B\)</span> must be <span class="math">\(\lambda + 5\)</span>.</p>
+<details>
+    <summary>Solution</summary>
+<p>True.</p>
+<p>The main thing to realize is that <span class="math">\(A\)</span> and <span class="math">\(B\)</span> have the same eigenvectors. If <span class="math">\(\vec v\)</span> is an eigenvector of <span class="math">\(A\)</span> with eigenvalue <span class="math">\(\lambda\)</span>, then:</p>
+<div class="math">$$\begin{align*}
+            B \vec v &= (A + 5I) \vec v \\&= A \vec v + 5I \vec v \\&= \lambda\vec v + 5 \vec v \\&= (\lambda + 5) \vec v
+        \end{align*}$$</div>
+<p>Thus, <span class="math">\(\vec v\)</span> is also an eigenvector of <span class="math">\(B\)</span> with eigenvalue <span class="math">\(\lambda + 5\)</span>.</p>
+<p>This means that the eigenvalues of <span class="math">\(B\)</span> are simply the eigenvalues of <span class="math">\(A\)</span> shifted by 5. Therefore, if <span class="math">\(\lambda\)</span> is the top eigenvalue of <span class="math">\(A\)</span>, then <span class="math">\(\lambda + 5\)</span> is the top eigenvalue of <span class="math">\(B\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+       </body>
+   </html>
+    </div>
+</div>
+
+    </div>
+
+    <script>
+        // Restore saved theme on page load
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else if (savedTheme === 'light') {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // Dark mode toggle
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const themeText = document.getElementById('theme-text');
+
+        // Update button to reflect current theme
+        function updateThemeButton() {
+            const isDark = document.documentElement.classList.contains('dark');
+            themeIcon.textContent = isDark ? '☀' : '☾';
+            themeText.textContent = isDark ? 'Light' : 'Dark';
+        }
+
+        // Initialize button state
+        updateThemeButton();
+
+        // Toggle theme on button click
+        themeToggleBtn.addEventListener('click', () => {
+            const isDark = document.documentElement.classList.contains('dark');
+
+            if (isDark) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+
+            updateThemeButton();
+        });
+
+        // Mobile menu toggle
+        const menuButton = document.getElementById('mobile-menu-button');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+
+        menuButton.addEventListener('click', () => {
+            sidebar.classList.toggle('-translate-x-full');
+            overlay.classList.toggle('hidden');
+        });
+
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>
