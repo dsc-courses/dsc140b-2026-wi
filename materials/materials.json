@@ -45,7 +45,14 @@
                         "topic": "Linear Transformations",
                         "number": 2
                     },
-                    "artifacts": {}
+                    "artifacts": {
+                        "quiz.pdf": {
+                            "path": "materials/quizzes/02-linear_transformations/quiz.pdf"
+                        },
+                        "solution.pdf": {
+                            "path": "materials/quizzes/02-linear_transformations/solution.pdf"
+                        }
+                    }
                 }
             }
         },
