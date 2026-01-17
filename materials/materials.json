@@ -307,6 +307,9 @@
                     "artifacts": {
                         "homework.pdf": {
                             "path": "materials/homeworks/01-linear_transformations/homework.pdf"
+                        },
+                        "solution.pdf": {
+                            "path": "materials/homeworks/01-linear_transformations/solution.pdf"
                         }
                     }
                 },
