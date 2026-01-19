@@ -691,6 +691,141 @@ Live Q&A
 
 
 
+
+        <div class="problem-outer">
+        <h2>Problem #53</h2>
+        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/quiz-03.html'>quiz-03</a>, <a href='../tags/lecture-05.html'>lecture-05</a>, <a href='../tags/eigenvalues.html'>eigenvalues</a>, <a href='../tags/eigenvectors.html'>eigenvectors</a>, <a href='../tags/diagonalization.html'>diagonalization</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(\vec f\)</span> be a linear transformation with eigenvectors and eigenvalues:</p>
+<div class="math">$$\begin{align*}\hat{u}^{(1)}&= \frac{1}{\sqrt 2}(1, 1)^T & \lambda_1 &= 2\\\hat{u}^{(2)}&= \frac{1}{\sqrt 2}(-1, 1)^T & \lambda_2 &= -1
+    \end{align*}$$</div>
+<p>What is <span class="math">\(\vec f(\vec x)\)</span> for <span class="math">\(\vec x = (3, 1)^T\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\vec f(\vec x) = (3, 5)^T\)</span>.</p>
+<p>We'll take the three step approach of 1) finding the coordinates of <span class="math">\(\vec x\)</span> in the eigenbasis, 2) applying the transformation in that basis (where the matrix of the transformation <span class="math">\(A_\mathcal{U}\)</span> is diagonal and consists of the eigenvalues), and 3) converting back to the standard basis.</p>
+<p>We saw in lecture that we can do this all in one go using the change of basis matrix <span class="math">\(U\)</span>:</p>
+<div class="math">\[\vec f(\vec x) = U^T A_\mathcal{U} U \vec x
+        \]</div>
+<p>where <span class="math">\(U\)</span> is the change of basis matrix with the eigenvectors as rows and <span class="math">\(A_\mathcal{U}\)</span> is the diagonal matrix with the eigenvalues on the diagonal. In this case, they are:</p>
+<div class="math">\[
+            U = \begin{pmatrix}
+                \frac{1}{\sqrt 2} & \frac{1}{\sqrt 2}\\[0.5em]
+                \frac{-1}{\sqrt 2} & \frac{1}{\sqrt 2}
+            \end{pmatrix}\qquad
+            A_\mathcal{U} = \begin{pmatrix} 2 & 0 \\ 0 & -1 \end{pmatrix}\]</div>
+<p>Then:</p>
+<div class="math">$$\begin{align*}\vec f(\vec x) &= U^T A_\mathcal{U} U \vec x \\&=
+            \begin{pmatrix}
+                \frac{1}{\sqrt 2} & \frac{-1}{\sqrt 2}\\[0.5em]
+                \frac{1}{\sqrt 2} & \frac{1}{\sqrt 2}
+            \end{pmatrix}\begin{pmatrix} 2 & 0 \\ 0 & -1 \end{pmatrix}\begin{pmatrix}
+                \frac{1}{\sqrt 2} & \frac{1}{\sqrt 2}\\[0.5em]
+                \frac{-1}{\sqrt 2} & \frac{1}{\sqrt 2}
+            \end{pmatrix}\begin{pmatrix} 3 \\ 1 \end{pmatrix}\\&= \begin{pmatrix} 3 \\ 5 \end{pmatrix}\end{align*}$$</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #54</h2>
+        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/quiz-03.html'>quiz-03</a>, <a href='../tags/lecture-05.html'>lecture-05</a>, <a href='../tags/eigenvalues.html'>eigenvalues</a>, <a href='../tags/eigenvectors.html'>eigenvectors</a>, <a href='../tags/diagonalization.html'>diagonalization</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(\vec f\)</span> be a linear transformation with eigenvectors and eigenvalues:</p>
+<div class="math">$$\begin{align*}\hat{u}^{(1)}&= \frac{1}{\sqrt{2}}(1, 1, 0)^T & \lambda_1 &= 3\\\hat{u}^{(2)}&= \frac{1}{\sqrt{2}}(1, -1, 0)^T & \lambda_2 &= 2\\\hat{u}^{(3)}&= (0, 0, 1)^T & \lambda_3 &= 1
+    \end{align*}$$</div>
+<p>What is <span class="math">\(\vec f(\vec x)\)</span> for <span class="math">\(\vec x = (1, 1, 2)^T\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\vec f(\vec x) = (3, 3, 2)^T\)</span>.</p>
+<p>We'll take the three step approach of 1) finding the coordinates of <span class="math">\(\vec x\)</span> in the eigenbasis, 2) applying the transformation in that basis (where the matrix of the transformation <span class="math">\(A_\mathcal{U}\)</span> is diagonal and consists of the eigenvalues), and 3) converting back to the standard basis.</p>
+<p>We saw in lecture that we can do this all in one go using the change of basis matrix <span class="math">\(U\)</span>:</p>
+<div class="math">\[\vec f(\vec x) = U^T A_\mathcal{U} U \vec x
+        \]</div>
+<p>where <span class="math">\(U\)</span> is the change of basis matrix with the eigenvectors as rows and <span class="math">\(A_\mathcal{U}\)</span> is the diagonal matrix with the eigenvalues on the diagonal. In this case, they are:</p>
+<div class="math">\[
+            U = \begin{pmatrix}
+                \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} & 0\\[0.5em]
+                \frac{1}{\sqrt{2}} & \frac{-1}{\sqrt{2}} & 0\\[0.5em]
+                0 & 0 & 1
+            \end{pmatrix}\qquad
+            A_\mathcal{U} = \begin{pmatrix} 3 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 1 \end{pmatrix}\]</div>
+<p>Then:</p>
+<div class="math">$$\begin{align*}\vec f(\vec x) &= U^T A_\mathcal{U} U \vec x \\&=
+            \begin{pmatrix}
+                \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} & 0\\[0.5em]
+                \frac{1}{\sqrt{2}} & \frac{-1}{\sqrt{2}} & 0\\[0.5em]
+                0 & 0 & 1
+            \end{pmatrix}\begin{pmatrix} 3 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 1 \end{pmatrix}\begin{pmatrix}
+                \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} & 0\\[0.5em]
+                \frac{1}{\sqrt{2}} & \frac{-1}{\sqrt{2}} & 0\\[0.5em]
+                0 & 0 & 1
+            \end{pmatrix}\begin{pmatrix} 1 \\ 1 \\ 2 \end{pmatrix}\\&= \begin{pmatrix} 3 \\ 3 \\ 2 \end{pmatrix}\end{align*}$$</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #55</h2>
+        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/quiz-03.html'>quiz-03</a>, <a href='../tags/lecture-05.html'>lecture-05</a>, <a href='../tags/eigenvalues.html'>eigenvalues</a>, <a href='../tags/eigenvectors.html'>eigenvectors</a>, <a href='../tags/diagonalization.html'>diagonalization</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(\vec f\)</span> be a linear transformation with eigenvectors and eigenvalues:</p>
+<div class="math">$$\begin{align*}\hat{u}^{(1)}&= \frac{1}{2}(1, 1, 1, 1)^T & \lambda_1 &= 4\\\hat{u}^{(2)}&= \frac{1}{2}(1, 1, -1, -1)^T & \lambda_2 &= 2\\\hat{u}^{(3)}&= \frac{1}{2}(1, -1, 1, -1)^T & \lambda_3 &= 1\\\hat{u}^{(4)}&= \frac{1}{2}(1, -1, -1, 1)^T & \lambda_4 &= 0
+    \end{align*}$$</div>
+<p>What is <span class="math">\(\vec f(\vec x)\)</span> for <span class="math">\(\vec x = (4, 0, 0, 0)^T\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\vec f(\vec x) = (7, 5, 3, 1)^T\)</span>.</p>
+<p>We'll take the three step approach of 1) finding the coordinates of <span class="math">\(\vec x\)</span> in the eigenbasis, 2) applying the transformation in that basis (where the matrix of the transformation <span class="math">\(A_\mathcal{U}\)</span> is diagonal and consists of the eigenvalues), and 3) converting back to the standard basis.</p>
+<p>We saw in lecture that we can do this all in one go using the change of basis matrix <span class="math">\(U\)</span>:</p>
+<div class="math">\[\vec f(\vec x) = U^T A_\mathcal{U} U \vec x
+        \]</div>
+<p>where <span class="math">\(U\)</span> is the change of basis matrix with the eigenvectors as rows and <span class="math">\(A_\mathcal{U}\)</span> is the diagonal matrix with the eigenvalues on the diagonal. In this case, they are:</p>
+<div class="math">\[
+            U = \frac{1}{2}\begin{pmatrix}
+                1 & 1 & 1 & 1\\
+                1 & 1 & -1 & -1\\
+                1 & -1 & 1 & -1\\
+                1 & -1 & -1 & 1
+            \end{pmatrix}\qquad
+            A_\mathcal{U} = \begin{pmatrix} 4 & 0 & 0 & 0 \\ 0 & 2 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 \end{pmatrix}\]</div>
+<p>Then:</p>
+<div class="math">$$\begin{align*}\vec f(\vec x) &= U^T A_\mathcal{U} U \vec x \\&=
+            \frac{1}{2}\begin{pmatrix}
+                1 & 1 & 1 & 1\\
+                1 & 1 & -1 & -1\\
+                1 & -1 & 1 & -1\\
+                1 & -1 & -1 & 1
+            \end{pmatrix}\begin{pmatrix} 4 & 0 & 0 & 0 \\ 0 & 2 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 \end{pmatrix}\frac{1}{2}\begin{pmatrix}
+                1 & 1 & 1 & 1\\
+                1 & 1 & -1 & -1\\
+                1 & -1 & 1 & -1\\
+                1 & -1 & -1 & 1
+            \end{pmatrix}\begin{pmatrix} 4 \\ 0 \\ 0 \\ 0 \end{pmatrix}\\&= \begin{pmatrix} 7 \\ 5 \\ 3 \\ 1 \end{pmatrix}\end{align*}$$</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
        </body>
    </html>
     </div>

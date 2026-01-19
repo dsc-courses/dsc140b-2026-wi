@@ -136,7 +136,7 @@ Live Q&A
 
     <div class="prose dark:prose-invert">
     <!DOCTYPE html> <html> <head> <meta
-                          charset="utf-8"> <title>Practice Problems</title>
+                          charset="utf-8"> <title>Problems tagged with orthogonal matrices</title>
 
            <!-- MathJax -->
            <script type="text/x-mathjax-config">
@@ -167,54 +167,157 @@ Live Q&A
 
        </head>
        <body>
-           <div>
-<h1>Practice Problems</h1>
+           
+<h1>Problems tagged with "orthogonal matrices"</h1>
 
 
-<div class="tagset">
-    <h2>Midterm 01</h2>
-    <p>Practice problems for topics on Midterm 01.</p>
-    <p>
-        <a href="./midterm-01.html">See all problems in this set</a>, or
-        choose a tag below to view only those problems.
-    </p>
-<ul>
-<li><a href='./tags/linear algebra.html'>linear algebra</a></li>
-<li><a href='./tags/linear transformations.html'>linear transformations</a></li>
-</ul>
-</div>
-
-
-<div class="tagset">
-    <h2>Quiz 03</h2>
-    <p>Practice problems for topics on Quiz 03.</p>
-    <p>
-        <a href="./quiz-03.html">See all problems in this set</a>, or
-        choose a tag below to view only those problems.
-    </p>
-<ul>
-<li><a href='./tags/lecture-04.html'>lecture-04</a></li>
-<li><a href='./tags/lecture-05.html'>lecture-05</a></li>
-<li><a href='./tags/quiz-03.html'>quiz-03</a></li>
-</ul>
-</div>
-
-
-<div class="tagset">
-    <h2>Quiz 02</h2>
-    <p>Practice problems for topics on Quiz 02.</p>
-    <p>
-        <a href="./quiz-02.html">See all problems in this set</a>, or
-        choose a tag below to view only those problems.
-    </p>
-<ul>
-<li><a href='./tags/lecture-02.html'>lecture-02</a></li>
-<li><a href='./tags/lecture-03.html'>lecture-03</a></li>
-<li><a href='./tags/quiz-02.html'>quiz-02</a></li>
-</ul>
-</div>
+        <div class="problem-outer">
+        <h2>Problem #50</h2>
+        <p>Tags: <a href='../tags/orthogonal matrices.html'>orthogonal matrices</a>, <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/quiz-03.html'>quiz-03</a>, <a href='../tags/change of basis.html'>change of basis</a>, <a href='../tags/lecture-05.html'>lecture-05</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(\hat{u}^{(1)}\)</span> and <span class="math">\(\hat{u}^{(2)}\)</span> be an orthonormal basis for <span class="math">\(\mathbb R^2\)</span>:</p>
+<div class="math">$$\begin{align*}\hat{u}^{(1)}&= \frac{1}{\sqrt 2}(1, 1)^T\\\hat{u}^{(2)}&= \frac{1}{\sqrt 2}(-1, 1)^T
+    \end{align*}$$</div>
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 1)</h3>
+<p>What is the change of basis matrix <span class="math">\(U\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p>The change of basis matrix <span class="math">\(U\)</span> has the new basis vectors as its <i>rows</i>:</p>
+<div class="math">\[
+                    U = \begin{pmatrix}
+                        \frac{1}{\sqrt 2} & \frac{1}{\sqrt 2}\\[0.5em]
+                        \frac{-1}{\sqrt 2} & \frac{1}{\sqrt 2}
+                    \end{pmatrix}\]</div>
+<p>This matrix represents a 45-degree rotation.</p>
+</details>
 
 </div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 2)</h3>
+<p>Let <span class="math">\(\vec x = (2, 0)^T\)</span> be a vector in the standard basis. What are the coordinates of <span class="math">\(\vec x\)</span> in the basis <span class="math">\(\mathcal{U}\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p>We compute <span class="math">\([\vec x]_{\mathcal{U}} = U \vec x\)</span>:</p>
+<div class="math">\[[\vec x]_{\mathcal{U}} = \begin{pmatrix}
+                        \frac{1}{\sqrt 2} & \frac{1}{\sqrt 2}\\[0.5em]
+                        \frac{-1}{\sqrt 2} & \frac{1}{\sqrt 2}
+                    \end{pmatrix}\begin{pmatrix} 2 \\ 0 \end{pmatrix}
+                    = \begin{pmatrix} \frac{2}{\sqrt 2} \\[0.5em] \frac{-2}{\sqrt 2} \end{pmatrix}
+                    = \begin{pmatrix} \sqrt 2 \\ -\sqrt 2 \end{pmatrix}\]</div>
+</details>
+
+</div>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #51</h2>
+        <p>Tags: <a href='../tags/orthogonal matrices.html'>orthogonal matrices</a>, <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/quiz-03.html'>quiz-03</a>, <a href='../tags/change of basis.html'>change of basis</a>, <a href='../tags/lecture-05.html'>lecture-05</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(\hat{u}^{(1)}\)</span>, <span class="math">\(\hat{u}^{(2)}\)</span>, and <span class="math">\(\hat{u}^{(3)}\)</span> be an orthonormal basis for <span class="math">\(\mathbb R^3\)</span>:</p>
+<div class="math">$$\begin{align*}\hat{u}^{(1)}&= \left(\frac{\sqrt 3}{2}, \frac{1}{2}, 0\right)^T\\\hat{u}^{(2)}&= \left(\frac{-1}{2}, \frac{\sqrt 3}{2}, 0\right)^T\\\hat{u}^{(3)}&= (0, 0, 1)^T
+    \end{align*}$$</div>
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 1)</h3>
+<p>What is the change of basis matrix <span class="math">\(U\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p>The change of basis matrix <span class="math">\(U\)</span> has the new basis vectors as its <i>rows</i>:</p>
+<div class="math">\[
+                    U = \begin{pmatrix}
+                        \frac{\sqrt 3}{2} & \frac{1}{2} & 0\\[0.5em]
+                        \frac{-1}{2} & \frac{\sqrt 3}{2} & 0\\[0.5em]
+                        0 & 0 & 1
+                    \end{pmatrix}\]</div>
+<p>This matrix represents a 30-degree rotation in the <span class="math">\(xy\)</span>-plane while leaving the <span class="math">\(z\)</span>-axis unchanged.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 2)</h3>
+<p>Let <span class="math">\(\vec x = (\sqrt 3, 1, 2)^T\)</span> be a vector in the standard basis. What are the coordinates of <span class="math">\(\vec x\)</span> in the basis <span class="math">\(\mathcal{U}\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p>We compute <span class="math">\([\vec x]_{\mathcal{U}} = U \vec x\)</span>:</p>
+<div class="math">\[[\vec x]_{\mathcal{U}} = \begin{pmatrix}
+                        \frac{\sqrt 3}{2} & \frac{1}{2} & 0\\[0.5em]
+                        \frac{-1}{2} & \frac{\sqrt 3}{2} & 0\\[0.5em]
+                        0 & 0 & 1
+                    \end{pmatrix}\begin{pmatrix} \sqrt 3 \\ 1 \\ 2 \end{pmatrix}
+                    = \begin{pmatrix} \frac{3}{2} + \frac{1}{2} \\[0.5em] \frac{-\sqrt 3}{2} + \frac{\sqrt 3}{2} \\[0.5em] 2 \end{pmatrix}
+                    = \begin{pmatrix} 2 \\ 0 \\ 2 \end{pmatrix}\]</div>
+</details>
+
+</div>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #52</h2>
+        <p>Tags: <a href='../tags/orthogonal matrices.html'>orthogonal matrices</a>, <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/quiz-03.html'>quiz-03</a>, <a href='../tags/change of basis.html'>change of basis</a>, <a href='../tags/lecture-05.html'>lecture-05</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(\hat{u}^{(1)}\)</span>, <span class="math">\(\hat{u}^{(2)}\)</span>, <span class="math">\(\hat{u}^{(3)}\)</span>, and <span class="math">\(\hat{u}^{(4)}\)</span> be an orthonormal basis for <span class="math">\(\mathbb R^4\)</span>:</p>
+<div class="math">$$\begin{align*}\hat{u}^{(1)}&= (0, 1, 0, 0)^T\\\hat{u}^{(2)}&= (-1, 0, 0, 0)^T\\\hat{u}^{(3)}&= (0, 0, 0, 1)^T\\\hat{u}^{(4)}&= (0, 0, -1, 0)^T
+    \end{align*}$$</div>
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 1)</h3>
+<p>What is the change of basis matrix <span class="math">\(U\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p>The change of basis matrix <span class="math">\(U\)</span> has the new basis vectors as its <i>rows</i>:</p>
+<div class="math">\[
+                    U = \begin{pmatrix}
+                        0 & 1 & 0 & 0\\
+                        -1 & 0 & 0 & 0\\
+                        0 & 0 & 0 & 1\\
+                        0 & 0 & -1 & 0
+                    \end{pmatrix}\]</div>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 2)</h3>
+<p>Let <span class="math">\(\vec x = (2, 3, 1, 4)^T\)</span> be a vector in the standard basis. What are the coordinates of <span class="math">\(\vec x\)</span> in the basis <span class="math">\(\mathcal{U}\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p>We compute <span class="math">\([\vec x]_{\mathcal{U}} = U \vec x\)</span>:</p>
+<div class="math">\[[\vec x]_{\mathcal{U}} = \begin{pmatrix}
+                        0 & 1 & 0 & 0\\
+                        -1 & 0 & 0 & 0\\
+                        0 & 0 & 0 & 1\\
+                        0 & 0 & -1 & 0
+                    \end{pmatrix}\begin{pmatrix} 2 \\ 3 \\ 1 \\ 4 \end{pmatrix}
+                    = \begin{pmatrix} 3 \\ -2 \\ 4 \\ -1 \end{pmatrix}\]</div>
+</details>
+
+</div>
+
+    </div>
+</div>
+
+        </div>
+
+
+
        </body>
    </html>
     </div>
