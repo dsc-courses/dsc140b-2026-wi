@@ -155,7 +155,11 @@
                         "topic": "Diagonalization and PCA",
                         "number": 5
                     },
-                    "artifacts": {}
+                    "artifacts": {
+                        "slides.pdf": {
+                            "path": "materials/lectures/schedules/tr/05-linear_algebra-IV/slides.pdf"
+                        }
+                    }
                 },
                 "06-pca-I": {
                     "metadata": {
