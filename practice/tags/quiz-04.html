@@ -136,7 +136,7 @@ Live Q&A
 
     <div class="prose dark:prose-invert">
     <!DOCTYPE html> <html> <head> <meta
-                          charset="utf-8"> <title>Problems tagged with dimensionality reduction</title>
+                          charset="utf-8"> <title>Problems tagged with quiz-04</title>
 
            <!-- MathJax -->
            <script type="text/x-mathjax-config">
@@ -168,7 +168,7 @@ Live Q&A
        </head>
        <body>
            
-<h1>Problems tagged with "dimensionality reduction"</h1>
+<h1>Problems tagged with "quiz-04"</h1>
 
 
         <div class="problem-outer">
@@ -242,6 +242,58 @@ Live Q&A
 <div class="math">\[
             z = \vec x \cdot\vec u = (3, 1, -1, 5) \cdot\frac{1}{2}(1, 1, 1, 1) = \frac{3 + 1 - 1 + 5}{2} = 4
         \]</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #61</h2>
+        <p>Tags: <a href='../tags/pca.html'>pca</a>, <a href='../tags/centering.html'>centering</a>, <a href='../tags/covariance.html'>covariance</a>, <a href='../tags/quiz-04.html'>quiz-04</a>, <a href='../tags/lecture-06.html'>lecture-06</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Center the data set:</p>
+<div class="math">$$\begin{align*}\vec x^{(1)}&= (2, 4)^T \\\vec x^{(2)}&= (4, 2)^T \\\vec x^{(3)}&= (6, 6)^T
+    \end{align*}$$</div>
+<details>
+    <summary>Solution</summary>
+<p>First, compute the mean:</p>
+<div class="math">\[\bar{\vec x} = \frac{1}{3}\left[(2, 4)^T + (4, 2)^T + (6, 6)^T\right]= \frac{1}{3}(12, 12)^T = (4, 4)^T
+        \]</div>
+<p>Then subtract the mean from each data point:</p>
+<div class="math">$$\begin{align*}\tilde{\vec x}^{(1)}&= \vec x^{(1)} - \bar{\vec x} = (2, 4)^T - (4, 4)^T = (-2, 0)^T \\\tilde{\vec x}^{(2)}&= \vec x^{(2)} - \bar{\vec x} = (4, 2)^T - (4, 4)^T = (0, -2)^T \\\tilde{\vec x}^{(3)}&= \vec x^{(3)} - \bar{\vec x} = (6, 6)^T - (4, 4)^T = (2, 2)^T
+        \end{align*}$$</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #62</h2>
+        <p>Tags: <a href='../tags/pca.html'>pca</a>, <a href='../tags/centering.html'>centering</a>, <a href='../tags/covariance.html'>covariance</a>, <a href='../tags/quiz-04.html'>quiz-04</a>, <a href='../tags/lecture-06.html'>lecture-06</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Center the data set:</p>
+<div class="math">$$\begin{align*}\vec x^{(1)}&= (1, 0, 2)^T \\\vec x^{(2)}&= (3, 2, 4)^T \\\vec x^{(3)}&= (2, 4, 0)^T
+    \end{align*}$$</div>
+<details>
+    <summary>Solution</summary>
+<p>First, compute the mean:</p>
+<div class="math">\[\bar{\vec x} = \frac{1}{3}\left[(1, 0, 2)^T + (3, 2, 4)^T + (2, 4, 0)^T\right]= \frac{1}{3}(6, 6, 6)^T = (2, 2, 2)^T
+        \]</div>
+<p>Then subtract the mean from each data point:</p>
+<div class="math">$$\begin{align*}\tilde{\vec x}^{(1)}&= \vec x^{(1)} - \bar{\vec x} = (1, 0, 2)^T - (2, 2, 2)^T = (-1, -2, 0)^T \\\tilde{\vec x}^{(2)}&= \vec x^{(2)} - \bar{\vec x} = (3, 2, 4)^T - (2, 2, 2)^T = (1, 0, 2)^T \\\tilde{\vec x}^{(3)}&= \vec x^{(3)} - \bar{\vec x} = (2, 4, 0)^T - (2, 2, 2)^T = (0, 2, -2)^T
+        \end{align*}$$</div>
 </details>
 
     </div>

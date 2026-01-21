@@ -193,6 +193,61 @@ Live Q&A
 
 
 
+
+        <div class="problem-outer">
+        <h2>Problem #56</h2>
+        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/quiz-03.html'>quiz-03</a>, <a href='../tags/symmetric matrices.html'>symmetric matrices</a>, <a href='../tags/spectral theorem.html'>spectral theorem</a>, <a href='../tags/eigenvalues.html'>eigenvalues</a>, <a href='../tags/eigenvectors.html'>eigenvectors</a>, <a href='../tags/lecture-05.html'>lecture-05</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Find a symmetric <span class="math">\(2 \times 2\)</span> matrix <span class="math">\(A\)</span> whose eigenvectors are <span class="math">\(\hat{u}^{(1)} = \frac{1}{\sqrt{5}}(1, 2)^T\)</span> with eigenvalue <span class="math">\(6\)</span> and <span class="math">\(\hat{u}^{(2)} = \frac{1}{\sqrt{5}}(2, -1)^T\)</span> with eigenvalue <span class="math">\(1\)</span>.</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(A = \begin{pmatrix} 2 & 2 \\ 2 & 5 \end{pmatrix}\)</span>.</p>
+<p>We saw in lecture that a symmetric matrix <span class="math">\(A\)</span> can be written as <span class="math">\(A = U^T \Lambda U\)</span>, where <span class="math">\(U\)</span> is the matrix whose rows are the eigenvectors of <span class="math">\(A\)</span> and <span class="math">\(\Lambda\)</span> is the diagonal matrix of eigenvalues.</p>
+<p>This means that if we know the eigenvectors and eigenvalues of a symmetric matrix, we can "work backwards" to find the matrix itself.</p>
+<p>In this case:</p>
+<div class="math">\[
+            U = \frac{1}{\sqrt{5}}\begin{pmatrix} 1 & 2 \\ 2 & -1 \end{pmatrix}, \quad\Lambda = \begin{pmatrix} 6 & 0 \\ 0 & 1 \end{pmatrix}\]</div>
+<p>Therefore:</p>
+<div class="math">$$\begin{align*}
+            A &= U^T \Lambda U \\[0.5em]&= \frac{1}{\sqrt{5}}\begin{pmatrix} 1 & 2 \\ 2 & -1 \end{pmatrix}\begin{pmatrix} 6 & 0 \\ 0 & 1 \end{pmatrix}\frac{1}{\sqrt{5}}\begin{pmatrix} 1 & 2 \\ 2 & -1 \end{pmatrix}\\[0.5em]&= \frac{1}{5}\begin{pmatrix} 1 & 2 \\ 2 & -1 \end{pmatrix}\begin{pmatrix} 6 & 0 \\ 0 & 1 \end{pmatrix}\begin{pmatrix} 1 & 2 \\ 2 & -1 \end{pmatrix}\\[0.5em]&= \frac{1}{5}\begin{pmatrix} 6 & 2 \\ 12 & -1 \end{pmatrix}\begin{pmatrix} 1 & 2 \\ 2 & -1 \end{pmatrix}\\[0.5em]&= \frac{1}{5}\begin{pmatrix} 6 + 4 & 12 - 2 \\ 12 - 2 & 24 + 1 \end{pmatrix}\\[0.5em]&= \frac{1}{5}\begin{pmatrix} 10 & 10 \\ 10 & 25 \end{pmatrix}\\[0.5em]&= \begin{pmatrix} 2 & 2 \\ 2 & 5 \end{pmatrix}\end{align*}$$</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #57</h2>
+        <p>Tags: <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/quiz-03.html'>quiz-03</a>, <a href='../tags/symmetric matrices.html'>symmetric matrices</a>, <a href='../tags/spectral theorem.html'>spectral theorem</a>, <a href='../tags/eigenvalues.html'>eigenvalues</a>, <a href='../tags/eigenvectors.html'>eigenvectors</a>, <a href='../tags/lecture-05.html'>lecture-05</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Find a symmetric <span class="math">\(3 \times 3\)</span> matrix <span class="math">\(A\)</span> whose eigenvectors are <span class="math">\(\hat{u}^{(1)} = \frac{1}{3}(1, 2, 2)^T\)</span> with eigenvalue <span class="math">\(9\)</span>, <span class="math">\(\hat{u}^{(2)} = \frac{1}{3}(2, 1, -2)^T\)</span> with eigenvalue <span class="math">\(18\)</span>, and <span class="math">\(\hat{u}^{(3)} = \frac{1}{3}(2, -2, 1)^T\)</span> with eigenvalue <span class="math">\(-9\)</span>.</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(A = \begin{pmatrix} 5 & 10 & -8 \\ 10 & 2 & 2 \\ -8 & 2 & 11 \end{pmatrix}\)</span>.</p>
+<p>We saw in lecture that a symmetric matrix <span class="math">\(A\)</span> can be written as <span class="math">\(A = U^T \Lambda U\)</span>, where <span class="math">\(U\)</span> is the matrix whose rows are the eigenvectors of <span class="math">\(A\)</span> and <span class="math">\(\Lambda\)</span> is the diagonal matrix of eigenvalues.</p>
+<p>In this case:</p>
+<div class="math">\[
+            U = \frac{1}{3}\begin{pmatrix} 1 & 2 & 2 \\ 2 & 1 & -2 \\ 2 & -2 & 1 \end{pmatrix}, \quad\Lambda = \begin{pmatrix} 9 & 0 & 0 \\ 0 & 18 & 0 \\ 0 & 0 & -9 \end{pmatrix}\]</div>
+<p>Therefore:</p>
+<div class="math">$$\begin{align*}
+            A &= U^T \Lambda U \\[0.5em]&= \frac{1}{3}\begin{pmatrix} 1 & 2 & 2 \\ 2 & 1 & -2 \\ 2 & -2 & 1 \end{pmatrix}\begin{pmatrix} 9 & 0 & 0 \\ 0 & 18 & 0 \\ 0 & 0 & -9 \end{pmatrix}\frac{1}{3}\begin{pmatrix} 1 & 2 & 2 \\ 2 & 1 & -2 \\ 2 & -2 & 1 \end{pmatrix}\\[0.5em]&= \frac{1}{9}\begin{pmatrix} 1 & 2 & 2 \\ 2 & 1 & -2 \\ 2 & -2 & 1 \end{pmatrix}\begin{pmatrix} 9 & 0 & 0 \\ 0 & 18 & 0 \\ 0 & 0 & -9 \end{pmatrix}\begin{pmatrix} 1 & 2 & 2 \\ 2 & 1 & -2 \\ 2 & -2 & 1 \end{pmatrix}\\[0.5em]&= \frac{1}{9}\begin{pmatrix} 9 & 36 & -18 \\ 18 & 18 & 18 \\ 18 & -18 & -9 \end{pmatrix}\begin{pmatrix} 1 & 2 & 2 \\ 2 & 1 & -2 \\ 2 & -2 & 1 \end{pmatrix}\\[0.5em]&= \frac{1}{9}\begin{pmatrix} 9 + 72 - 36 & 18 + 36 + 36 & 18 - 72 - 18 \\
+                                           18 + 36 + 36 & 36 + 18 - 36 & 36 - 36 + 18 \\
+                                           18 - 36 - 18 & 36 - 18 + 18 & 36 + 36 - 9 \end{pmatrix}\\[0.5em]&= \frac{1}{9}\begin{pmatrix} 45 & 90 & -72 \\ 90 & 18 & 18 \\ -72 & 18 & 99 \end{pmatrix}\\[0.5em]&= \begin{pmatrix} 5 & 10 & -8 \\ 10 & 2 & 2 \\ -8 & 2 & 11 \end{pmatrix}\end{align*}$$</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
        </body>
    </html>
     </div>
