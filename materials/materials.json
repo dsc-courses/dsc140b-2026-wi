@@ -53,6 +53,14 @@
                             "path": "materials/quizzes/02-linear_transformations/solution.pdf"
                         }
                     }
+                },
+                "03-eigenvectors_eigenvalues": {
+                    "metadata": {
+                        "date": "2026-01-22",
+                        "topic": "Eigenvectors and Eigenvalues",
+                        "number": 3
+                    },
+                    "artifacts": {}
                 }
             }
         },
@@ -171,7 +179,11 @@
                         "topic": "PCA",
                         "number": 6
                     },
-                    "artifacts": {}
+                    "artifacts": {
+                        "slides.pdf": {
+                            "path": "materials/lectures/schedules/tr/06-pca-I/slides.pdf"
+                        }
+                    }
                 },
                 "07-pca-II": {
                     "metadata": {
@@ -340,7 +352,11 @@
                         "topic": "PCA",
                         "number": 3
                     },
-                    "artifacts": {}
+                    "artifacts": {
+                        "homework.pdf": {
+                            "path": "materials/homeworks/03-pca-I/homework.pdf"
+                        }
+                    }
                 },
                 "04-pca-II": {
                     "metadata": {
