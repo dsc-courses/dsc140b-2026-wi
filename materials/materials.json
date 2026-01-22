@@ -182,6 +182,9 @@
                     "artifacts": {
                         "slides.pdf": {
                             "path": "materials/lectures/schedules/tr/06-pca-I/slides.pdf"
+                        },
+                        "marked.pdf": {
+                            "path": "materials/lectures/schedules/tr/06-pca-I/marked.pdf"
                         }
                     }
                 },
