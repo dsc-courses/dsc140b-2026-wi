@@ -881,6 +881,85 @@ Live Q&A
 
 
 
+
+        <div class="problem-outer">
+        <h2>Problem #69</h2>
+        <p>Tags: <a href='../tags/lecture-06.html'>lecture-06</a>, <a href='../tags/quiz-04.html'>quiz-04</a>, <a href='../tags/eigenvalues.html'>eigenvalues</a>, <a href='../tags/pca.html'>pca</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(C\)</span> be the sample covariance matrix of a data set <span class="math">\(\mathcal X\)</span> consisting of five points. Suppose that PCA is performed to reduce the dimensionality of <span class="math">\(\mathcal X\)</span> to one dimension. The results are:</p>
+<div class="math">$$\begin{align*}
+        z^{(1)}& = 4\\
+        z^{(2)}& = 3\\
+        z^{(3)}& = -2\\
+        z^{(4)}& = 1\\
+        z^{(5)}& = -6\\\end{align*}$$</div>
+<p>What is the largest eigenvalue of <span class="math">\(C\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(66/5\)</span> The largest eigenvalue of <span class="math">\(C\)</span> equals the variance of the projected data along the first principal component. This data has mean zero (we can verify: <span class="math">\((4 + 3 - 2 +
+        1 - 6)/5 = 0\)</span>). So the variance is simply:</p>
+<div class="math">$$\begin{align*}\lambda_1 &= \frac{1}{5}\sum_{i=1}^{5}(z^{(i)})^2 \\&= \frac{1}{5}(16 + 9 + 4 + 1 + 36) \\&= \frac{66}{5}\end{align*}$$</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #77</h2>
+        <p>Tags: <a href='../tags/lecture-06.html'>lecture-06</a>, <a href='../tags/quiz-04.html'>quiz-04</a>, <a href='../tags/eigenvalues.html'>eigenvalues</a>, <a href='../tags/pca.html'>pca</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider the data set shown below:</p>
+<center><div class="image"><img src="../images/77/fig/data.png" /></div></center>
+<p>As before, the symmetry across both axes is exact.</p>
+<p>Let <span class="math">\(C\)</span> be the empirical covariance matrix. What is the largest eigenvalue of <span class="math">\(C\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(180/8\)</span> Due to the symmetry across both axes, the covariance matrix is diagonal (the off-diagonal entries are zero). The diagonal entries are the variances in the <span class="math">\(x_1\)</span> and <span class="math">\(x_2\)</span> directions respectively.</p>
+<p>From the image, we can read off the coordinates of the 8 points. Due to symmetry, we have points at approximately <span class="math">\((\pm 3, \pm 3)\)</span> and <span class="math">\((\pm 3, \pm 3)\)</span> forming a symmetric pattern.</p>
+<p>The largest eigenvalue equals the larger of the two variances. Computing the variance in the direction with greater spread gives <span class="math">\(180/8\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #78</h2>
+        <p>Tags: <a href='../tags/lecture-06.html'>lecture-06</a>, <a href='../tags/quiz-04.html'>quiz-04</a>, <a href='../tags/eigenvalues.html'>eigenvalues</a>, <a href='../tags/pca.html'>pca</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(\mathcal X = \{\vec{x}^{(1)}, \ldots, \vec{x}^{(100)}\}\)</span> be a data set of <span class="math">\(100\)</span> points in 50 dimensions. Let <span class="math">\(\lambda\)</span> be the top eigenvalue of the covariance matrix for <span class="math">\(\mathcal X\)</span>.</p>
+<p>From this data set, we will construct two data sets <span class="math">\(\mathcal A =
+    \{\vec{a}^{(1)}, \ldots, \vec{a}^{(100)}\}\)</span> and <span class="math">\(\mathcal B = \{\vec{b}^{(1)},
+    \ldots, \vec{b}^{(100)}\}\)</span> in 25 dimensions, by setting <span class="math">\(\vec{a}^{(i)}\)</span> to be the first 25 coordinates of <span class="math">\(\vec{x}^{(i)}\)</span>, and setting <span class="math">\(\vec{b}^{(i)}\)</span> to be the remaining 25 coordinates of <span class="math">\(\vec{x}^{(i)}\)</span>.</p>
+<p>Let <span class="math">\(\lambda_a\)</span> and <span class="math">\(\lambda_b\)</span> be the top eigenvalues of the covariance matrices for <span class="math">\(\mathcal A\)</span> and <span class="math">\(\mathcal B\)</span>, respectively.</p>
+<p>True or False: it must be the case that <span class="math">\(\lambda = \max\{\lambda_a, \lambda_b\}\)</span>.</p>
+<details>
+    <summary>Solution</summary>
+<p>False.</p>
+<p>The top eigenvalue <span class="math">\(\lambda\)</span> of the full covariance matrix represents the maximum variance in any direction in the 50-dimensional space. This direction may involve correlations between the first 25 and last 25 coordinates.</p>
+<p>When we split the data, <span class="math">\(\lambda_a\)</span> captures only the maximum variance within the first 25 dimensions, and <span class="math">\(\lambda_b\)</span> captures only the maximum variance within the last 25 dimensions. Neither can capture variance in directions that span both coordinate sets.</p>
+<p>As a counterexample, consider data where all variance is along the direction <span class="math">\((1, 0, \ldots, 0, 1, 0, \ldots, 0)^T\)</span>(a unit vector with components in both the first 25 and last 25 coordinates). The original data would have <span class="math">\(\lambda > 0\)</span>, but both <span class="math">\(\mathcal A\)</span> and <span class="math">\(\mathcal B\)</span> would have smaller top eigenvalues, so <span class="math">\(\lambda > \max\{\lambda_a, \lambda_b\}\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
        </body>
    </html>
     </div>

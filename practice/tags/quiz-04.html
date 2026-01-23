@@ -284,16 +284,539 @@ Live Q&A
         <div class="problem">
     <div class="problem-body">
 <p>Center the data set:</p>
-<div class="math">$$\begin{align*}\vec x^{(1)}&= (1, 0, 2)^T \\\vec x^{(2)}&= (3, 2, 4)^T \\\vec x^{(3)}&= (2, 4, 0)^T
+<div class="math">$$\begin{align*}\vec x^{(1)}&= (4, -2, 2)^T \\\vec x^{(2)}&= (2, 3, 0)^T \\\vec x^{(3)}&= (3, -1, 1)^T
     \end{align*}$$</div>
 <details>
     <summary>Solution</summary>
 <p>First, compute the mean:</p>
-<div class="math">\[\bar{\vec x} = \frac{1}{3}\left[(1, 0, 2)^T + (3, 2, 4)^T + (2, 4, 0)^T\right]= \frac{1}{3}(6, 6, 6)^T = (2, 2, 2)^T
+<div class="math">\[\bar{\vec x} = \frac{1}{3}\left[(4, -2, 2)^T + (2, 3, 0)^T + (3, -1, 1)^T\right]= \frac{1}{3}(9, 0, 3)^T = (3, 0, 1)^T
         \]</div>
 <p>Then subtract the mean from each data point:</p>
-<div class="math">$$\begin{align*}\tilde{\vec x}^{(1)}&= \vec x^{(1)} - \bar{\vec x} = (1, 0, 2)^T - (2, 2, 2)^T = (-1, -2, 0)^T \\\tilde{\vec x}^{(2)}&= \vec x^{(2)} - \bar{\vec x} = (3, 2, 4)^T - (2, 2, 2)^T = (1, 0, 2)^T \\\tilde{\vec x}^{(3)}&= \vec x^{(3)} - \bar{\vec x} = (2, 4, 0)^T - (2, 2, 2)^T = (0, 2, -2)^T
+<div class="math">$$\begin{align*}\tilde{\vec x}^{(1)}&= \vec x^{(1)} - \bar{\vec x} = (4, -2, 2)^T - (3, 0, 1)^T = (1, -2, 1)^T \\\tilde{\vec x}^{(2)}&= \vec x^{(2)} - \bar{\vec x} = (2, 3, 0)^T - (3, 0, 1)^T = (-1, 3, -1)^T \\\tilde{\vec x}^{(3)}&= \vec x^{(3)} - \bar{\vec x} = (3, -1, 1)^T - (3, 0, 1)^T = (0, -1, 0)^T
         \end{align*}$$</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #63</h2>
+        <p>Tags: <a href='../tags/quiz-04.html'>quiz-04</a>, <a href='../tags/covariance.html'>covariance</a>, <a href='../tags/lecture-06.html'>lecture-06</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider the dataset of four points in <span class="math">\(\mathbb R^2\)</span> shown below:</p>
+<div class="math">$$\begin{align*}\vec{x}^{(1)}&= (12, 2)^T\\\vec{x}^{(2)}&= (8, 6)^T\\\vec{x}^{(3)}&= (6, 5)^T\\\vec{x}^{(4)}&= (14, 3)^T
+    \end{align*}$$</div>
+<p>Calculate the sample covariance matrix.</p>
+<details>
+    <summary>Solution</summary>
+<div class="math">\[C = \begin{pmatrix} 10 & -4 \\ -4 & 5/2 \end{pmatrix}\]</div>
+<p>First, compute the mean:</p>
+<div class="math">\[\bar{\vec x} = \frac{1}{4}\left[(12, 2)^T + (8, 6)^T + (6, 5)^T + (14, 3)^T\right]= \frac{1}{4}(40, 16)^T = (10, 4)^T
+        \]</div>
+<p>Then form the centered data matrix <span class="math">\(Z\)</span>, whose rows are the centered data points:</p>
+<div class="math">\[
+            Z = \begin{pmatrix}
+                \vec{x}^{(1)} - \bar{\vec x} \\
+                \vec{x}^{(2)} - \bar{\vec x} \\
+                \vec{x}^{(3)} - \bar{\vec x} \\
+                \vec{x}^{(4)} - \bar{\vec x}
+            \end{pmatrix}
+            = \begin{pmatrix}
+                2 & -2 \\
+                -2 & 2 \\
+                -4 & 1 \\
+                4 & -1
+            \end{pmatrix}\]</div>
+<p>The sample covariance matrix is:</p>
+<div class="math">$$\begin{align*}
+            C &= \frac{1}{n} Z^T Z \\&= \frac{1}{4}\begin{pmatrix} 2 & -2 & -4 & 4 \\ -2 & 2 & 1 & -1 \end{pmatrix}\begin{pmatrix} 2 & -2 \\ -2 & 2 \\ -4 & 1 \\ 4 & -1 \end{pmatrix}\\&= \frac{1}{4}\begin{pmatrix} 4+4+16+16 & -4-4-4-4 \\ -4-4-4-4 & 4+4+1+1 \end{pmatrix}\\&= \frac{1}{4}\begin{pmatrix} 40 & -16 \\ -16 & 10 \end{pmatrix}\\&= \begin{pmatrix} 10 & -4 \\ -4 & 5/2 \end{pmatrix}\end{align*}$$</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #64</h2>
+        <p>Tags: <a href='../tags/quiz-04.html'>quiz-04</a>, <a href='../tags/covariance.html'>covariance</a>, <a href='../tags/lecture-06.html'>lecture-06</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider the data set in the image shown below:</p>
+<center><div class="image"><img src="../images/64/fig/data.png" /></div></center>
+<p>You may assume that this data is already centered and that the symmetry over the <span class="math">\(x_2\)</span> axis is exact.</p>
+<p>Which one of the following is true about the <span class="math">\((1, 2)\)</span> entry of the data's sample covariance matrix?</p>
+<p>Consider the <span class="math">\((1, 2)\)</span> entry of the covariance matrix, which represents the covariance between the first and second features.</p>
+<p>Is the <span class="math">\((1, 2)\)</span> entry of the covariance matrix positive, negative, or zero?</p>
+<details>
+    <summary>Solution</summary>
+<p>It is zero.</p>
+<p>Because of the symmetry over the <span class="math">\(x_2\)</span> axis, for every point <span class="math">\((a, b)\)</span> in the data set, there is a corresponding point <span class="math">\((-a, b)\)</span>. When computing the <span class="math">\((1, 2)\)</span> entry of the covariance matrix, we sum <span class="math">\(\tilde{x}_1^{(i)}\cdot\tilde{x}_2^{(i)}\)</span> over all points. For the symmetric pairs <span class="math">\((a, b)\)</span> and <span class="math">\((-a, b)\)</span>, these contributions are <span class="math">\(ab\)</span> and <span class="math">\(-ab\)</span>, which cancel out. Therefore, the <span class="math">\((1, 2)\)</span> entry is zero.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #65</h2>
+        <p>Tags: <a href='../tags/quiz-04.html'>quiz-04</a>, <a href='../tags/covariance.html'>covariance</a>, <a href='../tags/lecture-06.html'>lecture-06</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(\vec{x}^{(1)}, \ldots, \vec{x}^{(6)}\)</span> be a data set of <span class="math">\(6\)</span> points in <span class="math">\(\mathbb R^3\)</span>. Shown below are scatter plots of each pair of coordinates (pay close attention to the axis labels):</p>
+<center><div class="image"><img src="../images/65/fig/scatter.png" /></div></center>
+<p>Which one of the following could possibly be the data's sample covariance matrix?</p>
+<div class="multiple-choices"><form><div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\begin{pmatrix} 9 & 3 & -1 \\ 3 & 12 & 2 \\ -1 & 2 & 11\end{pmatrix}\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\begin{pmatrix} 8 & -3 & 2 \\ -3 & 6 & 1 \\ 2 & 1 & 7\end{pmatrix}\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\begin{pmatrix} 10 & 4 & -2 \\ 4 & 5 & 0 \\ -2 & 0 & 10\end{pmatrix}\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\begin{pmatrix} 12 & 2 & 6 \\ 2 & 8 & -4 \\ 6 & -4 & 9\end{pmatrix}\)</span></p></label></div></form></div>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\begin{pmatrix} 10 & 4 & -2 \\ 4 & 5 & 0 \\ -2 & 0 & 10\end{pmatrix}\)</span> From the scatter plots, we can determine the signs of the covariances. The <span class="math">\((x_1, x_2)\)</span> plot shows a positive correlation, so <span class="math">\(C_{12} > 0\)</span>. The <span class="math">\((x_1, x_3)\)</span> plot shows a negative correlation, so <span class="math">\(C_{13} < 0\)</span>. The <span class="math">\((x_2, x_3)\)</span> plot shows no clear correlation, so <span class="math">\(C_{23}\approx 0\)</span>. The only matrix with <span class="math">\(C_{12} > 0\)</span>, <span class="math">\(C_{13} < 0\)</span>, and <span class="math">\(C_{23} = 0\)</span> is the third choice.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #66</h2>
+        <p>Tags: <a href='../tags/quiz-04.html'>quiz-04</a>, <a href='../tags/linear transformations.html'>linear transformations</a>, <a href='../tags/covariance.html'>covariance</a>, <a href='../tags/lecture-06.html'>lecture-06</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(\mathcal X = \{\vec{x}^{(1)}, \ldots, \vec{x}^{(n)}\}\)</span> be a centered data set of <span class="math">\(n\)</span> points in <span class="math">\(\mathbb R^2\)</span>. Consider the linear transformation <span class="math">\(\vec f(\vec x) = (-x_1, x_2)^T\)</span>, which takes an input point and ``flips'' it over the <span class="math">\(x_2\)</span> axis. Let <span class="math">\(\mathcal X' = \{\vec f(\vec{x}^{(1)}), \ldots, \vec f(\vec{x}^{(n)}) \}\)</span> be the set of points in <span class="math">\(\mathbb
+    R^2\)</span> obtained by applying <span class="math">\(\vec f\)</span> to each point in <span class="math">\(\mathcal X\)</span>.</p>
+<p>Suppose the sample covariance matrix of <span class="math">\(\mathcal X\)</span> is</p>
+<div class="math">\[
+        C = \begin{pmatrix}
+            5 & -3\\
+            -3 & 4
+        \end{pmatrix}.
+    \]</div>
+<p>What is the sample covariance matrix of <span class="math">\(\mathcal X'\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\begin{pmatrix} 5 & 3\\ 3 & 4 \end{pmatrix}\)</span> Flipping the data over the <span class="math">\(x_2\)</span> axis doesn't change the variance (spread) in the <span class="math">\(x_1\)</span> or <span class="math">\(x_2\)</span> directions, and so the diagonal entries of the covariance matrix remain the same. The covariance between <span class="math">\(x_1\)</span> and <span class="math">\(x_2\)</span> stays at the same magnitude but changes sign. That is, the covariance goes from <span class="math">\(-3\)</span> to <span class="math">\(3\)</span>.</p>
+<p>You can see this more formally, too. The transformation takes a point <span class="math">\((x_1, x_2)^T\)</span> to <span class="math">\((-x_1, x_2)^T\)</span>. The covariance between <span class="math">\(x_1\)</span> and <span class="math">\(x_2\)</span> in this transformed data is therefore:</p>
+<div class="math">$$\begin{align*}\text{Cov}(-x_1, x_2)
+            &= \frac{1}{n}\sum_{i=1}^n \left(-x_1^{(i)}\right)\left(x_2^{(i)}\right)\\&= -\frac{1}{n}\sum_{i=1}^n x_1^{(i)} x_2^{(i)}\\&= -\text{Cov}(x_1, x_2)
+        \end{align*}$$</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #67</h2>
+        <p>Tags: <a href='../tags/quiz-04.html'>quiz-04</a>, <a href='../tags/covariance.html'>covariance</a>, <a href='../tags/variance.html'>variance</a>, <a href='../tags/lecture-06.html'>lecture-06</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Suppose <span class="math">\(C = \begin{pmatrix} 5 & -3\\ -3 & 6 \\ \end{pmatrix}\)</span> is the empirical covariance matrix for a data set of points. What is the variance in the direction given by the unit vector <span class="math">\(\vec{u} = \frac{1}{\sqrt2}(-1, 1)^T\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(17/2\)</span>.</p>
+<p>The variance in the direction of a unit vector <span class="math">\(\vec{u}\)</span> is given by <span class="math">\(\vec{u}^T C \vec{u}\)</span>.</p>
+<div class="math">$$\begin{align*}\vec{u}^T C \vec{u}&= \frac{1}{\sqrt{2}}(-1, 1) \begin{pmatrix} 5 & -3 \\ -3 & 6 \end{pmatrix}\frac{1}{\sqrt{2}}\begin{pmatrix} -1 \\ 1 \end{pmatrix}\\&= \frac{1}{2}(-1, 1) \begin{pmatrix} -5 - 3 \\ 3 + 6 \end{pmatrix}\\&= \frac{1}{2}(-1, 1) \begin{pmatrix} -8 \\ 9 \end{pmatrix}\\&= \frac{1}{2}(8 + 9) \\&= \frac{17}{2}\end{align*}$$</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #68</h2>
+        <p>Tags: <a href='../tags/covariance.html'>covariance</a>, <a href='../tags/eigenvectors.html'>eigenvectors</a>, <a href='../tags/quiz-04.html'>quiz-04</a>, <a href='../tags/variance.html'>variance</a>, <a href='../tags/lecture-06.html'>lecture-06</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(C\)</span> be the sample covariance matrix of a data set, and suppose <span class="math">\(\vec{u}^{(1)}, \vec{u}^{(2)}, \vec{u}^{(3)}\)</span> are normalized eigenvectors of <span class="math">\(C\)</span> with eigenvalues <span class="math">\(\lambda_1 = 9, \lambda_2 = 3, \lambda_3=0\)</span>, respectively.</p>
+<p>Suppose <span class="math">\(\vec x = \frac{1}{\sqrt 2}\vec{u}^{(1)} + \frac{1}{\sqrt 6}\vec{u}^{(2)} +
+    \frac{1}{\sqrt 3}\vec{u}^{(3)}\)</span>. What is the variance in the direction of <span class="math">\(\vec x\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(5\)</span> Remember that for any unit vector <span class="math">\(\vec u\)</span>, the variance in the direction of <span class="math">\(\vec u\)</span> is given by <span class="math">\(\vec u^T C \vec u\)</span>. So, for the vector <span class="math">\(\vec x\)</span>, we have</p>
+<div class="math">$$\begin{align*}\operatorname{Var}(\vec x) &= \vec x^T C \vec x \\&= \left(\frac{1}{\sqrt 2}\vec{u}^{(1)} + \frac{1}{\sqrt 6}\vec{u}^{(2)} + \frac{1}{\sqrt 3}\vec{u}^{(3)}\right)^T C \left(\frac{1}{\sqrt 2}\vec{u}^{(1)} + \frac{1}{\sqrt 6}\vec{u}^{(2)} + \frac{1}{\sqrt 3}\vec{u}^{(3)}\right)\end{align*}$$</div>
+<p>Since <span class="math">\(\vec{u}^{(1)}, \vec{u}^{(2)}, \vec{u}^{(3)}\)</span> are eigenvectors of <span class="math">\(C\)</span>, the matrix multiplication simplifies:</p>
+<div class="math">$$\begin{align*}\operatorname{Var}(\vec x) &= \left(\frac{1}{\sqrt 2}\vec{u}^{(1)} + \frac{1}{\sqrt 6}\vec{u}^{(2)} + \frac{1}{\sqrt 3}\vec{u}^{(3)}\right)^T \left(\frac{9}{\sqrt 2}\vec{u}^{(1)} + \frac{3}{\sqrt 6}\vec{u}^{(2)} + \frac{0}{\sqrt 3}\vec{u}^{(3)}\right)\\&= \frac{1}{2}\cdot 9 + \frac{1}{6}\cdot 3 + \frac{1}{3}\cdot 0 \\&= \frac{9}{2} + \frac{1}{2} + 0 \\&= 5
+        \end{align*}$$</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #69</h2>
+        <p>Tags: <a href='../tags/lecture-06.html'>lecture-06</a>, <a href='../tags/quiz-04.html'>quiz-04</a>, <a href='../tags/eigenvalues.html'>eigenvalues</a>, <a href='../tags/pca.html'>pca</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(C\)</span> be the sample covariance matrix of a data set <span class="math">\(\mathcal X\)</span> consisting of five points. Suppose that PCA is performed to reduce the dimensionality of <span class="math">\(\mathcal X\)</span> to one dimension. The results are:</p>
+<div class="math">$$\begin{align*}
+        z^{(1)}& = 4\\
+        z^{(2)}& = 3\\
+        z^{(3)}& = -2\\
+        z^{(4)}& = 1\\
+        z^{(5)}& = -6\\\end{align*}$$</div>
+<p>What is the largest eigenvalue of <span class="math">\(C\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(66/5\)</span> The largest eigenvalue of <span class="math">\(C\)</span> equals the variance of the projected data along the first principal component. This data has mean zero (we can verify: <span class="math">\((4 + 3 - 2 +
+        1 - 6)/5 = 0\)</span>). So the variance is simply:</p>
+<div class="math">$$\begin{align*}\lambda_1 &= \frac{1}{5}\sum_{i=1}^{5}(z^{(i)})^2 \\&= \frac{1}{5}(16 + 9 + 4 + 1 + 36) \\&= \frac{66}{5}\end{align*}$$</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #70</h2>
+        <p>Tags: <a href='../tags/lecture-06.html'>lecture-06</a>, <a href='../tags/quiz-04.html'>quiz-04</a>, <a href='../tags/eigenvectors.html'>eigenvectors</a>, <a href='../tags/pca.html'>pca</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider the data set shown below:</p>
+<center><div class="image"><img src="../images/70/fig/data.png" /></div></center>
+<p>Which of the following could possibly be the top eigenvector of the data's sample covariance matrix?</p>
+<div class="multiple-choices"><form><div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\((1, 0)^T\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\((0, 1)^T\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\((1, 1)^T\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\((3, 1)^T\)</span></p></label></div></form></div>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\((3, 1)^T\)</span> The top eigenvector of the covariance matrix points in the direction of greatest variance. Looking at the scatter plot, the data is elongated along a direction that has a positive slope, rising more in the <span class="math">\(x_1\)</span> direction than the <span class="math">\(x_2\)</span> direction. The vector <span class="math">\((3, 1)^T\)</span> points roughly in this direction.</p>
+<p><span class="math">\((1, 0)^T\)</span> and <span class="math">\((0, 1)^T\)</span> are along the axes, which don't align with the data's elongation. <span class="math">\((1, 1)^T\)</span> has too steep a slope compared to the apparent direction of the data.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #71</h2>
+        <p>Tags: <a href='../tags/lecture-07.html'>lecture-07</a>, <a href='../tags/quiz-04.html'>quiz-04</a>, <a href='../tags/pca.html'>pca</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(\vec{x}^{(1)}\)</span> and <span class="math">\(\vec{x}^{(2)}\)</span> be two points in a data set <span class="math">\(\mathcal{X}\)</span> of 100 points in <span class="math">\(d\)</span> dimensions. Suppose PCA is performed, but dimensionality is not reduced; that is, each point <span class="math">\(\vec{x}^{(i)}\)</span> is transformed to the vector <span class="math">\(\vec{z}^{(i)} = U \vec{x}^{(i)}\)</span>, where <span class="math">\(U\)</span> is a matrix whose <span class="math">\(d\)</span> rows are the (orthonormal) eigenvectors of the data covariance matrix.</p>
+<p>True or False: <span class="math">\(\|\vec{x}^{(1)} - \vec{x}^{(2)}\| = \|\vec{z}^{(1)} -
+    \vec{z}^{(2)}\|\)</span>. That is, the distance between <span class="math">\(\vec{z}^{(1)}\)</span> and <span class="math">\(\vec{z}^{(2)}\)</span> in the new data set is necessarily the same as the distance between their corresponding points in the original data set.</p>
+<details>
+    <summary>Solution</summary>
+<p>True.</p>
+<p>Since <span class="math">\(U\)</span> is an orthogonal matrix (its rows are orthonormal eigenvectors), it preserves distances. For any vector <span class="math">\(\vec{v}\)</span>:</p>
+<div class="math">\[\|U\vec{v}\|^2 = (U\vec{v})^T(U\vec{v}) = \vec{v}^T U^T U \vec{v} = \vec{v}^T \vec{v} = \|\vec{v}\|^2
+        \]</div>
+<p>Therefore:</p>
+<div class="math">\[\|\vec{z}^{(1)} - \vec{z}^{(2)}\| = \|U\vec{x}^{(1)} - U\vec{x}^{(2)}\| = \|U(\vec{x}^{(1)} - \vec{x}^{(2)})\| = \|\vec{x}^{(1)} - \vec{x}^{(2)}\|\]</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #72</h2>
+        <p>Tags: <a href='../tags/quiz-04.html'>quiz-04</a>, <a href='../tags/covariance.html'>covariance</a>, <a href='../tags/variance.html'>variance</a>, <a href='../tags/lecture-06.html'>lecture-06</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Suppose <span class="math">\(C = \begin{pmatrix} 4 & -2\\ -2 & 5 \\ \end{pmatrix}\)</span> is the empirical covariance matrix for a data set of points. What is the variance in the direction given by the unit vector <span class="math">\(\vec{u} = \frac{1}{\sqrt2}(1, 1)^T\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(5/2\)</span> The variance in the direction of a unit vector <span class="math">\(\vec{u}\)</span> is given by <span class="math">\(\vec{u}^T C \vec{u}\)</span>.</p>
+<div class="math">$$\begin{align*}\vec{u}^T C \vec{u}&= \frac{1}{\sqrt{2}}(1, 1) \begin{pmatrix} 4 & -2 \\ -2 & 5 \end{pmatrix}\frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ 1 \end{pmatrix}\\&= \frac{1}{2}(1, 1) \begin{pmatrix} 4 - 2 \\ -2 + 5 \end{pmatrix}\\&= \frac{1}{2}(1, 1) \begin{pmatrix} 2 \\ 3 \end{pmatrix}\\&= \frac{1}{2}(2 + 3) \\&= \frac{5}{2}\end{align*}$$</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #73</h2>
+        <p>Tags: <a href='../tags/covariance.html'>covariance</a>, <a href='../tags/eigenvectors.html'>eigenvectors</a>, <a href='../tags/quiz-04.html'>quiz-04</a>, <a href='../tags/variance.html'>variance</a>, <a href='../tags/lecture-06.html'>lecture-06</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(C\)</span> be the sample covariance matrix of a data set, and suppose <span class="math">\(\vec{u}^{(1)}, \vec{u}^{(2)}, \vec{u}^{(3)}\)</span> are normalized eigenvectors of <span class="math">\(C\)</span> with eigenvalues <span class="math">\(\lambda_1 = 16, \lambda_2 = 12, \lambda_3=0\)</span>, respectively.</p>
+<p>Suppose <span class="math">\(\vec x = \frac{1}{\sqrt 2}\vec{u}^{(1)} + \frac{1}{\sqrt 6}\vec{u}^{(2)} +
+    \frac{1}{\sqrt 3}\vec{u}^{(3)}\)</span>. What is the variance in the direction of <span class="math">\(\vec x\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(10\)</span> Remember that for any unit vector <span class="math">\(\vec u\)</span>, the variance in the direction of <span class="math">\(\vec u\)</span> is given by <span class="math">\(\vec u^T C \vec u\)</span>. So, for the vector <span class="math">\(\vec x\)</span>, we have</p>
+<div class="math">$$\begin{align*}\operatorname{Var}(\vec x) &= \vec x^T C \vec x \\&= \left(\frac{1}{\sqrt 2}\vec{u}^{(1)} + \frac{1}{\sqrt 6}\vec{u}^{(2)} + \frac{1}{\sqrt 3}\vec{u}^{(3)}\right)^T C \left(\frac{1}{\sqrt 2}\vec{u}^{(1)} + \frac{1}{\sqrt 6}\vec{u}^{(2)} + \frac{1}{\sqrt 3}\vec{u}^{(3)}\right)\end{align*}$$</div>
+<p>Since <span class="math">\(\vec{u}^{(1)}, \vec{u}^{(2)}, \vec{u}^{(3)}\)</span> are eigenvectors of <span class="math">\(C\)</span>, the matrix multiplication simplifies:</p>
+<div class="math">$$\begin{align*}\operatorname{Var}(\vec x) &= \left(\frac{1}{\sqrt 2}\vec{u}^{(1)} + \frac{1}{\sqrt 6}\vec{u}^{(2)} + \frac{1}{\sqrt 3}\vec{u}^{(3)}\right)^T \left(\frac{16}{\sqrt 2}\vec{u}^{(1)} + \frac{12}{\sqrt 6}\vec{u}^{(2)} + \frac{0}{\sqrt 3}\vec{u}^{(3)}\right)\\&= \frac{1}{2}\cdot 16 + \frac{1}{6}\cdot 12 + \frac{1}{3}\cdot 0 \\&= 8 + 2 + 0 \\&= 10
+        \end{align*}$$</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #74</h2>
+        <p>Tags: <a href='../tags/quiz-04.html'>quiz-04</a>, <a href='../tags/covariance.html'>covariance</a>, <a href='../tags/lecture-06.html'>lecture-06</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider the data set in the image shown below:</p>
+<center><div class="image"><img src="../images/74/fig/data.png" /></div></center>
+<p>You may assume that this data is already centered and that the symmetry over both the <span class="math">\(x_1\)</span> and <span class="math">\(x_2\)</span> axes is exact.</p>
+<p>Consider the <span class="math">\((1, 2)\)</span> entry of the data's sample covariance matrix. Is it positive, negative, or zero?</p>
+<details>
+    <summary>Solution</summary>
+<p>It is zero.</p>
+<p>Because of the symmetry over both the <span class="math">\(x_1\)</span> and <span class="math">\(x_2\)</span> axes, for every point <span class="math">\((a, b)\)</span> in the data set, there are corresponding points <span class="math">\((-a, b)\)</span>, <span class="math">\((a, -b)\)</span>, and <span class="math">\((-a, -b)\)</span>. When computing the <span class="math">\((1, 2)\)</span> entry of the covariance matrix, we sum <span class="math">\(\tilde{x}_1^{(i)}\cdot\tilde{x}_2^{(i)}\)</span> over all points. For these symmetric groups of four points, the contributions are <span class="math">\(ab\)</span>, <span class="math">\(-ab\)</span>, <span class="math">\(-ab\)</span>, and <span class="math">\(ab\)</span>, which sum to zero. Therefore, the <span class="math">\((1, 2)\)</span> entry is zero.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #75</h2>
+        <p>Tags: <a href='../tags/quiz-04.html'>quiz-04</a>, <a href='../tags/covariance.html'>covariance</a>, <a href='../tags/lecture-06.html'>lecture-06</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider the dataset of four points in <span class="math">\(\mathbb R^2\)</span> shown below:</p>
+<div class="math">$$\begin{align*}\vec{x}^{(1)}&= (10, -3)^T\\\vec{x}^{(2)}&= (6, 2)^T\\\vec{x}^{(3)}&= (2, 8)^T\\\vec{x}^{(4)}&= (6, 1)^T
+    \end{align*}$$</div>
+<p>Calculate the sample covariance matrix.</p>
+<details>
+    <summary>Solution</summary>
+<div class="math">\[C = \begin{pmatrix} 8 & -11 \\ -11 & 31/2 \end{pmatrix}\]</div>
+<p>First, compute the mean:</p>
+<div class="math">\[\bar{\vec x} = \frac{1}{4}\left[(10, -3)^T + (6, 2)^T + (2, 8)^T + (6, 1)^T\right]= \frac{1}{4}(24, 8)^T = (6, 2)^T
+        \]</div>
+<p>Then form the centered data matrix <span class="math">\(Z\)</span>, whose rows are the centered data points:</p>
+<div class="math">\[
+            Z = \begin{pmatrix}
+                \vec{x}^{(1)} - \bar{\vec x} \\
+                \vec{x}^{(2)} - \bar{\vec x} \\
+                \vec{x}^{(3)} - \bar{\vec x} \\
+                \vec{x}^{(4)} - \bar{\vec x}
+            \end{pmatrix}
+            = \begin{pmatrix}
+                4 & -5 \\
+                0 & 0 \\
+                -4 & 6 \\
+                0 & -1
+            \end{pmatrix}\]</div>
+<p>The sample covariance matrix is:</p>
+<div class="math">$$\begin{align*}
+            C &= \frac{1}{n} Z^T Z \\&= \frac{1}{4}\begin{pmatrix} 4 & 0 & -4 & 0 \\ -5 & 0 & 6 & -1 \end{pmatrix}\begin{pmatrix} 4 & -5 \\ 0 & 0 \\ -4 & 6 \\ 0 & -1 \end{pmatrix}\\&= \frac{1}{4}\begin{pmatrix} 16+0+16+0 & -20+0-24+0 \\ -20+0-24+0 & 25+0+36+1 \end{pmatrix}\\&= \frac{1}{4}\begin{pmatrix} 32 & -44 \\ -44 & 62 \end{pmatrix}\\&= \begin{pmatrix} 8 & -11 \\ -11 & 31/2 \end{pmatrix}\end{align*}$$</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #76</h2>
+        <p>Tags: <a href='../tags/quiz-04.html'>quiz-04</a>, <a href='../tags/linear transformations.html'>linear transformations</a>, <a href='../tags/covariance.html'>covariance</a>, <a href='../tags/lecture-06.html'>lecture-06</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(\mathcal X = \{\vec{x}^{(1)}, \ldots, \vec{x}^{(n)}\}\)</span> be a data set of <span class="math">\(n\)</span> points in <span class="math">\(\mathbb R^2\)</span>. Consider the transformation <span class="math">\(\vec f(\vec x) = (x_1 + 5, x_2 - 5)^T\)</span>, which takes an input point and ``shifts'' it over by <span class="math">\(5\)</span> units and down by 5 units. Let <span class="math">\(\mathcal X' = \{\vec f(\vec{x}^{(1)}), \ldots, \vec
+    f(\vec{x}^{(n)}) \}\)</span> be the set of points in <span class="math">\(\mathbb R^2\)</span> obtained by applying <span class="math">\(\vec f\)</span> to each point in <span class="math">\(\mathcal X\)</span>.</p>
+<p>Suppose the sample covariance matrix of <span class="math">\(\mathcal X\)</span> is</p>
+<div class="math">\[
+        C = \begin{pmatrix}
+            5 & -3\\
+            -3 & 4
+        \end{pmatrix}.
+    \]</div>
+<p>What is the sample covariance matrix of <span class="math">\(\mathcal X'\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\begin{pmatrix} 5 & -3\\ -3 & 4 \end{pmatrix}\)</span> The transformation <span class="math">\(\vec f(\vec x) = (x_1 + 5, x_2 - 5)^T\)</span> is a translation (shift) of the data. Translations do not affect the covariance matrix, because in defining the covariance matrix we first subtract the mean from each data point. Translating all points shifts the mean by the same amount, so the centered data remains unchanged.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #77</h2>
+        <p>Tags: <a href='../tags/lecture-06.html'>lecture-06</a>, <a href='../tags/quiz-04.html'>quiz-04</a>, <a href='../tags/eigenvalues.html'>eigenvalues</a>, <a href='../tags/pca.html'>pca</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider the data set shown below:</p>
+<center><div class="image"><img src="../images/77/fig/data.png" /></div></center>
+<p>As before, the symmetry across both axes is exact.</p>
+<p>Let <span class="math">\(C\)</span> be the empirical covariance matrix. What is the largest eigenvalue of <span class="math">\(C\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(180/8\)</span> Due to the symmetry across both axes, the covariance matrix is diagonal (the off-diagonal entries are zero). The diagonal entries are the variances in the <span class="math">\(x_1\)</span> and <span class="math">\(x_2\)</span> directions respectively.</p>
+<p>From the image, we can read off the coordinates of the 8 points. Due to symmetry, we have points at approximately <span class="math">\((\pm 3, \pm 3)\)</span> and <span class="math">\((\pm 3, \pm 3)\)</span> forming a symmetric pattern.</p>
+<p>The largest eigenvalue equals the larger of the two variances. Computing the variance in the direction with greater spread gives <span class="math">\(180/8\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #78</h2>
+        <p>Tags: <a href='../tags/lecture-06.html'>lecture-06</a>, <a href='../tags/quiz-04.html'>quiz-04</a>, <a href='../tags/eigenvalues.html'>eigenvalues</a>, <a href='../tags/pca.html'>pca</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(\mathcal X = \{\vec{x}^{(1)}, \ldots, \vec{x}^{(100)}\}\)</span> be a data set of <span class="math">\(100\)</span> points in 50 dimensions. Let <span class="math">\(\lambda\)</span> be the top eigenvalue of the covariance matrix for <span class="math">\(\mathcal X\)</span>.</p>
+<p>From this data set, we will construct two data sets <span class="math">\(\mathcal A =
+    \{\vec{a}^{(1)}, \ldots, \vec{a}^{(100)}\}\)</span> and <span class="math">\(\mathcal B = \{\vec{b}^{(1)},
+    \ldots, \vec{b}^{(100)}\}\)</span> in 25 dimensions, by setting <span class="math">\(\vec{a}^{(i)}\)</span> to be the first 25 coordinates of <span class="math">\(\vec{x}^{(i)}\)</span>, and setting <span class="math">\(\vec{b}^{(i)}\)</span> to be the remaining 25 coordinates of <span class="math">\(\vec{x}^{(i)}\)</span>.</p>
+<p>Let <span class="math">\(\lambda_a\)</span> and <span class="math">\(\lambda_b\)</span> be the top eigenvalues of the covariance matrices for <span class="math">\(\mathcal A\)</span> and <span class="math">\(\mathcal B\)</span>, respectively.</p>
+<p>True or False: it must be the case that <span class="math">\(\lambda = \max\{\lambda_a, \lambda_b\}\)</span>.</p>
+<details>
+    <summary>Solution</summary>
+<p>False.</p>
+<p>The top eigenvalue <span class="math">\(\lambda\)</span> of the full covariance matrix represents the maximum variance in any direction in the 50-dimensional space. This direction may involve correlations between the first 25 and last 25 coordinates.</p>
+<p>When we split the data, <span class="math">\(\lambda_a\)</span> captures only the maximum variance within the first 25 dimensions, and <span class="math">\(\lambda_b\)</span> captures only the maximum variance within the last 25 dimensions. Neither can capture variance in directions that span both coordinate sets.</p>
+<p>As a counterexample, consider data where all variance is along the direction <span class="math">\((1, 0, \ldots, 0, 1, 0, \ldots, 0)^T\)</span>(a unit vector with components in both the first 25 and last 25 coordinates). The original data would have <span class="math">\(\lambda > 0\)</span>, but both <span class="math">\(\mathcal A\)</span> and <span class="math">\(\mathcal B\)</span> would have smaller top eigenvalues, so <span class="math">\(\lambda > \max\{\lambda_a, \lambda_b\}\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #79</h2>
+        <p>Tags: <a href='../tags/pca.html'>pca</a>, <a href='../tags/dimensionality-reduction.html'>dimensionality-reduction</a>, <a href='../tags/eigenvectors.html'>eigenvectors</a>, <a href='../tags/quiz-04.html'>quiz-04</a>, <a href='../tags/lecture-06.html'>lecture-06</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(C\)</span> be the sample covariance matrix of a data set in <span class="math">\(\mathbb{R}^3\)</span>, and suppose <span class="math">\(\vec{u}^{(1)}, \vec{u}^{(2)}, \vec{u}^{(3)}\)</span> are orthonormal eigenvectors of <span class="math">\(C\)</span> with eigenvalues <span class="math">\(\lambda_1 = 9, \lambda_2 = 4, \lambda_3 = 1\)</span>, respectively, where:</p>
+<div class="math">\[\vec{u}^{(1)} = \begin{pmatrix} 2/3 \\ 2/3 \\ 1/3 \end{pmatrix}, \quad\vec{u}^{(2)} = \begin{pmatrix} -2/3 \\ 1/3 \\ 2/3 \end{pmatrix}, \quad\vec{u}^{(3)} = \begin{pmatrix} 1/3 \\ -2/3 \\ 2/3 \end{pmatrix}\]</div>
+<p>Suppose a data point is <span class="math">\(\vec{x} = \begin{pmatrix} 3 \\ 6 \\ 6 \end{pmatrix}\)</span>.</p>
+<p>If PCA is performed to reduce the dimensionality from 3 to 2, what is the new representation of <span class="math">\(\vec{x}\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\begin{pmatrix} 8 \\ 4 \end{pmatrix}\)</span> In PCA, to reduce from <span class="math">\(d\)</span> dimensions to <span class="math">\(k\)</span> dimensions, we project each data point onto the top <span class="math">\(k\)</span> eigenvectors (those with the largest eigenvalues).</p>
+<p>Here, the top 2 eigenvectors are <span class="math">\(\vec{u}^{(1)}\)</span>(with <span class="math">\(\lambda_1 = 9\)</span>) and <span class="math">\(\vec{u}^{(2)}\)</span>(with <span class="math">\(\lambda_2 = 4\)</span>).</p>
+<p>The new representation is obtained by computing the dot product of <span class="math">\(\vec{x}\)</span> with each of the top <span class="math">\(k\)</span> eigenvectors:</p>
+<div class="math">$$\begin{align*}\vec{x}\cdot\vec{u}^{(1)}&= 3 \cdot\frac{2}{3} + 6 \cdot\frac{2}{3} + 6 \cdot\frac{1}{3} = 2 + 4 + 2 = 8 \\\vec{x}\cdot\vec{u}^{(2)}&= 3 \cdot\left(-\frac{2}{3}\right)+ 6 \cdot\frac{1}{3} + 6 \cdot\frac{2}{3} = -2 + 2 + 4 = 4
+        \end{align*}$$</div>
+<p>Therefore, the new representation is:</p>
+<div class="math">\[\vec{z} = \begin{pmatrix} \vec{x} \cdot \vec{u}^{(1)} \\ \vec{x} \cdot \vec{u}^{(2)} \end{pmatrix} = \begin{pmatrix} 8 \\ 4 \end{pmatrix}\]</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #80</h2>
+        <p>Tags: <a href='../tags/pca.html'>pca</a>, <a href='../tags/dimensionality-reduction.html'>dimensionality-reduction</a>, <a href='../tags/eigenvectors.html'>eigenvectors</a>, <a href='../tags/quiz-04.html'>quiz-04</a>, <a href='../tags/lecture-06.html'>lecture-06</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(C\)</span> be the sample covariance matrix of a data set in <span class="math">\(\mathbb{R}^4\)</span>, and suppose <span class="math">\(\vec{u}^{(1)}, \vec{u}^{(2)}, \vec{u}^{(3)}, \vec{u}^{(4)}\)</span> are orthonormal eigenvectors of <span class="math">\(C\)</span> with eigenvalues <span class="math">\(\lambda_1 = 16, \lambda_2 = 9, \lambda_3 = 4, \lambda_4 = 1\)</span>, respectively, where:</p>
+<div class="math">\[\vec{u}^{(1)} = \begin{pmatrix} 0 \\ 1/3 \\ 2/3 \\ 2/3 \end{pmatrix}, \quad\vec{u}^{(2)} = \begin{pmatrix} 1/3 \\ 0 \\ 2/3 \\ -2/3 \end{pmatrix}, \quad\vec{u}^{(3)} = \begin{pmatrix} -2/3 \\ -2/3 \\ 1/3 \\ 0 \end{pmatrix}, \quad\vec{u}^{(4)} = \begin{pmatrix} 2/3 \\ -2/3 \\ 0 \\ 1/3 \end{pmatrix}\]</div>
+<p>Suppose a data point is <span class="math">\(\vec{x} = \begin{pmatrix} 3 \\ 3 \\ 6 \\ 6 \end{pmatrix}\)</span>.</p>
+<p>If PCA is performed to reduce the dimensionality from 4 to 2, what is the new representation of <span class="math">\(\vec{x}\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\begin{pmatrix} 9 \\ 1 \end{pmatrix}\)</span> In PCA, to reduce from <span class="math">\(d\)</span> dimensions to <span class="math">\(k\)</span> dimensions, we project each data point onto the top <span class="math">\(k\)</span> eigenvectors (those with the largest eigenvalues).</p>
+<p>Here, the top 2 eigenvectors are <span class="math">\(\vec{u}^{(1)}\)</span>(with <span class="math">\(\lambda_1 = 16\)</span>) and <span class="math">\(\vec{u}^{(2)}\)</span>(with <span class="math">\(\lambda_2 = 9\)</span>).</p>
+<p>The new representation is obtained by computing the dot product of <span class="math">\(\vec{x}\)</span> with each of the top <span class="math">\(k\)</span> eigenvectors:</p>
+<div class="math">$$\begin{align*}\vec{x}\cdot\vec{u}^{(1)}&= 3 \cdot 0 + 3 \cdot\frac{1}{3} + 6 \cdot\frac{2}{3} + 6 \cdot\frac{2}{3} = 0 + 1 + 4 + 4 = 9 \\\vec{x}\cdot\vec{u}^{(2)}&= 3 \cdot\frac{1}{3} + 3 \cdot 0 + 6 \cdot\frac{2}{3} + 6 \cdot\left(-\frac{2}{3}\right)= 1 + 0 + 4 - 4 = 1
+        \end{align*}$$</div>
+<p>Therefore, the new representation is:</p>
+<div class="math">\[\vec{z} = \begin{pmatrix} \vec{x} \cdot \vec{u}^{(1)} \\ \vec{x} \cdot \vec{u}^{(2)} \end{pmatrix} = \begin{pmatrix} 9 \\ 1 \end{pmatrix}\]</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #81</h2>
+        <p>Tags: <a href='../tags/pca.html'>pca</a>, <a href='../tags/dimensionality-reduction.html'>dimensionality-reduction</a>, <a href='../tags/eigenvectors.html'>eigenvectors</a>, <a href='../tags/quiz-04.html'>quiz-04</a>, <a href='../tags/lecture-06.html'>lecture-06</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(C\)</span> be the sample covariance matrix of a data set in <span class="math">\(\mathbb{R}^5\)</span>, and suppose <span class="math">\(\vec{u}^{(1)}, \vec{u}^{(2)}, \vec{u}^{(3)}, \vec{u}^{(4)}, \vec{u}^{(5)}\)</span> are orthonormal eigenvectors of <span class="math">\(C\)</span> with eigenvalues <span class="math">\(\lambda_1 = 25, \lambda_2 = 16, \lambda_3 = 9, \lambda_4 = 4, \lambda_5 = 1\)</span>, respectively, where:</p>
+<div class="math">\[\vec{u}^{(1)} = \begin{pmatrix} 1/3 \\ 2/3 \\ 2/3 \\ 0 \\ 0 \end{pmatrix}, \quad\vec{u}^{(2)} = \begin{pmatrix} 2/3 \\ -1/3 \\ 0 \\ 2/3 \\ 0 \end{pmatrix}, \quad\vec{u}^{(3)} = \begin{pmatrix} -2/3 \\ 0 \\ 1/3 \\ 2/3 \\ 0 \end{pmatrix}, \quad\vec{u}^{(4)} = \begin{pmatrix} 0 \\ 2/3 \\ -2/3 \\ 1/3 \\ 0 \end{pmatrix}, \quad\vec{u}^{(5)} = \begin{pmatrix} 0 \\ 0 \\ 0 \\ 0 \\ 1 \end{pmatrix}\]</div>
+<p>Suppose a data point is <span class="math">\(\vec{x} = \begin{pmatrix} 3 \\ 6 \\ 6 \\ 3 \\ 2 \end{pmatrix}\)</span>.</p>
+<p>If PCA is performed to reduce the dimensionality from 5 to 3, what is the new representation of <span class="math">\(\vec{x}\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\begin{pmatrix} 9 \\ 2 \\ 2 \end{pmatrix}\)</span> In PCA, to reduce from <span class="math">\(d\)</span> dimensions to <span class="math">\(k\)</span> dimensions, we project each data point onto the top <span class="math">\(k\)</span> eigenvectors (those with the largest eigenvalues).</p>
+<p>Here, the top 3 eigenvectors are <span class="math">\(\vec{u}^{(1)}\)</span>(with <span class="math">\(\lambda_1 = 25\)</span>), <span class="math">\(\vec{u}^{(2)}\)</span>(with <span class="math">\(\lambda_2 = 16\)</span>), and <span class="math">\(\vec{u}^{(3)}\)</span>(with <span class="math">\(\lambda_3 = 9\)</span>).</p>
+<p>The new representation is obtained by computing the dot product of <span class="math">\(\vec{x}\)</span> with each of the top <span class="math">\(k\)</span> eigenvectors:</p>
+<div class="math">$$\begin{align*}\vec{x}\cdot\vec{u}^{(1)}&= 3 \cdot\frac{1}{3} + 6 \cdot\frac{2}{3} + 6 \cdot\frac{2}{3} + 3 \cdot 0 + 2 \cdot 0 = 1 + 4 + 4 + 0 + 0 = 9 \\\vec{x}\cdot\vec{u}^{(2)}&= 3 \cdot\frac{2}{3} + 6 \cdot\left(-\frac{1}{3}\right)+ 6 \cdot 0 + 3 \cdot\frac{2}{3} + 2 \cdot 0 = 2 - 2 + 0 + 2 + 0 = 2 \\\vec{x}\cdot\vec{u}^{(3)}&= 3 \cdot\left(-\frac{2}{3}\right)+ 6 \cdot 0 + 6 \cdot\frac{1}{3} + 3 \cdot\frac{2}{3} + 2 \cdot 0 = -2 + 0 + 2 + 2 + 0 = 2
+        \end{align*}$$</div>
+<p>Therefore, the new representation is:</p>
+<div class="math">\[\vec{z} = \begin{pmatrix} \vec{x} \cdot \vec{u}^{(1)} \\ \vec{x} \cdot \vec{u}^{(2)} \\ \vec{x} \cdot \vec{u}^{(3)} \end{pmatrix} = \begin{pmatrix} 9 \\ 2 \\ 2 \end{pmatrix}\]</div>
 </details>
 
     </div>

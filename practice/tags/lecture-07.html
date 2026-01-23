@@ -136,7 +136,7 @@ Live Q&A
 
     <div class="prose dark:prose-invert">
     <!DOCTYPE html> <html> <head> <meta
-                          charset="utf-8"> <title>Practice Problems</title>
+                          charset="utf-8"> <title>Problems tagged with lecture-07</title>
 
            <!-- MathJax -->
            <script type="text/x-mathjax-config">
@@ -167,69 +167,35 @@ Live Q&A
 
        </head>
        <body>
-           <div>
-<h1>Practice Problems</h1>
+           
+<h1>Problems tagged with "lecture-07"</h1>
 
 
-<div class="tagset">
-    <h2>Midterm 01</h2>
-    <p>Practice problems for topics on Midterm 01.</p>
-    <p>
-        <a href="./midterm-01.html">See all problems in this set</a>, or
-        choose a tag below to view only those problems.
-    </p>
-<ul>
-<li><a href='./tags/linear algebra.html'>linear algebra</a></li>
-<li><a href='./tags/linear transformations.html'>linear transformations</a></li>
-</ul>
+        <div class="problem-outer">
+        <h2>Problem #71</h2>
+        <p>Tags: <a href='../tags/lecture-07.html'>lecture-07</a>, <a href='../tags/quiz-04.html'>quiz-04</a>, <a href='../tags/pca.html'>pca</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(\vec{x}^{(1)}\)</span> and <span class="math">\(\vec{x}^{(2)}\)</span> be two points in a data set <span class="math">\(\mathcal{X}\)</span> of 100 points in <span class="math">\(d\)</span> dimensions. Suppose PCA is performed, but dimensionality is not reduced; that is, each point <span class="math">\(\vec{x}^{(i)}\)</span> is transformed to the vector <span class="math">\(\vec{z}^{(i)} = U \vec{x}^{(i)}\)</span>, where <span class="math">\(U\)</span> is a matrix whose <span class="math">\(d\)</span> rows are the (orthonormal) eigenvectors of the data covariance matrix.</p>
+<p>True or False: <span class="math">\(\|\vec{x}^{(1)} - \vec{x}^{(2)}\| = \|\vec{z}^{(1)} -
+    \vec{z}^{(2)}\|\)</span>. That is, the distance between <span class="math">\(\vec{z}^{(1)}\)</span> and <span class="math">\(\vec{z}^{(2)}\)</span> in the new data set is necessarily the same as the distance between their corresponding points in the original data set.</p>
+<details>
+    <summary>Solution</summary>
+<p>True.</p>
+<p>Since <span class="math">\(U\)</span> is an orthogonal matrix (its rows are orthonormal eigenvectors), it preserves distances. For any vector <span class="math">\(\vec{v}\)</span>:</p>
+<div class="math">\[\|U\vec{v}\|^2 = (U\vec{v})^T(U\vec{v}) = \vec{v}^T U^T U \vec{v} = \vec{v}^T \vec{v} = \|\vec{v}\|^2
+        \]</div>
+<p>Therefore:</p>
+<div class="math">\[\|\vec{z}^{(1)} - \vec{z}^{(2)}\| = \|U\vec{x}^{(1)} - U\vec{x}^{(2)}\| = \|U(\vec{x}^{(1)} - \vec{x}^{(2)})\| = \|\vec{x}^{(1)} - \vec{x}^{(2)}\|\]</div>
+</details>
+
+    </div>
 </div>
 
-
-<div class="tagset">
-    <h2>Quiz 04</h2>
-    <p>Practice problems for topics on Quiz 04.</p>
-    <p>
-        <a href="./quiz-04.html">See all problems in this set</a>, or
-        choose a tag below to view only those problems.
-    </p>
-<ul>
-<li><a href='./tags/lecture-06.html'>lecture-06</a></li>
-<li><a href='./tags/lecture-07.html'>lecture-07</a></li>
-<li><a href='./tags/quiz-04.html'>quiz-04</a></li>
-</ul>
-</div>
+        </div>
 
 
-<div class="tagset">
-    <h2>Quiz 03</h2>
-    <p>Practice problems for topics on Quiz 03.</p>
-    <p>
-        <a href="./quiz-03.html">See all problems in this set</a>, or
-        choose a tag below to view only those problems.
-    </p>
-<ul>
-<li><a href='./tags/lecture-04.html'>lecture-04</a></li>
-<li><a href='./tags/lecture-05.html'>lecture-05</a></li>
-<li><a href='./tags/quiz-03.html'>quiz-03</a></li>
-</ul>
-</div>
 
-
-<div class="tagset">
-    <h2>Quiz 02</h2>
-    <p>Practice problems for topics on Quiz 02.</p>
-    <p>
-        <a href="./quiz-02.html">See all problems in this set</a>, or
-        choose a tag below to view only those problems.
-    </p>
-<ul>
-<li><a href='./tags/lecture-02.html'>lecture-02</a></li>
-<li><a href='./tags/lecture-03.html'>lecture-03</a></li>
-<li><a href='./tags/quiz-02.html'>quiz-02</a></li>
-</ul>
-</div>
-
-</div>
        </body>
    </html>
     </div>

@@ -1945,6 +1945,66 @@ Live Q&A
 
 
 
+
+        <div class="problem-outer">
+        <h2>Problem #66</h2>
+        <p>Tags: <a href='./tags/quiz-04.html'>quiz-04</a>, <a href='./tags/linear transformations.html'>linear transformations</a>, <a href='./tags/covariance.html'>covariance</a>, <a href='./tags/lecture-06.html'>lecture-06</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(\mathcal X = \{\vec{x}^{(1)}, \ldots, \vec{x}^{(n)}\}\)</span> be a centered data set of <span class="math">\(n\)</span> points in <span class="math">\(\mathbb R^2\)</span>. Consider the linear transformation <span class="math">\(\vec f(\vec x) = (-x_1, x_2)^T\)</span>, which takes an input point and ``flips'' it over the <span class="math">\(x_2\)</span> axis. Let <span class="math">\(\mathcal X' = \{\vec f(\vec{x}^{(1)}), \ldots, \vec f(\vec{x}^{(n)}) \}\)</span> be the set of points in <span class="math">\(\mathbb
+    R^2\)</span> obtained by applying <span class="math">\(\vec f\)</span> to each point in <span class="math">\(\mathcal X\)</span>.</p>
+<p>Suppose the sample covariance matrix of <span class="math">\(\mathcal X\)</span> is</p>
+<div class="math">\[
+        C = \begin{pmatrix}
+            5 & -3\\
+            -3 & 4
+        \end{pmatrix}.
+    \]</div>
+<p>What is the sample covariance matrix of <span class="math">\(\mathcal X'\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\begin{pmatrix} 5 & 3\\ 3 & 4 \end{pmatrix}\)</span> Flipping the data over the <span class="math">\(x_2\)</span> axis doesn't change the variance (spread) in the <span class="math">\(x_1\)</span> or <span class="math">\(x_2\)</span> directions, and so the diagonal entries of the covariance matrix remain the same. The covariance between <span class="math">\(x_1\)</span> and <span class="math">\(x_2\)</span> stays at the same magnitude but changes sign. That is, the covariance goes from <span class="math">\(-3\)</span> to <span class="math">\(3\)</span>.</p>
+<p>You can see this more formally, too. The transformation takes a point <span class="math">\((x_1, x_2)^T\)</span> to <span class="math">\((-x_1, x_2)^T\)</span>. The covariance between <span class="math">\(x_1\)</span> and <span class="math">\(x_2\)</span> in this transformed data is therefore:</p>
+<div class="math">$$\begin{align*}\text{Cov}(-x_1, x_2)
+            &= \frac{1}{n}\sum_{i=1}^n \left(-x_1^{(i)}\right)\left(x_2^{(i)}\right)\\&= -\frac{1}{n}\sum_{i=1}^n x_1^{(i)} x_2^{(i)}\\&= -\text{Cov}(x_1, x_2)
+        \end{align*}$$</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #76</h2>
+        <p>Tags: <a href='./tags/quiz-04.html'>quiz-04</a>, <a href='./tags/linear transformations.html'>linear transformations</a>, <a href='./tags/covariance.html'>covariance</a>, <a href='./tags/lecture-06.html'>lecture-06</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(\mathcal X = \{\vec{x}^{(1)}, \ldots, \vec{x}^{(n)}\}\)</span> be a data set of <span class="math">\(n\)</span> points in <span class="math">\(\mathbb R^2\)</span>. Consider the transformation <span class="math">\(\vec f(\vec x) = (x_1 + 5, x_2 - 5)^T\)</span>, which takes an input point and ``shifts'' it over by <span class="math">\(5\)</span> units and down by 5 units. Let <span class="math">\(\mathcal X' = \{\vec f(\vec{x}^{(1)}), \ldots, \vec
+    f(\vec{x}^{(n)}) \}\)</span> be the set of points in <span class="math">\(\mathbb R^2\)</span> obtained by applying <span class="math">\(\vec f\)</span> to each point in <span class="math">\(\mathcal X\)</span>.</p>
+<p>Suppose the sample covariance matrix of <span class="math">\(\mathcal X\)</span> is</p>
+<div class="math">\[
+        C = \begin{pmatrix}
+            5 & -3\\
+            -3 & 4
+        \end{pmatrix}.
+    \]</div>
+<p>What is the sample covariance matrix of <span class="math">\(\mathcal X'\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\begin{pmatrix} 5 & -3\\ -3 & 4 \end{pmatrix}\)</span> The transformation <span class="math">\(\vec f(\vec x) = (x_1 + 5, x_2 - 5)^T\)</span> is a translation (shift) of the data. Translations do not affect the covariance matrix, because in defining the covariance matrix we first subtract the mean from each data point. Translating all points shifts the mean by the same amount, so the centered data remains unchanged.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
        </body>
    </html>
     </div>
