@@ -60,7 +60,14 @@
                         "topic": "Eigenvectors and Eigenvalues",
                         "number": 3
                     },
-                    "artifacts": {}
+                    "artifacts": {
+                        "quiz.pdf": {
+                            "path": "materials/quizzes/03-eigenvectors_eigenvalues/quiz.pdf"
+                        },
+                        "solution.pdf": {
+                            "path": "materials/quizzes/03-eigenvectors_eigenvalues/solution.pdf"
+                        }
+                    }
                 }
             }
         },
