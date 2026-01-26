@@ -352,6 +352,9 @@
                     "artifacts": {
                         "homework.pdf": {
                             "path": "materials/homeworks/02-matrices_and_eigenvectors/homework.pdf"
+                        },
+                        "solution.pdf": {
+                            "path": "materials/homeworks/02-matrices_and_eigenvectors/solution.pdf"
                         }
                     }
                 },
