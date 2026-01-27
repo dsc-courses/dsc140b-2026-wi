@@ -18,7 +18,40 @@ const STD3 = Math.sqrt(LAMBDA3);  // 0.4
 
 const NUM_POINTS = 200;
 
+// Rotation angles (radians) to rotate data away from standard basis
+const ROTATE_X = 0.6;   // rotation around x-axis
+const ROTATE_Y = 0.8;   // rotation around y-axis
+const ROTATE_Z = 0.4;   // rotation around z-axis
+
 let points = [];
+
+// Principal component directions after rotation (unit vectors)
+let pc1Dir = {x: 1, y: 0, z: 0};
+let pc2Dir = {x: 0, y: 1, z: 0};
+let pc3Dir = {x: 0, y: 0, z: 1};
+
+// Apply rotation matrix (Rz * Ry * Rx) to a point
+function rotatePoint(x, y, z) {
+    // Rotation around X-axis
+    let cosX = Math.cos(ROTATE_X), sinX = Math.sin(ROTATE_X);
+    let y1 = y * cosX - z * sinX;
+    let z1 = y * sinX + z * cosX;
+    let x1 = x;
+
+    // Rotation around Y-axis
+    let cosY = Math.cos(ROTATE_Y), sinY = Math.sin(ROTATE_Y);
+    let x2 = x1 * cosY + z1 * sinY;
+    let z2 = -x1 * sinY + z1 * cosY;
+    let y2 = y1;
+
+    // Rotation around Z-axis
+    let cosZ = Math.cos(ROTATE_Z), sinZ = Math.sin(ROTATE_Z);
+    let x3 = x2 * cosZ - y2 * sinZ;
+    let y3 = x2 * sinZ + y2 * cosZ;
+    let z3 = z2;
+
+    return {x: x3, y: y3, z: z3};
+}
 
 // Generate points from a 3D Gaussian (prolate spheroid)
 function generatePoints() {
@@ -37,8 +70,15 @@ function generatePoints() {
         let z2 = randn() * STD2;  // along second PC (medium spread)
         let z3 = randn() * STD3;  // along third PC (smallest spread)
 
-        points.push({x: z1, y: z2, z: z3});
+        // Rotate to misalign with standard basis
+        let rotated = rotatePoint(z1, z2, z3);
+        points.push(rotated);
     }
+
+    // Compute rotated principal component directions
+    pc1Dir = rotatePoint(1, 0, 0);
+    pc2Dir = rotatePoint(0, 1, 0);
+    pc3Dir = rotatePoint(0, 0, 1);
 }
 
 function sketch_3d(sketch) {
