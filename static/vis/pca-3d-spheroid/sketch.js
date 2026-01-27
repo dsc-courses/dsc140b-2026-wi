@@ -30,6 +30,17 @@ let pc1Dir = {x: 1, y: 0, z: 0};
 let pc2Dir = {x: 0, y: 1, z: 0};
 let pc3Dir = {x: 0, y: 0, z: 1};
 
+// Project a point onto the PC1-PC2 plane (remove PC3 component)
+function projectOntoPC1PC2(p) {
+    // Projection: p_proj = p - (p · pc3Dir) * pc3Dir
+    let dot = p.x * pc3Dir.x + p.y * pc3Dir.y + p.z * pc3Dir.z;
+    return {
+        x: p.x - dot * pc3Dir.x,
+        y: p.y - dot * pc3Dir.y,
+        z: p.z - dot * pc3Dir.z
+    };
+}
+
 // Apply rotation matrix (Rz * Ry * Rx) to a point
 function rotatePoint(x, y, z) {
     // Rotation around X-axis
@@ -202,10 +213,11 @@ function sketch_3d(sketch) {
             let origY = -p.z * scale;  // z maps to screen y
             let origZ = p.y * scale;   // y maps to screen z
 
-            // Projected position (onto PC1-PC2 plane, which is y=0 in screen coords)
-            let projX = p.x * scale;
-            let projY = 0;
-            let projZ = p.y * scale;
+            // Projected position (onto PC1-PC2 plane)
+            let proj = projectOntoPC1PC2(p);
+            let projX = proj.x * scale;
+            let projY = -proj.z * scale;
+            let projZ = proj.y * scale;
 
             // Interpolate based on animation progress
             let drawX = sketch.lerp(origX, projX, animationProgress);
@@ -221,9 +233,9 @@ function sketch_3d(sketch) {
         // Draw eigenvectors if checkbox is checked
         let showEigenvectors = sketch.select("#show-eigenvectors").checked();
         if (showEigenvectors) {
-            drawEigenvector(1, 0, 0, STD1 * 1.5, PASTELRED, scale);   // PC1 along x
-            drawEigenvector(0, 0, 1, STD2 * 1.5, PASTELBLUE, scale);  // PC2 along z (shown as y in view)
-            drawEigenvector(0, 1, 0, STD3 * 1.5, PASTELGREEN, scale); // PC3 along y (shown as z in view)
+            drawEigenvector(pc1Dir.x, pc1Dir.z, pc1Dir.y, STD1 * 1.5, PASTELRED, scale);   // PC1
+            drawEigenvector(pc2Dir.x, pc2Dir.z, pc2Dir.y, STD2 * 1.5, PASTELBLUE, scale);  // PC2
+            drawEigenvector(pc3Dir.x, pc3Dir.z, pc3Dir.y, STD3 * 1.5, PASTELGREEN, scale); // PC3
         }
 
         // Draw residuals if checkbox is checked
@@ -272,7 +284,7 @@ function sketch_3d(sketch) {
         sketch.stroke(150, 150, 150, lineAlpha);
         sketch.strokeWeight(1);
 
-        // Project onto PC1-PC2 plane (z=0 in our coordinate system)
+        // Project onto PC1-PC2 plane
         for (let p of points) {
             // Original position
             let origX = p.x * s;
@@ -280,9 +292,10 @@ function sketch_3d(sketch) {
             let origZ = p.y * s;
 
             // Projected position
-            let px = p.x * s;
-            let py = 0;
-            let pz = p.y * s;
+            let proj = projectOntoPC1PC2(p);
+            let px = proj.x * s;
+            let py = -proj.z * s;
+            let pz = proj.y * s;
 
             // Current animated position
             let currX = sketch.lerp(origX, px, progress);
@@ -310,9 +323,10 @@ function sketch_3d(sketch) {
             let origZ = p.y * s;
 
             // Projected position (onto PC1-PC2 plane)
-            let px = p.x * s;
-            let py = 0;
-            let pz = p.y * s;
+            let proj = projectOntoPC1PC2(p);
+            let px = proj.x * s;
+            let py = -proj.z * s;
+            let pz = proj.y * s;
 
             // Draw residual line from original to projection
             sketch.line(origX, origY, origZ, px, py, pz);
@@ -320,11 +334,35 @@ function sketch_3d(sketch) {
     }
 
     function drawPlane(s) {
+        // Draw the PC1-PC2 plane as a quad using the rotated principal directions
+        let extent1 = STD1 * 1.5;
+        let extent2 = STD2 * 1.5;
+
+        // Four corners of the plane: ±extent1*pc1Dir ± extent2*pc2Dir
+        let corners = [
+            { x: extent1 * pc1Dir.x + extent2 * pc2Dir.x,
+              y: extent1 * pc1Dir.y + extent2 * pc2Dir.y,
+              z: extent1 * pc1Dir.z + extent2 * pc2Dir.z },
+            { x: extent1 * pc1Dir.x - extent2 * pc2Dir.x,
+              y: extent1 * pc1Dir.y - extent2 * pc2Dir.y,
+              z: extent1 * pc1Dir.z - extent2 * pc2Dir.z },
+            { x: -extent1 * pc1Dir.x - extent2 * pc2Dir.x,
+              y: -extent1 * pc1Dir.y - extent2 * pc2Dir.y,
+              z: -extent1 * pc1Dir.z - extent2 * pc2Dir.z },
+            { x: -extent1 * pc1Dir.x + extent2 * pc2Dir.x,
+              y: -extent1 * pc1Dir.y + extent2 * pc2Dir.y,
+              z: -extent1 * pc1Dir.z + extent2 * pc2Dir.z }
+        ];
+
         sketch.push();
         sketch.fill(200, 200, 200, 50);
         sketch.noStroke();
-        sketch.rotateX(sketch.HALF_PI);
-        sketch.plane(STD1 * 3 * s, STD2 * 3 * s);
+        sketch.beginShape();
+        for (let c of corners) {
+            // Convert to screen coordinates
+            sketch.vertex(c.x * s, -c.z * s, c.y * s);
+        }
+        sketch.endShape(sketch.CLOSE);
         sketch.pop();
     }
 }
