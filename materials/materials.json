@@ -202,7 +202,11 @@
                         "topic": "PCA II",
                         "number": 7
                     },
-                    "artifacts": {}
+                    "artifacts": {
+                        "slides.pdf": {
+                            "path": "materials/lectures/schedules/tr/07-pca-II/slides.pdf"
+                        }
+                    }
                 },
                 "08-pca-III": {
                     "metadata": {
