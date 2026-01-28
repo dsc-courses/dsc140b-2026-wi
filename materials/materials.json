@@ -205,6 +205,9 @@
                     "artifacts": {
                         "slides.pdf": {
                             "path": "materials/lectures/schedules/tr/07-pca-II/slides.pdf"
+                        },
+                        "marked.pdf": {
+                            "path": "materials/lectures/schedules/tr/07-pca-II/marked.pdf"
                         }
                     }
                 },
