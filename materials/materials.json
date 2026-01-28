@@ -68,6 +68,14 @@
                             "path": "materials/quizzes/03-eigenvectors_eigenvalues/solution.pdf"
                         }
                     }
+                },
+                "04-pca": {
+                    "metadata": {
+                        "date": "2026-01-29",
+                        "topic": "PCA",
+                        "number": 4
+                    },
+                    "artifacts": {}
                 }
             }
         },
@@ -211,93 +219,88 @@
                         }
                     }
                 },
-                "08-pca-III": {
+                "08-laplacian_eigenmaps": {
                     "metadata": {
                         "videos": null,
                         "date": "2026-01-29",
-                        "topic": "PCA III",
+                        "topic": "Laplacian Eigenmaps",
                         "number": 8
                     },
-                    "artifacts": {}
+                    "artifacts": {
+                        "slides.pdf": {
+                            "path": "materials/lectures/schedules/tr/08-laplacian_eigenmaps/slides.pdf"
+                        }
+                    }
                 },
-                "09-laplacian_eigenmaps": {
+                "09-linear_models": {
                     "metadata": {
                         "videos": null,
                         "date": "2026-02-03",
-                        "topic": "Laplacian Eigenmaps",
+                        "topic": "Linear Models",
                         "number": 9
                     },
                     "artifacts": {}
                 },
-                "10-linear_models": {
+                "10-feature_maps": {
                     "metadata": {
                         "videos": null,
-                        "date": "2026-02-10",
-                        "topic": "Linear Models",
+                        "date": "2026-02-05",
+                        "topic": "Feature Maps",
                         "number": 10
                     },
                     "artifacts": {}
                 },
-                "11-feature_maps": {
+                "11-rbf_networks": {
                     "metadata": {
                         "videos": null,
-                        "date": "2026-02-12",
-                        "topic": "Feature Maps",
+                        "date": "2026-02-10",
+                        "topic": "RBF Networks and Neural Networks",
                         "number": 11
                     },
                     "artifacts": {}
                 },
-                "12-rbf_networks": {
+                "12-neural_networks": {
                     "metadata": {
                         "videos": null,
-                        "date": "2026-02-17",
-                        "topic": "RBF Networks and Neural Networks",
+                        "date": "2026-02-12",
+                        "topic": "Training Neural Networks",
                         "number": 12
                     },
                     "artifacts": {}
                 },
-                "13-neural_networks": {
+                "13-training_nns": {
                     "metadata": {
                         "videos": null,
-                        "date": "2026-02-19",
-                        "topic": "Training Neural Networks",
+                        "date": "2026-02-17",
+                        "topic": "Backpropagation",
                         "number": 13
                     },
                     "artifacts": {}
                 },
-                "14-training_nns": {
+                "14-sgd": {
                     "metadata": {
                         "videos": null,
-                        "date": "2026-02-24",
-                        "topic": "Backpropagation",
+                        "date": "2026-02-19",
+                        "topic": "SGD",
                         "number": 14
                     },
                     "artifacts": {}
                 },
-                "15-sgd": {
+                "15-cnn": {
                     "metadata": {
                         "videos": null,
-                        "date": "2026-02-26",
-                        "topic": "SGD",
+                        "date": "2026-02-24",
+                        "topic": "Convolutional Neural Networks",
                         "number": 15
                     },
                     "artifacts": {}
                 },
-                "16-cnn": {
+                "16-autoencoders": {
                     "metadata": {
                         "videos": null,
                         "date": "2026-03-03",
-                        "topic": "Convolutional Neural Networks",
-                        "number": 16
-                    },
-                    "artifacts": {}
-                },
-                "17-autoencoders": {
-                    "metadata": {
-                        "videos": null,
-                        "date": "2026-03-10",
                         "topic": "Autoencoders",
-                        "number": 17
+                        "number": 16
                     },
                     "artifacts": {}
                 }
@@ -378,14 +381,18 @@
                         }
                     }
                 },
-                "04-pca-II": {
+                "04-pca_and_eigenmaps": {
                     "metadata": {
                         "due": "2026-02-04 23:59:00",
                         "released": "2026-01-29 00:00:00",
-                        "topic": "PCA",
+                        "topic": "PCA and Eigenmaps",
                         "number": 4
                     },
-                    "artifacts": {}
+                    "artifacts": {
+                        "homework.pdf": {
+                            "path": "materials/homeworks/04-pca_and_eigenmaps/homework.pdf"
+                        }
+                    }
                 },
                 "05-eigenmaps": {
                     "metadata": {
