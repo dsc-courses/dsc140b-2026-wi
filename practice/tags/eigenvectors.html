@@ -1373,6 +1373,60 @@ array([[-3.45, -1.17,  0.67],
 
 
 
+
+        <div class="problem-outer">
+        <h2>Problem #85</h2>
+        <p>Tags: <a href='../tags/pca.html'>pca</a>, <a href='../tags/eigenvectors.html'>eigenvectors</a>, <a href='../tags/quiz-04.html'>quiz-04</a>, <a href='../tags/dimensionality reduction.html'>dimensionality reduction</a>, <a href='../tags/lecture-06.html'>lecture-06</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Suppose <span class="math">\(C\)</span> is a <span class="math">\(3 \times 3\)</span> sample covariance matrix for a data set <span class="math">\(\mathcal X\)</span>, and that the top two eigenvectors of <span class="math">\(C\)</span> are:</p>
+<div class="math">$$\begin{align*}\vec{u}^{(1)}&= \frac{1}{\sqrt2}(-1, 1, 0)^T,\\\vec{u}^{(2)}&= \frac{1}{\sqrt3}( 1, 1, 1)^T,
+    \end{align*}$$</div>
+<p>with eigenvalues <span class="math">\(\lambda_1 = 10\)</span> and <span class="math">\(\lambda_2 = 4\)</span>, respectively.</p>
+<p>Let <span class="math">\(\vec x = (1, 2, 3)^T\)</span> be the coordinates of <span class="math">\(\vec x\)</span> with respect to the standard basis. Let <span class="math">\(\vec z\)</span> be the result of applying PCA to reduce the dimensionality of <span class="math">\(\vec x\)</span> to 2. What is <span class="math">\(\vec z\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\vec z = \left(\frac{1}{\sqrt 2}, \frac{6}{\sqrt 3}\right)^T\)</span>.</p>
+<p>We compute <span class="math">\(\vec z\)</span> by projecting <span class="math">\(\vec x\)</span> onto each eigenvector:</p>
+<div class="math">$$\begin{align*}
+            z_1 &= \vec{u}^{(1)}\cdot\vec x = \frac{1}{\sqrt 2}(-1 + 2 + 0) = \frac{1}{\sqrt 2}\\
+            z_2 &= \vec{u}^{(2)}\cdot\vec x = \frac{1}{\sqrt 3}(1 + 2 + 3) = \frac{6}{\sqrt 3}\end{align*}$$</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #87</h2>
+        <p>Tags: <a href='../tags/pca.html'>pca</a>, <a href='../tags/eigenvectors.html'>eigenvectors</a>, <a href='../tags/quiz-04.html'>quiz-04</a>, <a href='../tags/dimensionality reduction.html'>dimensionality reduction</a>, <a href='../tags/lecture-06.html'>lecture-06</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Suppose <span class="math">\(C\)</span> is a <span class="math">\(3 \times 3\)</span> sample covariance matrix for a data set <span class="math">\(\mathcal X\)</span>, and that the top two eigenvectors of <span class="math">\(C\)</span> are:</p>
+<div class="math">$$\begin{align*}\vec{u}^{(1)}&= \frac{1}{\sqrt6}(-1, 1, 1)^T,\\\vec{u}^{(2)}&= \frac{1}{\sqrt2}( 0, 1, 1)^T,
+    \end{align*}$$</div>
+<p>with eigenvalues <span class="math">\(\lambda_1 = 5\)</span> and <span class="math">\(\lambda_2 = 2\)</span>, respectively.</p>
+<p>Let <span class="math">\(\vec x = (3,2,1)^T\)</span> be the coordinates of <span class="math">\(\vec x\)</span> with respect to the standard basis. Let <span class="math">\(\vec z\)</span> be the result of applying PCA to reduce the dimensionality of <span class="math">\(\vec x\)</span> to 2. What is <span class="math">\(\vec z\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\vec z = \left(0, \frac{3}{\sqrt 2}\right)^T\)</span>.</p>
+<p>We compute <span class="math">\(\vec z\)</span> by projecting <span class="math">\(\vec x\)</span> onto each eigenvector:</p>
+<div class="math">$$\begin{align*}
+            z_1 &= \vec{u}^{(1)}\cdot\vec x = \frac{1}{\sqrt 6}(-3 + 2 + 1) = \frac{0}{\sqrt 6} = 0\\
+            z_2 &= \vec{u}^{(2)}\cdot\vec x = \frac{1}{\sqrt 2}(0 + 2 + 1) = \frac{3}{\sqrt 2}\end{align*}$$</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
        </body>
    </html>
     </div>

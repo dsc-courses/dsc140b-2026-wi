@@ -136,7 +136,7 @@ Live Q&A
 
     <div class="prose dark:prose-invert">
     <!DOCTYPE html> <html> <head> <meta
-                          charset="utf-8"> <title>Problems tagged with lecture-07</title>
+                          charset="utf-8"> <title>Problems tagged with reconstruction error</title>
 
            <!-- MathJax -->
            <script type="text/x-mathjax-config">
@@ -168,45 +168,7 @@ Live Q&A
        </head>
        <body>
            
-<h1>Problems tagged with "lecture-07"</h1>
-
-
-        <div class="problem-outer">
-        <h2>Problem #71</h2>
-        <p>Tags: <a href='../tags/lecture-07.html'>lecture-07</a>, <a href='../tags/quiz-04.html'>quiz-04</a>, <a href='../tags/pca.html'>pca</a></p>
-        <div class="problem">
-    <div class="problem-body">
-<p>Let <span class="math">\(\vec{x}^{(1)}\)</span> and <span class="math">\(\vec{x}^{(2)}\)</span> be two points in a centered data set <span class="math">\(\mathcal{X}\)</span> of 100 points in <span class="math">\(d\)</span> dimensions. Suppose PCA is performed, but dimensionality is not reduced; that is, each point <span class="math">\(\vec{x}^{(i)}\)</span> is transformed to the vector <span class="math">\(\vec{z}^{(i)} = U \vec{x}^{(i)}\)</span>, where <span class="math">\(U\)</span> is a matrix whose <span class="math">\(d\)</span> rows are the (orthonormal) eigenvectors of the data covariance matrix.</p>
-<p>True or False: <span class="math">\(\|\vec{x}^{(1)} - \vec{x}^{(2)}\| = \|\vec{z}^{(1)} -
-    \vec{z}^{(2)}\|\)</span>. That is, the distance between <span class="math">\(\vec{z}^{(1)}\)</span> and <span class="math">\(\vec{z}^{(2)}\)</span> in the new data set is necessarily the same as the distance between their corresponding points in the original data set.</p>
-<details>
-    <summary>Solution</summary>
-<p>True.</p>
-<p>There's a mathematical way of seeing this, and an intuitive way.</p>
-<p>Let's start with the intuitive way. We saw in lecture that when we perform PCA without reducing dimensionality, we are simply rotating the data to align with the directions of maximum variance (in the process, "decorrelating" the features). A rotation does not change distances between points, so the distances remain the same. This is illustrated in the figure below. On the left is the original data, and on the right is the same data after PCA transformation (without dimensionality reduction). Notice that the shape of the data hasn't change, and you can find two points in the left plot and see that their distance is the same as the corresponding points in the right plot.</p>
-<center><div class="image"><img src="../images/71/fig/pca_transform.png" /></div></center>
-<p>Now for the mathematical way. We want to show that:</p>
-<div class="math">\[\|\vec{x}^{(1)} - \vec{x}^{(2)}\| = \|\vec{z}^{(1)} - \vec{z}^{(2)}\|.
-        \]</div>
-<p>We know that <span class="math">\(\vec{z}^{(i)} = U \vec{x}^{(i)}\)</span>, so we can rewrite the right-hand side:</p>
-<div class="math">\[\|\vec{z}^{(1)} - \vec{z}^{(2)}\| = \|U\vec{x}^{(1)} - U\vec{x}^{(2)}\|.
-        \]</div>
-<p>Remember that the norm of a vector <span class="math">\(\vec{v}\)</span> can be expressed as:</p>
-<div class="math">\[\|\vec{v}\|^2 = \vec{v}^T \vec{v}.
-        \]</div>
-<p>So:</p>
-<div class="math">$$\begin{align*}\|\vec{z}^{(1)} - \vec{z}^{(2)}\|^2
-            &= (U\vec{x}^{(1)} - U\vec{x}^{(2)})^T (U\vec{x}^{(1)} - U\vec{x}^{(2)}) \\&= (\vec{x}^{(1)} - \vec{x}^{(2)})^T U^T U (\vec{x}^{(1)} - \vec{x}^{(2)}) \\&= (\vec{x}^{(1)} - \vec{x}^{(2)})^T I (\vec{x}^{(1)} - \vec{x}^{(2)}) \\&= (\vec{x}^{(1)} - \vec{x}^{(2)})^T (\vec{x}^{(1)} - \vec{x}^{(2)}) \\&= \|\vec{x}^{(1)} - \vec{x}^{(2)}\|^2.
-        \end{align*}$$</div>
-<p>In the middle of this calculation, we used the fact that <span class="math">\(U\)</span> is an orthonormal matrix, so <span class="math">\(U^T U = I\)</span>.</p>
-</details>
-
-    </div>
-</div>
-
-        </div>
-
-
+<h1>Problems tagged with "reconstruction error"</h1>
 
 
         <div class="problem-outer">
@@ -261,71 +223,6 @@ Live Q&A
 
 
         <div class="problem-outer">
-        <h2>Problem #88</h2>
-        <p>Tags: <a href='../tags/pca.html'>pca</a>, <a href='../tags/covariance.html'>covariance</a>, <a href='../tags/eigenvalues.html'>eigenvalues</a>, <a href='../tags/lecture-07.html'>lecture-07</a>, <a href='../tags/quiz-04.html'>quiz-04</a></p>
-        <div class="problem">
-    <div class="problem-body">
-<p>Consider the centered data set shown below. The data is symmetric across both axes.</p>
-<center><div class="image"><img src="../images/88/data.png" /></div></center>
-<p>Let <span class="math">\(C\)</span> be the empirical covariance matrix. What is the largest eigenvalue of <span class="math">\(C\)</span>?</p>
-<details>
-    <summary>Solution</summary>
-<p><span class="math">\(45/2\)</span>.</p>
-<p>Remember that the largest eigenvalue of the data's covariance matrix is equal to the variance of the first PCA feature. That is, it is the variance in the direction of the first principal component (the first eigenvector of the covariance matrix).</p>
-<p>Since the data is symmetric across both axes, the eigenvectors of the covariance matrix are aligned with the coordinate axes. From the figure, the data is more spread out vertically than horizontally, so the first principal component is the vector <span class="math">\((0, 1)^T\)</span>(or <span class="math">\((0, -1)^T\)</span>).</p>
-<p>The variance of the data in this direction can be computed by</p>
-<div class="math">\[\text{Var}(X) = \frac{1}{n}\sum_{i=1}^n (x_i - \mu)^2,\]</div>
-<p>where <span class="math">\(x_i\)</span> is the <span class="math">\(x_2\)</span>-coordinate of the <span class="math">\(i\)</span>-th data point, <span class="math">\(\mu\)</span> is the mean of all the <span class="math">\(x_2\)</span>-coordinates, and <span class="math">\(n\)</span> is the number of data points. Since the data is centered, <span class="math">\(\mu = 0\)</span>. Therefore, we just need to compute the average of the squared <span class="math">\(x_2\)</span>-coordinates.</p>
-<p>Reading these off, we have four points whose <span class="math">\(x_2\)</span>-coordinate is <span class="math">\(6\)</span> or <span class="math">\(-6\)</span>, and four points whose <span class="math">\(x_2\)</span>-coordinate is <span class="math">\(3\)</span> or <span class="math">\(-3\)</span>. So the variance is:</p>
-<div class="math">\[\text{Var}(X) = \frac{1}{8}\left(4\cdot 6^2 + 4 \cdot 3^2\right)= \frac{1}{8}(144 + 36) = \frac{180}{8} = \frac{45}{2}.
-        \]</div>
-<p>Therefore, the largest eigenvalue of the data's covariance matrix is <span class="math">\(45/2\)</span>.</p>
-</details>
-
-    </div>
-</div>
-
-        </div>
-
-
-
-
-        <div class="problem-outer">
-        <h2>Problem #89</h2>
-        <p>Tags: <a href='../tags/lecture-07.html'>lecture-07</a>, <a href='../tags/eigenvalues.html'>eigenvalues</a>, <a href='../tags/variance.html'>variance</a>, <a href='../tags/pca.html'>pca</a></p>
-        <div class="problem">
-    <div class="problem-body">
-<p>Let <span class="math">\(\mathcal X = \{\vec{x}^{(1)}, \ldots, \vec{x}^{(100)}\}\)</span> be a set of 100 points in <span class="math">\(3\)</span> dimensions. The variance in the direction of <span class="math">\(\hat{e}^{(1)}\)</span> is 20, the variance in the direction of <span class="math">\(\hat{e}^{(2)}\)</span> is 12, and the variance in the direction of <span class="math">\(\hat{e}^{(3)}\)</span> is 10.</p>
-<p>Suppose PCA is performed, but dimensionality is not reduced; that is, each point <span class="math">\(\vec{x}^{(i)}\)</span> is transformed to the vector <span class="math">\(\vec{z}^{(i)} = U
-    \vec{x}^{(i)}\)</span>, where <span class="math">\(U\)</span> is a matrix whose <span class="math">\(3\)</span> rows are the (orthonormal) eigenvectors of the data covariance matrix. Let <span class="math">\(\mathcal Z =
-    \{\vec{z}^{(1)}, \ldots, \vec{z}^{(100)}\}\)</span> be the resulting data set.</p>
-<p>Suppose <span class="math">\(C\)</span> is the covariance matrix of the new data set, <span class="math">\(\mathcal Z\)</span>, and that the top two eigenvalues of <span class="math">\(C\)</span> are 25 and 15. What is the third eigenvalue?</p>
-<details>
-    <summary>Solution</summary>
-<p><span class="math">\(2\)</span>.</p>
-<p>Although it wasn't discussed in lecture, it turns out that the total variance is preserved under orthogonal transformations. The total variance of the original data is:</p>
-<div class="math">\[
-            20 + 12 + 10 = 42
-        \]</div>
-<p>After PCA, the covariance matrix <span class="math">\(C\)</span> of <span class="math">\(\mathcal Z\)</span> is diagonal with the eigenvalues on the diagonal. The sum of eigenvalues equals the total variance:</p>
-<div class="math">\[\lambda_1 + \lambda_2 + \lambda_3 = 42
-        \]</div>
-<div class="math">\[
-            25 + 15 + \lambda_3 = 42
-        \]</div>
-<div class="math">\[\lambda_3 = 42 - 40 = 2
-        \]</div>
-</details>
-
-    </div>
-</div>
-
-        </div>
-
-
-
-
-        <div class="problem-outer">
         <h2>Problem #90</h2>
         <p>Tags: <a href='../tags/reconstruction error.html'>reconstruction error</a>, <a href='../tags/pca.html'>pca</a>, <a href='../tags/covariance.html'>covariance</a>, <a href='../tags/eigenvalues.html'>eigenvalues</a>, <a href='../tags/lecture-07.html'>lecture-07</a>, <a href='../tags/quiz-04.html'>quiz-04</a></p>
         <div class="problem">
@@ -367,104 +264,6 @@ Live Q&A
 <p>Therefore, the second PCA feature values for the four points are 0, 0, 2, and -2. The variance of these (centered) values is:</p>
 <div class="math">\[\frac{1}{4}\left(0^2 + 0^2 + (2\sqrt{2})^2 + (-2\sqrt{2})^2 \right)= \frac{1}{4}(0 + 0 + 8 + 8) = \frac{16}{4} = 4.
                 \]</div>
-</details>
-
-</div>
-
-    </div>
-</div>
-
-        </div>
-
-
-
-
-        <div class="problem-outer">
-        <h2>Problem #91</h2>
-        <p>Tags: <a href='../tags/lecture-07.html'>lecture-07</a>, <a href='../tags/quiz-04.html'>quiz-04</a>, <a href='../tags/dimensionality reduction.html'>dimensionality reduction</a>, <a href='../tags/pca.html'>pca</a></p>
-        <div class="problem">
-    <div class="problem-body">
-<p>Let <span class="math">\(\mathcal X_1\)</span> and <span class="math">\(\mathcal X_2\)</span> be two data sets containing 100 points each, and let <span class="math">\(\mathcal X\)</span> be the combination of the two data sets into a data set of 200 points.</p>
-<p>Suppose <span class="math">\(\vec x \in\mathcal X_1\)</span> is a point in the first data set. Suppose PCA is performed on <span class="math">\(\mathcal X_1\)</span> by itself, reducing each point to one dimension, and that the new representation of <span class="math">\(\vec x\)</span> is <span class="math">\(z\)</span>.</p>
-<p>The point <span class="math">\(\vec x\)</span> is also in the combined data set, <span class="math">\(\mathcal X\)</span>. Suppose PCA is performed on the combined data set, <span class="math">\(\mathcal X\)</span>, reducing each point to one dimension, and that the new representation of <span class="math">\(\vec x\)</span> after this PCA is <span class="math">\(z'\)</span>.</p>
-<p>True or False: it is necessarily the case that <span class="math">\(z = z'\)</span>.</p>
-<details>
-    <summary>Solution</summary>
-<p>False.</p>
-<p>The principal eigenvector of <span class="math">\(\mathcal X_1\)</span> may be different from the principal eigenvector of the combined data set <span class="math">\(\mathcal X\)</span>. Since <span class="math">\(z\)</span> and <span class="math">\(z'\)</span> are computed by projecting <span class="math">\(\vec x\)</span> onto different eigenvectors, they can be different values.</p>
-<p>For example, if <span class="math">\(\mathcal X_1\)</span> has maximum variance along the <span class="math">\(x\)</span>-axis and <span class="math">\(\mathcal X_2\)</span> has maximum variance along the <span class="math">\(y\)</span>-axis, the combined data set might have a different principal direction altogether.</p>
-</details>
-
-    </div>
-</div>
-
-        </div>
-
-
-
-
-        <div class="problem-outer">
-        <h2>Problem #92</h2>
-        <p>Tags: <a href='../tags/laplacian eigenmaps.html'>laplacian eigenmaps</a>, <a href='../tags/intrinsic dimension.html'>intrinsic dimension</a>, <a href='../tags/lecture-07.html'>lecture-07</a>, <a href='../tags/quiz-04.html'>quiz-04</a>, <a href='../tags/dimensionality reduction.html'>dimensionality reduction</a></p>
-        <div class="problem">
-    <div class="problem-body">
-<p>Consider the plot shown below:</p>
-<center><div class="image"><img src="../images/92/fig/helix.png" /></div></center>
-<div class="subproblem">
-    <h3 class="subproblem-id">Part 1)</h3>
-<p>What is the ambient dimension?</p>
-<details>
-    <summary>Solution</summary>
-<p>3.</p>
-<p>The ambient dimension is the dimension of the space in which the data lives. Here, the helix is embedded in 3D space (it has <span class="math">\(x\)</span>, <span class="math">\(y\)</span>, and <span class="math">\(z\)</span> coordinates), so the ambient dimension is 3.</p>
-</details>
-
-</div>
-
-<div class="subproblem">
-    <h3 class="subproblem-id">Part 2)</h3>
-<p>What is the intrinsic dimension of the curve?</p>
-<details>
-    <summary>Solution</summary>
-<p>1.</p>
-<p>The intrinsic dimension is the number of parameters needed to describe a point's location on the manifold. For this helix, even though it lives in 3D space, you only need one parameter (e.g., the arc length along the curve, or equivalently, the angle of rotation) to specify any point on it. If you ``unroll'' the helix, it becomes a straight line, which is 1-dimensional. Therefore, the intrinsic dimension is 1.</p>
-</details>
-
-</div>
-
-    </div>
-</div>
-
-        </div>
-
-
-
-
-        <div class="problem-outer">
-        <h2>Problem #93</h2>
-        <p>Tags: <a href='../tags/laplacian eigenmaps.html'>laplacian eigenmaps</a>, <a href='../tags/intrinsic dimension.html'>intrinsic dimension</a>, <a href='../tags/lecture-07.html'>lecture-07</a>, <a href='../tags/quiz-04.html'>quiz-04</a>, <a href='../tags/dimensionality reduction.html'>dimensionality reduction</a></p>
-        <div class="problem">
-    <div class="problem-body">
-<p>Consider the plot shown below:</p>
-<center><div class="image"><img src="../images/93/fig/manifold.png" /></div></center>
-<div class="subproblem">
-    <h3 class="subproblem-id">Part 1)</h3>
-<p>What is the ambient dimension?</p>
-<details>
-    <summary>Solution</summary>
-<p>3.</p>
-<p>The ambient dimension is the dimension of the space in which the data lives. The curve shown is embedded in 3D space (with <span class="math">\(x\)</span>, <span class="math">\(y\)</span>, and <span class="math">\(z\)</span> axes visible), so the ambient dimension is 3.</p>
-</details>
-
-</div>
-
-<div class="subproblem">
-    <h3 class="subproblem-id">Part 2)</h3>
-<p>What is the intrinsic dimension of the curve?</p>
-<details>
-    <summary>Solution</summary>
-<p>1.</p>
-<p>The intrinsic dimension is the minimum number of coordinates needed to describe a point's position on the manifold itself. This zigzag path, despite twisting through 3D space, is fundamentally a 1-dimensional curve. You only need a single parameter (such as the distance traveled along the path from a starting point) to uniquely identify any location on it. If you were to ``straighten out'' the path, it would become a line segment, confirming its intrinsic dimension is 1.</p>
 </details>
 
 </div>

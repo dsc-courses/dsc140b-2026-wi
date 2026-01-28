@@ -261,6 +261,41 @@ Live Q&A
 
 
 
+
+        <div class="problem-outer">
+        <h2>Problem #89</h2>
+        <p>Tags: <a href='../tags/lecture-07.html'>lecture-07</a>, <a href='../tags/eigenvalues.html'>eigenvalues</a>, <a href='../tags/variance.html'>variance</a>, <a href='../tags/pca.html'>pca</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(\mathcal X = \{\vec{x}^{(1)}, \ldots, \vec{x}^{(100)}\}\)</span> be a set of 100 points in <span class="math">\(3\)</span> dimensions. The variance in the direction of <span class="math">\(\hat{e}^{(1)}\)</span> is 20, the variance in the direction of <span class="math">\(\hat{e}^{(2)}\)</span> is 12, and the variance in the direction of <span class="math">\(\hat{e}^{(3)}\)</span> is 10.</p>
+<p>Suppose PCA is performed, but dimensionality is not reduced; that is, each point <span class="math">\(\vec{x}^{(i)}\)</span> is transformed to the vector <span class="math">\(\vec{z}^{(i)} = U
+    \vec{x}^{(i)}\)</span>, where <span class="math">\(U\)</span> is a matrix whose <span class="math">\(3\)</span> rows are the (orthonormal) eigenvectors of the data covariance matrix. Let <span class="math">\(\mathcal Z =
+    \{\vec{z}^{(1)}, \ldots, \vec{z}^{(100)}\}\)</span> be the resulting data set.</p>
+<p>Suppose <span class="math">\(C\)</span> is the covariance matrix of the new data set, <span class="math">\(\mathcal Z\)</span>, and that the top two eigenvalues of <span class="math">\(C\)</span> are 25 and 15. What is the third eigenvalue?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(2\)</span>.</p>
+<p>Although it wasn't discussed in lecture, it turns out that the total variance is preserved under orthogonal transformations. The total variance of the original data is:</p>
+<div class="math">\[
+            20 + 12 + 10 = 42
+        \]</div>
+<p>After PCA, the covariance matrix <span class="math">\(C\)</span> of <span class="math">\(\mathcal Z\)</span> is diagonal with the eigenvalues on the diagonal. The sum of eigenvalues equals the total variance:</p>
+<div class="math">\[\lambda_1 + \lambda_2 + \lambda_3 = 42
+        \]</div>
+<div class="math">\[
+            25 + 15 + \lambda_3 = 42
+        \]</div>
+<div class="math">\[\lambda_3 = 42 - 40 = 2
+        \]</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
        </body>
    </html>
     </div>
