@@ -457,6 +457,28 @@
                             "path": "materials/default/supplementary/math_review/slides.pdf"
                         }
                     }
+                },
+                "supplementary/sample_midterm_01": {
+                    "metadata": {},
+                    "artifacts": {
+                        "sample_midterm_01-solution.pdf": {
+                            "path": "materials/default/supplementary/sample_midterm_01/sample_midterm_01-solution.pdf"
+                        },
+                        "sample_midterm_01.pdf": {
+                            "path": "materials/default/supplementary/sample_midterm_01/sample_midterm_01.pdf"
+                        }
+                    }
+                },
+                "supplementary/sample_midterm_02": {
+                    "metadata": {},
+                    "artifacts": {
+                        "sample_midterm_01-solution.pdf": {
+                            "path": "materials/default/supplementary/sample_midterm_02/sample_midterm_01-solution.pdf"
+                        },
+                        "sample_midterm_01.pdf": {
+                            "path": "materials/default/supplementary/sample_midterm_02/sample_midterm_01.pdf"
+                        }
+                    }
                 }
             }
         }
