@@ -172,7 +172,7 @@ Live Q&A
 
 
         <div class="problem-outer">
-        <h2>Problem #47</h2>
+        <h2>Problem #047</h2>
         <p>Tags: <a href='../tags/optimization.html'>optimization</a>, <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/quiz-03.html'>quiz-03</a>, <a href='../tags/eigenvalues.html'>eigenvalues</a>, <a href='../tags/eigenvectors.html'>eigenvectors</a>, <a href='../tags/lecture-04.html'>lecture-04</a></p>
         <div class="problem">
     <div class="problem-body">
@@ -197,7 +197,7 @@ Live Q&A
 
 
         <div class="problem-outer">
-        <h2>Problem #48</h2>
+        <h2>Problem #048</h2>
         <p>Tags: <a href='../tags/optimization.html'>optimization</a>, <a href='../tags/linear algebra.html'>linear algebra</a>, <a href='../tags/quiz-03.html'>quiz-03</a>, <a href='../tags/eigenvalues.html'>eigenvalues</a>, <a href='../tags/eigenvectors.html'>eigenvectors</a>, <a href='../tags/quadratic forms.html'>quadratic forms</a>, <a href='../tags/lecture-04.html'>lecture-04</a></p>
         <div class="problem">
     <div class="problem-body">
@@ -248,6 +248,40 @@ Live Q&A
 </details>
 
 </div>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #094</h2>
+        <p>Tags: <a href='../tags/laplacian eigenmaps.html'>laplacian eigenmaps</a>, <a href='../tags/quiz-05.html'>quiz-05</a>, <a href='../tags/optimization.html'>optimization</a>, <a href='../tags/lecture-08.html'>lecture-08</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Define the cost function to be:</p>
+<div class="math">\[\text{Cost}(\vec f) = \frac{1}{2}\sum_{i=1}^n \sum_{j=1}^n w_{ij}(f_i - f_j)^2
+    \]</div>
+<p>Consider the similarity matrix with <span class="math">\(n = 3\)</span>:</p>
+<div class="math">\[
+        W = \begin{pmatrix}
+            1 & 0.5 & 0\\
+            0.5 & 1 & 0.9\\
+            0 & 0.9 & 1
+        \end{pmatrix}\]</div>
+<p>Which of the following embedding vectors <span class="math">\(\vec f\)</span> leads to the minimum cost?</p>
+<div class="multiple-choices"><form><div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\((1, 1, 1)^T\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\((1, 1, 0)^T\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\((1, 0, 0)^T\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\((0, 1, 0)^T\)</span></p></label></div></form></div>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\((1, 1, 1)^T\)</span>.</p>
+<p>When <span class="math">\(f_i = f_j\)</span> for all <span class="math">\(i, j\)</span>, the term inside the summation is always <span class="math">\(0\)</span>, leading the value of the cost function to be <span class="math">\(0\)</span>. This is the minimum possible value of the cost function, since all terms in the sum are non-negative.</p>
+</details>
 
     </div>
 </div>
