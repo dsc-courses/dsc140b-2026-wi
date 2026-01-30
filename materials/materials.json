@@ -75,7 +75,14 @@
                         "topic": "PCA",
                         "number": 4
                     },
-                    "artifacts": {}
+                    "artifacts": {
+                        "quiz.pdf": {
+                            "path": "materials/quizzes/04-pca/quiz.pdf"
+                        },
+                        "solution.pdf": {
+                            "path": "materials/quizzes/04-pca/solution.pdf"
+                        }
+                    }
                 }
             }
         },
