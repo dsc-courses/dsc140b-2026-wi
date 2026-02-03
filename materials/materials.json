@@ -246,10 +246,14 @@
                     "metadata": {
                         "videos": null,
                         "date": "2026-02-03",
-                        "topic": "Linear Models",
+                        "topic": "Feature Maps",
                         "number": 9
                     },
-                    "artifacts": {}
+                    "artifacts": {
+                        "slides.pdf": {
+                            "path": "materials/lectures/schedules/tr/09-linear_models/slides.pdf"
+                        }
+                    }
                 },
                 "10-feature_maps": {
                     "metadata": {
