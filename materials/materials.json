@@ -252,6 +252,9 @@
                     "artifacts": {
                         "slides.pdf": {
                             "path": "materials/lectures/schedules/tr/09-linear_models/slides.pdf"
+                        },
+                        "marked.pdf": {
+                            "path": "materials/lectures/schedules/tr/09-linear_models/marked.pdf"
                         }
                     }
                 },
