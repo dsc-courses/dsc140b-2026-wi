@@ -411,6 +411,9 @@
                     "artifacts": {
                         "homework.pdf": {
                             "path": "materials/homeworks/04-pca_and_eigenmaps/homework.pdf"
+                        },
+                        "solution.pdf": {
+                            "path": "materials/homeworks/04-pca_and_eigenmaps/solution.pdf"
                         }
                     }
                 },
