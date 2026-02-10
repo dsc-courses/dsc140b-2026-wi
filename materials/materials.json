@@ -258,14 +258,18 @@
                         }
                     }
                 },
-                "10-feature_maps": {
+                "10-rbf_networks": {
                     "metadata": {
                         "videos": null,
                         "date": "2026-02-05",
-                        "topic": "Feature Maps",
+                        "topic": "RBF Networks",
                         "number": 10
                     },
-                    "artifacts": {}
+                    "artifacts": {
+                        "slides.pdf": {
+                            "path": "materials/lectures/schedules/tr/10-rbf_networks/slides.pdf"
+                        }
+                    }
                 },
                 "11-rbf_networks": {
                     "metadata": {
