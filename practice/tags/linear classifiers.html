@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head data-automata-theme="default">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>DSC 140B</title>
+    <link href="/static/style.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+
+    <!-- Mobile menu button -->
+<div class="mobile-navbar lg:hidden fixed top-0 left-0 right-0 bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 z-50 flex items-center">
+    <button id="mobile-menu-button" class="py-5 pl-4 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
+        <i data-lucide="menu" class="w-6 h-5"></i>
+    </button>
+    <span class="ml-2 font-semibold">DSC 140B</span>
+</div>
+
+    <div class="flex min-h-screen">
+        <!-- Left Navigation Column -->
+        <nav id="sidebar" class="
+    w-64 flex-none
+    fixed lg:sticky
+    top-0 left-0 h-screen
+    transform -translate-x-full lg:translate-x-0 transition-transform duration-200 ease-in-out
+    bg-gray-50 dark:bg-gray-900
+    z-40
+    sidebar-mobile-spacing lg:pt-6
+    flex flex-col items-end
+    border-r lg:border-r-0 border-gray-200 dark:border-gray-700
+    ">
+
+    <div class="pt-6 pr-6 flex">
+        <ul class="space-y-2">
+            
+            <li>
+                <a href="/index.html" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="home" class="mr-2 text-slate-400"></i>
+Home
+                </a>
+            </li>
+            
+            <li>
+                <a href="/syllabus.html" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="scale" class="mr-2 text-slate-400"></i>
+Syllabus
+                </a>
+            </li>
+            
+            <li>
+                <a href="/office_hours.html" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="briefcase-business" class="mr-2 text-slate-400"></i>
+Office Hours
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://campuswire.com/p/G7C157AD2" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="message-circle-more" class="mr-2 text-slate-400"></i>
+Campuswire
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://www.gradescope.com/courses/1212103" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="spell-check" class="mr-2 text-slate-400"></i>
+Gradescope
+                </a>
+            </li>
+            
+            <li>
+                <a href="/practice/index.html" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="dumbbell" class="mr-2 text-slate-400"></i>
+Practice
+                </a>
+            </li>
+            
+            <li>
+                <a href="http://sierra.ucsd.edu/qa/dsc140b" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="message-circle-question-mark" class="mr-2 text-slate-400"></i>
+Live Q&A
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <div class="flex mr-9 pt-3 pb-6">
+        <button id="theme-toggle" class="inline-flex items-center px-3 py-1.5 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded-full transition-colors">
+            <span id="theme-icon" class="mr-1.5">☾</span>
+            <span id="theme-text">Dark</span>
+        </button>
+    </div>
+</nav>
+
+<!-- Overlay for mobile -->
+<div id="overlay" class="fixed inset-0 bg-gray-200/40 dark:bg-black/50 backdrop-blur-[2px] z-30 hidden"></div>
+
+        <!-- Main Content Column -->
+        
+<!-- Main Content Column -->
+<div class="
+    w-full
+    bg-white dark:bg-gray-800
+    md:border-l
+    border-gray-200 dark:border-gray-700
+    md:min-w-180
+    px-4 md:px-12
+    pt-20 lg:pt-12
+    pb-24
+    ">
+
+    <div class="
+    text-xl font-semibold
+    left-12 right-12
+    py-4 lg:pt-0 lg:pb-0 lg:mb-10
+    lg:static
+    truncate
+    flex
+    ">
+    <div class="
+        shrink
+        lg:border-b border-gray-200 dark:border-gray-700
+        ">
+        <span class="hidden lg:inline">
+            DSC 140B
+            &ndash;
+            Representation Learning
+        </span>
+    </div>
+</div>
+
+    <div class="prose dark:prose-invert">
+    <!DOCTYPE html> <html> <head> <meta
+                          charset="utf-8"> <title>Problems tagged with linear classifiers</title>
+
+           <!-- MathJax -->
+           <script type="text/x-mathjax-config">
+             MathJax.Hub.Config({
+               tex: {
+                 inlineMath: [ ['$$','$$'], ["\\(","\\)"] ],
+                 displayMath: [             // start/end delimiter pairs for display math
+                     ['\\[', '\\]']
+                 ],
+                 processEscapes: true
+               }
+           });
+           </script>
+
+           <!-- highlightjs -->
+           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+           <!-- and it's easy to individually load additional languages -->
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+
+           <script>hljs.highlightAll();</script>
+
+           <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+           <script type="text/javascript" id="MathJax-script" async
+             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+           </script>
+
+       </head>
+       <body>
+           
+<h1>Problems tagged with "linear classifiers"</h1>
+
+
+        <div class="problem-outer">
+        <h2>Problem #111</h2>
+        <p>Tags: <a href='../tags/linear classifiers.html'>linear classifiers</a>, <a href='../tags/quiz-05.html'>quiz-05</a>, <a href='../tags/lecture-09.html'>lecture-09</a>, <a href='../tags/feature maps.html'>feature maps</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Suppose we have a feature map <span class="math">\(\varphi : \mathbb{R}^3 \to\mathbb{R}^4\)</span> with the following basis functions:</p>
+<div class="math">$$\begin{align*}\varphi_1(\vec{x}) &= x_1 x_2 \\\varphi_2(\vec{x}) &= x_2^2 \\\varphi_3(\vec{x}) &= x_3^2 x_1 \\\varphi_4(\vec{x}) &= x_1 x_2 x_3
+    \end{align*}$$</div>
+<p>A linear classifier in this feature space has learned the weight vector <span class="math">\(\vec{w} = (w_0, w_1, w_2, w_3, w_4) = (0.4,\; 0.3,\; -0.6,\; 1.3,\; 0.7)\)</span>, where <span class="math">\(w_0 = 0.4\)</span> is the bias (intercept) term. The prediction function is:</p>
+<div class="math">\[
+        H(\vec{x}) = w_0 + w_1 \varphi_1(\vec{x}) + w_2 \varphi_2(\vec{x}) + w_3 \varphi_3(\vec{x}) + w_4 \varphi_4(\vec{x})
+    \]</div>
+<p>What is the value of the prediction function <span class="math">\(H\)</span> for the input point <span class="math">\(\vec{x} = (3, 2, -1)\)</span> in the original <span class="math">\(\mathbb{R}^3\)</span> space?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(-0.5\)</span>.</p>
+<p>First, we compute the feature representation of <span class="math">\(\vec{x} = (3, 2, -1)\)</span>:</p>
+<div class="math">$$\begin{align*}\varphi_1(\vec{x}) &= x_1 x_2 = (3)(2) = 6 \\\varphi_2(\vec{x}) &= x_2^2 = (2)^2 = 4 \\\varphi_3(\vec{x}) &= x_3^2 x_1 = (-1)^2(3) = 3 \\\varphi_4(\vec{x}) &= x_1 x_2 x_3 = (3)(2)(-1) = -6
+        \end{align*}$$</div>
+<p>So the feature vector is <span class="math">\(\varphi(\vec{x}) = (6, 4, 3, -6)\)</span>.</p>
+<p>Then we compute the prediction function:</p>
+<div class="math">$$\begin{align*}
+            H(\vec{x}) &= 0.4 + 0.3(6) + (-0.6)(4) + 1.3(3) + 0.7(-6) \\&= 0.4 + 1.8 - 2.4 + 3.9 - 4.2 \\&= -0.5
+        \end{align*}$$</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #112</h2>
+        <p>Tags: <a href='../tags/linear classifiers.html'>linear classifiers</a>, <a href='../tags/quiz-05.html'>quiz-05</a>, <a href='../tags/lecture-09.html'>lecture-09</a>, <a href='../tags/feature maps.html'>feature maps</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Suppose we have a feature map <span class="math">\(\varphi : \mathbb{R}^3 \to\mathbb{R}^4\)</span> with the following basis functions:</p>
+<div class="math">$$\begin{align*}\varphi_1(\vec{x}) &= x_1^2 \\\varphi_2(\vec{x}) &= x_2 x_3 \\\varphi_3(\vec{x}) &= x_1 x_3 \\\varphi_4(\vec{x}) &= x_2^2 x_3
+    \end{align*}$$</div>
+<p>A linear classifier in this feature space has learned the weight vector <span class="math">\(\vec{w} = (w_0, w_1, w_2, w_3, w_4) = (0.5,\; 0.25,\; -1,\; 0.5,\; -0.5)\)</span>, where <span class="math">\(w_0 = 0.5\)</span> is the bias (intercept) term. The prediction function is:</p>
+<div class="math">\[
+        H(\vec{x}) = w_0 + w_1 \varphi_1(\vec{x}) + w_2 \varphi_2(\vec{x}) + w_3 \varphi_3(\vec{x}) + w_4 \varphi_4(\vec{x})
+    \]</div>
+<p>What is the value of the prediction function <span class="math">\(H\)</span> for the input point <span class="math">\(\vec{x} = (2, -1, 3)\)</span> in the original <span class="math">\(\mathbb{R}^3\)</span> space?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(6\)</span>.</p>
+<p>First, we compute the feature representation of <span class="math">\(\vec{x} = (2, -1, 3)\)</span>:</p>
+<div class="math">$$\begin{align*}\varphi_1(\vec{x}) &= x_1^2 = (2)^2 = 4 \\\varphi_2(\vec{x}) &= x_2 x_3 = (-1)(3) = -3 \\\varphi_3(\vec{x}) &= x_1 x_3 = (2)(3) = 6 \\\varphi_4(\vec{x}) &= x_2^2 x_3 = (-1)^2(3) = 3
+        \end{align*}$$</div>
+<p>So the feature vector is <span class="math">\(\varphi(\vec{x}) = (4, -3, 6, 3)\)</span>.</p>
+<p>Then we compute the prediction function:</p>
+<div class="math">$$\begin{align*}
+            H(\vec{x}) &= 0.5 + 0.25(4) + (-1)(-3) + 0.5(6) + (-0.5)(3) \\&= 0.5 + 1 + 3 + 3 - 1.5 \\&= 6
+        \end{align*}$$</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #113</h2>
+        <p>Tags: <a href='../tags/linear classifiers.html'>linear classifiers</a>, <a href='../tags/quiz-05.html'>quiz-05</a>, <a href='../tags/lecture-09.html'>lecture-09</a>, <a href='../tags/feature maps.html'>feature maps</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Suppose we have a feature map <span class="math">\(\varphi : \mathbb{R}^3 \to\mathbb{R}^4\)</span> with the following basis functions:</p>
+<div class="math">$$\begin{align*}\varphi_1(\vec{x}) &= |x_1 - x_2| \\\varphi_2(\vec{x}) &= |x_3| \\\varphi_3(\vec{x}) &= |x_1 + x_3| \\\varphi_4(\vec{x}) &= |x_2 - x_3|
+    \end{align*}$$</div>
+<p>A linear classifier in this feature space has learned the weight vector <span class="math">\(\vec{w} = (w_0, w_1, w_2, w_3, w_4) = (2,\; -1,\; 3,\; 0.5,\; -2)\)</span>, where <span class="math">\(w_0 = 2\)</span> is the bias (intercept) term. The prediction function is:</p>
+<div class="math">\[
+        H(\vec{x}) = w_0 + w_1 \varphi_1(\vec{x}) + w_2 \varphi_2(\vec{x}) + w_3 \varphi_3(\vec{x}) + w_4 \varphi_4(\vec{x})
+    \]</div>
+<p>What is the value of the prediction function <span class="math">\(H\)</span> for the input point <span class="math">\(\vec{x} = (1, -3, 2)\)</span> in the original <span class="math">\(\mathbb{R}^3\)</span> space?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(-4.5\)</span>.</p>
+<p>First, we compute the feature representation of <span class="math">\(\vec{x} = (1, -3, 2)\)</span>:</p>
+<div class="math">$$\begin{align*}\varphi_1(\vec{x}) &= |x_1 - x_2| = |1 - (-3)| = |4| = 4 \\\varphi_2(\vec{x}) &= |x_3| = |2| = 2 \\\varphi_3(\vec{x}) &= |x_1 + x_3| = |1 + 2| = |3| = 3 \\\varphi_4(\vec{x}) &= |x_2 - x_3| = |{-3} - 2| = |{-5}| = 5
+        \end{align*}$$</div>
+<p>So the feature vector is <span class="math">\(\varphi(\vec{x}) = (4, 2, 3, 5)\)</span>.</p>
+<p>Then we compute the prediction function:</p>
+<div class="math">$$\begin{align*}
+            H(\vec{x}) &= 2 + (-1)(4) + 3(2) + 0.5(3) + (-2)(5) \\&= 2 - 4 + 6 + 1.5 - 10 \\&= -4.5
+        \end{align*}$$</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #114</h2>
+        <p>Tags: <a href='../tags/linear classifiers.html'>linear classifiers</a>, <a href='../tags/quiz-05.html'>quiz-05</a>, <a href='../tags/lecture-09.html'>lecture-09</a>, <a href='../tags/feature maps.html'>feature maps</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider the following data in <span class="math">\(\mathbb{R}\)</span>:</p>
+<center><div class="image"><img src="../images/114/fig/number_line.png" /></div></center>
+<p>Note that this data is <b>not</b> linearly separable in <span class="math">\(\mathbb{R}\)</span>. For each of the following transformations that map the data into <span class="math">\(\mathbb{R}^2\)</span>, determine whether the transformed data is linearly separable.</p>
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 1)</h3>
+<p>True or False: The transformation <span class="math">\(x \mapsto(x, x^3)\)</span> makes the data linearly separable in <span class="math">\(\mathbb{R}^2\)</span>.</p>
+
+<div class="true-false">
+    <input type="radio" name="true-false" value="true" /> True
+    <input type="radio" name="true-false" value="false" /> False
+</div>
+
+<details>
+    <summary>Solution</summary>
+<p>False.</p>
+<center><div class="image"><img src="../images/114/fig/transform_a.png" /></div></center>
+<p>Since <span class="math">\(x^3\)</span> is a monotonically increasing function, the relative order of the points along the curve <span class="math">\(y = x^3\)</span> is the same as in 1D. The classes remain interleaved and cannot be separated by a line.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 2)</h3>
+<p>True or False: The transformation <span class="math">\(x \mapsto(x, x^2)\)</span> makes the data linearly separable in <span class="math">\(\mathbb{R}^2\)</span>.</p>
+
+<div class="true-false">
+    <input type="radio" name="true-false" value="true" /> True
+    <input type="radio" name="true-false" value="false" /> False
+</div>
+
+<details>
+    <summary>Solution</summary>
+<p>True.</p>
+<center><div class="image"><img src="../images/114/fig/transform_b.png" /></div></center>
+<p>The green points have large <span class="math">\(x^2\)</span> values (<span class="math">\(25\)</span> and <span class="math">\(36\)</span>) while the red points have small <span class="math">\(x^2\)</span> values (<span class="math">\(0\)</span> and <span class="math">\(1\)</span>). A horizontal line such as <span class="math">\(x_2 = 10\)</span> separates them.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 3)</h3>
+<p>True or False: The transformation <span class="math">\(x \mapsto(x, |x|)\)</span> makes the data linearly separable in <span class="math">\(\mathbb{R}^2\)</span>.</p>
+
+<div class="true-false">
+    <input type="radio" name="true-false" value="true" /> True
+    <input type="radio" name="true-false" value="false" /> False
+</div>
+
+<details>
+    <summary>Solution</summary>
+<p>True.</p>
+<center><div class="image"><img src="../images/114/fig/transform_c.png" /></div></center>
+<p>The green points have large <span class="math">\(|x|\)</span> values (<span class="math">\(5\)</span> and <span class="math">\(6\)</span>) while the red points have small <span class="math">\(|x|\)</span> values (<span class="math">\(0\)</span> and <span class="math">\(1\)</span>). A horizontal line such as <span class="math">\(x_2 = 3\)</span> separates them.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 4)</h3>
+<p>True or False: The transformation <span class="math">\(x \mapsto(x, x)\)</span> makes the data linearly separable in <span class="math">\(\mathbb{R}^2\)</span>.</p>
+
+<div class="true-false">
+    <input type="radio" name="true-false" value="true" /> True
+    <input type="radio" name="true-false" value="false" /> False
+</div>
+
+<details>
+    <summary>Solution</summary>
+<p>False.</p>
+<center><div class="image"><img src="../images/114/fig/transform_d.png" /></div></center>
+<p>This transformation maps every point to the line <span class="math">\(y = x\)</span> in <span class="math">\(\mathbb{R}^2\)</span>. The data is effectively still one-dimensional, and the classes remain interleaved along this line.</p>
+</details>
+
+</div>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #115</h2>
+        <p>Tags: <a href='../tags/linear classifiers.html'>linear classifiers</a>, <a href='../tags/quiz-05.html'>quiz-05</a>, <a href='../tags/lecture-09.html'>lecture-09</a>, <a href='../tags/feature maps.html'>feature maps</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider the data shown below:</p>
+<center><div class="image"><img src="../images/115/fig/nonseparable.png" /></div></center>
+<p>The data comes from two classes: <span class="math">\(\circ\)</span> and <span class="math">\(+\)</span>.</p>
+<p>Suppose a single basis function will be used to map the data to feature space where a linear classifier will be trained. Which of the below is the best choice of basis function?</p>
+<div class="multiple-choices"><form><div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\varphi(x_1, x_2) = \max\{x_1, x_2\}\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\varphi(x_1, x_2) = x_1 + x_2\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\varphi(x_1, x_2) = x_1^2 + x_2^2\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\varphi(x_1, x_2) = x_1 \cdot x_2\)</span></p></label></div></form></div>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\varphi(x_1, x_2) = x_1 \cdot x_2\)</span>.</p>
+<p>The data has <span class="math">\(\circ\)</span> points in quadrants where <span class="math">\(x_1\)</span> and <span class="math">\(x_2\)</span> have the same sign (so <span class="math">\(x_1 x_2 > 0\)</span>) and <span class="math">\(+\)</span> points where they have opposite signs (so <span class="math">\(x_1 x_2 < 0\)</span>). The product <span class="math">\(x_1 \cdot x_2\)</span> captures this separation, allowing a linear classifier in the 1D feature space to distinguish the classes.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #116</h2>
+        <p>Tags: <a href='../tags/linear classifiers.html'>linear classifiers</a>, <a href='../tags/quiz-05.html'>quiz-05</a>, <a href='../tags/lecture-09.html'>lecture-09</a>, <a href='../tags/feature maps.html'>feature maps</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Define the "triangle" basis function:</p>
+<div class="math">\[\phi(x; c) = \begin{cases} 1 - |x - c|, & |x - c| < 1, \\ 0 & \text{otherwise}. \end{cases}\]</div>
+<p>Three triangle basis functions <span class="math">\(\phi_1\)</span>, <span class="math">\(\phi_2\)</span>, <span class="math">\(\phi_3\)</span> have centers <span class="math">\(c_1 = 1\)</span>, <span class="math">\(c_2 = 4\)</span>, and <span class="math">\(c_3 = 5\)</span>, respectively. These basis functions map data from <span class="math">\(\mathbb{R}\)</span> to feature space <span class="math">\(\mathbb{R}^3\)</span> via <span class="math">\(x \mapsto(\phi_1(x), \phi_2(x), \phi_3(x))^T\)</span>.</p>
+<p>A linear predictor in feature space has equation:</p>
+<div class="math">\[H_\phi(\vec{z}) = 2z_1 - z_2 + 3z_3\]</div>
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 1)</h3>
+<p>What is the representation of <span class="math">\(x = 4.5\)</span> in feature space?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\((0, 1/2, 1/2)^T\)</span>.</p>
+<p>We evaluate each basis function at <span class="math">\(x = 4.5\)</span>:</p>
+<div class="math">$$\begin{align*}\phi_1(4.5) &= 0, \quad\text{since } |4.5 - 1| = 3.5 \geq 1 \\\phi_2(4.5) &= 1 - |4.5 - 4| = 1 - 0.5 = 1/2 \\\phi_3(4.5) &= 1 - |4.5 - 5| = 1 - 0.5 = 1/2
+                \end{align*}$$</div>
+<p>Therefore, the feature space representation is <span class="math">\((0, 1/2, 1/2)^T\)</span>.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 2)</h3>
+<p>What is <span class="math">\(H(4.5)\)</span> in the original space?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(1\)</span>.</p>
+<p>Using the feature space representation from part (a):</p>
+<div class="math">$$\begin{align*}
+                    H(4.5) &= H_\phi(0,\, 1/2,\, 1/2) \\&= 2(0) - (1/2) + 3(1/2) \\&= 0 - 1/2 + 3/2 \\&= 1
+                \end{align*}$$</div>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 3)</h3>
+<p>Plot <span class="math">\(H(x)\)</span>(the prediction function in the original space) from 0 to 8 on the grid below.</p>
+<center><div class="image"><img src="../images/116/fig/grid.png" /></div></center>
+<details>
+    <summary>Solution</summary>
+<center><div class="image"><img src="../images/116/fig/soln.png" /></div></center>
+</details>
+
+</div>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #117</h2>
+        <p>Tags: <a href='../tags/linear classifiers.html'>linear classifiers</a>, <a href='../tags/quiz-05.html'>quiz-05</a>, <a href='../tags/lecture-09.html'>lecture-09</a>, <a href='../tags/feature maps.html'>feature maps</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider the data shown below:</p>
+<center><div class="image"><img src="../images/117/fig/data.png" /></div></center>
+<p>The data comes from two classes: <span class="math">\(\circ\)</span> and <span class="math">\(+\)</span>.</p>
+<p>Suppose a single basis function will be used to map the data to feature space where a linear classifier will be trained. Which of the below is the best choice of basis function?</p>
+<div class="multiple-choices"><form><div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\varphi(x_1, x_2) = \min\{x_1, x_2\}\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\varphi(x_1, x_2) = x_1 + x_2\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\varphi(x_1, x_2) = x_1^2 + x_2^2\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\varphi(x_1, x_2) = x_1 \cdot x_2\)</span></p></label></div></form></div>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\varphi(x_1, x_2) = \min\{x_1, x_2\}\)</span>.</p>
+<p>The data has <span class="math">\(\circ\)</span> points where both coordinates are large and <span class="math">\(+\)</span> points where at least one coordinate is small. The minimum of the two coordinates captures this: <span class="math">\(\circ\)</span> points have a large minimum while <span class="math">\(+\)</span> points have a small minimum. This allows a linear classifier in the 1D feature space to separate the classes.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #118</h2>
+        <p>Tags: <a href='../tags/linear classifiers.html'>linear classifiers</a>, <a href='../tags/quiz-05.html'>quiz-05</a>, <a href='../tags/lecture-09.html'>lecture-09</a>, <a href='../tags/feature maps.html'>feature maps</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Define the "box" basis function:</p>
+<div class="math">\[\phi(x; c) = \begin{cases} 1, & |x - c| \leq 1, \\ 0 & \text{otherwise}. \end{cases}\]</div>
+<p>Three box basis functions <span class="math">\(\phi_1\)</span>, <span class="math">\(\phi_2\)</span>, <span class="math">\(\phi_3\)</span> have centers <span class="math">\(c_1 = 1\)</span>, <span class="math">\(c_2 = 2\)</span>, and <span class="math">\(c_3 = 6\)</span>, respectively. These basis functions map data from <span class="math">\(\mathbb{R}\)</span> to feature space <span class="math">\(\mathbb{R}^3\)</span> via <span class="math">\(x \mapsto(\phi_1(x), \phi_2(x), \phi_3(x))^T\)</span>.</p>
+<p>A linear predictor in feature space has equation:</p>
+<div class="math">\[H_\phi(\vec{z}) = 3z_1 - z_2 - 2z_3\]</div>
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 1)</h3>
+<p>What is the representation of <span class="math">\(x = 1.5\)</span> in feature space?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\((1, 1, 0)^T\)</span>.</p>
+<p>We evaluate each basis function at <span class="math">\(x = 1.5\)</span>:</p>
+<div class="math">$$\begin{align*}\phi_1(1.5) &= 1, \quad\text{since } |1.5 - 1| = 0.5 \leq 1 \\\phi_2(1.5) &= 1, \quad\text{since } |1.5 - 2| = 0.5 \leq 1 \\\phi_3(1.5) &= 0, \quad\text{since } |1.5 - 6| = 4.5 > 1
+                \end{align*}$$</div>
+<p>Therefore, the feature space representation is <span class="math">\((1, 1, 0)^T\)</span>.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 2)</h3>
+<p>What is <span class="math">\(H(2.5)\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(-1\)</span>.</p>
+<p>First, we find the feature space representation of <span class="math">\(x = 2.5\)</span>:</p>
+<div class="math">$$\begin{align*}\phi_1(2.5) &= 0, \quad\text{since } |2.5 - 1| = 1.5 > 1 \\\phi_2(2.5) &= 1, \quad\text{since } |2.5 - 2| = 0.5 \leq 1 \\\phi_3(2.5) &= 0, \quad\text{since } |2.5 - 6| = 3.5 > 1
+                \end{align*}$$</div>
+<p>Then:</p>
+<div class="math">$$\begin{align*}
+                    H(2.5) &= H_\phi(0, 1, 0) \\&= 3(0) - (1) - 2(0) \\&= -1
+                \end{align*}$$</div>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 3)</h3>
+<p>Plot <span class="math">\(H(x)\)</span>(the prediction function in the original space) from 0 to 8 on the grid below.</p>
+<center><div class="image"><img src="../images/118/fig/grid.png" /></div></center>
+<details>
+    <summary>Solution</summary>
+<center><div class="image"><img src="../images/118/fig/soln.png" /></div></center>
+</details>
+
+</div>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+       </body>
+   </html>
+    </div>
+</div>
+
+    </div>
+
+    <script>
+        // Restore saved theme on page load
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else if (savedTheme === 'light') {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // Dark mode toggle
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const themeText = document.getElementById('theme-text');
+
+        // Update button to reflect current theme
+        function updateThemeButton() {
+            const isDark = document.documentElement.classList.contains('dark');
+            themeIcon.textContent = isDark ? '☀' : '☾';
+            themeText.textContent = isDark ? 'Light' : 'Dark';
+        }
+
+        // Initialize button state
+        updateThemeButton();
+
+        // Toggle theme on button click
+        themeToggleBtn.addEventListener('click', () => {
+            const isDark = document.documentElement.classList.contains('dark');
+
+            if (isDark) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+
+            updateThemeButton();
+        });
+
+        // Mobile menu toggle
+        const menuButton = document.getElementById('mobile-menu-button');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+
+        menuButton.addEventListener('click', () => {
+            sidebar.classList.toggle('-translate-x-full');
+            overlay.classList.toggle('hidden');
+        });
+
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>

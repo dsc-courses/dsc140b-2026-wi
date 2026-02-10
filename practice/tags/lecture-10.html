@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head data-automata-theme="default">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>DSC 140B</title>
+    <link href="/static/style.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+
+    <!-- Mobile menu button -->
+<div class="mobile-navbar lg:hidden fixed top-0 left-0 right-0 bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 z-50 flex items-center">
+    <button id="mobile-menu-button" class="py-5 pl-4 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
+        <i data-lucide="menu" class="w-6 h-5"></i>
+    </button>
+    <span class="ml-2 font-semibold">DSC 140B</span>
+</div>
+
+    <div class="flex min-h-screen">
+        <!-- Left Navigation Column -->
+        <nav id="sidebar" class="
+    w-64 flex-none
+    fixed lg:sticky
+    top-0 left-0 h-screen
+    transform -translate-x-full lg:translate-x-0 transition-transform duration-200 ease-in-out
+    bg-gray-50 dark:bg-gray-900
+    z-40
+    sidebar-mobile-spacing lg:pt-6
+    flex flex-col items-end
+    border-r lg:border-r-0 border-gray-200 dark:border-gray-700
+    ">
+
+    <div class="pt-6 pr-6 flex">
+        <ul class="space-y-2">
+            
+            <li>
+                <a href="/index.html" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="home" class="mr-2 text-slate-400"></i>
+Home
+                </a>
+            </li>
+            
+            <li>
+                <a href="/syllabus.html" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="scale" class="mr-2 text-slate-400"></i>
+Syllabus
+                </a>
+            </li>
+            
+            <li>
+                <a href="/office_hours.html" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="briefcase-business" class="mr-2 text-slate-400"></i>
+Office Hours
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://campuswire.com/p/G7C157AD2" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="message-circle-more" class="mr-2 text-slate-400"></i>
+Campuswire
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://www.gradescope.com/courses/1212103" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="spell-check" class="mr-2 text-slate-400"></i>
+Gradescope
+                </a>
+            </li>
+            
+            <li>
+                <a href="/practice/index.html" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="dumbbell" class="mr-2 text-slate-400"></i>
+Practice
+                </a>
+            </li>
+            
+            <li>
+                <a href="http://sierra.ucsd.edu/qa/dsc140b" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="message-circle-question-mark" class="mr-2 text-slate-400"></i>
+Live Q&A
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <div class="flex mr-9 pt-3 pb-6">
+        <button id="theme-toggle" class="inline-flex items-center px-3 py-1.5 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded-full transition-colors">
+            <span id="theme-icon" class="mr-1.5">☾</span>
+            <span id="theme-text">Dark</span>
+        </button>
+    </div>
+</nav>
+
+<!-- Overlay for mobile -->
+<div id="overlay" class="fixed inset-0 bg-gray-200/40 dark:bg-black/50 backdrop-blur-[2px] z-30 hidden"></div>
+
+        <!-- Main Content Column -->
+        
+<!-- Main Content Column -->
+<div class="
+    w-full
+    bg-white dark:bg-gray-800
+    md:border-l
+    border-gray-200 dark:border-gray-700
+    md:min-w-180
+    px-4 md:px-12
+    pt-20 lg:pt-12
+    pb-24
+    ">
+
+    <div class="
+    text-xl font-semibold
+    left-12 right-12
+    py-4 lg:pt-0 lg:pb-0 lg:mb-10
+    lg:static
+    truncate
+    flex
+    ">
+    <div class="
+        shrink
+        lg:border-b border-gray-200 dark:border-gray-700
+        ">
+        <span class="hidden lg:inline">
+            DSC 140B
+            &ndash;
+            Representation Learning
+        </span>
+    </div>
+</div>
+
+    <div class="prose dark:prose-invert">
+    <!DOCTYPE html> <html> <head> <meta
+                          charset="utf-8"> <title>Problems tagged with lecture-10</title>
+
+           <!-- MathJax -->
+           <script type="text/x-mathjax-config">
+             MathJax.Hub.Config({
+               tex: {
+                 inlineMath: [ ['$$','$$'], ["\\(","\\)"] ],
+                 displayMath: [             // start/end delimiter pairs for display math
+                     ['\\[', '\\]']
+                 ],
+                 processEscapes: true
+               }
+           });
+           </script>
+
+           <!-- highlightjs -->
+           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+           <!-- and it's easy to individually load additional languages -->
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+
+           <script>hljs.highlightAll();</script>
+
+           <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+           <script type="text/javascript" id="MathJax-script" async
+             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+           </script>
+
+       </head>
+       <body>
+           
+<h1>Problems tagged with "lecture-10"</h1>
+
+
+        <div class="problem-outer">
+        <h2>Problem #119</h2>
+        <p>Tags: <a href='../tags/quiz-05.html'>quiz-05</a>, <a href='../tags/RBF networks.html'>RBF networks</a>, <a href='../tags/lecture-10.html'>lecture-10</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Suppose a Gaussian RBF network <span class="math">\(H(\vec x) : \mathbb{R}^2 \to\mathbb{R}\)</span> is trained on a binary classification dataset using four Gaussian RBFs located at <span class="math">\(\vec\mu_1 = (0,0)\)</span>, <span class="math">\(\vec\mu_2 = (1,0)\)</span>, <span class="math">\(\vec\mu_3 = (0,1)\)</span>, and <span class="math">\(\vec\mu_4 = (1,1)\)</span>.</p>
+<p>All four RBFs use the same width parameter, <span class="math">\(\sigma\)</span>.</p>
+<p>After training, it is found that the weights corresponding to the four basis functions are <span class="math">\(w_1 = -3\)</span>, <span class="math">\(w_2 = 3\)</span>, <span class="math">\(w_3 = 3\)</span>, <span class="math">\(w_4 = -3\)</span>.</p>
+<p>Which of the below could show the decision boundary of <span class="math">\(H\)</span>? The plusses and minuses show where the prediction function, <span class="math">\(H\)</span>, is positive and negative.</p>
+<div class="multiple-choices"><form><div class="choice"><label><input name="choice" class="choice" type="radio" /><center><div class="image"><img src="../images/119/fig/db-b.png" /></div></center></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><center><div class="image"><img src="../images/119/fig/db-a.png" /></div></center></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><center><div class="image"><img src="../images/119/fig/db-c.png" /></div></center></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><center><div class="image"><img src="../images/119/fig/db-d.png" /></div></center></label></div></form></div>
+<details>
+    <summary>Solution</summary>
+<p>The second plot is correct.</p>
+<p>The weights <span class="math">\(w_2 = 3\)</span> and <span class="math">\(w_3 = 3\)</span> are positive at <span class="math">\((1,0)\)</span> and <span class="math">\((0,1)\)</span>, while <span class="math">\(w_1 = -3\)</span> and <span class="math">\(w_4 = -3\)</span> are negative at <span class="math">\((0,0)\)</span> and <span class="math">\((1,1)\)</span>. This means <span class="math">\(H\)</span> is positive near <span class="math">\((1,0)\)</span> and <span class="math">\((0,1)\)</span> and negative near <span class="math">\((0,0)\)</span> and <span class="math">\((1,1)\)</span>. The decision boundary separates these regions, running diagonally through the square.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #120</h2>
+        <p>Tags: <a href='../tags/lecture-10.html'>lecture-10</a>, <a href='../tags/quiz-05.html'>quiz-05</a>, <a href='../tags/RBF networks.html'>RBF networks</a>, <a href='../tags/feature maps.html'>feature maps</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(\mathcal{X} = \{(\vec{x}^{(1)}, y_1), \ldots, (\vec{x}^{(100)}, y_{100})\}\)</span> be a dataset of 100 points, where each feature vector <span class="math">\(\vec{x}^{(i)}\in\mathbb{R}^{50}\)</span>. Suppose a Gaussian RBF network is trained using 25 Gaussian basis functions.</p>
+<p>Recall that a Gaussian RBF network can be viewed as mapping the data to feature space, where a linear prediction rule is trained. In the above scenario, what is the dimensionality of this feature space?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(25\)</span>.</p>
+<p>Each Gaussian basis function produces one feature (the output of that basis function applied to the input). With 25 basis functions, the feature space is <span class="math">\(\mathbb{R}^{25}\)</span>. The dimensionality of the feature space equals the number of basis functions, not the original input dimension.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #121</h2>
+        <p>Tags: <a href='../tags/quiz-05.html'>quiz-05</a>, <a href='../tags/RBF networks.html'>RBF networks</a>, <a href='../tags/lecture-10.html'>lecture-10</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Does standardizing features affect the output of a Gaussian RBF network?</p>
+<p>More precisely, let <span class="math">\(\mathcal{X} = \{(\vec{x}^{(1)}, y_1), \ldots, (\vec{x}^{(n)}, y_n)\}\)</span> be a dataset, and let <span class="math">\(\mathcal{Z} = \{(\vec{z}^{(1)}, y_1), \ldots, (\vec{z}^{(n)}, y_n)\}\)</span> be the dataset obtained by standardizing each feature in <span class="math">\(\mathcal{X}\)</span>(that is, each feature is scaled to have unit standard deviation and zero mean). Note that the <span class="math">\(y_i\)</span>'s are not standardized -- they are the same in both datasets.</p>
+<p>Suppose <span class="math">\(H_\mathcal{X}(\vec{x})\)</span> is a Gaussian RBF network trained by minimizing mean squared error on <span class="math">\(\mathcal{X}\)</span>, and <span class="math">\(H_\mathcal{Z}(\vec{z})\)</span> is a Gaussian RBF network trained by minimizing mean squared error on <span class="math">\(\mathcal{Z}\)</span>. Both RBF networks use the same width parameters, <span class="math">\(\sigma\)</span>. The centers used in <span class="math">\(H_\mathcal{Z}\)</span> are obtained by standardizing the centers used in <span class="math">\(H_\mathcal{X}\)</span> using the mean and standard deviation of the data, <span class="math">\(\vec{x}^{(i)}\)</span>.</p>
+<p>True or False: it must be the case that <span class="math">\(H_\mathcal{X}(\vec{x}^{(i)}) =
+    H_\mathcal{Z}(\vec{z}^{(i)})\)</span> for all <span class="math">\(i \in\{1, \ldots, n\}\)</span>.</p>
+
+<div class="true-false">
+    <input type="radio" name="true-false" value="true" /> True
+    <input type="radio" name="true-false" value="false" /> False
+</div>
+
+<details>
+    <summary>Solution</summary>
+<p>False.</p>
+<p>Standardizing changes the distances between points and centers. The Gaussian basis function <span class="math">\(\varphi(\vec{x}; \vec{\mu}, \sigma) = e^{-\|\vec{x} -
+        \vec{\mu}\|^2 / \sigma^2}\)</span> depends on the Euclidean distance <span class="math">\(\|\vec{x} -
+        \vec{\mu}\|\)</span>. While the centers are standardized along with the data, the width parameter <span class="math">\(\sigma\)</span> remains the same. Since standardizing changes the scale of the features (and thus the distances), using the same <span class="math">\(\sigma\)</span> will produce different basis function outputs, leading to different predictions.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #122</h2>
+        <p>Tags: <a href='../tags/quiz-05.html'>quiz-05</a>, <a href='../tags/RBF networks.html'>RBF networks</a>, <a href='../tags/lecture-10.html'>lecture-10</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider the following labeled data set of three points:</p>
+<div class="math">$$\begin{align*}(x_1, y_1) &= (1, 3) \\(x_2, y_2) &= (5, 1) \\(x_3, y_3) &= (6, 3)
+    \end{align*}$$</div>
+<p>A Gaussian RBF network <span class="math">\(H(x) : \mathbb{R}\to\mathbb{R}\)</span> is trained on this data with two Gaussian basis functions of the form <span class="math">\(\varphi_i(x; \mu_i, \sigma_i)
+    = e^{-(x - \mu_i)^2 / \sigma_i^2}\)</span>. The centers of the basis functions are at <span class="math">\(\mu_1 = 2\)</span> and <span class="math">\(\mu_2 = 6\)</span>, and both use a width parameter of <span class="math">\(\sigma =
+    \sigma_1 = \sigma_2 = 1\)</span>.</p>
+<p>Suppose the RBF network does not have a bias parameter, so that the prediction function is <span class="math">\(H(x) = w_1 \varphi_1(x) + w_2 \varphi_2(x)\)</span>.</p>
+<p>What is <span class="math">\(w_1\)</span>, approximately? Your answer may involve <span class="math">\(e\)</span>, but should evaluate to a number.</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(w_1 \approx 3e\)</span>.</p>
+<p>We evaluate the basis functions at each data point. Note that when a basis function center is far from a data point, the Gaussian evaluates to approximately zero.</p>
+<p>At <span class="math">\(x_1 = 1\)</span>: <span class="math">\(\varphi_1(1) = e^{-(1-2)^2} = e^{-1}\)</span> and <span class="math">\(\varphi_2(1)
+        = e^{-(1-6)^2} = e^{-25}\approx 0\)</span>.</p>
+<p>At <span class="math">\(x_3 = 6\)</span>: <span class="math">\(\varphi_1(6) = e^{-(6-2)^2} = e^{-16}\approx 0\)</span> and <span class="math">\(\varphi_2(6) = e^{0} = 1\)</span>.</p>
+<p>So <span class="math">\(H(1) \approx w_1 e^{-1} = y_1 = 3\)</span>, giving <span class="math">\(w_1 \approx 3e\)</span>. Similarly, <span class="math">\(H(6) \approx w_2 = y_3 = 3\)</span>, confirming <span class="math">\(w_2 \approx 3\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+       </body>
+   </html>
+    </div>
+</div>
+
+    </div>
+
+    <script>
+        // Restore saved theme on page load
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else if (savedTheme === 'light') {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // Dark mode toggle
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const themeText = document.getElementById('theme-text');
+
+        // Update button to reflect current theme
+        function updateThemeButton() {
+            const isDark = document.documentElement.classList.contains('dark');
+            themeIcon.textContent = isDark ? '☀' : '☾';
+            themeText.textContent = isDark ? 'Light' : 'Dark';
+        }
+
+        // Initialize button state
+        updateThemeButton();
+
+        // Toggle theme on button click
+        themeToggleBtn.addEventListener('click', () => {
+            const isDark = document.documentElement.classList.contains('dark');
+
+            if (isDark) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+
+            updateThemeButton();
+        });
+
+        // Mobile menu toggle
+        const menuButton = document.getElementById('mobile-menu-button');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+
+        menuButton.addEventListener('click', () => {
+            sidebar.classList.toggle('-translate-x-full');
+            overlay.classList.toggle('hidden');
+        });
+
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>
