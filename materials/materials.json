@@ -268,6 +268,9 @@
                     "artifacts": {
                         "slides.pdf": {
                             "path": "materials/lectures/schedules/tr/10-rbf_networks/slides.pdf"
+                        },
+                        "marked.pdf": {
+                            "path": "materials/lectures/schedules/tr/10-rbf_networks/marked.pdf"
                         }
                     }
                 },
