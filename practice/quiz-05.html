@@ -1222,6 +1222,68 @@ Live Q&A
 
 
 
+
+        <div class="problem-outer">
+        <h2>Problem #123</h2>
+        <p>Tags: <a href='./tags/lecture-10.html'>lecture-10</a>, <a href='./tags/quiz-05.html'>quiz-05</a>, <a href='./tags/RBF networks.html'>RBF networks</a>, <a href='./tags/feature maps.html'>feature maps</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider a Gaussian RBF network with three basis functions of the form <span class="math">\(\varphi_i(\vec x) = e^{-\|\vec x - \vec \mu^{(i)}\|^2 / \sigma^2}\)</span>, where <span class="math">\(\sigma = 2\)</span> for all basis functions. The centers <span class="math">\(\vec\mu^{(1)}\)</span>, <span class="math">\(\vec\mu^{(2)}\)</span>, and <span class="math">\(\vec\mu^{(3)}\)</span> are shown as black <span class="math">\(\times\)</span> markers in the figure below.</p>
+<center><div class="image"><img src="images/123/fig/rbf_points.png" /></div></center>
+<p>Recall that a Gaussian RBF network can be viewed as mapping data points to a feature space, where the new representation of a point <span class="math">\(\vec x\)</span> is:</p>
+<div class="math">\[\vec f(\vec x) = \begin{pmatrix} \varphi_1(\vec x) \\ \varphi_2(\vec x) \\ \varphi_3(\vec x) \end{pmatrix}\]</div>
+<p>Suppose a point <span class="math">\(\vec x\)</span> has the following feature representation:</p>
+<div class="math">\[\vec f(\vec x) \approx\begin{pmatrix} 0 \\ 0 \\ 0.73 \end{pmatrix}\]</div>
+<p>Which of the labeled points (a, b, c, or d) could be <span class="math">\(\vec x\)</span>?</p>
+<div class="multiple-choices"><form><div class="choice"><label><input name="choice" class="choice" type="radio" /><p>a</p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p>b</p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p>c</p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p>d</p></label></div></form></div>
+<details>
+    <summary>Solution</summary>
+<p>The answer is <b>c</b>.</p>
+<p>The feature representation tells us that <span class="math">\(\varphi_1(\vec x) \approx 0\)</span>, <span class="math">\(\varphi_2(\vec x) \approx 0\)</span>, and <span class="math">\(\varphi_3(\vec x) \approx 0.73\)</span>.</p>
+<p>Since a Gaussian basis function <span class="math">\(\varphi_i(\vec x) = e^{-\|\vec x - \vec
+        \mu^{(i)}\|^2 / \sigma^2}\)</span> outputs values close to 1 when <span class="math">\(\vec x\)</span> is near the center <span class="math">\(\vec\mu^{(i)}\)</span> and values close to 0 when <span class="math">\(\vec x\)</span> is far from the center, the feature representation indicates that <span class="math">\(\vec x\)</span> is far from <span class="math">\(\vec\mu^{(1)}\)</span> and <span class="math">\(\vec\mu^{(2)}\)</span>(since <span class="math">\(\varphi_1 \approx 0\)</span> and <span class="math">\(\varphi_2 \approx 0\)</span>), but relatively close to <span class="math">\(\vec\mu^{(3)}\)</span>(since <span class="math">\(\varphi_3 \approx 0.73\)</span>).</p>
+<p>Looking at the figure, point c is the only point that is close to <span class="math">\(\vec\mu^{(3)}\)</span> and far from both <span class="math">\(\vec\mu^{(1)}\)</span> and <span class="math">\(\vec\mu^{(2)}\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #124</h2>
+        <p>Tags: <a href='./tags/lecture-10.html'>lecture-10</a>, <a href='./tags/quiz-05.html'>quiz-05</a>, <a href='./tags/RBF networks.html'>RBF networks</a>, <a href='./tags/feature maps.html'>feature maps</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider a Gaussian RBF network with three basis functions of the form <span class="math">\(\varphi_i(\vec x) = e^{-\|\vec x - \vec \mu^{(i)}\|^2 / \sigma^2}\)</span>, where <span class="math">\(\sigma = 3\)</span> for all basis functions. The centers <span class="math">\(\vec\mu^{(1)}\)</span>, <span class="math">\(\vec\mu^{(2)}\)</span>, and <span class="math">\(\vec\mu^{(3)}\)</span> are shown as black <span class="math">\(\times\)</span> markers in the figure below.</p>
+<center><div class="image"><img src="images/124/fig/rbf_point.png" /></div></center>
+<p>Recall that a Gaussian RBF network can be viewed as mapping data points to a feature space, where the new representation of a point <span class="math">\(\vec x\)</span> is:</p>
+<div class="math">\[\vec f(\vec x) = \begin{pmatrix} \varphi_1(\vec x) \\ \varphi_2(\vec x) \\ \varphi_3(\vec x) \end{pmatrix}\]</div>
+<p>One of the following is the feature representation of the highlighted point <span class="math">\(\vec x\)</span>. Which one?</p>
+<div class="multiple-choices"><form><div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\vec f(\vec x) \approx\begin{pmatrix} 0.73 \\ 0 \\ 0 \end{pmatrix}\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\vec f(\vec x) \approx\begin{pmatrix} 0 \\ 0.73 \\ 0 \end{pmatrix}\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\vec f(\vec x) \approx\begin{pmatrix} 0 \\ 0 \\ 0.73 \end{pmatrix}\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\vec f(\vec x) \approx\begin{pmatrix} 0.18 \\ 0.18 \\ 0.26 \end{pmatrix}\)</span></p></label></div></form></div>
+<details>
+    <summary>Solution</summary>
+<p>The answer is <span class="math">\(\vec f(\vec x) \approx(0.18, 0.18, 0.26)^T\)</span>.</p>
+<p>The highlighted point <span class="math">\(\vec x\)</span> is not particularly close to any of the three centers. It is roughly equidistant from <span class="math">\(\vec\mu^{(1)}\)</span> and <span class="math">\(\vec\mu^{(2)}\)</span>, and slightly closer to <span class="math">\(\vec\mu^{(3)}\)</span>.</p>
+<p>Since a Gaussian basis function outputs values close to 1 only when the input is very near the center and decays toward 0 as the distance increases, we expect all three basis functions to output moderate, nonzero values. This rules out the first three options, which each have one large value and two zeros (corresponding to a point very close to a single center).</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
        </body>
    </html>
     </div>
