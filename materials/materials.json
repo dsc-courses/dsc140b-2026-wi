@@ -83,6 +83,14 @@
                             "path": "materials/quizzes/04-pca/solution.pdf"
                         }
                     }
+                },
+                "05-feature_maps": {
+                    "metadata": {
+                        "date": "2026-02-12",
+                        "topic": "Feature Maps and RBF Networks",
+                        "number": 5
+                    },
+                    "artifacts": {}
                 }
             }
         },
@@ -274,57 +282,52 @@
                         }
                     }
                 },
-                "11-rbf_networks": {
+                "11-neural_networks": {
                     "metadata": {
                         "videos": null,
                         "date": "2026-02-12",
-                        "topic": "RBF Networks and Neural Networks",
+                        "topic": "Neural Networks",
                         "number": 11
                     },
-                    "artifacts": {}
+                    "artifacts": {
+                        "slides.pdf": {
+                            "path": "materials/lectures/schedules/tr/11-neural_networks/slides.pdf"
+                        }
+                    }
                 },
-                "12-neural_networks": {
+                "12-training_nns": {
                     "metadata": {
                         "videos": null,
                         "date": "2026-02-17",
-                        "topic": "Training Neural Networks",
+                        "topic": "Backpropagation",
                         "number": 12
                     },
                     "artifacts": {}
                 },
-                "13-training_nns": {
+                "13-sgd": {
                     "metadata": {
                         "videos": null,
                         "date": "2026-02-19",
-                        "topic": "Backpropagation",
+                        "topic": "SGD",
                         "number": 13
                     },
                     "artifacts": {}
                 },
-                "14-sgd": {
+                "14-cnn": {
                     "metadata": {
                         "videos": null,
                         "date": "2026-02-24",
-                        "topic": "SGD",
+                        "topic": "Convolutional Neural Networks",
                         "number": 14
                     },
                     "artifacts": {}
                 },
-                "15-cnn": {
-                    "metadata": {
-                        "videos": null,
-                        "date": "2026-02-26",
-                        "topic": "Convolutional Neural Networks",
-                        "number": 15
-                    },
-                    "artifacts": {}
-                },
-                "16-autoencoders": {
+                "15-autoencoders": {
                     "metadata": {
                         "videos": null,
                         "date": "2026-03-03",
                         "topic": "Autoencoders",
-                        "number": 16
+                        "number": 15
                     },
                     "artifacts": {}
                 }
@@ -437,16 +440,20 @@
                         }
                     }
                 },
-                "06-basis_functions": {
+                "06-neural_networks": {
                     "metadata": {
                         "due": "2026-02-18 23:59:00",
                         "released": "2026-02-12 00:00:00",
-                        "topic": "Basis Functions",
+                        "topic": "Neural Networks",
                         "number": 6
                     },
-                    "artifacts": {}
+                    "artifacts": {
+                        "homework.pdf": {
+                            "path": "materials/homeworks/06-neural_networks/homework.pdf"
+                        }
+                    }
                 },
-                "07-neural_networks": {
+                "07-neural_networks-II": {
                     "metadata": {
                         "due": "2026-02-25 23:59:00",
                         "released": "2026-02-19 00:00:00",
@@ -455,21 +462,12 @@
                     },
                     "artifacts": {}
                 },
-                "08-neural_networks-II": {
-                    "metadata": {
-                        "due": "2026-03-04 23:59:00",
-                        "released": "2026-02-26 00:00:00",
-                        "topic": "Neural Networks",
-                        "number": 8
-                    },
-                    "artifacts": {}
-                },
                 "09-super_hw": {
                     "metadata": {
                         "due": "2023-06-14 23:59:00",
                         "released": "2023-06-02 21:00:00",
                         "topic": "Super Homework",
-                        "number": 9
+                        "number": 8
                     },
                     "artifacts": {}
                 }
