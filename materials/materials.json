@@ -90,7 +90,14 @@
                         "topic": "Feature Maps and RBF Networks",
                         "number": 5
                     },
-                    "artifacts": {}
+                    "artifacts": {
+                        "quiz.pdf": {
+                            "path": "materials/quizzes/05-feature_maps/quiz.pdf"
+                        },
+                        "solution.pdf": {
+                            "path": "materials/quizzes/05-feature_maps/solution.pdf"
+                        }
+                    }
                 }
             }
         },
