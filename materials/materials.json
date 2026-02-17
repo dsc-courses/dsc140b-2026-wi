@@ -312,7 +312,11 @@
                         "topic": "Backpropagation",
                         "number": 12
                     },
-                    "artifacts": {}
+                    "artifacts": {
+                        "slides.pdf": {
+                            "path": "materials/lectures/schedules/tr/12-training_nns/slides.pdf"
+                        }
+                    }
                 },
                 "13-sgd": {
                     "metadata": {

@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head data-automata-theme="default">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>DSC 140B</title>
+    <link href="/static/style.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+
+    <!-- Mobile menu button -->
+<div class="mobile-navbar lg:hidden fixed top-0 left-0 right-0 bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 z-50 flex items-center">
+    <button id="mobile-menu-button" class="py-5 pl-4 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
+        <i data-lucide="menu" class="w-6 h-5"></i>
+    </button>
+    <span class="ml-2 font-semibold">DSC 140B</span>
+</div>
+
+    <div class="flex min-h-screen">
+        <!-- Left Navigation Column -->
+        <nav id="sidebar" class="
+    w-64 flex-none
+    fixed lg:sticky
+    top-0 left-0 h-screen
+    transform -translate-x-full lg:translate-x-0 transition-transform duration-200 ease-in-out
+    bg-gray-50 dark:bg-gray-900
+    z-40
+    sidebar-mobile-spacing lg:pt-6
+    flex flex-col items-end
+    border-r lg:border-r-0 border-gray-200 dark:border-gray-700
+    ">
+
+    <div class="pt-6 pr-6 flex">
+        <ul class="space-y-2">
+            
+            <li>
+                <a href="/index.html" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="home" class="mr-2 text-slate-400"></i>
+Home
+                </a>
+            </li>
+            
+            <li>
+                <a href="/syllabus.html" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="scale" class="mr-2 text-slate-400"></i>
+Syllabus
+                </a>
+            </li>
+            
+            <li>
+                <a href="/office_hours.html" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="briefcase-business" class="mr-2 text-slate-400"></i>
+Office Hours
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://campuswire.com/p/G7C157AD2" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="message-circle-more" class="mr-2 text-slate-400"></i>
+Campuswire
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://www.gradescope.com/courses/1212103" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="spell-check" class="mr-2 text-slate-400"></i>
+Gradescope
+                </a>
+            </li>
+            
+            <li>
+                <a href="/practice/index.html" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="dumbbell" class="mr-2 text-slate-400"></i>
+Practice
+                </a>
+            </li>
+            
+            <li>
+                <a href="http://sierra.ucsd.edu/qa/dsc140b" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="message-circle-question-mark" class="mr-2 text-slate-400"></i>
+Live Q&A
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <div class="flex mr-9 pt-3 pb-6">
+        <button id="theme-toggle" class="inline-flex items-center px-3 py-1.5 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded-full transition-colors">
+            <span id="theme-icon" class="mr-1.5">☾</span>
+            <span id="theme-text">Dark</span>
+        </button>
+    </div>
+</nav>
+
+<!-- Overlay for mobile -->
+<div id="overlay" class="fixed inset-0 bg-gray-200/40 dark:bg-black/50 backdrop-blur-[2px] z-30 hidden"></div>
+
+        <!-- Main Content Column -->
+        
+<!-- Main Content Column -->
+<div class="
+    w-full
+    bg-white dark:bg-gray-800
+    md:border-l
+    border-gray-200 dark:border-gray-700
+    md:min-w-180
+    px-4 md:px-12
+    pt-20 lg:pt-12
+    pb-24
+    ">
+
+    <div class="
+    text-xl font-semibold
+    left-12 right-12
+    py-4 lg:pt-0 lg:pb-0 lg:mb-10
+    lg:static
+    truncate
+    flex
+    ">
+    <div class="
+        shrink
+        lg:border-b border-gray-200 dark:border-gray-700
+        ">
+        <span class="hidden lg:inline">
+            DSC 140B
+            &ndash;
+            Representation Learning
+        </span>
+    </div>
+</div>
+
+    <div class="prose dark:prose-invert">
+    <!DOCTYPE html> <html> <head> <meta
+                          charset="utf-8"> <title>Problems tagged with lecture-11</title>
+
+           <!-- MathJax -->
+           <script type="text/x-mathjax-config">
+             MathJax.Hub.Config({
+               tex: {
+                 inlineMath: [ ['$$','$$'], ["\\(","\\)"] ],
+                 displayMath: [             // start/end delimiter pairs for display math
+                     ['\\[', '\\]']
+                 ],
+                 processEscapes: true
+               }
+           });
+           </script>
+
+           <!-- highlightjs -->
+           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+           <!-- and it's easy to individually load additional languages -->
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+
+           <script>hljs.highlightAll();</script>
+
+           <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+           <script type="text/javascript" id="MathJax-script" async
+             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+           </script>
+
+       </head>
+       <body>
+           
+<h1>Problems tagged with "lecture-11"</h1>
+
+
+        <div class="problem-outer">
+        <h2>Problem #125</h2>
+        <p>Tags: <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/forward pass.html'>forward pass</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider a neural network <span class="math">\(H(\vec x)\)</span> shown below:</p>
+<center><div class="image"><img src="../images/125/fig/nn.png" /></div></center>
+<p>Let the weights of the network be:</p>
+<div class="math">\[
+        W^{(1)} = \begin{pmatrix}
+            3 & 2 \\
+            -1 & 2 \\
+            -1 & 4
+        \end{pmatrix}\quad
+        W^{(2)} = \begin{pmatrix}
+            5 & 1 \\
+            1 & 2
+        \end{pmatrix}\quad
+        W^{(3)} = \begin{pmatrix}
+            2 \\
+            -3
+        \end{pmatrix}\]</div>
+<p>Assume that all nodes use <b>linear</b> activation functions, and that all biases are zero.</p>
+<p>Suppose <span class="math">\(\vec x = (2, 0, -2)^T\)</span>.</p>
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 1)</h3>
+<p>What is <span class="math">\(a_1^{(1)}\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p>With linear activations, <span class="math">\(a = z\)</span> at every node.</p>
+<p><span class="math">\(z_1^{(1)} = 3(2) + (-1)(0) + (-1)(-2) = 8\)</span>, so <span class="math">\(a_1^{(1)} = 8\)</span>.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 2)</h3>
+<p>What is <span class="math">\(a_2^{(2)}\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p>Layer 1: <span class="math">\(\vec a^{(1)} = (8, -4)^T\)</span>. Layer 2: <span class="math">\(z_2^{(2)} = 1(8) + 2(-4) = 0\)</span>, so <span class="math">\(a_2^{(2)} = 0\)</span>.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 3)</h3>
+<p>What is <span class="math">\(H(\vec x)\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p>Layer 2: <span class="math">\(\vec a^{(2)} = (36, 0)^T\)</span>. <span class="math">\(H(\vec x) = 2(36) + (-3)(0) = 72\)</span>.</p>
+</details>
+
+</div>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #126</h2>
+        <p>Tags: <a href='../tags/neural networks.html'>neural networks</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/activation functions.html'>activation functions</a>, <a href='../tags/forward pass.html'>forward pass</a>, <a href='../tags/lecture-11.html'>lecture-11</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider a neural network <span class="math">\(H(\vec x)\)</span> shown below:</p>
+<center><div class="image"><img src="../images/126/fig/nn.png" /></div></center>
+<p>Let the weights of the network be:</p>
+<div class="math">\[
+        W^{(1)} = \begin{pmatrix}
+            3 & 2 \\
+            -1 & 2 \\
+            -1 & 4
+        \end{pmatrix}\quad
+        W^{(2)} = \begin{pmatrix}
+            5 & 1 \\
+            1 & 2
+        \end{pmatrix}\quad
+        W^{(3)} = \begin{pmatrix}
+            2 \\
+            -3
+        \end{pmatrix}\]</div>
+<p>Assume that all hidden nodes use <b>ReLU activation</b> functions, that the output node uses a linear activation, and that all biases are zero.</p>
+<p>Suppose <span class="math">\(\vec x = (2, 0, -2)^T\)</span>.</p>
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 1)</h3>
+<p>What is <span class="math">\(a_1^{(1)}\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(z_1^{(1)} = 3(2) + (-1)(0) + (-1)(-2) = 8\)</span>, so <span class="math">\(a_1^{(1)} = \text{ReLU}(8) = 8\)</span>.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 2)</h3>
+<p>What is <span class="math">\(a_2^{(2)}\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(z_2^{(1)} = 2(2) + 2(0) + 4(-2) = -4\)</span>, so <span class="math">\(a_2^{(1)} = \text{ReLU}(-4) = 0\)</span>. Now <span class="math">\(\vec a^{(1)} = (8, 0)^T\)</span>. Layer 2: <span class="math">\(z_2^{(2)} = 1(8) + 2(0) = 8\)</span>, so <span class="math">\(a_2^{(2)} = \text{ReLU}(8) = 8\)</span>.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 3)</h3>
+<p>What is <span class="math">\(H(\vec x)\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(z_1^{(2)} = 5(8) + 1(0) = 40\)</span>, <span class="math">\(a_1^{(2)} = 40\)</span>. So <span class="math">\(\vec a^{(2)} = (40, 8)^T\)</span>. <span class="math">\(H(\vec x) = 2(40) + (-3)(8) = 56\)</span>.</p>
+</details>
+
+</div>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #127</h2>
+        <p>Tags: <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a>, <a href='../tags/feature maps.html'>feature maps</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider a neural network <span class="math">\(H(\vec x)\)</span> shown below:</p>
+<center><div class="image"><img src="../images/127/fig/nn.png" /></div></center>
+<p>The first layer of this neural network can be thought of as a function <span class="math">\(f:
+    \mathbb R^d \to\mathbb R^k\)</span> mapping feature vectors to a new representation. What are <span class="math">\(d\)</span> and <span class="math">\(k\)</span> in this case?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(d = 4\)</span> and <span class="math">\(k = 2\)</span>.</p>
+<p>The first layer takes the 4-dimensional input and maps it to a 2-dimensional representation (the number of nodes in the first hidden layer).</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #128</h2>
+        <p>Tags: <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a>, <a href='../tags/feature maps.html'>feature maps</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider a neural network <span class="math">\(H(\vec x)\)</span> shown below:</p>
+<center><div class="image"><img src="../images/128/fig/nn.png" /></div></center>
+<p>The first layer of this neural network can be thought of as a function <span class="math">\(f:
+    \mathbb R^d \to\mathbb R^k\)</span> mapping feature vectors to a new representation. What is this new representation if</p>
+<div class="math">\[
+        W^{(1)} =
+        \begin{pmatrix}
+            3 & 2 & 1 \\
+            -2 & -1 & 4
+        \end{pmatrix}\]</div>
+<p>and <span class="math">\(\vec x = (3, -1)^T\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p>The new representation is <span class="math">\(\vec z^{(1)}\)</span>, where <span class="math">\(z_j^{(1)} = \sum_i W_{ij}^{(1)} x_i\)</span>. Computing:</p>
+<div class="math">$$\begin{align*}
+            z_1^{(1)}&= 3(3) + (-2)(-1) = 11 \\
+            z_2^{(1)}&= 2(3) + (-1)(-1) = 7 \\
+            z_3^{(1)}&= 1(3) + 4(-1) = -1
+        \end{align*}$$</div>
+<p>So the new representation is <span class="math">\((11, 7, -1)^T\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #131</h2>
+        <p>Tags: <a href='../tags/activation functions.html'>activation functions</a>, <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>In the following, when we say a function <span class="math">\(f(x)\)</span> "looks like a ReLU", we mean that it has a flat part where <span class="math">\(f(x) = 0\)</span>, and a linear part with a slope (not necessarily equal to one).</p>
+<p>Suppose a deep neural network <span class="math">\(H(x): \mathbb R \to\mathbb R\)</span> uses ReLU activations in all of its hidden layers.</p>
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 1)</h3>
+<p>Suppose in addition that the output node uses a linear activation. True or False: when plotted, <span class="math">\(H(x)\)</span> must look like a ReLU.</p>
+<details>
+    <summary>Solution</summary>
+<p>False. A deep ReLU network with linear output is a piecewise linear function, but it can have <i>many</i> linear pieces, not just two. For example, a network with many hidden units can produce a function with several "bends" in it, which does not look like a ReLU.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 2)</h3>
+<p>Suppose instead that the output node <i>also</i> uses a sigmoid activation. True or False: when plotted, <span class="math">\(H(x)\)</span> must look like a ReLU.</p>
+<details>
+    <summary>Solution</summary>
+<p>False. Composing a piecewise linear function with a sigmoid produces a smooth, S-shaped curve, which does not look like a ReLU.</p>
+</details>
+
+</div>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #132</h2>
+        <p>Tags: <a href='../tags/activation functions.html'>activation functions</a>, <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Suppose that when a deep neural network <span class="math">\(H(x): \mathbb R \to\mathbb R\)</span> is plotted, the resulting graph looks like the following:</p>
+<center><div class="image"><img src="../images/132/fig/plot.png" /></div></center>
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 1)</h3>
+<p>True or False: it is possible that the network uses <b>ReLU</b> activation in its hidden layers, and <b>linear</b> activation in its output layer.</p>
+<details>
+    <summary>Solution</summary>
+<p>True. A deep ReLU network with linear output produces a piecewise linear function, which is consistent with the plot.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 2)</h3>
+<p>True or False: it is possible that the network uses <b>ReLU</b> activation in its hidden layers, and <b>ReLU</b> activation in its output layer.</p>
+<details>
+    <summary>Solution</summary>
+<p>True. Applying ReLU at the output clips negative values to zero. If the piecewise linear function produced by the hidden layers already has the shape shown (non-negative everywhere it is nonzero), the output ReLU would not change it.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 3)</h3>
+<p>True or False: it is possible that the network uses linear activation in its hidden layers, and ReLU activation in its output layer.</p>
+<details>
+    <summary>Solution</summary>
+<p>False. Linear activation in all hidden layers makes the entire network a linear function. Applying ReLU at the output can only produce a function with at most one "cusp," which cannot match the multi-piece shape shown.</p>
+</details>
+
+</div>
+
+<p>Now suppose the plot of <span class="math">\(H(x)\)</span> looked like the below, instead:</p>
+<center><div class="image"><img src="../images/132/fig/plot-shifted.png" /></div></center>
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 4)</h3>
+<p>True or False: it is possible that the network uses <b>ReLU</b> activation in its hidden layers, and <b>ReLU</b> activation in its output layer.</p>
+<details>
+    <summary>Solution</summary>
+<p>False. The shifted plot takes negative values in some region. ReLU at the output would clip those to zero, so the network cannot produce negative outputs. Since the plot shows negative values, this is impossible.</p>
+</details>
+
+</div>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #139</h2>
+        <p>Tags: <a href='../tags/activation functions.html'>activation functions</a>, <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider two numbers <span class="math">\(z_1 = 10\)</span>, <span class="math">\(z_2 = -5\)</span>, and the ReLU activation function <span class="math">\(f(z) = \max(0, z)\)</span>. What is <span class="math">\(f(z_1) + f(z_2)\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(f(z_1) + f(z_2) = \max(0, 10) + \max(0, -5) = 10 + 0 = 10\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #140</h2>
+        <p>Tags: <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider a neural network with <span class="math">\(d = 6\)</span> input features, a single hidden layer of <span class="math">\(d' = 4\)</span> nodes, and one output node. There is a bias in both the hidden layer and the output layer.</p>
+<p>What is the total number of parameters in this network?</p>
+<details>
+    <summary>Solution</summary>
+<p>33.</p>
+<p>The hidden layer has <span class="math">\((6 + 1) \times 4 = 28\)</span> parameters. The output layer has <span class="math">\((4 + 1) \times 1 = 5\)</span> parameters. Total: <span class="math">\(28 + 5 = 33\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #141</h2>
+        <p>Tags: <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/forward pass.html'>forward pass</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider a neural network with 2 input nodes, 2 hidden nodes, and 1 output node. There is no non-linear activation function used in the network (i.e., all activations are linear). The input is <span class="math">\((x_1, x_2) = (1, 1)\)</span>.</p>
+<p>The weights and biases are as follows. Hidden layer: <span class="math">\(W^{(1)} = \begin{pmatrix} 1 & 1 \\ 1 & 1 \end{pmatrix}\)</span>, <span class="math">\(\vec b^{(1)} = (-1, -1)^T\)</span>. Output layer: <span class="math">\(\vec w^{(2)} = (-1, -1)^T\)</span>, <span class="math">\(b^{(2)} = -1\)</span>.</p>
+<p>What is the output of this neural network?</p>
+<details>
+    <summary>Solution</summary>
+<p>Hidden node 1: <span class="math">\(\psi_1 = 1(1) + 1(1) - 1 = 1\)</span>.</p>
+<p>Hidden node 2: <span class="math">\(\psi_2 = 1(1) + 1(1) - 1 = 1\)</span>.</p>
+<p>Output: <span class="math">\(H = (-1)(1) + (-1)(1) - 1 = -3\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #142</h2>
+        <p>Tags: <a href='../tags/activation functions.html'>activation functions</a>, <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>The sigmoid function is <span class="math">\(f(x) = \dfrac{1}{1 + e^{-x}}\)</span>.</p>
+<p>Use the chain rule to find <span class="math">\(f'(x)\)</span>, and evaluate <span class="math">\(f'(0)\)</span>.</p>
+<details>
+    <summary>Solution</summary>
+<p>Using the chain rule:</p>
+<div class="math">\[
+            f'(x) = \frac{e^{-x}}{(1 + e^{-x})^2} = f(x)(1 - f(x)).
+        \]</div>
+<p>At <span class="math">\(x = 0\)</span>: <span class="math">\(f(0) = \frac{1}{1 + 1} = 0.5\)</span>, so <span class="math">\(f'(0) = 0.5 \cdot 0.5 = 0.25\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #143</h2>
+        <p>Tags: <a href='../tags/activation functions.html'>activation functions</a>, <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Which of the following is generally true about linear activation functions in neural networks?</p>
+<div class="multiple-choices"><form><div class="choice"><label><input name="choice" class="choice" type="radio" /><p>Linear activation results in linear prediction functions, regardless of the number of hidden layers.</p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p>Linear activation can lead to non-linear prediction functions, provided we have enough hidden layers.</p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p>Linear activation functions are slower to compute than the sigmoid activation function.</p></label></div></form></div>
+<details>
+    <summary>Solution</summary>
+<p>Linear activation results in linear prediction functions, regardless of the number of hidden layers or units.</p>
+<p>If all activation functions are linear, then each layer computes a linear transformation of its input. The composition of linear transformations is itself a linear transformation, so the entire network collapses to a single linear model.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #144</h2>
+        <p>Tags: <a href='../tags/activation functions.html'>activation functions</a>, <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>The sigmoid activation function is given as <span class="math">\(g(z) = \dfrac{1}{1 + e^{-z}}\)</span>.</p>
+<p>Consider two points <span class="math">\(z_1 > 0\)</span> and <span class="math">\(z_2 < 0\)</span>. Which of the following always holds true?</p>
+<div class="multiple-choices"><form><div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(g(z_1) > g(z_2)\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(g(z_1) < g(z_2)\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(g(z_1) = g(z_2)\)</span> if <span class="math">\(|z_1| = |z_2|\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p>The relationship depends on the exact values of <span class="math">\(z_1\)</span> and <span class="math">\(z_2\)</span>.</p></label></div></form></div>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(g(z_1) > g(z_2)\)</span>.</p>
+<p>When <span class="math">\(z > 0\)</span>, <span class="math">\(g(z) > 0.5\)</span>; when <span class="math">\(z < 0\)</span>, <span class="math">\(g(z) < 0.5\)</span>. Therefore <span class="math">\(g(z_1) > 0.5 > g(z_2)\)</span> always holds.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #145</h2>
+        <p>Tags: <a href='../tags/activation functions.html'>activation functions</a>, <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>For the sigmoid activation function <span class="math">\(g(z) = \dfrac{1}{1 + e^{-z}}\)</span>, what is <span class="math">\(g(z) + g(-z)\)</span> for any <span class="math">\(z \in\mathbb{R}\)</span>?</p>
+<div class="multiple-choices"><form><div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(0\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(1\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\dfrac{2}{1 + e^{-z}}\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\dfrac{2}{1 + e^{z}}\)</span></p></label></div></form></div>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(g(z) + g(-z) = 1\)</span>.</p>
+<div class="math">\[
+            g(z) + g(-z) = \frac{1}{1 + e^{-z}} + \frac{1}{1 + e^{z}}
+            = \frac{e^z}{1 + e^{z}} + \frac{1}{1 + e^{z}}
+            = \frac{1 + e^z}{1 + e^z} = 1
+        \]</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #146</h2>
+        <p>Tags: <a href='../tags/activation functions.html'>activation functions</a>, <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>The Leaky ReLU activation function is defined as <span class="math">\(g(z) = \max\{\alpha z, z\}\)</span>, where <span class="math">\(0 \leq\alpha < 1\)</span>.</p>
+<p>What is <span class="math">\(g(-5)\)</span> when <span class="math">\(\alpha = 0.01\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(g(-5) = \max\{0.01 \cdot(-5),\; -5\} = \max\{-0.05,\; -5\} = -0.05\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #147</h2>
+        <p>Tags: <a href='../tags/activation functions.html'>activation functions</a>, <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Suppose you are modeling the percentage change in stock prices each day as a regression problem by training a neural network. On some days the percentage change is positive; on others it is negative.</p>
+<p>True or False: ReLU activation can be used in the output layer of the neural network for this task.</p>
+<details>
+    <summary>Solution</summary>
+<p>False.</p>
+<p>ReLU activation in the output layer truncates all negative values to zero, so the network could never predict a negative percentage change.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+       </body>
+   </html>
+    </div>
+</div>
+
+    </div>
+
+    <script>
+        // Restore saved theme on page load
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else if (savedTheme === 'light') {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // Dark mode toggle
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const themeText = document.getElementById('theme-text');
+
+        // Update button to reflect current theme
+        function updateThemeButton() {
+            const isDark = document.documentElement.classList.contains('dark');
+            themeIcon.textContent = isDark ? '☀' : '☾';
+            themeText.textContent = isDark ? 'Light' : 'Dark';
+        }
+
+        // Initialize button state
+        updateThemeButton();
+
+        // Toggle theme on button click
+        themeToggleBtn.addEventListener('click', () => {
+            const isDark = document.documentElement.classList.contains('dark');
+
+            if (isDark) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+
+            updateThemeButton();
+        });
+
+        // Mobile menu toggle
+        const menuButton = document.getElementById('mobile-menu-button');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+
+        menuButton.addEventListener('click', () => {
+            sidebar.classList.toggle('-translate-x-full');
+            overlay.classList.toggle('hidden');
+        });
+
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>

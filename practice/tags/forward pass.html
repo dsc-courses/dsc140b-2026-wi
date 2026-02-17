@@ -136,7 +136,7 @@ Live Q&A
 
     <div class="prose dark:prose-invert">
     <!DOCTYPE html> <html> <head> <meta
-                          charset="utf-8"> <title>Practice Problems</title>
+                          charset="utf-8"> <title>Problems tagged with forward pass</title>
 
            <!-- MathJax -->
            <script type="text/x-mathjax-config">
@@ -167,107 +167,157 @@ Live Q&A
 
        </head>
        <body>
-           <div>
-<h1>Practice Problems</h1>
+           
+<h1>Problems tagged with "forward pass"</h1>
 
 
-            <div class="tagset">
-                <h2>Midterm 01</h2>
-                <p>Practice problems for topics on Midterm 01.
-See also the <a href="http://dsc140b.com/materials/default/supplementary/sample_midterm_01/sample_midterm_01.pdf">Sample Midterm 01</a>
-and its <a href="http://dsc140b.com/materials/default/supplementary/sample_midterm_01/sample_midterm_01-solution.pdf">solutions</a>.</p>
-                <p>
-                    <a href="./midterm-01.html">See all problems in this set</a>, or
-                    choose a tag below to view only those problems.
-                </p>
-            <ul>
-<li><a href='./tags/lecture-02.html'>lecture-02</a></li>
-<li><a href='./tags/lecture-03.html'>lecture-03</a></li>
-<li><a href='./tags/lecture-04.html'>lecture-04</a></li>
-<li><a href='./tags/lecture-05.html'>lecture-05</a></li>
-<li><a href='./tags/lecture-06.html'>lecture-06</a></li>
-<li><a href='./tags/lecture-07.html'>lecture-07</a></li>
-<li><a href='./tags/lecture-08.html'>lecture-08</a></li>
-</ul>
-            </div>
-
-
-<div class="tagset">
-    <h2>Quiz 06</h2>
-    <p>Practice problems for topics on Quiz 06.</p>
-    <p>
-        <a href="./quiz-06.html">See all problems in this set</a>, or
-        choose a tag below to view only those problems.
-    </p>
-<ul>
-<li><a href='./tags/lecture-11.html'>lecture-11</a></li>
-<li><a href='./tags/lecture-12.html'>lecture-12</a></li>
-<li><a href='./tags/quiz-06.html'>quiz-06</a></li>
-</ul>
-</div>
-
-
-<div class="tagset">
-    <h2>Quiz 05</h2>
-    <p>Practice problems for topics on Quiz 05.</p>
-    <p>
-        <a href="./quiz-05.html">See all problems in this set</a>, or
-        choose a tag below to view only those problems.
-    </p>
-<ul>
-<li><a href='./tags/lecture-08.html'>lecture-08</a></li>
-<li><a href='./tags/lecture-09.html'>lecture-09</a></li>
-<li><a href='./tags/lecture-10.html'>lecture-10</a></li>
-<li><a href='./tags/quiz-05.html'>quiz-05</a></li>
-</ul>
-</div>
-
-
-<div class="tagset">
-    <h2>Quiz 04</h2>
-    <p>Practice problems for topics on Quiz 04.</p>
-    <p>
-        <a href="./quiz-04.html">See all problems in this set</a>, or
-        choose a tag below to view only those problems.
-    </p>
-<ul>
-<li><a href='./tags/lecture-06.html'>lecture-06</a></li>
-<li><a href='./tags/lecture-07.html'>lecture-07</a></li>
-<li><a href='./tags/quiz-04.html'>quiz-04</a></li>
-</ul>
-</div>
-
-
-<div class="tagset">
-    <h2>Quiz 03</h2>
-    <p>Practice problems for topics on Quiz 03.</p>
-    <p>
-        <a href="./quiz-03.html">See all problems in this set</a>, or
-        choose a tag below to view only those problems.
-    </p>
-<ul>
-<li><a href='./tags/lecture-04.html'>lecture-04</a></li>
-<li><a href='./tags/lecture-05.html'>lecture-05</a></li>
-<li><a href='./tags/quiz-03.html'>quiz-03</a></li>
-</ul>
-</div>
-
-
-<div class="tagset">
-    <h2>Quiz 02</h2>
-    <p>Practice problems for topics on Quiz 02.</p>
-    <p>
-        <a href="./quiz-02.html">See all problems in this set</a>, or
-        choose a tag below to view only those problems.
-    </p>
-<ul>
-<li><a href='./tags/lecture-02.html'>lecture-02</a></li>
-<li><a href='./tags/lecture-03.html'>lecture-03</a></li>
-<li><a href='./tags/quiz-02.html'>quiz-02</a></li>
-</ul>
-</div>
+        <div class="problem-outer">
+        <h2>Problem #125</h2>
+        <p>Tags: <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/forward pass.html'>forward pass</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider a neural network <span class="math">\(H(\vec x)\)</span> shown below:</p>
+<center><div class="image"><img src="../images/125/fig/nn.png" /></div></center>
+<p>Let the weights of the network be:</p>
+<div class="math">\[
+        W^{(1)} = \begin{pmatrix}
+            3 & 2 \\
+            -1 & 2 \\
+            -1 & 4
+        \end{pmatrix}\quad
+        W^{(2)} = \begin{pmatrix}
+            5 & 1 \\
+            1 & 2
+        \end{pmatrix}\quad
+        W^{(3)} = \begin{pmatrix}
+            2 \\
+            -3
+        \end{pmatrix}\]</div>
+<p>Assume that all nodes use <b>linear</b> activation functions, and that all biases are zero.</p>
+<p>Suppose <span class="math">\(\vec x = (2, 0, -2)^T\)</span>.</p>
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 1)</h3>
+<p>What is <span class="math">\(a_1^{(1)}\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p>With linear activations, <span class="math">\(a = z\)</span> at every node.</p>
+<p><span class="math">\(z_1^{(1)} = 3(2) + (-1)(0) + (-1)(-2) = 8\)</span>, so <span class="math">\(a_1^{(1)} = 8\)</span>.</p>
+</details>
 
 </div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 2)</h3>
+<p>What is <span class="math">\(a_2^{(2)}\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p>Layer 1: <span class="math">\(\vec a^{(1)} = (8, -4)^T\)</span>. Layer 2: <span class="math">\(z_2^{(2)} = 1(8) + 2(-4) = 0\)</span>, so <span class="math">\(a_2^{(2)} = 0\)</span>.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 3)</h3>
+<p>What is <span class="math">\(H(\vec x)\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p>Layer 2: <span class="math">\(\vec a^{(2)} = (36, 0)^T\)</span>. <span class="math">\(H(\vec x) = 2(36) + (-3)(0) = 72\)</span>.</p>
+</details>
+
+</div>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #126</h2>
+        <p>Tags: <a href='../tags/neural networks.html'>neural networks</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/activation functions.html'>activation functions</a>, <a href='../tags/forward pass.html'>forward pass</a>, <a href='../tags/lecture-11.html'>lecture-11</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider a neural network <span class="math">\(H(\vec x)\)</span> shown below:</p>
+<center><div class="image"><img src="../images/126/fig/nn.png" /></div></center>
+<p>Let the weights of the network be:</p>
+<div class="math">\[
+        W^{(1)} = \begin{pmatrix}
+            3 & 2 \\
+            -1 & 2 \\
+            -1 & 4
+        \end{pmatrix}\quad
+        W^{(2)} = \begin{pmatrix}
+            5 & 1 \\
+            1 & 2
+        \end{pmatrix}\quad
+        W^{(3)} = \begin{pmatrix}
+            2 \\
+            -3
+        \end{pmatrix}\]</div>
+<p>Assume that all hidden nodes use <b>ReLU activation</b> functions, that the output node uses a linear activation, and that all biases are zero.</p>
+<p>Suppose <span class="math">\(\vec x = (2, 0, -2)^T\)</span>.</p>
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 1)</h3>
+<p>What is <span class="math">\(a_1^{(1)}\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(z_1^{(1)} = 3(2) + (-1)(0) + (-1)(-2) = 8\)</span>, so <span class="math">\(a_1^{(1)} = \text{ReLU}(8) = 8\)</span>.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 2)</h3>
+<p>What is <span class="math">\(a_2^{(2)}\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(z_2^{(1)} = 2(2) + 2(0) + 4(-2) = -4\)</span>, so <span class="math">\(a_2^{(1)} = \text{ReLU}(-4) = 0\)</span>. Now <span class="math">\(\vec a^{(1)} = (8, 0)^T\)</span>. Layer 2: <span class="math">\(z_2^{(2)} = 1(8) + 2(0) = 8\)</span>, so <span class="math">\(a_2^{(2)} = \text{ReLU}(8) = 8\)</span>.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 3)</h3>
+<p>What is <span class="math">\(H(\vec x)\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(z_1^{(2)} = 5(8) + 1(0) = 40\)</span>, <span class="math">\(a_1^{(2)} = 40\)</span>. So <span class="math">\(\vec a^{(2)} = (40, 8)^T\)</span>. <span class="math">\(H(\vec x) = 2(40) + (-3)(8) = 56\)</span>.</p>
+</details>
+
+</div>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #141</h2>
+        <p>Tags: <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/forward pass.html'>forward pass</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider a neural network with 2 input nodes, 2 hidden nodes, and 1 output node. There is no non-linear activation function used in the network (i.e., all activations are linear). The input is <span class="math">\((x_1, x_2) = (1, 1)\)</span>.</p>
+<p>The weights and biases are as follows. Hidden layer: <span class="math">\(W^{(1)} = \begin{pmatrix} 1 & 1 \\ 1 & 1 \end{pmatrix}\)</span>, <span class="math">\(\vec b^{(1)} = (-1, -1)^T\)</span>. Output layer: <span class="math">\(\vec w^{(2)} = (-1, -1)^T\)</span>, <span class="math">\(b^{(2)} = -1\)</span>.</p>
+<p>What is the output of this neural network?</p>
+<details>
+    <summary>Solution</summary>
+<p>Hidden node 1: <span class="math">\(\psi_1 = 1(1) + 1(1) - 1 = 1\)</span>.</p>
+<p>Hidden node 2: <span class="math">\(\psi_2 = 1(1) + 1(1) - 1 = 1\)</span>.</p>
+<p>Output: <span class="math">\(H = (-1)(1) + (-1)(1) - 1 = -3\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
        </body>
    </html>
     </div>
