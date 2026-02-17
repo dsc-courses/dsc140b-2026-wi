@@ -451,6 +451,9 @@
                     "artifacts": {
                         "homework.pdf": {
                             "path": "materials/homeworks/05-eigenmaps/homework.pdf"
+                        },
+                        "solution.pdf": {
+                            "path": "materials/homeworks/05-eigenmaps/solution.pdf"
                         }
                     }
                 },
