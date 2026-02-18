@@ -326,52 +326,7 @@ Live Q&A
 
 
         <div class="problem-outer">
-        <h2>Problem #137</h2>
-        <p>Tags: <a href='../tags/lecture-12.html'>lecture-12</a>, <a href='../tags/neural networks.html'>neural networks</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/activation functions.html'>activation functions</a>, <a href='../tags/backpropagation.html'>backpropagation</a></p>
-        <div class="problem">
-    <div class="problem-body">
-<p>Suppose a deep network <span class="math">\(H(\vec x)\)</span> uses a sigmoid activation in its output layer. Suppose as well that for a given input, <span class="math">\(\vec x\)</span>, <span class="math">\(H(\vec x) \approx 1\)</span>.</p>
-<p>True or False: evaluated at this point <span class="math">\(\vec x\)</span>, <span class="math">\(\partial H / \partial
-    W_{ij}^{(\ell)}\approx 0\)</span> for all <span class="math">\(i, j, \ell\)</span>.</p>
-<details>
-    <summary>Solution</summary>
-<p>True.</p>
-<p>The sigmoid function <span class="math">\(\sigma(z) = 1/(1 + e^{-z})\)</span> satisfies <span class="math">\(\sigma'(z) = \sigma(z)(1 - \sigma(z))\)</span>. When <span class="math">\(H(\vec x) \approx 1\)</span>, the output of the sigmoid is near 1, so <span class="math">\(\sigma'(z) \approx 1 \cdot 0 = 0\)</span>.</p>
-<p>Since every partial derivative <span class="math">\(\partial H / \partial W_{ij}^{(\ell)}\)</span> includes the factor <span class="math">\(\sigma'(z^{(\text{out})})\)</span>(by the chain rule through the output node), all partial derivatives are approximately zero.</p>
-</details>
-
-    </div>
-</div>
-
-        </div>
-
-
-
-
-        <div class="problem-outer">
-        <h2>Problem #138</h2>
-        <p>Tags: <a href='../tags/lecture-12.html'>lecture-12</a>, <a href='../tags/neural networks.html'>neural networks</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/activation functions.html'>activation functions</a>, <a href='../tags/backpropagation.html'>backpropagation</a></p>
-        <div class="problem">
-    <div class="problem-body">
-<p>Suppose a deep network <span class="math">\(H(\vec x)\)</span> uses a ReLU activation in its output layer. Suppose as well that for a given input, <span class="math">\(\vec x\)</span>, <span class="math">\(H(\vec x) \approx 1\)</span>.</p>
-<p>True or False: evaluated at this point <span class="math">\(\vec x\)</span>, <span class="math">\(\partial H / \partial
-    W_{ij}^{(\ell)} = 0\)</span> for all <span class="math">\(i, j, \ell\)</span>.</p>
-<details>
-    <summary>Solution</summary>
-<p>False.</p>
-<p>Since <span class="math">\(H(\vec x) \approx 1 > 0\)</span>, the output of the ReLU is in the linear region where <span class="math">\(g'(z) = 1\)</span>. The output activation does not zero out the gradient, and the partial derivatives need not be zero.</p>
-</details>
-
-    </div>
-</div>
-
-        </div>
-
-
-
-
-        <div class="problem-outer">
-        <h2>Problem #139</h2>
+        <h2>Problem #133</h2>
         <p>Tags: <a href='../tags/activation functions.html'>activation functions</a>, <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
         <div class="problem">
     <div class="problem-body">
@@ -390,7 +345,7 @@ Live Q&A
 
 
         <div class="problem-outer">
-        <h2>Problem #142</h2>
+        <h2>Problem #136</h2>
         <p>Tags: <a href='../tags/activation functions.html'>activation functions</a>, <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
         <div class="problem">
     <div class="problem-body">
@@ -414,7 +369,7 @@ Live Q&A
 
 
         <div class="problem-outer">
-        <h2>Problem #143</h2>
+        <h2>Problem #137</h2>
         <p>Tags: <a href='../tags/activation functions.html'>activation functions</a>, <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
         <div class="problem">
     <div class="problem-body">
@@ -437,7 +392,7 @@ Live Q&A
 
 
         <div class="problem-outer">
-        <h2>Problem #144</h2>
+        <h2>Problem #138</h2>
         <p>Tags: <a href='../tags/activation functions.html'>activation functions</a>, <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
         <div class="problem">
     <div class="problem-body">
@@ -462,7 +417,7 @@ Live Q&A
 
 
         <div class="problem-outer">
-        <h2>Problem #145</h2>
+        <h2>Problem #139</h2>
         <p>Tags: <a href='../tags/activation functions.html'>activation functions</a>, <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
         <div class="problem">
     <div class="problem-body">
@@ -490,7 +445,7 @@ Live Q&A
 
 
         <div class="problem-outer">
-        <h2>Problem #146</h2>
+        <h2>Problem #140</h2>
         <p>Tags: <a href='../tags/activation functions.html'>activation functions</a>, <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
         <div class="problem">
     <div class="problem-body">
@@ -510,7 +465,7 @@ Live Q&A
 
 
         <div class="problem-outer">
-        <h2>Problem #147</h2>
+        <h2>Problem #141</h2>
         <p>Tags: <a href='../tags/activation functions.html'>activation functions</a>, <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
         <div class="problem">
     <div class="problem-body">
@@ -520,6 +475,51 @@ Live Q&A
     <summary>Solution</summary>
 <p>False.</p>
 <p>ReLU activation in the output layer truncates all negative values to zero, so the network could never predict a negative percentage change.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #146</h2>
+        <p>Tags: <a href='../tags/quiz-07.html'>quiz-07</a>, <a href='../tags/neural networks.html'>neural networks</a>, <a href='../tags/lecture-13.html'>lecture-13</a>, <a href='../tags/activation functions.html'>activation functions</a>, <a href='../tags/backpropagation.html'>backpropagation</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Suppose a deep network <span class="math">\(H(\vec x)\)</span> uses a sigmoid activation in its output layer. Suppose as well that for a given input, <span class="math">\(\vec x\)</span>, <span class="math">\(H(\vec x) \approx 1\)</span>.</p>
+<p>True or False: evaluated at this point <span class="math">\(\vec x\)</span>, <span class="math">\(\partial H / \partial
+    W_{ij}^{(\ell)}\approx 0\)</span> for all <span class="math">\(i, j, \ell\)</span>.</p>
+<details>
+    <summary>Solution</summary>
+<p>True.</p>
+<p>The sigmoid function <span class="math">\(\sigma(z) = 1/(1 + e^{-z})\)</span> satisfies <span class="math">\(\sigma'(z) = \sigma(z)(1 - \sigma(z))\)</span>. When <span class="math">\(H(\vec x) \approx 1\)</span>, the output of the sigmoid is near 1, so <span class="math">\(\sigma'(z) \approx 1 \cdot 0 = 0\)</span>.</p>
+<p>Since every partial derivative <span class="math">\(\partial H / \partial W_{ij}^{(\ell)}\)</span> includes the factor <span class="math">\(\sigma'(z^{(\text{out})})\)</span>(by the chain rule through the output node), all partial derivatives are approximately zero.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #147</h2>
+        <p>Tags: <a href='../tags/quiz-07.html'>quiz-07</a>, <a href='../tags/neural networks.html'>neural networks</a>, <a href='../tags/lecture-13.html'>lecture-13</a>, <a href='../tags/activation functions.html'>activation functions</a>, <a href='../tags/backpropagation.html'>backpropagation</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Suppose a deep network <span class="math">\(H(\vec x)\)</span> uses a ReLU activation in its output layer. Suppose as well that for a given input, <span class="math">\(\vec x\)</span>, <span class="math">\(H(\vec x) \approx 1\)</span>.</p>
+<p>True or False: evaluated at this point <span class="math">\(\vec x\)</span>, <span class="math">\(\partial H / \partial
+    W_{ij}^{(\ell)} = 0\)</span> for all <span class="math">\(i, j, \ell\)</span>.</p>
+<details>
+    <summary>Solution</summary>
+<p>False.</p>
+<p>Since <span class="math">\(H(\vec x) \approx 1 > 0\)</span>, the output of the ReLU is in the linear region where <span class="math">\(g'(z) = 1\)</span>. The output activation does not zero out the gradient, and the partial derivatives need not be zero.</p>
 </details>
 
     </div>

@@ -492,11 +492,215 @@ Live Q&A
 
         <div class="problem-outer">
         <h2>Problem #133</h2>
-        <p>Tags: <a href='../tags/backpropagation.html'>backpropagation</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a>, <a href='../tags/lecture-12.html'>lecture-12</a></p>
+        <p>Tags: <a href='../tags/activation functions.html'>activation functions</a>, <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider two numbers <span class="math">\(z_1 = 10\)</span>, <span class="math">\(z_2 = -5\)</span>, and the ReLU activation function <span class="math">\(f(z) = \max(0, z)\)</span>. What is <span class="math">\(f(z_1) + f(z_2)\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(f(z_1) + f(z_2) = \max(0, 10) + \max(0, -5) = 10 + 0 = 10\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #134</h2>
+        <p>Tags: <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider a neural network with <span class="math">\(d = 6\)</span> input features, a single hidden layer of <span class="math">\(d' = 4\)</span> nodes, and one output node. There is a bias in both the hidden layer and the output layer.</p>
+<p>What is the total number of parameters in this network?</p>
+<details>
+    <summary>Solution</summary>
+<p>33.</p>
+<p>The hidden layer has <span class="math">\((6 + 1) \times 4 = 28\)</span> parameters. The output layer has <span class="math">\((4 + 1) \times 1 = 5\)</span> parameters. Total: <span class="math">\(28 + 5 = 33\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #135</h2>
+        <p>Tags: <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/forward pass.html'>forward pass</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider a neural network with 2 input nodes, 2 hidden nodes, and 1 output node. There is no non-linear activation function used in the network (i.e., all activations are linear). The input is <span class="math">\((x_1, x_2) = (1, 1)\)</span>.</p>
+<p>The weights and biases are as follows. Hidden layer: <span class="math">\(W^{(1)} = \begin{pmatrix} 1 & 1 \\ 1 & 1 \end{pmatrix}\)</span>, <span class="math">\(\vec b^{(1)} = (-1, -1)^T\)</span>. Output layer: <span class="math">\(\vec w^{(2)} = (-1, -1)^T\)</span>, <span class="math">\(b^{(2)} = -1\)</span>.</p>
+<p>What is the output of this neural network?</p>
+<details>
+    <summary>Solution</summary>
+<p>Hidden node 1: <span class="math">\(\psi_1 = 1(1) + 1(1) - 1 = 1\)</span>.</p>
+<p>Hidden node 2: <span class="math">\(\psi_2 = 1(1) + 1(1) - 1 = 1\)</span>.</p>
+<p>Output: <span class="math">\(H = (-1)(1) + (-1)(1) - 1 = -3\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #136</h2>
+        <p>Tags: <a href='../tags/activation functions.html'>activation functions</a>, <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>The sigmoid function is <span class="math">\(f(x) = \dfrac{1}{1 + e^{-x}}\)</span>.</p>
+<p>Use the chain rule to find <span class="math">\(f'(x)\)</span>, and evaluate <span class="math">\(f'(0)\)</span>.</p>
+<details>
+    <summary>Solution</summary>
+<p>Using the chain rule:</p>
+<div class="math">\[
+            f'(x) = \frac{e^{-x}}{(1 + e^{-x})^2} = f(x)(1 - f(x)).
+        \]</div>
+<p>At <span class="math">\(x = 0\)</span>: <span class="math">\(f(0) = \frac{1}{1 + 1} = 0.5\)</span>, so <span class="math">\(f'(0) = 0.5 \cdot 0.5 = 0.25\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #137</h2>
+        <p>Tags: <a href='../tags/activation functions.html'>activation functions</a>, <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Which of the following is generally true about linear activation functions in neural networks?</p>
+<div class="multiple-choices"><form><div class="choice"><label><input name="choice" class="choice" type="radio" /><p>Linear activation results in linear prediction functions, regardless of the number of hidden layers.</p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p>Linear activation can lead to non-linear prediction functions, provided we have enough hidden layers.</p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p>Linear activation functions are slower to compute than the sigmoid activation function.</p></label></div></form></div>
+<details>
+    <summary>Solution</summary>
+<p>Linear activation results in linear prediction functions, regardless of the number of hidden layers or units.</p>
+<p>If all activation functions are linear, then each layer computes a linear transformation of its input. The composition of linear transformations is itself a linear transformation, so the entire network collapses to a single linear model.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #138</h2>
+        <p>Tags: <a href='../tags/activation functions.html'>activation functions</a>, <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>The sigmoid activation function is given as <span class="math">\(g(z) = \dfrac{1}{1 + e^{-z}}\)</span>.</p>
+<p>Consider two points <span class="math">\(z_1 > 0\)</span> and <span class="math">\(z_2 < 0\)</span>. Which of the following always holds true?</p>
+<div class="multiple-choices"><form><div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(g(z_1) > g(z_2)\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(g(z_1) < g(z_2)\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(g(z_1) = g(z_2)\)</span> if <span class="math">\(|z_1| = |z_2|\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p>The relationship depends on the exact values of <span class="math">\(z_1\)</span> and <span class="math">\(z_2\)</span>.</p></label></div></form></div>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(g(z_1) > g(z_2)\)</span>.</p>
+<p>When <span class="math">\(z > 0\)</span>, <span class="math">\(g(z) > 0.5\)</span>; when <span class="math">\(z < 0\)</span>, <span class="math">\(g(z) < 0.5\)</span>. Therefore <span class="math">\(g(z_1) > 0.5 > g(z_2)\)</span> always holds.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #139</h2>
+        <p>Tags: <a href='../tags/activation functions.html'>activation functions</a>, <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>For the sigmoid activation function <span class="math">\(g(z) = \dfrac{1}{1 + e^{-z}}\)</span>, what is <span class="math">\(g(z) + g(-z)\)</span> for any <span class="math">\(z \in\mathbb{R}\)</span>?</p>
+<div class="multiple-choices"><form><div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(0\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(1\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\dfrac{2}{1 + e^{-z}}\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\dfrac{2}{1 + e^{z}}\)</span></p></label></div></form></div>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(g(z) + g(-z) = 1\)</span>.</p>
+<div class="math">\[
+            g(z) + g(-z) = \frac{1}{1 + e^{-z}} + \frac{1}{1 + e^{z}}
+            = \frac{e^z}{1 + e^{z}} + \frac{1}{1 + e^{z}}
+            = \frac{1 + e^z}{1 + e^z} = 1
+        \]</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #140</h2>
+        <p>Tags: <a href='../tags/activation functions.html'>activation functions</a>, <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>The Leaky ReLU activation function is defined as <span class="math">\(g(z) = \max\{\alpha z, z\}\)</span>, where <span class="math">\(0 \leq\alpha < 1\)</span>.</p>
+<p>What is <span class="math">\(g(-5)\)</span> when <span class="math">\(\alpha = 0.01\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(g(-5) = \max\{0.01 \cdot(-5),\; -5\} = \max\{-0.05,\; -5\} = -0.05\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #141</h2>
+        <p>Tags: <a href='../tags/activation functions.html'>activation functions</a>, <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Suppose you are modeling the percentage change in stock prices each day as a regression problem by training a neural network. On some days the percentage change is positive; on others it is negative.</p>
+<p>True or False: ReLU activation can be used in the output layer of the neural network for this task.</p>
+<details>
+    <summary>Solution</summary>
+<p>False.</p>
+<p>ReLU activation in the output layer truncates all negative values to zero, so the network could never predict a negative percentage change.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #142</h2>
+        <p>Tags: <a href='../tags/quiz-07.html'>quiz-07</a>, <a href='../tags/backpropagation.html'>backpropagation</a>, <a href='../tags/lecture-13.html'>lecture-13</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
         <div class="problem">
     <div class="problem-body">
 <p>Consider a neural network <span class="math">\(H(\vec x)\)</span> shown below:</p>
-<center><div class="image"><img src="../images/133/fig/nn.png" /></div></center>
+<center><div class="image"><img src="../images/142/fig/nn.png" /></div></center>
 <p>Assume that all hidden nodes use <b>ReLU activation</b> functions, that the output node uses a linear activation, and that there are no biases.</p>
 <p>Let the weights of the second layer of the network be: <span class="math">\(
         W^{(2)} = \begin{pmatrix}
@@ -577,12 +781,12 @@ Live Q&A
 
 
         <div class="problem-outer">
-        <h2>Problem #134</h2>
-        <p>Tags: <a href='../tags/backpropagation.html'>backpropagation</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a>, <a href='../tags/lecture-12.html'>lecture-12</a></p>
+        <h2>Problem #143</h2>
+        <p>Tags: <a href='../tags/quiz-07.html'>quiz-07</a>, <a href='../tags/backpropagation.html'>backpropagation</a>, <a href='../tags/lecture-13.html'>lecture-13</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
         <div class="problem">
     <div class="problem-body">
 <p>Consider a neural network <span class="math">\(H(\vec x)\)</span> shown below:</p>
-<center><div class="image"><img src="../images/134/fig/nn.png" /></div></center>
+<center><div class="image"><img src="../images/143/fig/nn.png" /></div></center>
 <p>Assume that all hidden nodes use <b>ReLU activation</b> functions, that the output node uses a linear activation, and that there are no biases.</p>
 <p>Let the weights of the second layer of the network be: <span class="math">\(
         W^{(2)} = \begin{pmatrix}
@@ -663,12 +867,12 @@ Live Q&A
 
 
         <div class="problem-outer">
-        <h2>Problem #135</h2>
-        <p>Tags: <a href='../tags/backpropagation.html'>backpropagation</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a>, <a href='../tags/lecture-12.html'>lecture-12</a></p>
+        <h2>Problem #144</h2>
+        <p>Tags: <a href='../tags/quiz-07.html'>quiz-07</a>, <a href='../tags/backpropagation.html'>backpropagation</a>, <a href='../tags/lecture-13.html'>lecture-13</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
         <div class="problem">
     <div class="problem-body">
 <p>Consider a neural network <span class="math">\(H(\vec x)\)</span> shown below:</p>
-<center><div class="image"><img src="../images/135/fig/nn.png" /></div></center>
+<center><div class="image"><img src="../images/144/fig/nn.png" /></div></center>
 <p>Suppose that the ReLU is used on all hidden nodes, and the linear activation is used on the output node. There are no biases.</p>
 <p>Fill in the blank without making reference to any derivatives (apart from <span class="math">\(g'\)</span>, which is the derivative of the ReLU):</p>
 <div class="math">\[\frac{\partial H}{\partial W^{(1)}_{12}}
@@ -691,12 +895,12 @@ Live Q&A
 
 
         <div class="problem-outer">
-        <h2>Problem #136</h2>
-        <p>Tags: <a href='../tags/backpropagation.html'>backpropagation</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a>, <a href='../tags/lecture-12.html'>lecture-12</a></p>
+        <h2>Problem #145</h2>
+        <p>Tags: <a href='../tags/quiz-07.html'>quiz-07</a>, <a href='../tags/backpropagation.html'>backpropagation</a>, <a href='../tags/lecture-13.html'>lecture-13</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
         <div class="problem">
     <div class="problem-body">
 <p>Consider a neural network <span class="math">\(H(\vec x)\)</span> shown below:</p>
-<center><div class="image"><img src="../images/136/fig/nn.png" /></div></center>
+<center><div class="image"><img src="../images/145/fig/nn.png" /></div></center>
 <p>Suppose that the ReLU is used on all hidden nodes, and the linear activation is used on the output node. There are no biases.</p>
 <p>Fill in the blank without making reference to any derivatives (apart from <span class="math">\(g'\)</span>, which is the derivative of the ReLU):</p>
 <div class="math">\[\frac{\partial H}{\partial x_1}
@@ -718,8 +922,8 @@ Live Q&A
 
 
         <div class="problem-outer">
-        <h2>Problem #137</h2>
-        <p>Tags: <a href='../tags/lecture-12.html'>lecture-12</a>, <a href='../tags/neural networks.html'>neural networks</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/activation functions.html'>activation functions</a>, <a href='../tags/backpropagation.html'>backpropagation</a></p>
+        <h2>Problem #146</h2>
+        <p>Tags: <a href='../tags/quiz-07.html'>quiz-07</a>, <a href='../tags/neural networks.html'>neural networks</a>, <a href='../tags/lecture-13.html'>lecture-13</a>, <a href='../tags/activation functions.html'>activation functions</a>, <a href='../tags/backpropagation.html'>backpropagation</a></p>
         <div class="problem">
     <div class="problem-body">
 <p>Suppose a deep network <span class="math">\(H(\vec x)\)</span> uses a sigmoid activation in its output layer. Suppose as well that for a given input, <span class="math">\(\vec x\)</span>, <span class="math">\(H(\vec x) \approx 1\)</span>.</p>
@@ -741,8 +945,8 @@ Live Q&A
 
 
         <div class="problem-outer">
-        <h2>Problem #138</h2>
-        <p>Tags: <a href='../tags/lecture-12.html'>lecture-12</a>, <a href='../tags/neural networks.html'>neural networks</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/activation functions.html'>activation functions</a>, <a href='../tags/backpropagation.html'>backpropagation</a></p>
+        <h2>Problem #147</h2>
+        <p>Tags: <a href='../tags/quiz-07.html'>quiz-07</a>, <a href='../tags/neural networks.html'>neural networks</a>, <a href='../tags/lecture-13.html'>lecture-13</a>, <a href='../tags/activation functions.html'>activation functions</a>, <a href='../tags/backpropagation.html'>backpropagation</a></p>
         <div class="problem">
     <div class="problem-body">
 <p>Suppose a deep network <span class="math">\(H(\vec x)\)</span> uses a ReLU activation in its output layer. Suppose as well that for a given input, <span class="math">\(\vec x\)</span>, <span class="math">\(H(\vec x) \approx 1\)</span>.</p>
@@ -763,212 +967,8 @@ Live Q&A
 
 
         <div class="problem-outer">
-        <h2>Problem #139</h2>
-        <p>Tags: <a href='../tags/activation functions.html'>activation functions</a>, <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
-        <div class="problem">
-    <div class="problem-body">
-<p>Consider two numbers <span class="math">\(z_1 = 10\)</span>, <span class="math">\(z_2 = -5\)</span>, and the ReLU activation function <span class="math">\(f(z) = \max(0, z)\)</span>. What is <span class="math">\(f(z_1) + f(z_2)\)</span>?</p>
-<details>
-    <summary>Solution</summary>
-<p><span class="math">\(f(z_1) + f(z_2) = \max(0, 10) + \max(0, -5) = 10 + 0 = 10\)</span>.</p>
-</details>
-
-    </div>
-</div>
-
-        </div>
-
-
-
-
-        <div class="problem-outer">
-        <h2>Problem #140</h2>
-        <p>Tags: <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
-        <div class="problem">
-    <div class="problem-body">
-<p>Consider a neural network with <span class="math">\(d = 6\)</span> input features, a single hidden layer of <span class="math">\(d' = 4\)</span> nodes, and one output node. There is a bias in both the hidden layer and the output layer.</p>
-<p>What is the total number of parameters in this network?</p>
-<details>
-    <summary>Solution</summary>
-<p>33.</p>
-<p>The hidden layer has <span class="math">\((6 + 1) \times 4 = 28\)</span> parameters. The output layer has <span class="math">\((4 + 1) \times 1 = 5\)</span> parameters. Total: <span class="math">\(28 + 5 = 33\)</span>.</p>
-</details>
-
-    </div>
-</div>
-
-        </div>
-
-
-
-
-        <div class="problem-outer">
-        <h2>Problem #141</h2>
-        <p>Tags: <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/forward pass.html'>forward pass</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
-        <div class="problem">
-    <div class="problem-body">
-<p>Consider a neural network with 2 input nodes, 2 hidden nodes, and 1 output node. There is no non-linear activation function used in the network (i.e., all activations are linear). The input is <span class="math">\((x_1, x_2) = (1, 1)\)</span>.</p>
-<p>The weights and biases are as follows. Hidden layer: <span class="math">\(W^{(1)} = \begin{pmatrix} 1 & 1 \\ 1 & 1 \end{pmatrix}\)</span>, <span class="math">\(\vec b^{(1)} = (-1, -1)^T\)</span>. Output layer: <span class="math">\(\vec w^{(2)} = (-1, -1)^T\)</span>, <span class="math">\(b^{(2)} = -1\)</span>.</p>
-<p>What is the output of this neural network?</p>
-<details>
-    <summary>Solution</summary>
-<p>Hidden node 1: <span class="math">\(\psi_1 = 1(1) + 1(1) - 1 = 1\)</span>.</p>
-<p>Hidden node 2: <span class="math">\(\psi_2 = 1(1) + 1(1) - 1 = 1\)</span>.</p>
-<p>Output: <span class="math">\(H = (-1)(1) + (-1)(1) - 1 = -3\)</span>.</p>
-</details>
-
-    </div>
-</div>
-
-        </div>
-
-
-
-
-        <div class="problem-outer">
-        <h2>Problem #142</h2>
-        <p>Tags: <a href='../tags/activation functions.html'>activation functions</a>, <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
-        <div class="problem">
-    <div class="problem-body">
-<p>The sigmoid function is <span class="math">\(f(x) = \dfrac{1}{1 + e^{-x}}\)</span>.</p>
-<p>Use the chain rule to find <span class="math">\(f'(x)\)</span>, and evaluate <span class="math">\(f'(0)\)</span>.</p>
-<details>
-    <summary>Solution</summary>
-<p>Using the chain rule:</p>
-<div class="math">\[
-            f'(x) = \frac{e^{-x}}{(1 + e^{-x})^2} = f(x)(1 - f(x)).
-        \]</div>
-<p>At <span class="math">\(x = 0\)</span>: <span class="math">\(f(0) = \frac{1}{1 + 1} = 0.5\)</span>, so <span class="math">\(f'(0) = 0.5 \cdot 0.5 = 0.25\)</span>.</p>
-</details>
-
-    </div>
-</div>
-
-        </div>
-
-
-
-
-        <div class="problem-outer">
-        <h2>Problem #143</h2>
-        <p>Tags: <a href='../tags/activation functions.html'>activation functions</a>, <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
-        <div class="problem">
-    <div class="problem-body">
-<p>Which of the following is generally true about linear activation functions in neural networks?</p>
-<div class="multiple-choices"><form><div class="choice"><label><input name="choice" class="choice" type="radio" /><p>Linear activation results in linear prediction functions, regardless of the number of hidden layers.</p></label></div>
-<div class="choice"><label><input name="choice" class="choice" type="radio" /><p>Linear activation can lead to non-linear prediction functions, provided we have enough hidden layers.</p></label></div>
-<div class="choice"><label><input name="choice" class="choice" type="radio" /><p>Linear activation functions are slower to compute than the sigmoid activation function.</p></label></div></form></div>
-<details>
-    <summary>Solution</summary>
-<p>Linear activation results in linear prediction functions, regardless of the number of hidden layers or units.</p>
-<p>If all activation functions are linear, then each layer computes a linear transformation of its input. The composition of linear transformations is itself a linear transformation, so the entire network collapses to a single linear model.</p>
-</details>
-
-    </div>
-</div>
-
-        </div>
-
-
-
-
-        <div class="problem-outer">
-        <h2>Problem #144</h2>
-        <p>Tags: <a href='../tags/activation functions.html'>activation functions</a>, <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
-        <div class="problem">
-    <div class="problem-body">
-<p>The sigmoid activation function is given as <span class="math">\(g(z) = \dfrac{1}{1 + e^{-z}}\)</span>.</p>
-<p>Consider two points <span class="math">\(z_1 > 0\)</span> and <span class="math">\(z_2 < 0\)</span>. Which of the following always holds true?</p>
-<div class="multiple-choices"><form><div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(g(z_1) > g(z_2)\)</span></p></label></div>
-<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(g(z_1) < g(z_2)\)</span></p></label></div>
-<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(g(z_1) = g(z_2)\)</span> if <span class="math">\(|z_1| = |z_2|\)</span></p></label></div>
-<div class="choice"><label><input name="choice" class="choice" type="radio" /><p>The relationship depends on the exact values of <span class="math">\(z_1\)</span> and <span class="math">\(z_2\)</span>.</p></label></div></form></div>
-<details>
-    <summary>Solution</summary>
-<p><span class="math">\(g(z_1) > g(z_2)\)</span>.</p>
-<p>When <span class="math">\(z > 0\)</span>, <span class="math">\(g(z) > 0.5\)</span>; when <span class="math">\(z < 0\)</span>, <span class="math">\(g(z) < 0.5\)</span>. Therefore <span class="math">\(g(z_1) > 0.5 > g(z_2)\)</span> always holds.</p>
-</details>
-
-    </div>
-</div>
-
-        </div>
-
-
-
-
-        <div class="problem-outer">
-        <h2>Problem #145</h2>
-        <p>Tags: <a href='../tags/activation functions.html'>activation functions</a>, <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
-        <div class="problem">
-    <div class="problem-body">
-<p>For the sigmoid activation function <span class="math">\(g(z) = \dfrac{1}{1 + e^{-z}}\)</span>, what is <span class="math">\(g(z) + g(-z)\)</span> for any <span class="math">\(z \in\mathbb{R}\)</span>?</p>
-<div class="multiple-choices"><form><div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(0\)</span></p></label></div>
-<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(1\)</span></p></label></div>
-<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\dfrac{2}{1 + e^{-z}}\)</span></p></label></div>
-<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\dfrac{2}{1 + e^{z}}\)</span></p></label></div></form></div>
-<details>
-    <summary>Solution</summary>
-<p><span class="math">\(g(z) + g(-z) = 1\)</span>.</p>
-<div class="math">\[
-            g(z) + g(-z) = \frac{1}{1 + e^{-z}} + \frac{1}{1 + e^{z}}
-            = \frac{e^z}{1 + e^{z}} + \frac{1}{1 + e^{z}}
-            = \frac{1 + e^z}{1 + e^z} = 1
-        \]</div>
-</details>
-
-    </div>
-</div>
-
-        </div>
-
-
-
-
-        <div class="problem-outer">
-        <h2>Problem #146</h2>
-        <p>Tags: <a href='../tags/activation functions.html'>activation functions</a>, <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
-        <div class="problem">
-    <div class="problem-body">
-<p>The Leaky ReLU activation function is defined as <span class="math">\(g(z) = \max\{\alpha z, z\}\)</span>, where <span class="math">\(0 \leq\alpha < 1\)</span>.</p>
-<p>What is <span class="math">\(g(-5)\)</span> when <span class="math">\(\alpha = 0.01\)</span>?</p>
-<details>
-    <summary>Solution</summary>
-<p><span class="math">\(g(-5) = \max\{0.01 \cdot(-5),\; -5\} = \max\{-0.05,\; -5\} = -0.05\)</span>.</p>
-</details>
-
-    </div>
-</div>
-
-        </div>
-
-
-
-
-        <div class="problem-outer">
-        <h2>Problem #147</h2>
-        <p>Tags: <a href='../tags/activation functions.html'>activation functions</a>, <a href='../tags/lecture-11.html'>lecture-11</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
-        <div class="problem">
-    <div class="problem-body">
-<p>Suppose you are modeling the percentage change in stock prices each day as a regression problem by training a neural network. On some days the percentage change is positive; on others it is negative.</p>
-<p>True or False: ReLU activation can be used in the output layer of the neural network for this task.</p>
-<details>
-    <summary>Solution</summary>
-<p>False.</p>
-<p>ReLU activation in the output layer truncates all negative values to zero, so the network could never predict a negative percentage change.</p>
-</details>
-
-    </div>
-</div>
-
-        </div>
-
-
-
-
-        <div class="problem-outer">
         <h2>Problem #148</h2>
-        <p>Tags: <a href='../tags/backpropagation.html'>backpropagation</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a>, <a href='../tags/lecture-12.html'>lecture-12</a></p>
+        <p>Tags: <a href='../tags/quiz-07.html'>quiz-07</a>, <a href='../tags/backpropagation.html'>backpropagation</a>, <a href='../tags/lecture-13.html'>lecture-13</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
         <div class="problem">
     <div class="problem-body">
 <p>Suppose that the square loss is used to train a neural network <span class="math">\(H\)</span> so that the empirical risk is</p>
@@ -997,7 +997,7 @@ Live Q&A
 
         <div class="problem-outer">
         <h2>Problem #149</h2>
-        <p>Tags: <a href='../tags/backpropagation.html'>backpropagation</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a>, <a href='../tags/lecture-12.html'>lecture-12</a></p>
+        <p>Tags: <a href='../tags/quiz-07.html'>quiz-07</a>, <a href='../tags/backpropagation.html'>backpropagation</a>, <a href='../tags/lecture-13.html'>lecture-13</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
         <div class="problem">
     <div class="problem-body">
 <p>Consider the neural network shown below.</p>
@@ -1046,7 +1046,7 @@ Live Q&A
 
         <div class="problem-outer">
         <h2>Problem #150</h2>
-        <p>Tags: <a href='../tags/backpropagation.html'>backpropagation</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a>, <a href='../tags/lecture-12.html'>lecture-12</a></p>
+        <p>Tags: <a href='../tags/quiz-07.html'>quiz-07</a>, <a href='../tags/backpropagation.html'>backpropagation</a>, <a href='../tags/lecture-13.html'>lecture-13</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
         <div class="problem">
     <div class="problem-body">
 <p>Consider the neural network shown below, now with weights and inputs. Assume that the ReLU is the activation function for the hidden layers, and that the output layer uses a linear activation. There are no biases.</p>
@@ -1071,7 +1071,7 @@ Live Q&A
 
         <div class="problem-outer">
         <h2>Problem #151</h2>
-        <p>Tags: <a href='../tags/backpropagation.html'>backpropagation</a>, <a href='../tags/quiz-06.html'>quiz-06</a>, <a href='../tags/neural networks.html'>neural networks</a>, <a href='../tags/lecture-12.html'>lecture-12</a></p>
+        <p>Tags: <a href='../tags/quiz-07.html'>quiz-07</a>, <a href='../tags/backpropagation.html'>backpropagation</a>, <a href='../tags/lecture-13.html'>lecture-13</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
         <div class="problem">
     <div class="problem-body">
 <p>Consider the neural network shown below, now with different weights and inputs. Assume that the ReLU is the activation function for the hidden layers, and that the output layer uses a linear activation. There are no biases.</p>
