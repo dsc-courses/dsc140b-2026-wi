@@ -98,6 +98,14 @@
                             "path": "materials/quizzes/05-feature_maps/solution.pdf"
                         }
                     }
+                },
+                "06-neural_networks": {
+                    "metadata": {
+                        "date": "2026-02-19",
+                        "topic": "Neural Networks",
+                        "number": 6
+                    },
+                    "artifacts": {}
                 }
             }
         },
@@ -507,6 +515,22 @@
                     "artifacts": {
                         "slides.pdf": {
                             "path": "materials/default/supplementary/math_review/slides.pdf"
+                        }
+                    }
+                },
+                "supplementary/notebook-pytorch-backprop": {
+                    "metadata": {},
+                    "artifacts": {
+                        "Notebook.ipynb": {
+                            "path": "materials/default/supplementary/notebook-pytorch-backprop/Notebook.ipynb"
+                        }
+                    }
+                },
+                "supplementary/notebook-pytorch-training": {
+                    "metadata": {},
+                    "artifacts": {
+                        "Notebook.ipynb": {
+                            "path": "materials/default/supplementary/notebook-pytorch-training/Notebook.ipynb"
                         }
                     }
                 },
