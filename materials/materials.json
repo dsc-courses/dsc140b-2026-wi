@@ -120,6 +120,22 @@
                     "notebook"
                 ],
                 "metadata_schema": {
+                    "optional_keys": {
+                        "notebooks": {
+                            "element_schema": {
+                                "required_keys": {
+                                    "title": {
+                                        "type": "string"
+                                    },
+                                    "url": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "dict"
+                            },
+                            "type": "list"
+                        }
+                    },
                     "required_keys": {
                         "videos": {
                             "type": "any",
@@ -334,9 +350,23 @@
                         "videos": null,
                         "date": "2026-02-19",
                         "topic": "SGD",
-                        "number": 13
+                        "number": 13,
+                        "notebooks": [
+                            {
+                                "title": "Training NNs in PyTorch",
+                                "url": "https://github.com/dsc-courses/dsc140b-2026-wi/blob/gh-pages/materials/default/supplementary/notebook-pytorch-training/Notebook.ipynb?raw=1"
+                            },
+                            {
+                                "title": "Backprop in PyTorch",
+                                "url": "https://github.com/dsc-courses/dsc140b-2026-wi/blob/gh-pages/materials/default/supplementary/notebook-pytorch-backprop/Notebook.ipynb?raw=1"
+                            }
+                        ]
                     },
-                    "artifacts": {}
+                    "artifacts": {
+                        "slides.pdf": {
+                            "path": "materials/lectures/schedules/tr/13-sgd/slides.pdf"
+                        }
+                    }
                 },
                 "14-cnn": {
                     "metadata": {
@@ -488,7 +518,11 @@
                         "topic": "Neural Networks",
                         "number": 7
                     },
-                    "artifacts": {}
+                    "artifacts": {
+                        "homework.pdf": {
+                            "path": "materials/homeworks/07-neural_networks-II/homework.pdf"
+                        }
+                    }
                 },
                 "09-super_hw": {
                     "metadata": {
