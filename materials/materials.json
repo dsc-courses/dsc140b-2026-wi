@@ -105,7 +105,14 @@
                         "topic": "Neural Networks",
                         "number": 6
                     },
-                    "artifacts": {}
+                    "artifacts": {
+                        "quiz.pdf": {
+                            "path": "materials/quizzes/06-neural_networks/quiz.pdf"
+                        },
+                        "solution.pdf": {
+                            "path": "materials/quizzes/06-neural_networks/solution.pdf"
+                        }
+                    }
                 }
             }
         },
