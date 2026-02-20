@@ -518,6 +518,9 @@
                     "artifacts": {
                         "homework.pdf": {
                             "path": "materials/homeworks/06-neural_networks/homework.pdf"
+                        },
+                        "solution.pdf": {
+                            "path": "materials/homeworks/06-neural_networks/solution.pdf"
                         }
                     }
                 },
