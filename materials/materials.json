@@ -352,11 +352,11 @@
                         }
                     }
                 },
-                "13-sgd": {
+                "13-gd": {
                     "metadata": {
                         "videos": null,
                         "date": "2026-02-19",
-                        "topic": "SGD",
+                        "topic": "Gradient Descent + PyTorch",
                         "number": 13,
                         "notebooks": [
                             {
@@ -371,28 +371,44 @@
                     },
                     "artifacts": {
                         "slides.pdf": {
-                            "path": "materials/lectures/schedules/tr/13-sgd/slides.pdf"
+                            "path": "materials/lectures/schedules/tr/13-gd/slides.pdf"
                         },
                         "marked.pdf": {
-                            "path": "materials/lectures/schedules/tr/13-sgd/marked.pdf"
+                            "path": "materials/lectures/schedules/tr/13-gd/marked.pdf"
                         }
                     }
                 },
-                "14-cnn": {
+                "14-sgd": {
                     "metadata": {
                         "videos": null,
                         "date": "2026-02-24",
-                        "topic": "Convolutional Neural Networks",
+                        "topic": "Stochastic Gradient Descent",
                         "number": 14
+                    },
+                    "artifacts": {
+                        "slides.pdf": {
+                            "path": "materials/lectures/schedules/tr/14-sgd/slides.pdf"
+                        },
+                        "marked.pdf": {
+                            "path": "materials/lectures/schedules/tr/14-sgd/marked.pdf"
+                        }
+                    }
+                },
+                "15-cnn": {
+                    "metadata": {
+                        "videos": null,
+                        "date": "2026-02-26",
+                        "topic": "Convolutional Neural Networks",
+                        "number": 15
                     },
                     "artifacts": {}
                 },
-                "15-autoencoders": {
+                "16-autoencoders": {
                     "metadata": {
                         "videos": null,
                         "date": "2026-03-03",
                         "topic": "Autoencoders",
-                        "number": 15
+                        "number": 16
                     },
                     "artifacts": {}
                 }
