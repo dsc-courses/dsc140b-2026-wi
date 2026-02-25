@@ -592,8 +592,14 @@
                 "supplementary/notebook-pytorch-training": {
                     "metadata": {},
                     "artifacts": {
+                        "util.py": {
+                            "path": "materials/default/supplementary/notebook-pytorch-training/util.py"
+                        },
                         "Notebook.ipynb": {
                             "path": "materials/default/supplementary/notebook-pytorch-training/Notebook.ipynb"
+                        },
+                        "parking.csv": {
+                            "path": "materials/default/supplementary/notebook-pytorch-training/parking.csv"
                         }
                     }
                 },
