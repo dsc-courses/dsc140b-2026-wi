@@ -361,11 +361,11 @@
                         "notebooks": [
                             {
                                 "title": "Training NNs in PyTorch",
-                                "url": "https://github.com/dsc-courses/dsc140b-2026-wi/blob/gh-pages/materials/default/supplementary/notebook-pytorch-training/Notebook.ipynb?raw=1"
+                                "url": "https://github.com/dsc-courses/dsc140b-2026-wi/tree/gh-pages/materials/default/supplementary/notebook-pytorch-training"
                             },
                             {
                                 "title": "Backprop in PyTorch",
-                                "url": "https://github.com/dsc-courses/dsc140b-2026-wi/blob/gh-pages/materials/default/supplementary/notebook-pytorch-backprop/Notebook.ipynb?raw=1"
+                                "url": "https://github.com/dsc-courses/dsc140b-2026-wi/tree/gh-pages/materials/default/supplementary/notebook-pytorch-backprop"
                             }
                         ]
                     },
