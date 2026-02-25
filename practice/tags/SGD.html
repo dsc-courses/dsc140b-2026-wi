@@ -136,7 +136,7 @@ Live Q&A
 
     <div class="prose dark:prose-invert">
     <!DOCTYPE html> <html> <head> <meta
-                          charset="utf-8"> <title>Practice Problems</title>
+                          charset="utf-8"> <title>Problems tagged with SGD</title>
 
            <!-- MathJax -->
            <script type="text/x-mathjax-config">
@@ -167,122 +167,61 @@ Live Q&A
 
        </head>
        <body>
-           <div>
-<h1>Practice Problems</h1>
+           
+<h1>Problems tagged with "SGD"</h1>
 
 
-            <div class="tagset">
-                <h2>Midterm 01</h2>
-                <p>Practice problems for topics on Midterm 01.
-See also the <a href="http://dsc140b.com/materials/default/supplementary/sample_midterm_01/sample_midterm_01.pdf">Sample Midterm 01</a>
-and its <a href="http://dsc140b.com/materials/default/supplementary/sample_midterm_01/sample_midterm_01-solution.pdf">solutions</a>.</p>
-                <p>
-                    <a href="./midterm-01.html">See all problems in this set</a>, or
-                    choose a tag below to view only those problems.
-                </p>
-            <ul>
-<li><a href='./tags/lecture-02.html'>lecture-02</a></li>
-<li><a href='./tags/lecture-03.html'>lecture-03</a></li>
-<li><a href='./tags/lecture-04.html'>lecture-04</a></li>
-<li><a href='./tags/lecture-05.html'>lecture-05</a></li>
-<li><a href='./tags/lecture-06.html'>lecture-06</a></li>
-<li><a href='./tags/lecture-07.html'>lecture-07</a></li>
-<li><a href='./tags/lecture-08.html'>lecture-08</a></li>
-</ul>
-            </div>
+        <div class="problem-outer">
+        <h2>Problem #158</h2>
+        <p>Tags: <a href='../tags/quiz-07.html'>quiz-07</a>, <a href='../tags/SGD.html'>SGD</a>, <a href='../tags/neural networks.html'>neural networks</a>, <a href='../tags/gradient descent.html'>gradient descent</a>, <a href='../tags/lecture-14.html'>lecture-14</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>True or False: in stochastic gradient descent, each update step moves in the direction of steepest descent of the empirical risk.</p>
 
-
-<div class="tagset">
-    <h2>Quiz 07</h2>
-    <p>Practice problems for topics on Quiz 07.</p>
-    <p>
-        <a href="./quiz-07.html">See all problems in this set</a>, or
-        choose a tag below to view only those problems.
-    </p>
-<ul>
-<li><a href='./tags/lecture-13.html'>lecture-13</a></li>
-<li><a href='./tags/lecture-14.html'>lecture-14</a></li>
-<li><a href='./tags/quiz-07.html'>quiz-07</a></li>
-</ul>
+<div class="true-false">
+    <input type="radio" name="true-false" value="true" /> True
+    <input type="radio" name="true-false" value="false" /> False
 </div>
 
+<details>
+    <summary>Solution</summary>
+<p>False.</p>
+<p>Each update step moves in the direction of steepest descent of the risk computed on the <i>mini-batch</i>, not the full training set. The mini-batch gradient is only an approximation of the true gradient of the empirical risk. This is what makes each iteration of SGD fast --- computing the gradient over a small mini-batch of <span class="math">\(m\)</span> points is much cheaper than computing it over all <span class="math">\(n\)</span> points --- but it means that the update direction is noisy.</p>
+</details>
 
-<div class="tagset">
-    <h2>Quiz 06</h2>
-    <p>Practice problems for topics on Quiz 06.</p>
-    <p>
-        <a href="./quiz-06.html">See all problems in this set</a>, or
-        choose a tag below to view only those problems.
-    </p>
-<ul>
-<li><a href='./tags/lecture-11.html'>lecture-11</a></li>
-<li><a href='./tags/lecture-12.html'>lecture-12</a></li>
-<li><a href='./tags/quiz-06.html'>quiz-06</a></li>
-</ul>
+    </div>
 </div>
 
+        </div>
 
-<div class="tagset">
-    <h2>Quiz 05</h2>
-    <p>Practice problems for topics on Quiz 05.</p>
-    <p>
-        <a href="./quiz-05.html">See all problems in this set</a>, or
-        choose a tag below to view only those problems.
-    </p>
-<ul>
-<li><a href='./tags/lecture-08.html'>lecture-08</a></li>
-<li><a href='./tags/lecture-09.html'>lecture-09</a></li>
-<li><a href='./tags/lecture-10.html'>lecture-10</a></li>
-<li><a href='./tags/quiz-05.html'>quiz-05</a></li>
-</ul>
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #159</h2>
+        <p>Tags: <a href='../tags/quiz-07.html'>quiz-07</a>, <a href='../tags/SGD.html'>SGD</a>, <a href='../tags/neural networks.html'>neural networks</a>, <a href='../tags/gradient descent.html'>gradient descent</a>, <a href='../tags/lecture-14.html'>lecture-14</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>True or False: stochastic gradient descent generally requires fewer iterations than gradient descent to converge.</p>
+
+<div class="true-false">
+    <input type="radio" name="true-false" value="true" /> True
+    <input type="radio" name="true-false" value="false" /> False
 </div>
 
+<details>
+    <summary>Solution</summary>
+<p>False.</p>
+<p>SGD typically requires <i>more</i> iterations than gradient descent to converge, because each update uses a noisy approximation of the true gradient. However, each iteration of SGD is much cheaper (<span class="math">\(O(md)\)</span> vs. <span class="math">\(O(nd)\)</span> for a mini-batch of size <span class="math">\(m \ll n\)</span>), so SGD often converges faster in terms of total computation time.</p>
+</details>
 
-<div class="tagset">
-    <h2>Quiz 04</h2>
-    <p>Practice problems for topics on Quiz 04.</p>
-    <p>
-        <a href="./quiz-04.html">See all problems in this set</a>, or
-        choose a tag below to view only those problems.
-    </p>
-<ul>
-<li><a href='./tags/lecture-06.html'>lecture-06</a></li>
-<li><a href='./tags/lecture-07.html'>lecture-07</a></li>
-<li><a href='./tags/quiz-04.html'>quiz-04</a></li>
-</ul>
+    </div>
 </div>
 
-
-<div class="tagset">
-    <h2>Quiz 03</h2>
-    <p>Practice problems for topics on Quiz 03.</p>
-    <p>
-        <a href="./quiz-03.html">See all problems in this set</a>, or
-        choose a tag below to view only those problems.
-    </p>
-<ul>
-<li><a href='./tags/lecture-04.html'>lecture-04</a></li>
-<li><a href='./tags/lecture-05.html'>lecture-05</a></li>
-<li><a href='./tags/quiz-03.html'>quiz-03</a></li>
-</ul>
-</div>
+        </div>
 
 
-<div class="tagset">
-    <h2>Quiz 02</h2>
-    <p>Practice problems for topics on Quiz 02.</p>
-    <p>
-        <a href="./quiz-02.html">See all problems in this set</a>, or
-        choose a tag below to view only those problems.
-    </p>
-<ul>
-<li><a href='./tags/lecture-02.html'>lecture-02</a></li>
-<li><a href='./tags/lecture-03.html'>lecture-03</a></li>
-<li><a href='./tags/quiz-02.html'>quiz-02</a></li>
-</ul>
-</div>
 
-</div>
        </body>
    </html>
     </div>

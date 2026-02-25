@@ -603,6 +603,251 @@ Live Q&A
 
 
 
+
+        <div class="problem-outer">
+        <h2>Problem #152</h2>
+        <p>Tags: <a href='../tags/vanishing gradients.html'>vanishing gradients</a>, <a href='../tags/quiz-07.html'>quiz-07</a>, <a href='../tags/lecture-14.html'>lecture-14</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Which of the following best describes the <b>vanishing gradient</b> problem that can occur while training deep neural networks using backpropagation?</p>
+<div class="multiple-choices"><form><div class="choice"><label><input name="choice" class="choice" type="radio" /><p>Partial derivatives of parameters in layers far from the output become very small.</p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p>Partial derivatives of parameters in layers close to the output become very small.</p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p>Partial derivatives of parameters in layers far from the output become very large.</p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p>Partial derivatives of parameters in layers close to the output become very large.</p></label></div></form></div>
+<details>
+    <summary>Solution</summary>
+<p>Partial derivatives of parameters in layers far from the output become very small.</p>
+<p>During backpropagation, the chain rule multiplies many factors together as the gradient propagates from the output back through each layer. If these factors are small (e.g., because of sigmoid activations whose derivatives are at most <span class="math">\(1/4\)</span>), the product shrinks exponentially with depth. This means that parameters in early layers (far from the output) receive very small gradient updates and learn very slowly.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #153</h2>
+        <p>Tags: <a href='../tags/quiz-07.html'>quiz-07</a>, <a href='../tags/backpropagation.html'>backpropagation</a>, <a href='../tags/lecture-13.html'>lecture-13</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Suppose <span class="math">\(H\)</span> is a fully-connected neural network with 3 input features, 4 nodes in the first hidden layer, 2 nodes in the second hidden layer, and a single output node. Assume that all hidden and output nodes have a bias.</p>
+<p>The gradient of <span class="math">\(H\)</span> with respect to the parameters is a vector. What is this vector's dimensionality?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(29\)</span>.</p>
+<p>We count the number of weights and biases in each layer. Layer 1 (<span class="math">\(3 \to 4\)</span>): <span class="math">\(3 \times 4 = 12\)</span> weights <span class="math">\(+ \; 4\)</span> biases <span class="math">\(= 16\)</span>. Layer 2 (<span class="math">\(4 \to 2\)</span>): <span class="math">\(4 \times 2 = 8\)</span> weights <span class="math">\(+ \; 2\)</span> biases <span class="math">\(= 10\)</span>. Output (<span class="math">\(2 \to 1\)</span>): <span class="math">\(2 \times 1 = 2\)</span> weights <span class="math">\(+ \; 1\)</span> bias <span class="math">\(= 3\)</span>. Total: <span class="math">\(16 + 10 + 3 = 29\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #154</h2>
+        <p>Tags: <a href='../tags/quiz-07.html'>quiz-07</a>, <a href='../tags/backpropagation.html'>backpropagation</a>, <a href='../tags/lecture-13.html'>lecture-13</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Suppose <span class="math">\(H\)</span> is a fully-connected neural network with 2 input features, 5 nodes in the first hidden layer, 3 nodes in the second hidden layer, and a single output node. Assume that all hidden and output nodes have a bias.</p>
+<p>The gradient of <span class="math">\(H\)</span> with respect to the parameters is a vector. What is this vector's dimensionality?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(37\)</span>.</p>
+<p>We count the number of weights and biases in each layer. Layer 1 (<span class="math">\(2 \to 5\)</span>): <span class="math">\(2 \times 5 = 10\)</span> weights <span class="math">\(+ \; 5\)</span> biases <span class="math">\(= 15\)</span>. Layer 2 (<span class="math">\(5 \to 3\)</span>): <span class="math">\(5 \times 3 = 15\)</span> weights <span class="math">\(+ \; 3\)</span> biases <span class="math">\(= 18\)</span>. Output (<span class="math">\(3 \to 1\)</span>): <span class="math">\(3 \times 1 = 3\)</span> weights <span class="math">\(+ \; 1\)</span> bias <span class="math">\(= 4\)</span>. Total: <span class="math">\(15 + 18 + 4 = 37\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #155</h2>
+        <p>Tags: <a href='../tags/vanishing gradients.html'>vanishing gradients</a>, <a href='../tags/quiz-07.html'>quiz-07</a>, <a href='../tags/lecture-14.html'>lecture-14</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>True or False: one solution to the vanishing gradient problem is to increase the learning rate <span class="math">\(\eta\)</span>.</p>
+
+<div class="true-false">
+    <input type="radio" name="true-false" value="true" /> True
+    <input type="radio" name="true-false" value="false" /> False
+</div>
+
+<details>
+    <summary>Solution</summary>
+<p>False.</p>
+<p>Increasing the learning rate does not fix the vanishing gradient problem. Vanishing gradients arise because, during backpropagation, the chain rule multiplies many small factors together, causing gradients in early layers to shrink exponentially with depth. Increasing <span class="math">\(\eta\)</span> scales all gradient updates equally, so the relative imbalance between layers remains: early-layer gradients are still exponentially smaller than later-layer gradients.</p>
+<p>Actual solutions to the vanishing gradient problem include using ReLU activations (whose derivatives are <span class="math">\(0\)</span> or <span class="math">\(1\)</span>, rather than always small), skip connections, and batch normalization.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #156</h2>
+        <p>Tags: <a href='../tags/gradient descent.html'>gradient descent</a>, <a href='../tags/quiz-07.html'>quiz-07</a>, <a href='../tags/lecture-14.html'>lecture-14</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Recall that the gradient of the square loss at a single data point <span class="math">\((\vec
+    x, y)\)</span> is:</p>
+<div class="math">\[\nabla_{\vec w} L = 2(\operatorname{Aug}(\vec x) \cdot\vec w - y) \operatorname{Aug}(\vec x)
+    \]</div>
+<p>Suppose you are running gradient descent to minimize the empirical risk with respect to the squared loss in order to train a function <span class="math">\(H(x) = w_0 +
+    w_1 x\)</span> on the following data set: <span class="math">\((x, y) \in\{(1, 3),\;(2, 3),\;(3, 6)\}\)</span>.</p>
+<p>Suppose that the initial weight vector is <span class="math">\(\vec w = (0, 0)^T\)</span> and that the learning rate <span class="math">\(\eta = 1/2\)</span>. What will be the weight vector after one iteration of gradient descent?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\((4, 9)^T\)</span>.</p>
+<p>To perform gradient descent, we need to compute the gradient of the risk. The main thing to remember is that the gradient of the risk is the <i>average</i> of the gradient of the loss on each data point.</p>
+<div class="math">\[\newcommand{\Aug}{\operatorname{Aug}}\]</div>
+<p>So to start this problem, calculate the gradient of the loss for each of the three points. Our formula for the gradient of the squared loss tells us to compute <span class="math">\(2(\Aug(\vec x) \cdot\vec w - y) \Aug(\vec x)\)</span> for each point.</p>
+<p>Now, the initial weight vector <span class="math">\(\vec w\)</span> was conveniently chosen to be <span class="math">\(\vec 0\)</span>, meaning that <span class="math">\(\operatorname{Aug}(\vec x) \cdot\vec w = 0\)</span> for all of our data points. Therefore, when we compute <span class="math">\(\operatorname{Aug}(\vec x) \cdot\vec w - y\)</span>, we get <span class="math">\(-y\)</span> for every data point. The gradient of the loss at each of the three data points is:</p>
+<p>Point <span class="math">\((1, 3)\)</span>: <span class="math">\(2(0 - 3)(1, 1)^T = (-6, -6)^T\)</span> Point <span class="math">\((2, 3)\)</span>: <span class="math">\(2(0 - 3)(1, 2)^T = (-6, -12)^T\)</span> Point <span class="math">\((3, 6)\)</span>: <span class="math">\(2(0 - 6)(1, 3)^T = (-12, -36)^T\)</span> This means that the gradient of the risk is the average of these three:</p>
+<div class="math">\[\frac{1}{3}\left(\begin{bmatrix}-6\\-6\end{bmatrix} +
+                \begin{bmatrix}-6\\-12\end{bmatrix} +
+                \begin{bmatrix}-12\\-36\end{bmatrix}\right)=
+            \frac{1}{3}\begin{bmatrix}-24\\-54\end{bmatrix} =
+            \begin{bmatrix}-8\\ -18 \end{bmatrix}\]</div>
+<p>The gradient descent update rule says that <span class="math">\(\vec w^{(1)} = \vec w^{(0)}
+        - \eta\nabla R(\vec w^{(0)})\)</span>. The learning rate <span class="math">\(\eta\)</span> was given as <span class="math">\(1/2\)</span>, so we have:</p>
+<div class="math">\[\vec w^{(1)} = \begin{bmatrix}0\\ 0\end{bmatrix} - \frac{1}{2}\begin{bmatrix}-8\\ -18 \end{bmatrix} = \begin{bmatrix}4\\ 9 \end{bmatrix}\]</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #157</h2>
+        <p>Tags: <a href='../tags/gradient descent.html'>gradient descent</a>, <a href='../tags/quiz-07.html'>quiz-07</a>, <a href='../tags/lecture-14.html'>lecture-14</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Recall that the gradient of the squared loss at a single data point <span class="math">\((\vec
+    x, y)\)</span> is:</p>
+<div class="math">\[\nabla_{\vec w} L = 2(\operatorname{Aug}(\vec x) \cdot\vec w - y) \operatorname{Aug}(\vec x)
+    \]</div>
+<p>Suppose you are running <b>stochastic</b> gradient descent to minimize the empirical risk with respect to the squared loss in order to train a function <span class="math">\(H(x) = w_0 + w_1 x\)</span> on the following data set: <span class="math">\((x, y) \in\{(1, 2),\;(3, 5),\;(2, 1),\;(4, 4),\;(5, 8)\}\)</span>.</p>
+<p>Suppose that the initial weight vector is <span class="math">\(\vec w = (0, 0)^T\)</span>, the learning rate is <span class="math">\(\eta = 1/2\)</span>, and the mini-batch size is 2. If the first mini-batch consists of the 1st and 4th data points, what will be the weight vector after one iteration of stochastic gradient descent?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\((3, 9)^T\)</span>.</p>
+<p>Stochastic gradient descent works like gradient descent, but instead of computing the gradient of the risk over the entire data set, we compute the gradient over a <i>mini-batch</i> --- a small, randomly-chosen subset of the data. The gradient of the risk on the mini-batch is the average of the gradient of the loss on each point in the mini-batch.</p>
+<div class="math">\[\newcommand{\Aug}{\operatorname{Aug}}\]</div>
+<p>The mini-batch consists of the 1st and 4th data points: <span class="math">\((1, 2)\)</span> and <span class="math">\((4, 4)\)</span>. We compute the gradient of the squared loss at each of these points using <span class="math">\(2(\Aug(\vec x) \cdot\vec w - y) \Aug(\vec x)\)</span>.</p>
+<p>Since <span class="math">\(\vec w = \vec 0\)</span>, we have <span class="math">\(\Aug(\vec x) \cdot\vec w = 0\)</span> for both points.</p>
+<p>Point <span class="math">\((1, 2)\)</span>: <span class="math">\(2(0 - 2)(1, 1)^T = (-4, -4)^T\)</span> Point <span class="math">\((4, 4)\)</span>: <span class="math">\(2(0 - 4)(1, 4)^T = (-8, -32)^T\)</span> The gradient of the risk on the mini-batch is the average:</p>
+<div class="math">\[\frac{1}{2}\left(\begin{bmatrix}-4\\-4\end{bmatrix} +
+                \begin{bmatrix}-8\\-32\end{bmatrix}\right)=
+            \frac{1}{2}\begin{bmatrix}-12\\-36\end{bmatrix} =
+            \begin{bmatrix}-6\\ -18 \end{bmatrix}\]</div>
+<p>Applying the update rule <span class="math">\(\vec w^{(1)} = \vec w^{(0)} - \eta\nabla
+        R(\vec w^{(0)})\)</span> with <span class="math">\(\eta = 1/2\)</span>:</p>
+<div class="math">\[\vec w^{(1)} = \begin{bmatrix}0\\ 0\end{bmatrix} - \frac{1}{2}\begin{bmatrix}-6\\ -18 \end{bmatrix} = \begin{bmatrix}3\\ 9 \end{bmatrix}\]</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #158</h2>
+        <p>Tags: <a href='../tags/quiz-07.html'>quiz-07</a>, <a href='../tags/SGD.html'>SGD</a>, <a href='../tags/neural networks.html'>neural networks</a>, <a href='../tags/gradient descent.html'>gradient descent</a>, <a href='../tags/lecture-14.html'>lecture-14</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>True or False: in stochastic gradient descent, each update step moves in the direction of steepest descent of the empirical risk.</p>
+
+<div class="true-false">
+    <input type="radio" name="true-false" value="true" /> True
+    <input type="radio" name="true-false" value="false" /> False
+</div>
+
+<details>
+    <summary>Solution</summary>
+<p>False.</p>
+<p>Each update step moves in the direction of steepest descent of the risk computed on the <i>mini-batch</i>, not the full training set. The mini-batch gradient is only an approximation of the true gradient of the empirical risk. This is what makes each iteration of SGD fast --- computing the gradient over a small mini-batch of <span class="math">\(m\)</span> points is much cheaper than computing it over all <span class="math">\(n\)</span> points --- but it means that the update direction is noisy.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #159</h2>
+        <p>Tags: <a href='../tags/quiz-07.html'>quiz-07</a>, <a href='../tags/SGD.html'>SGD</a>, <a href='../tags/neural networks.html'>neural networks</a>, <a href='../tags/gradient descent.html'>gradient descent</a>, <a href='../tags/lecture-14.html'>lecture-14</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>True or False: stochastic gradient descent generally requires fewer iterations than gradient descent to converge.</p>
+
+<div class="true-false">
+    <input type="radio" name="true-false" value="true" /> True
+    <input type="radio" name="true-false" value="false" /> False
+</div>
+
+<details>
+    <summary>Solution</summary>
+<p>False.</p>
+<p>SGD typically requires <i>more</i> iterations than gradient descent to converge, because each update uses a noisy approximation of the true gradient. However, each iteration of SGD is much cheaper (<span class="math">\(O(md)\)</span> vs. <span class="math">\(O(nd)\)</span> for a mini-batch of size <span class="math">\(m \ll n\)</span>), so SGD often converges faster in terms of total computation time.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #160</h2>
+        <p>Tags: <a href='../tags/gradient descent.html'>gradient descent</a>, <a href='../tags/quiz-07.html'>quiz-07</a>, <a href='../tags/lecture-14.html'>lecture-14</a>, <a href='../tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>True or False: if two neural networks have the same architecture but different random initializations, they are guaranteed to converge to the same solution when trained with gradient descent on the same data.</p>
+
+<div class="true-false">
+    <input type="radio" name="true-false" value="true" /> True
+    <input type="radio" name="true-false" value="false" /> False
+</div>
+
+<details>
+    <summary>Solution</summary>
+<p>False.</p>
+<p>The loss surface of a neural network is non-convex, meaning it has many local minima. Different random initializations place the starting point at different locations on this surface, so gradient descent can follow different paths and converge to different local minima. This is one reason why initialization matters in practice.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
        </body>
    </html>
     </div>
