@@ -113,6 +113,14 @@
                             "path": "materials/quizzes/06-neural_networks/solution.pdf"
                         }
                     }
+                },
+                "07-training_nns": {
+                    "metadata": {
+                        "date": "2026-02-26",
+                        "topic": "Training Neural Networks",
+                        "number": 7
+                    },
+                    "artifacts": {}
                 }
             }
         },
@@ -399,9 +407,19 @@
                         "videos": null,
                         "date": "2026-02-26",
                         "topic": "Convolutional Neural Networks",
-                        "number": 15
+                        "number": 15,
+                        "notebooks": [
+                            {
+                                "title": "CNN on CIFAR-10",
+                                "url": "https://github.com/dsc-courses/dsc140b-2026-wi/tree/gh-pages/materials/default/supplementary/notebook-cnn-cifar"
+                            }
+                        ]
                     },
-                    "artifacts": {}
+                    "artifacts": {
+                        "slides.pdf": {
+                            "path": "materials/lectures/schedules/tr/15-cnn/slides.pdf"
+                        }
+                    }
                 },
                 "16-autoencoders": {
                     "metadata": {
@@ -553,10 +571,10 @@
                         }
                     }
                 },
-                "09-super_hw": {
+                "08-cnns": {
                     "metadata": {
-                        "due": "2023-06-14 23:59:00",
-                        "released": "2023-06-02 21:00:00",
+                        "due": "2026-03-10 00:00:00",
+                        "released": "2026-03-03 00:00:00",
                         "topic": "Super Homework",
                         "number": 8
                     },
@@ -578,6 +596,14 @@
                     "artifacts": {
                         "slides.pdf": {
                             "path": "materials/default/supplementary/math_review/slides.pdf"
+                        }
+                    }
+                },
+                "supplementary/notebook-cnn-cifar": {
+                    "metadata": {},
+                    "artifacts": {
+                        "Notebook.ipynb": {
+                            "path": "materials/default/supplementary/notebook-cnn-cifar/Notebook.ipynb"
                         }
                     }
                 },

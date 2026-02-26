@@ -572,14 +572,13 @@ Live Q&A
     <div class="problem-body">
 <p>Consider the neural network shown below, now with weights and inputs. Assume that the ReLU is the activation function for the hidden layers, and that the output layer uses a linear activation. There are no biases.</p>
 <center><div class="image"><img src="../images/150/fig/nn.png" /></div></center>
-<p>The blue numbers on the edges denote the weights, and the blue numbers above the <span class="math">\(z\)</span>'s and <span class="math">\(a\)</span>'s denote their values. Specifically: <span class="math">\(\vec x = (-2, 3)^T\)</span>. Layer 1: <span class="math">\(z_1^{(1)} = -13\)</span>, <span class="math">\(a_1^{(1)} = 0\)</span>; <span class="math">\(z_2^{(1)} = 9\)</span>, <span class="math">\(a_2^{(1)} = 9\)</span>. Layer 2: <span class="math">\(z_1^{(2)} = 0\)</span>, <span class="math">\(a_1^{(2)} = 0\)</span>; <span class="math">\(z_2^{(2)} = 0\)</span>, <span class="math">\(a_2^{(2)} = 0\)</span>.</p>
+<p>The blue numbers on the edges denote the weights, and the blue numbers above the <span class="math">\(z\)</span>'s and <span class="math">\(a\)</span>'s denote their values. Specifically: <span class="math">\(\vec x = (-2, 3)^T\)</span>. Layer 1: <span class="math">\(z_1^{(1)} = -13\)</span>, <span class="math">\(a_1^{(1)} = 0\)</span>; <span class="math">\(z_2^{(1)} = 9\)</span>, <span class="math">\(a_2^{(1)} = 9\)</span>. Layer 2: <span class="math">\(z_1^{(2)} = 0\)</span>, <span class="math">\(a_1^{(2)} = 0\)</span>; <span class="math">\(z_2^{(2)} = 9\)</span>, <span class="math">\(a_2^{(2)} = 9\)</span>. Output: <span class="math">\(z_1^{(3)} = -18\)</span>, <span class="math">\(a_1^{(3)} = -18\)</span>.</p>
 <p>True or False: <span class="math">\(\partial H / \partial W_{ij}^{(\ell)} = 0\)</span> for all <span class="math">\(i, j, \ell\)</span>.</p>
 <details>
     <summary>Solution</summary>
-<p>True.</p>
-<p>Since <span class="math">\(z_1^{(2)} = 0\)</span> and <span class="math">\(z_2^{(2)} = 0\)</span>, we have <span class="math">\(g'(z_1^{(2)}) = 0\)</span> and <span class="math">\(g'(z_2^{(2)}) = 0\)</span>(treating <span class="math">\(g'(0) = 0\)</span> for ReLU). This means <span class="math">\(\partial H / \partial z_k^{(2)} = 0\)</span> for <span class="math">\(k = 1, 2\)</span>, blocking all gradient flow through layer 2.</p>
-<p>Additionally, <span class="math">\(a_1^{(2)} = a_2^{(2)} = 0\)</span>, so derivatives of <span class="math">\(H\)</span> with respect to the output layer weights are also zero (since they involve multiplication by <span class="math">\(a_k^{(2)}\)</span>).</p>
-<p>Since every path from any weight to the output passes through either a dead ReLU node or a zero activation, all partial derivatives are zero.</p>
+<p>False.</p>
+<p>While <span class="math">\(z_1^{(2)} = 0\)</span> means <span class="math">\(g'(z_1^{(2)}) = 0\)</span>(treating <span class="math">\(g'(0) = 0\)</span> for ReLU), the second node in layer 2 has <span class="math">\(z_2^{(2)} = 9 > 0\)</span>, so <span class="math">\(g'(z_2^{(2)}) = 1\)</span> and gradient flows through it.</p>
+<p>In particular, <span class="math">\(a_2^{(2)} = 9 \neq 0\)</span>, so the derivative of <span class="math">\(H\)</span> with respect to the output weight <span class="math">\(W_{12}^{(3)}\)</span> is <span class="math">\(\frac{\partial H}{\partial W_{12}^{(3)}} = \frac{\partial H}{\partial z_1^{(3)}}\cdot a_2^{(2)}\)</span>, which is nonzero since <span class="math">\(a_2^{(2)} = 9\)</span>.</p>
 </details>
 
     </div>
