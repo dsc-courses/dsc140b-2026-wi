@@ -418,6 +418,9 @@
                     "artifacts": {
                         "slides.pdf": {
                             "path": "materials/lectures/schedules/tr/15-cnn/slides.pdf"
+                        },
+                        "marked.pdf": {
+                            "path": "materials/lectures/schedules/tr/15-cnn/marked.pdf"
                         }
                     }
                 },
