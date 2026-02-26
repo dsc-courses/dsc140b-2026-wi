@@ -581,7 +581,11 @@
                         "topic": "Super Homework",
                         "number": 8
                     },
-                    "artifacts": {}
+                    "artifacts": {
+                        "homework.pdf": {
+                            "path": "materials/homeworks/08-cnns/homework.pdf"
+                        }
+                    }
                 }
             }
         },
