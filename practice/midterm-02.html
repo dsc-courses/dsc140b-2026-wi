@@ -1,0 +1,2215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head data-automata-theme="default">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>DSC 140B</title>
+    <link href="/static/style.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+
+    <!-- Mobile menu button -->
+<div class="mobile-navbar lg:hidden fixed top-0 left-0 right-0 bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 z-50 flex items-center">
+    <button id="mobile-menu-button" class="py-5 pl-4 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
+        <i data-lucide="menu" class="w-6 h-5"></i>
+    </button>
+    <span class="ml-2 font-semibold">DSC 140B</span>
+</div>
+
+    <div class="flex min-h-screen">
+        <!-- Left Navigation Column -->
+        <nav id="sidebar" class="
+    w-64 flex-none
+    fixed lg:sticky
+    top-0 left-0 h-screen
+    transform -translate-x-full lg:translate-x-0 transition-transform duration-200 ease-in-out
+    bg-gray-50 dark:bg-gray-900
+    z-40
+    sidebar-mobile-spacing lg:pt-6
+    flex flex-col items-end
+    border-r lg:border-r-0 border-gray-200 dark:border-gray-700
+    ">
+
+    <div class="pt-6 pr-6 flex">
+        <ul class="space-y-2">
+            
+            <li>
+                <a href="/index.html" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="home" class="mr-2 text-slate-400"></i>
+Home
+                </a>
+            </li>
+            
+            <li>
+                <a href="/syllabus.html" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="scale" class="mr-2 text-slate-400"></i>
+Syllabus
+                </a>
+            </li>
+            
+            <li>
+                <a href="/office_hours.html" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="briefcase-business" class="mr-2 text-slate-400"></i>
+Office Hours
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://campuswire.com/p/G7C157AD2" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="message-circle-more" class="mr-2 text-slate-400"></i>
+Campuswire
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://www.gradescope.com/courses/1212103" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="spell-check" class="mr-2 text-slate-400"></i>
+Gradescope
+                </a>
+            </li>
+            
+            <li>
+                <a href="/practice/index.html" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="dumbbell" class="mr-2 text-slate-400"></i>
+Practice
+                </a>
+            </li>
+            
+            <li>
+                <a href="http://sierra.ucsd.edu/qa/dsc140b" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="message-circle-question-mark" class="mr-2 text-slate-400"></i>
+Live Q&A
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <div class="flex mr-9 pt-3 pb-6">
+        <button id="theme-toggle" class="inline-flex items-center px-3 py-1.5 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded-full transition-colors">
+            <span id="theme-icon" class="mr-1.5">☾</span>
+            <span id="theme-text">Dark</span>
+        </button>
+    </div>
+</nav>
+
+<!-- Overlay for mobile -->
+<div id="overlay" class="fixed inset-0 bg-gray-200/40 dark:bg-black/50 backdrop-blur-[2px] z-30 hidden"></div>
+
+        <!-- Main Content Column -->
+        
+<!-- Main Content Column -->
+<div class="
+    w-full
+    bg-white dark:bg-gray-800
+    md:border-l
+    border-gray-200 dark:border-gray-700
+    md:min-w-180
+    px-4 md:px-12
+    pt-20 lg:pt-12
+    pb-24
+    ">
+
+    <div class="
+    text-xl font-semibold
+    left-12 right-12
+    py-4 lg:pt-0 lg:pb-0 lg:mb-10
+    lg:static
+    truncate
+    flex
+    ">
+    <div class="
+        shrink
+        lg:border-b border-gray-200 dark:border-gray-700
+        ">
+        <span class="hidden lg:inline">
+            DSC 140B
+            &ndash;
+            Representation Learning
+        </span>
+    </div>
+</div>
+
+    <div class="prose dark:prose-invert">
+    <!DOCTYPE html> <html> <head> <meta
+                          charset="utf-8"> <title>Midterm 02</title>
+
+           <!-- MathJax -->
+           <script type="text/x-mathjax-config">
+             MathJax.Hub.Config({
+               tex: {
+                 inlineMath: [ ['$$','$$'], ["\\(","\\)"] ],
+                 displayMath: [             // start/end delimiter pairs for display math
+                     ['\\[', '\\]']
+                 ],
+                 processEscapes: true
+               }
+           });
+           </script>
+
+           <!-- highlightjs -->
+           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+           <!-- and it's easy to individually load additional languages -->
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+
+           <script>hljs.highlightAll();</script>
+
+           <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+           <script type="text/javascript" id="MathJax-script" async
+             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+           </script>
+
+       </head>
+       <body>
+           
+<h1>Midterm 02</h1>
+<p>Practice problems for topics on Midterm 02.</p>
+<p>Tags in this problem set:</p>
+<ul>
+<ul>
+<li><a href='./tags/lecture-09.html'>lecture-09</a></li>
+<li><a href='./tags/lecture-10.html'>lecture-10</a></li>
+<li><a href='./tags/lecture-11.html'>lecture-11</a></li>
+<li><a href='./tags/lecture-12.html'>lecture-12</a></li>
+<li><a href='./tags/lecture-13.html'>lecture-13</a></li>
+<li><a href='./tags/lecture-14.html'>lecture-14</a></li>
+<li><a href='./tags/lecture-15.html'>lecture-15</a></li>
+</ul>
+</ul>
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #108</h2>
+        <p>Tags: <a href='./tags/quiz-05.html'>quiz-05</a>, <a href='./tags/lecture-09.html'>lecture-09</a>, <a href='./tags/feature maps.html'>feature maps</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Suppose you are given the following basis functions that define a feature map <span class="math">\(\vec\phi: \mathbb{R}^3 \to\mathbb{R}^4\)</span>:</p>
+<div class="math">$$\begin{align*}\varphi_1(\vec{x}) &= x_1 x_2 \\\varphi_2(\vec{x}) &= x_2^2 \\\varphi_3(\vec{x}) &= x_3^2 x_1 \\\varphi_4(\vec{x}) &= x_1 x_2 x_3
+    \end{align*}$$</div>
+<p>What is the representation of the data point <span class="math">\(\vec{x} = (3, 2, -1)\)</span> in the new feature space?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\((6, 4, 3, -6)\)</span>.</p>
+<p>We compute each basis function at <span class="math">\(\vec{x} = (3, 2, -1)\)</span>:</p>
+<div class="math">$$\begin{align*}\varphi_1(\vec{x}) &= x_1 x_2 = (3)(2) = 6 \\\varphi_2(\vec{x}) &= x_2^2 = (2)^2 = 4 \\\varphi_3(\vec{x}) &= x_3^2 x_1 = (-1)^2(3) = 3 \\\varphi_4(\vec{x}) &= x_1 x_2 x_3 = (3)(2)(-1) = -6
+        \end{align*}$$</div>
+<p>So <span class="math">\(\vec\phi(\vec{x}) = (6, 4, 3, -6)\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #109</h2>
+        <p>Tags: <a href='./tags/quiz-05.html'>quiz-05</a>, <a href='./tags/lecture-09.html'>lecture-09</a>, <a href='./tags/feature maps.html'>feature maps</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Suppose you are given the following basis functions that define a feature map <span class="math">\(\vec\phi: \mathbb{R}^3 \to\mathbb{R}^4\)</span>:</p>
+<div class="math">$$\begin{align*}\varphi_1(\vec{x}) &= x_1^2 \\\varphi_2(\vec{x}) &= x_2 x_3 \\\varphi_3(\vec{x}) &= x_1 x_3 \\\varphi_4(\vec{x}) &= x_2^2 x_3
+    \end{align*}$$</div>
+<p>What is the representation of the data point <span class="math">\(\vec{x} = (2, -1, 3)\)</span> in the new feature space?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\((4, -3, 6, 3)\)</span>.</p>
+<p>We compute each basis function at <span class="math">\(\vec{x} = (2, -1, 3)\)</span>:</p>
+<div class="math">$$\begin{align*}\varphi_1(\vec{x}) &= x_1^2 = (2)^2 = 4 \\\varphi_2(\vec{x}) &= x_2 x_3 = (-1)(3) = -3 \\\varphi_3(\vec{x}) &= x_1 x_3 = (2)(3) = 6 \\\varphi_4(\vec{x}) &= x_2^2 x_3 = (-1)^2(3) = 3
+        \end{align*}$$</div>
+<p>So <span class="math">\(\vec\phi(\vec{x}) = (4, -3, 6, 3)\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #110</h2>
+        <p>Tags: <a href='./tags/quiz-05.html'>quiz-05</a>, <a href='./tags/lecture-09.html'>lecture-09</a>, <a href='./tags/feature maps.html'>feature maps</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Suppose you are given the following basis functions that define a feature map <span class="math">\(\vec\phi: \mathbb{R}^3 \to\mathbb{R}^4\)</span>:</p>
+<div class="math">$$\begin{align*}\varphi_1(\vec{x}) &= x_2^2 \\\varphi_2(\vec{x}) &= x_1 x_3^2 \\\varphi_3(\vec{x}) &= x_2 x_3 \\\varphi_4(\vec{x}) &= x_1^2
+    \end{align*}$$</div>
+<p>What is the representation of the data point <span class="math">\(\vec{x} = (2, -3, 1)\)</span> in the new feature space?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\((9, 2, -3, 4)\)</span>.</p>
+<p>We compute each basis function at <span class="math">\(\vec{x} = (2, -3, 1)\)</span>:</p>
+<div class="math">$$\begin{align*}\varphi_1(\vec{x}) &= x_2^2 = (-3)^2 = 9 \\\varphi_2(\vec{x}) &= x_1 x_3^2 = (2)(1)^2 = 2 \\\varphi_3(\vec{x}) &= x_2 x_3 = (-3)(1) = -3 \\\varphi_4(\vec{x}) &= x_1^2 = (2)^2 = 4
+        \end{align*}$$</div>
+<p>So <span class="math">\(\vec\phi(\vec{x}) = (9, 2, -3, 4)\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #111</h2>
+        <p>Tags: <a href='./tags/linear classifiers.html'>linear classifiers</a>, <a href='./tags/quiz-05.html'>quiz-05</a>, <a href='./tags/lecture-09.html'>lecture-09</a>, <a href='./tags/feature maps.html'>feature maps</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Suppose we have a feature map <span class="math">\(\varphi : \mathbb{R}^3 \to\mathbb{R}^4\)</span> with the following basis functions:</p>
+<div class="math">$$\begin{align*}\varphi_1(\vec{x}) &= x_1 x_2 \\\varphi_2(\vec{x}) &= x_2^2 \\\varphi_3(\vec{x}) &= x_3^2 x_1 \\\varphi_4(\vec{x}) &= x_1 x_2 x_3
+    \end{align*}$$</div>
+<p>A linear classifier in this feature space has learned the weight vector <span class="math">\(\vec{w} = (w_0, w_1, w_2, w_3, w_4) = (0.4,\; 0.3,\; -0.6,\; 1.3,\; 0.7)\)</span>, where <span class="math">\(w_0 = 0.4\)</span> is the bias (intercept) term. The prediction function is:</p>
+<div class="math">\[
+        H(\vec{x}) = w_0 + w_1 \varphi_1(\vec{x}) + w_2 \varphi_2(\vec{x}) + w_3 \varphi_3(\vec{x}) + w_4 \varphi_4(\vec{x})
+    \]</div>
+<p>What is the value of the prediction function <span class="math">\(H\)</span> for the input point <span class="math">\(\vec{x} = (3, 2, -1)\)</span> in the original <span class="math">\(\mathbb{R}^3\)</span> space?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(-0.5\)</span>.</p>
+<p>First, we compute the feature representation of <span class="math">\(\vec{x} = (3, 2, -1)\)</span>:</p>
+<div class="math">$$\begin{align*}\varphi_1(\vec{x}) &= x_1 x_2 = (3)(2) = 6 \\\varphi_2(\vec{x}) &= x_2^2 = (2)^2 = 4 \\\varphi_3(\vec{x}) &= x_3^2 x_1 = (-1)^2(3) = 3 \\\varphi_4(\vec{x}) &= x_1 x_2 x_3 = (3)(2)(-1) = -6
+        \end{align*}$$</div>
+<p>So the feature vector is <span class="math">\(\varphi(\vec{x}) = (6, 4, 3, -6)\)</span>.</p>
+<p>Then we compute the prediction function:</p>
+<div class="math">$$\begin{align*}
+            H(\vec{x}) &= 0.4 + 0.3(6) + (-0.6)(4) + 1.3(3) + 0.7(-6) \\&= 0.4 + 1.8 - 2.4 + 3.9 - 4.2 \\&= -0.5
+        \end{align*}$$</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #112</h2>
+        <p>Tags: <a href='./tags/linear classifiers.html'>linear classifiers</a>, <a href='./tags/quiz-05.html'>quiz-05</a>, <a href='./tags/lecture-09.html'>lecture-09</a>, <a href='./tags/feature maps.html'>feature maps</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Suppose we have a feature map <span class="math">\(\varphi : \mathbb{R}^3 \to\mathbb{R}^4\)</span> with the following basis functions:</p>
+<div class="math">$$\begin{align*}\varphi_1(\vec{x}) &= x_1^2 \\\varphi_2(\vec{x}) &= x_2 x_3 \\\varphi_3(\vec{x}) &= x_1 x_3 \\\varphi_4(\vec{x}) &= x_2^2 x_3
+    \end{align*}$$</div>
+<p>A linear classifier in this feature space has learned the weight vector <span class="math">\(\vec{w} = (w_0, w_1, w_2, w_3, w_4) = (0.5,\; 0.25,\; -1,\; 0.5,\; -0.5)\)</span>, where <span class="math">\(w_0 = 0.5\)</span> is the bias (intercept) term. The prediction function is:</p>
+<div class="math">\[
+        H(\vec{x}) = w_0 + w_1 \varphi_1(\vec{x}) + w_2 \varphi_2(\vec{x}) + w_3 \varphi_3(\vec{x}) + w_4 \varphi_4(\vec{x})
+    \]</div>
+<p>What is the value of the prediction function <span class="math">\(H\)</span> for the input point <span class="math">\(\vec{x} = (2, -1, 3)\)</span> in the original <span class="math">\(\mathbb{R}^3\)</span> space?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(6\)</span>.</p>
+<p>First, we compute the feature representation of <span class="math">\(\vec{x} = (2, -1, 3)\)</span>:</p>
+<div class="math">$$\begin{align*}\varphi_1(\vec{x}) &= x_1^2 = (2)^2 = 4 \\\varphi_2(\vec{x}) &= x_2 x_3 = (-1)(3) = -3 \\\varphi_3(\vec{x}) &= x_1 x_3 = (2)(3) = 6 \\\varphi_4(\vec{x}) &= x_2^2 x_3 = (-1)^2(3) = 3
+        \end{align*}$$</div>
+<p>So the feature vector is <span class="math">\(\varphi(\vec{x}) = (4, -3, 6, 3)\)</span>.</p>
+<p>Then we compute the prediction function:</p>
+<div class="math">$$\begin{align*}
+            H(\vec{x}) &= 0.5 + 0.25(4) + (-1)(-3) + 0.5(6) + (-0.5)(3) \\&= 0.5 + 1 + 3 + 3 - 1.5 \\&= 6
+        \end{align*}$$</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #113</h2>
+        <p>Tags: <a href='./tags/linear classifiers.html'>linear classifiers</a>, <a href='./tags/quiz-05.html'>quiz-05</a>, <a href='./tags/lecture-09.html'>lecture-09</a>, <a href='./tags/feature maps.html'>feature maps</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Suppose we have a feature map <span class="math">\(\varphi : \mathbb{R}^3 \to\mathbb{R}^4\)</span> with the following basis functions:</p>
+<div class="math">$$\begin{align*}\varphi_1(\vec{x}) &= |x_1 - x_2| \\\varphi_2(\vec{x}) &= |x_3| \\\varphi_3(\vec{x}) &= |x_1 + x_3| \\\varphi_4(\vec{x}) &= |x_2 - x_3|
+    \end{align*}$$</div>
+<p>A linear classifier in this feature space has learned the weight vector <span class="math">\(\vec{w} = (w_0, w_1, w_2, w_3, w_4) = (2,\; -1,\; 3,\; 0.5,\; -2)\)</span>, where <span class="math">\(w_0 = 2\)</span> is the bias (intercept) term. The prediction function is:</p>
+<div class="math">\[
+        H(\vec{x}) = w_0 + w_1 \varphi_1(\vec{x}) + w_2 \varphi_2(\vec{x}) + w_3 \varphi_3(\vec{x}) + w_4 \varphi_4(\vec{x})
+    \]</div>
+<p>What is the value of the prediction function <span class="math">\(H\)</span> for the input point <span class="math">\(\vec{x} = (1, -3, 2)\)</span> in the original <span class="math">\(\mathbb{R}^3\)</span> space?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(-4.5\)</span>.</p>
+<p>First, we compute the feature representation of <span class="math">\(\vec{x} = (1, -3, 2)\)</span>:</p>
+<div class="math">$$\begin{align*}\varphi_1(\vec{x}) &= |x_1 - x_2| = |1 - (-3)| = |4| = 4 \\\varphi_2(\vec{x}) &= |x_3| = |2| = 2 \\\varphi_3(\vec{x}) &= |x_1 + x_3| = |1 + 2| = |3| = 3 \\\varphi_4(\vec{x}) &= |x_2 - x_3| = |{-3} - 2| = |{-5}| = 5
+        \end{align*}$$</div>
+<p>So the feature vector is <span class="math">\(\varphi(\vec{x}) = (4, 2, 3, 5)\)</span>.</p>
+<p>Then we compute the prediction function:</p>
+<div class="math">$$\begin{align*}
+            H(\vec{x}) &= 2 + (-1)(4) + 3(2) + 0.5(3) + (-2)(5) \\&= 2 - 4 + 6 + 1.5 - 10 \\&= -4.5
+        \end{align*}$$</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #114</h2>
+        <p>Tags: <a href='./tags/linear classifiers.html'>linear classifiers</a>, <a href='./tags/quiz-05.html'>quiz-05</a>, <a href='./tags/lecture-09.html'>lecture-09</a>, <a href='./tags/feature maps.html'>feature maps</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider the following data in <span class="math">\(\mathbb{R}\)</span>:</p>
+<center><div class="image"><img src="images/114/fig/number_line.png" /></div></center>
+<p>Note that this data is <b>not</b> linearly separable in <span class="math">\(\mathbb{R}\)</span>. For each of the following transformations that map the data into <span class="math">\(\mathbb{R}^2\)</span>, determine whether the transformed data is linearly separable.</p>
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 1)</h3>
+<p>True or False: The transformation <span class="math">\(x \mapsto(x, x^3)\)</span> makes the data linearly separable in <span class="math">\(\mathbb{R}^2\)</span>.</p>
+
+<div class="true-false">
+    <input type="radio" name="true-false" value="true" /> True
+    <input type="radio" name="true-false" value="false" /> False
+</div>
+
+<details>
+    <summary>Solution</summary>
+<p>False.</p>
+<center><div class="image"><img src="images/114/fig/transform_a.png" /></div></center>
+<p>Since <span class="math">\(x^3\)</span> is a monotonically increasing function, the relative order of the points along the curve <span class="math">\(y = x^3\)</span> is the same as in 1D. The classes remain interleaved and cannot be separated by a line.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 2)</h3>
+<p>True or False: The transformation <span class="math">\(x \mapsto(x, x^2)\)</span> makes the data linearly separable in <span class="math">\(\mathbb{R}^2\)</span>.</p>
+
+<div class="true-false">
+    <input type="radio" name="true-false" value="true" /> True
+    <input type="radio" name="true-false" value="false" /> False
+</div>
+
+<details>
+    <summary>Solution</summary>
+<p>True.</p>
+<center><div class="image"><img src="images/114/fig/transform_b.png" /></div></center>
+<p>The green points have large <span class="math">\(x^2\)</span> values (<span class="math">\(25\)</span> and <span class="math">\(36\)</span>) while the red points have small <span class="math">\(x^2\)</span> values (<span class="math">\(0\)</span> and <span class="math">\(1\)</span>). A horizontal line such as <span class="math">\(x_2 = 10\)</span> separates them.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 3)</h3>
+<p>True or False: The transformation <span class="math">\(x \mapsto(x, |x|)\)</span> makes the data linearly separable in <span class="math">\(\mathbb{R}^2\)</span>.</p>
+
+<div class="true-false">
+    <input type="radio" name="true-false" value="true" /> True
+    <input type="radio" name="true-false" value="false" /> False
+</div>
+
+<details>
+    <summary>Solution</summary>
+<p>True.</p>
+<center><div class="image"><img src="images/114/fig/transform_c.png" /></div></center>
+<p>The green points have large <span class="math">\(|x|\)</span> values (<span class="math">\(5\)</span> and <span class="math">\(6\)</span>) while the red points have small <span class="math">\(|x|\)</span> values (<span class="math">\(0\)</span> and <span class="math">\(1\)</span>). A horizontal line such as <span class="math">\(x_2 = 3\)</span> separates them.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 4)</h3>
+<p>True or False: The transformation <span class="math">\(x \mapsto(x, x)\)</span> makes the data linearly separable in <span class="math">\(\mathbb{R}^2\)</span>.</p>
+
+<div class="true-false">
+    <input type="radio" name="true-false" value="true" /> True
+    <input type="radio" name="true-false" value="false" /> False
+</div>
+
+<details>
+    <summary>Solution</summary>
+<p>False.</p>
+<center><div class="image"><img src="images/114/fig/transform_d.png" /></div></center>
+<p>This transformation maps every point to the line <span class="math">\(y = x\)</span> in <span class="math">\(\mathbb{R}^2\)</span>. The data is effectively still one-dimensional, and the classes remain interleaved along this line.</p>
+</details>
+
+</div>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #115</h2>
+        <p>Tags: <a href='./tags/linear classifiers.html'>linear classifiers</a>, <a href='./tags/quiz-05.html'>quiz-05</a>, <a href='./tags/lecture-09.html'>lecture-09</a>, <a href='./tags/feature maps.html'>feature maps</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider the data shown below:</p>
+<center><div class="image"><img src="images/115/fig/nonseparable.png" /></div></center>
+<p>The data comes from two classes: <span class="math">\(\circ\)</span> and <span class="math">\(+\)</span>.</p>
+<p>Suppose a single basis function will be used to map the data to feature space where a linear classifier will be trained. Which of the below is the best choice of basis function?</p>
+<div class="multiple-choices"><form><div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\varphi(x_1, x_2) = \max\{x_1, x_2\}\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\varphi(x_1, x_2) = x_1 + x_2\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\varphi(x_1, x_2) = x_1^2 + x_2^2\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\varphi(x_1, x_2) = x_1 \cdot x_2\)</span></p></label></div></form></div>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\varphi(x_1, x_2) = x_1 \cdot x_2\)</span>.</p>
+<p>The data has <span class="math">\(\circ\)</span> points in quadrants where <span class="math">\(x_1\)</span> and <span class="math">\(x_2\)</span> have the same sign (so <span class="math">\(x_1 x_2 > 0\)</span>) and <span class="math">\(+\)</span> points where they have opposite signs (so <span class="math">\(x_1 x_2 < 0\)</span>). The product <span class="math">\(x_1 \cdot x_2\)</span> captures this separation, allowing a linear classifier in the 1D feature space to distinguish the classes.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #116</h2>
+        <p>Tags: <a href='./tags/linear classifiers.html'>linear classifiers</a>, <a href='./tags/quiz-05.html'>quiz-05</a>, <a href='./tags/lecture-09.html'>lecture-09</a>, <a href='./tags/feature maps.html'>feature maps</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Define the "triangle" basis function:</p>
+<div class="math">\[\phi(x; c) = \begin{cases} 1 - |x - c|, & |x - c| < 1, \\ 0 & \text{otherwise}. \end{cases}\]</div>
+<p>Three triangle basis functions <span class="math">\(\phi_1\)</span>, <span class="math">\(\phi_2\)</span>, <span class="math">\(\phi_3\)</span> have centers <span class="math">\(c_1 = 1\)</span>, <span class="math">\(c_2 = 4\)</span>, and <span class="math">\(c_3 = 5\)</span>, respectively. These basis functions map data from <span class="math">\(\mathbb{R}\)</span> to feature space <span class="math">\(\mathbb{R}^3\)</span> via <span class="math">\(x \mapsto(\phi_1(x), \phi_2(x), \phi_3(x))^T\)</span>.</p>
+<p>A linear predictor in feature space has equation:</p>
+<div class="math">\[H_\phi(\vec{z}) = 2z_1 - z_2 + 3z_3\]</div>
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 1)</h3>
+<p>What is the representation of <span class="math">\(x = 4.5\)</span> in feature space?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\((0, 1/2, 1/2)^T\)</span>.</p>
+<p>We evaluate each basis function at <span class="math">\(x = 4.5\)</span>:</p>
+<div class="math">$$\begin{align*}\phi_1(4.5) &= 0, \quad\text{since } |4.5 - 1| = 3.5 \geq 1 \\\phi_2(4.5) &= 1 - |4.5 - 4| = 1 - 0.5 = 1/2 \\\phi_3(4.5) &= 1 - |4.5 - 5| = 1 - 0.5 = 1/2
+                \end{align*}$$</div>
+<p>Therefore, the feature space representation is <span class="math">\((0, 1/2, 1/2)^T\)</span>.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 2)</h3>
+<p>What is <span class="math">\(H(4.5)\)</span> in the original space?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(1\)</span>.</p>
+<p>Using the feature space representation from part (a):</p>
+<div class="math">$$\begin{align*}
+                    H(4.5) &= H_\phi(0,\, 1/2,\, 1/2) \\&= 2(0) - (1/2) + 3(1/2) \\&= 0 - 1/2 + 3/2 \\&= 1
+                \end{align*}$$</div>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 3)</h3>
+<p>Plot <span class="math">\(H(x)\)</span>(the prediction function in the original space) from 0 to 8 on the grid below.</p>
+<center><div class="image"><img src="images/116/fig/grid.png" /></div></center>
+<details>
+    <summary>Solution</summary>
+<center><div class="image"><img src="images/116/fig/soln.png" /></div></center>
+</details>
+
+</div>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #117</h2>
+        <p>Tags: <a href='./tags/linear classifiers.html'>linear classifiers</a>, <a href='./tags/quiz-05.html'>quiz-05</a>, <a href='./tags/lecture-09.html'>lecture-09</a>, <a href='./tags/feature maps.html'>feature maps</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider the data shown below:</p>
+<center><div class="image"><img src="images/117/fig/data.png" /></div></center>
+<p>The data comes from two classes: <span class="math">\(\circ\)</span> and <span class="math">\(+\)</span>.</p>
+<p>Suppose a single basis function will be used to map the data to feature space where a linear classifier will be trained. Which of the below is the best choice of basis function?</p>
+<div class="multiple-choices"><form><div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\varphi(x_1, x_2) = \min\{x_1, x_2\}\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\varphi(x_1, x_2) = x_1 + x_2\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\varphi(x_1, x_2) = x_1^2 + x_2^2\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\varphi(x_1, x_2) = x_1 \cdot x_2\)</span></p></label></div></form></div>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\varphi(x_1, x_2) = \min\{x_1, x_2\}\)</span>.</p>
+<p>The data has <span class="math">\(\circ\)</span> points where both coordinates are large and <span class="math">\(+\)</span> points where at least one coordinate is small. The minimum of the two coordinates captures this: <span class="math">\(\circ\)</span> points have a large minimum while <span class="math">\(+\)</span> points have a small minimum. This allows a linear classifier in the 1D feature space to separate the classes.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #118</h2>
+        <p>Tags: <a href='./tags/linear classifiers.html'>linear classifiers</a>, <a href='./tags/quiz-05.html'>quiz-05</a>, <a href='./tags/lecture-09.html'>lecture-09</a>, <a href='./tags/feature maps.html'>feature maps</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Define the "box" basis function:</p>
+<div class="math">\[\phi(x; c) = \begin{cases} 1, & |x - c| \leq 1, \\ 0 & \text{otherwise}. \end{cases}\]</div>
+<p>Three box basis functions <span class="math">\(\phi_1\)</span>, <span class="math">\(\phi_2\)</span>, <span class="math">\(\phi_3\)</span> have centers <span class="math">\(c_1 = 1\)</span>, <span class="math">\(c_2 = 2\)</span>, and <span class="math">\(c_3 = 6\)</span>, respectively. These basis functions map data from <span class="math">\(\mathbb{R}\)</span> to feature space <span class="math">\(\mathbb{R}^3\)</span> via <span class="math">\(x \mapsto(\phi_1(x), \phi_2(x), \phi_3(x))^T\)</span>.</p>
+<p>A linear predictor in feature space has equation:</p>
+<div class="math">\[H_\phi(\vec{z}) = 3z_1 - z_2 - 2z_3\]</div>
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 1)</h3>
+<p>What is the representation of <span class="math">\(x = 1.5\)</span> in feature space?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\((1, 1, 0)^T\)</span>.</p>
+<p>We evaluate each basis function at <span class="math">\(x = 1.5\)</span>:</p>
+<div class="math">$$\begin{align*}\phi_1(1.5) &= 1, \quad\text{since } |1.5 - 1| = 0.5 \leq 1 \\\phi_2(1.5) &= 1, \quad\text{since } |1.5 - 2| = 0.5 \leq 1 \\\phi_3(1.5) &= 0, \quad\text{since } |1.5 - 6| = 4.5 > 1
+                \end{align*}$$</div>
+<p>Therefore, the feature space representation is <span class="math">\((1, 1, 0)^T\)</span>.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 2)</h3>
+<p>What is <span class="math">\(H(2.5)\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(-1\)</span>.</p>
+<p>First, we find the feature space representation of <span class="math">\(x = 2.5\)</span>:</p>
+<div class="math">$$\begin{align*}\phi_1(2.5) &= 0, \quad\text{since } |2.5 - 1| = 1.5 > 1 \\\phi_2(2.5) &= 1, \quad\text{since } |2.5 - 2| = 0.5 \leq 1 \\\phi_3(2.5) &= 0, \quad\text{since } |2.5 - 6| = 3.5 > 1
+                \end{align*}$$</div>
+<p>Then:</p>
+<div class="math">$$\begin{align*}
+                    H(2.5) &= H_\phi(0, 1, 0) \\&= 3(0) - (1) - 2(0) \\&= -1
+                \end{align*}$$</div>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 3)</h3>
+<p>Plot <span class="math">\(H(x)\)</span>(the prediction function in the original space) from 0 to 8 on the grid below.</p>
+<center><div class="image"><img src="images/118/fig/grid.png" /></div></center>
+<details>
+    <summary>Solution</summary>
+<center><div class="image"><img src="images/118/fig/soln.png" /></div></center>
+</details>
+
+</div>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #119</h2>
+        <p>Tags: <a href='./tags/quiz-05.html'>quiz-05</a>, <a href='./tags/RBF networks.html'>RBF networks</a>, <a href='./tags/lecture-10.html'>lecture-10</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Suppose a Gaussian RBF network <span class="math">\(H(\vec x) : \mathbb{R}^2 \to\mathbb{R}\)</span> is trained on a binary classification dataset using four Gaussian RBFs located at <span class="math">\(\vec\mu_1 = (0,0)\)</span>, <span class="math">\(\vec\mu_2 = (1,0)\)</span>, <span class="math">\(\vec\mu_3 = (0,1)\)</span>, and <span class="math">\(\vec\mu_4 = (1,1)\)</span>.</p>
+<p>All four RBFs use the same width parameter, <span class="math">\(\sigma\)</span>.</p>
+<p>After training, it is found that the weights corresponding to the four basis functions are <span class="math">\(w_1 = -3\)</span>, <span class="math">\(w_2 = 3\)</span>, <span class="math">\(w_3 = 3\)</span>, <span class="math">\(w_4 = -3\)</span>.</p>
+<p>Which of the below could show the decision boundary of <span class="math">\(H\)</span>? The plusses and minuses show where the prediction function, <span class="math">\(H\)</span>, is positive and negative.</p>
+<div class="multiple-choices"><form><div class="choice"><label><input name="choice" class="choice" type="radio" /><center><div class="image"><img src="images/119/fig/db-b.png" /></div></center></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><center><div class="image"><img src="images/119/fig/db-a.png" /></div></center></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><center><div class="image"><img src="images/119/fig/db-c.png" /></div></center></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><center><div class="image"><img src="images/119/fig/db-d.png" /></div></center></label></div></form></div>
+<details>
+    <summary>Solution</summary>
+<p>The second plot is correct.</p>
+<p>The weights <span class="math">\(w_2 = 3\)</span> and <span class="math">\(w_3 = 3\)</span> are positive at <span class="math">\((1,0)\)</span> and <span class="math">\((0,1)\)</span>, while <span class="math">\(w_1 = -3\)</span> and <span class="math">\(w_4 = -3\)</span> are negative at <span class="math">\((0,0)\)</span> and <span class="math">\((1,1)\)</span>. This means <span class="math">\(H\)</span> is positive near <span class="math">\((1,0)\)</span> and <span class="math">\((0,1)\)</span> and negative near <span class="math">\((0,0)\)</span> and <span class="math">\((1,1)\)</span>. The decision boundary separates these regions, running diagonally through the square.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #120</h2>
+        <p>Tags: <a href='./tags/lecture-10.html'>lecture-10</a>, <a href='./tags/quiz-05.html'>quiz-05</a>, <a href='./tags/RBF networks.html'>RBF networks</a>, <a href='./tags/feature maps.html'>feature maps</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Let <span class="math">\(\mathcal{X} = \{(\vec{x}^{(1)}, y_1), \ldots, (\vec{x}^{(100)}, y_{100})\}\)</span> be a dataset of 100 points, where each feature vector <span class="math">\(\vec{x}^{(i)}\in\mathbb{R}^{50}\)</span>. Suppose a Gaussian RBF network is trained using 25 Gaussian basis functions.</p>
+<p>Recall that a Gaussian RBF network can be viewed as mapping the data to feature space, where a linear prediction rule is trained. In the above scenario, what is the dimensionality of this feature space?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(25\)</span>.</p>
+<p>Each Gaussian basis function produces one feature (the output of that basis function applied to the input). With 25 basis functions, the feature space is <span class="math">\(\mathbb{R}^{25}\)</span>. The dimensionality of the feature space equals the number of basis functions, not the original input dimension.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #121</h2>
+        <p>Tags: <a href='./tags/quiz-05.html'>quiz-05</a>, <a href='./tags/RBF networks.html'>RBF networks</a>, <a href='./tags/lecture-10.html'>lecture-10</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Does standardizing features affect the output of a Gaussian RBF network?</p>
+<p>More precisely, let <span class="math">\(\mathcal{X} = \{(\vec{x}^{(1)}, y_1), \ldots, (\vec{x}^{(n)}, y_n)\}\)</span> be a dataset, and let <span class="math">\(\mathcal{Z} = \{(\vec{z}^{(1)}, y_1), \ldots, (\vec{z}^{(n)}, y_n)\}\)</span> be the dataset obtained by standardizing each feature in <span class="math">\(\mathcal{X}\)</span>(that is, each feature is scaled to have unit standard deviation and zero mean). Note that the <span class="math">\(y_i\)</span>'s are not standardized -- they are the same in both datasets.</p>
+<p>Suppose <span class="math">\(H_\mathcal{X}(\vec{x})\)</span> is a Gaussian RBF network trained by minimizing mean squared error on <span class="math">\(\mathcal{X}\)</span>, and <span class="math">\(H_\mathcal{Z}(\vec{z})\)</span> is a Gaussian RBF network trained by minimizing mean squared error on <span class="math">\(\mathcal{Z}\)</span>. Both RBF networks use the same width parameters, <span class="math">\(\sigma\)</span>. The centers used in <span class="math">\(H_\mathcal{Z}\)</span> are obtained by standardizing the centers used in <span class="math">\(H_\mathcal{X}\)</span> using the mean and standard deviation of the data, <span class="math">\(\vec{x}^{(i)}\)</span>.</p>
+<p>True or False: it must be the case that <span class="math">\(H_\mathcal{X}(\vec{x}^{(i)}) =
+    H_\mathcal{Z}(\vec{z}^{(i)})\)</span> for all <span class="math">\(i \in\{1, \ldots, n\}\)</span>.</p>
+
+<div class="true-false">
+    <input type="radio" name="true-false" value="true" /> True
+    <input type="radio" name="true-false" value="false" /> False
+</div>
+
+<details>
+    <summary>Solution</summary>
+<p>False.</p>
+<p>Standardizing changes the distances between points and centers. The Gaussian basis function <span class="math">\(\varphi(\vec{x}; \vec{\mu}, \sigma) = e^{-\|\vec{x} -
+        \vec{\mu}\|^2 / \sigma^2}\)</span> depends on the Euclidean distance <span class="math">\(\|\vec{x} -
+        \vec{\mu}\|\)</span>. While the centers are standardized along with the data, the width parameter <span class="math">\(\sigma\)</span> remains the same. Since standardizing changes the scale of the features (and thus the distances), using the same <span class="math">\(\sigma\)</span> will produce different basis function outputs, leading to different predictions.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #122</h2>
+        <p>Tags: <a href='./tags/quiz-05.html'>quiz-05</a>, <a href='./tags/RBF networks.html'>RBF networks</a>, <a href='./tags/lecture-10.html'>lecture-10</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider the following labeled data set of three points:</p>
+<div class="math">$$\begin{align*}(x_1, y_1) &= (1, 3) \\(x_2, y_2) &= (5, 1) \\(x_3, y_3) &= (6, 3)
+    \end{align*}$$</div>
+<p>A Gaussian RBF network <span class="math">\(H(x) : \mathbb{R}\to\mathbb{R}\)</span> is trained on this data with two Gaussian basis functions of the form <span class="math">\(\varphi_i(x; \mu_i, \sigma_i)
+    = e^{-(x - \mu_i)^2 / \sigma_i^2}\)</span>. The centers of the basis functions are at <span class="math">\(\mu_1 = 2\)</span> and <span class="math">\(\mu_2 = 6\)</span>, and both use a width parameter of <span class="math">\(\sigma =
+    \sigma_1 = \sigma_2 = 1\)</span>.</p>
+<p>Suppose the RBF network does not have a bias parameter, so that the prediction function is <span class="math">\(H(x) = w_1 \varphi_1(x) + w_2 \varphi_2(x)\)</span>.</p>
+<p>What is <span class="math">\(w_1\)</span>, approximately? Your answer may involve <span class="math">\(e\)</span>, but should evaluate to a number.</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(w_1 \approx 3e\)</span>.</p>
+<p>We evaluate the basis functions at each data point. Note that when a basis function center is far from a data point, the Gaussian evaluates to approximately zero.</p>
+<p>At <span class="math">\(x_1 = 1\)</span>: <span class="math">\(\varphi_1(1) = e^{-(1-2)^2} = e^{-1}\)</span> and <span class="math">\(\varphi_2(1)
+        = e^{-(1-6)^2} = e^{-25}\approx 0\)</span>.</p>
+<p>At <span class="math">\(x_3 = 6\)</span>: <span class="math">\(\varphi_1(6) = e^{-(6-2)^2} = e^{-16}\approx 0\)</span> and <span class="math">\(\varphi_2(6) = e^{0} = 1\)</span>.</p>
+<p>So <span class="math">\(H(1) \approx w_1 e^{-1} = y_1 = 3\)</span>, giving <span class="math">\(w_1 \approx 3e\)</span>. Similarly, <span class="math">\(H(6) \approx w_2 = y_3 = 3\)</span>, confirming <span class="math">\(w_2 \approx 3\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #123</h2>
+        <p>Tags: <a href='./tags/lecture-10.html'>lecture-10</a>, <a href='./tags/quiz-05.html'>quiz-05</a>, <a href='./tags/RBF networks.html'>RBF networks</a>, <a href='./tags/feature maps.html'>feature maps</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider a Gaussian RBF network with three basis functions of the form <span class="math">\(\varphi_i(\vec x) = e^{-\|\vec x - \vec \mu^{(i)}\|^2 / \sigma^2}\)</span>, where <span class="math">\(\sigma = 2\)</span> for all basis functions. The centers <span class="math">\(\vec\mu^{(1)}\)</span>, <span class="math">\(\vec\mu^{(2)}\)</span>, and <span class="math">\(\vec\mu^{(3)}\)</span> are shown as black <span class="math">\(\times\)</span> markers in the figure below.</p>
+<center><div class="image"><img src="images/123/fig/rbf_points.png" /></div></center>
+<p>Recall that a Gaussian RBF network can be viewed as mapping data points to a feature space, where the new representation of a point <span class="math">\(\vec x\)</span> is:</p>
+<div class="math">\[\vec f(\vec x) = \begin{pmatrix} \varphi_1(\vec x) \\ \varphi_2(\vec x) \\ \varphi_3(\vec x) \end{pmatrix}\]</div>
+<p>Suppose a point <span class="math">\(\vec x\)</span> has the following feature representation:</p>
+<div class="math">\[\vec f(\vec x) \approx\begin{pmatrix} 0 \\ 0 \\ 0.73 \end{pmatrix}\]</div>
+<p>Which of the labeled points (a, b, c, or d) could be <span class="math">\(\vec x\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p>The answer is <b>c</b>.</p>
+<p>The feature representation tells us that <span class="math">\(\varphi_1(\vec x) \approx 0\)</span>, <span class="math">\(\varphi_2(\vec x) \approx 0\)</span>, and <span class="math">\(\varphi_3(\vec x) \approx 0.73\)</span>.</p>
+<p>Since a Gaussian basis function <span class="math">\(\varphi_i(\vec x) = e^{-\|\vec x - \vec
+        \mu^{(i)}\|^2 / \sigma^2}\)</span> outputs values close to 1 when <span class="math">\(\vec x\)</span> is near the center <span class="math">\(\vec\mu^{(i)}\)</span> and values close to 0 when <span class="math">\(\vec x\)</span> is far from the center, the feature representation indicates that <span class="math">\(\vec x\)</span> is far from <span class="math">\(\vec\mu^{(1)}\)</span> and <span class="math">\(\vec\mu^{(2)}\)</span>(since <span class="math">\(\varphi_1 \approx 0\)</span> and <span class="math">\(\varphi_2 \approx 0\)</span>), but relatively close to <span class="math">\(\vec\mu^{(3)}\)</span>(since <span class="math">\(\varphi_3 \approx 0.73\)</span>).</p>
+<p>Looking at the figure, point c is the only point that is close to <span class="math">\(\vec\mu^{(3)}\)</span> and far from both <span class="math">\(\vec\mu^{(1)}\)</span> and <span class="math">\(\vec\mu^{(2)}\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #124</h2>
+        <p>Tags: <a href='./tags/lecture-10.html'>lecture-10</a>, <a href='./tags/quiz-05.html'>quiz-05</a>, <a href='./tags/RBF networks.html'>RBF networks</a>, <a href='./tags/feature maps.html'>feature maps</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider a Gaussian RBF network with three basis functions of the form <span class="math">\(\varphi_i(\vec x) = e^{-\|\vec x - \vec \mu^{(i)}\|^2 / \sigma^2}\)</span>, where <span class="math">\(\sigma = 3\)</span> for all basis functions. The centers <span class="math">\(\vec\mu^{(1)}\)</span>, <span class="math">\(\vec\mu^{(2)}\)</span>, and <span class="math">\(\vec\mu^{(3)}\)</span> are shown as black <span class="math">\(\times\)</span> markers in the figure below.</p>
+<center><div class="image"><img src="images/124/fig/rbf_point.png" /></div></center>
+<p>Recall that a Gaussian RBF network can be viewed as mapping data points to a feature space, where the new representation of a point <span class="math">\(\vec x\)</span> is:</p>
+<div class="math">\[\vec f(\vec x) = \begin{pmatrix} \varphi_1(\vec x) \\ \varphi_2(\vec x) \\ \varphi_3(\vec x) \end{pmatrix}\]</div>
+<p>One of the following is the feature representation of the highlighted point <span class="math">\(\vec x\)</span>. Which one?</p>
+<div class="multiple-choices"><form><div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\vec f(\vec x) \approx\begin{pmatrix} 0.73 \\ 0 \\ 0 \end{pmatrix}\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\vec f(\vec x) \approx\begin{pmatrix} 0 \\ 0.73 \\ 0 \end{pmatrix}\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\vec f(\vec x) \approx\begin{pmatrix} 0 \\ 0 \\ 0.73 \end{pmatrix}\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\vec f(\vec x) \approx\begin{pmatrix} 0.18 \\ 0.18 \\ 0.26 \end{pmatrix}\)</span></p></label></div></form></div>
+<details>
+    <summary>Solution</summary>
+<p>The answer is <span class="math">\(\vec f(\vec x) \approx(0.18, 0.18, 0.26)^T\)</span>.</p>
+<p>The highlighted point <span class="math">\(\vec x\)</span> is not particularly close to any of the three centers. It is roughly equidistant from <span class="math">\(\vec\mu^{(1)}\)</span> and <span class="math">\(\vec\mu^{(2)}\)</span>, and slightly closer to <span class="math">\(\vec\mu^{(3)}\)</span>.</p>
+<p>Since a Gaussian basis function outputs values close to 1 only when the input is very near the center and decays toward 0 as the distance increases, we expect all three basis functions to output moderate, nonzero values. This rules out the first three options, which each have one large value and two zeros (corresponding to a point very close to a single center).</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #125</h2>
+        <p>Tags: <a href='./tags/lecture-11.html'>lecture-11</a>, <a href='./tags/forward pass.html'>forward pass</a>, <a href='./tags/quiz-06.html'>quiz-06</a>, <a href='./tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider a neural network <span class="math">\(H(\vec x)\)</span> shown below:</p>
+<center><div class="image"><img src="images/125/fig/nn.png" /></div></center>
+<p>Let the weights of the network be:</p>
+<div class="math">\[
+        W^{(1)} = \begin{pmatrix}
+            3 & 2 \\
+            -1 & 2 \\
+            -1 & 4
+        \end{pmatrix}\quad
+        W^{(2)} = \begin{pmatrix}
+            5 & 1 \\
+            1 & 2
+        \end{pmatrix}\quad
+        W^{(3)} = \begin{pmatrix}
+            2 \\
+            -3
+        \end{pmatrix}\]</div>
+<p>Assume that all nodes use <b>linear</b> activation functions, and that all biases are zero.</p>
+<p>Suppose <span class="math">\(\vec x = (2, 0, -2)^T\)</span>.</p>
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 1)</h3>
+<p>What is <span class="math">\(a_1^{(1)}\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p>With linear activations, <span class="math">\(a = z\)</span> at every node.</p>
+<p><span class="math">\(z_1^{(1)} = 3(2) + (-1)(0) + (-1)(-2) = 8\)</span>, so <span class="math">\(a_1^{(1)} = 8\)</span>.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 2)</h3>
+<p>What is <span class="math">\(a_2^{(2)}\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p>Layer 1: <span class="math">\(\vec a^{(1)} = (8, -4)^T\)</span>. Layer 2: <span class="math">\(z_2^{(2)} = 1(8) + 2(-4) = 0\)</span>, so <span class="math">\(a_2^{(2)} = 0\)</span>.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 3)</h3>
+<p>What is <span class="math">\(H(\vec x)\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p>Layer 2: <span class="math">\(\vec a^{(2)} = (36, 0)^T\)</span>. <span class="math">\(H(\vec x) = 2(36) + (-3)(0) = 72\)</span>.</p>
+</details>
+
+</div>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #126</h2>
+        <p>Tags: <a href='./tags/neural networks.html'>neural networks</a>, <a href='./tags/quiz-06.html'>quiz-06</a>, <a href='./tags/activation functions.html'>activation functions</a>, <a href='./tags/forward pass.html'>forward pass</a>, <a href='./tags/lecture-11.html'>lecture-11</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider a neural network <span class="math">\(H(\vec x)\)</span> shown below:</p>
+<center><div class="image"><img src="images/126/fig/nn.png" /></div></center>
+<p>Let the weights of the network be:</p>
+<div class="math">\[
+        W^{(1)} = \begin{pmatrix}
+            3 & 2 \\
+            -1 & 2 \\
+            -1 & 4
+        \end{pmatrix}\quad
+        W^{(2)} = \begin{pmatrix}
+            5 & 1 \\
+            1 & 2
+        \end{pmatrix}\quad
+        W^{(3)} = \begin{pmatrix}
+            2 \\
+            -3
+        \end{pmatrix}\]</div>
+<p>Assume that all hidden nodes use <b>ReLU activation</b> functions, that the output node uses a linear activation, and that all biases are zero.</p>
+<p>Suppose <span class="math">\(\vec x = (2, 0, -2)^T\)</span>.</p>
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 1)</h3>
+<p>What is <span class="math">\(a_1^{(1)}\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(z_1^{(1)} = 3(2) + (-1)(0) + (-1)(-2) = 8\)</span>, so <span class="math">\(a_1^{(1)} = \text{ReLU}(8) = 8\)</span>.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 2)</h3>
+<p>What is <span class="math">\(a_2^{(2)}\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(z_2^{(1)} = 2(2) + 2(0) + 4(-2) = -4\)</span>, so <span class="math">\(a_2^{(1)} = \text{ReLU}(-4) = 0\)</span>. Now <span class="math">\(\vec a^{(1)} = (8, 0)^T\)</span>. Layer 2: <span class="math">\(z_2^{(2)} = 1(8) + 2(0) = 8\)</span>, so <span class="math">\(a_2^{(2)} = \text{ReLU}(8) = 8\)</span>.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 3)</h3>
+<p>What is <span class="math">\(H(\vec x)\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(z_1^{(2)} = 5(8) + 1(0) = 40\)</span>, <span class="math">\(a_1^{(2)} = 40\)</span>. So <span class="math">\(\vec a^{(2)} = (40, 8)^T\)</span>. <span class="math">\(H(\vec x) = 2(40) + (-3)(8) = 56\)</span>.</p>
+</details>
+
+</div>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #127</h2>
+        <p>Tags: <a href='./tags/lecture-11.html'>lecture-11</a>, <a href='./tags/quiz-06.html'>quiz-06</a>, <a href='./tags/neural networks.html'>neural networks</a>, <a href='./tags/feature maps.html'>feature maps</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider a neural network <span class="math">\(H(\vec x)\)</span> shown below:</p>
+<center><div class="image"><img src="images/127/fig/nn.png" /></div></center>
+<p>The first layer of this neural network can be thought of as a function <span class="math">\(f:
+    \mathbb R^d \to\mathbb R^k\)</span> mapping feature vectors to a new representation. What are <span class="math">\(d\)</span> and <span class="math">\(k\)</span> in this case?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(d = 4\)</span> and <span class="math">\(k = 2\)</span>.</p>
+<p>The first layer takes the 4-dimensional input and maps it to a 2-dimensional representation (the number of nodes in the first hidden layer).</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #128</h2>
+        <p>Tags: <a href='./tags/lecture-11.html'>lecture-11</a>, <a href='./tags/quiz-06.html'>quiz-06</a>, <a href='./tags/neural networks.html'>neural networks</a>, <a href='./tags/feature maps.html'>feature maps</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider a neural network <span class="math">\(H(\vec x)\)</span> shown below:</p>
+<center><div class="image"><img src="images/128/fig/nn.png" /></div></center>
+<p>The first layer of this neural network can be thought of as a function <span class="math">\(f:
+    \mathbb R^d \to\mathbb R^k\)</span> mapping feature vectors to a new representation. What is this new representation if</p>
+<div class="math">\[
+        W^{(1)} =
+        \begin{pmatrix}
+            3 & 2 & 1 \\
+            -2 & -1 & 4
+        \end{pmatrix}\]</div>
+<p>and <span class="math">\(\vec x = (3, -1)^T\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p>The new representation is <span class="math">\(\vec z^{(1)}\)</span>, where <span class="math">\(z_j^{(1)} = \sum_i W_{ij}^{(1)} x_i\)</span>. Computing:</p>
+<div class="math">$$\begin{align*}
+            z_1^{(1)}&= 3(3) + (-2)(-1) = 11 \\
+            z_2^{(1)}&= 2(3) + (-1)(-1) = 7 \\
+            z_3^{(1)}&= 1(3) + 4(-1) = -1
+        \end{align*}$$</div>
+<p>So the new representation is <span class="math">\((11, 7, -1)^T\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #129</h2>
+        <p>Tags: <a href='./tags/backpropagation.html'>backpropagation</a>, <a href='./tags/quiz-06.html'>quiz-06</a>, <a href='./tags/neural networks.html'>neural networks</a>, <a href='./tags/lecture-12.html'>lecture-12</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Suppose <span class="math">\(H\)</span> is the neural network shown below:</p>
+<center><div class="image"><img src="images/129/fig/nn.png" /></div></center>
+<p>You may assume that all hidden and output nodes have a bias, but that the bias is just not drawn for simplicity.</p>
+<p>The gradient of <span class="math">\(H\)</span> with respect to the parameters is a vector. What is this vector's dimensionality?</p>
+<details>
+    <summary>Solution</summary>
+<p>Count all weights and biases. Layer 1: <span class="math">\(3 \times 4\)</span> weights <span class="math">\(+ \; 4\)</span> biases <span class="math">\(= 16\)</span>. Layer 2: <span class="math">\(4 \times 2\)</span> weights <span class="math">\(+ \; 2\)</span> biases <span class="math">\(= 10\)</span>. Output: <span class="math">\(2 \times 1\)</span> weights <span class="math">\(+ \; 1\)</span> bias <span class="math">\(= 3\)</span>. Total: <span class="math">\(16 + 10 + 3 = 29\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #130</h2>
+        <p>Tags: <a href='./tags/backpropagation.html'>backpropagation</a>, <a href='./tags/quiz-06.html'>quiz-06</a>, <a href='./tags/neural networks.html'>neural networks</a>, <a href='./tags/lecture-12.html'>lecture-12</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Suppose <span class="math">\(H\)</span> is the neural network shown below:</p>
+<center><div class="image"><img src="images/130/fig/nn.png" /></div></center>
+<p>You may assume that all hidden and output nodes have a bias, but that the bias is just not drawn for simplicity.</p>
+<p>The gradient of <span class="math">\(H\)</span> with respect to the parameters is a vector. What is this vector's dimensionality?</p>
+<details>
+    <summary>Solution</summary>
+<p>Count all weights and biases. Layer 1: <span class="math">\(2 \times 5\)</span> weights <span class="math">\(+ \; 5\)</span> biases <span class="math">\(= 15\)</span>. Layer 2: <span class="math">\(5 \times 3\)</span> weights <span class="math">\(+ \; 3\)</span> biases <span class="math">\(= 18\)</span>. Output: <span class="math">\(3 \times 1\)</span> weights <span class="math">\(+ \; 1\)</span> bias <span class="math">\(= 4\)</span>. Total: <span class="math">\(15 + 18 + 4 = 37\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #131</h2>
+        <p>Tags: <a href='./tags/activation functions.html'>activation functions</a>, <a href='./tags/lecture-11.html'>lecture-11</a>, <a href='./tags/quiz-06.html'>quiz-06</a>, <a href='./tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>In the following, when we say a function <span class="math">\(f(x)\)</span> "looks like a ReLU", we mean that it has a flat part where <span class="math">\(f(x) = 0\)</span>, and a linear part with a slope (not necessarily equal to one).</p>
+<p>Suppose a deep neural network <span class="math">\(H(x): \mathbb R \to\mathbb R\)</span> uses ReLU activations in all of its hidden layers.</p>
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 1)</h3>
+<p>Suppose in addition that the output node uses a linear activation. True or False: when plotted, <span class="math">\(H(x)\)</span> must look like a ReLU.</p>
+<details>
+    <summary>Solution</summary>
+<p>False. A deep ReLU network with linear output is a piecewise linear function, but it can have <i>many</i> linear pieces, not just two. For example, a network with many hidden units can produce a function with several "bends" in it, which does not look like a ReLU.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 2)</h3>
+<p>Suppose instead that the output node <i>also</i> uses a sigmoid activation. True or False: when plotted, <span class="math">\(H(x)\)</span> must look like a ReLU.</p>
+<details>
+    <summary>Solution</summary>
+<p>False. Composing a piecewise linear function with a sigmoid produces a smooth, S-shaped curve, which does not look like a ReLU.</p>
+</details>
+
+</div>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #132</h2>
+        <p>Tags: <a href='./tags/activation functions.html'>activation functions</a>, <a href='./tags/lecture-11.html'>lecture-11</a>, <a href='./tags/quiz-06.html'>quiz-06</a>, <a href='./tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Suppose that when a deep neural network <span class="math">\(H(x): \mathbb R \to\mathbb R\)</span> is plotted, the resulting graph looks like the following:</p>
+<center><div class="image"><img src="images/132/fig/plot.png" /></div></center>
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 1)</h3>
+<p>True or False: it is possible that the network uses <b>ReLU</b> activation in its hidden layers, and <b>linear</b> activation in its output layer.</p>
+<details>
+    <summary>Solution</summary>
+<p>True. A deep ReLU network with linear output produces a piecewise linear function, which is consistent with the plot.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 2)</h3>
+<p>True or False: it is possible that the network uses <b>ReLU</b> activation in its hidden layers, and <b>ReLU</b> activation in its output layer.</p>
+<details>
+    <summary>Solution</summary>
+<p>True. Applying ReLU at the output clips negative values to zero. If the piecewise linear function produced by the hidden layers already has the shape shown (non-negative everywhere it is nonzero), the output ReLU would not change it.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 3)</h3>
+<p>True or False: it is possible that the network uses linear activation in its hidden layers, and ReLU activation in its output layer.</p>
+<details>
+    <summary>Solution</summary>
+<p>False. Linear activation in all hidden layers makes the entire network a linear function. Applying ReLU at the output can only produce a function with at most one "cusp," which cannot match the multi-piece shape shown.</p>
+</details>
+
+</div>
+
+<p>Now suppose the plot of <span class="math">\(H(x)\)</span> looked like the below, instead:</p>
+<center><div class="image"><img src="images/132/fig/plot-shifted.png" /></div></center>
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 4)</h3>
+<p>True or False: it is possible that the network uses <b>ReLU</b> activation in its hidden layers, and <b>ReLU</b> activation in its output layer.</p>
+<details>
+    <summary>Solution</summary>
+<p>False. The shifted plot takes negative values in some region. ReLU at the output would clip those to zero, so the network cannot produce negative outputs. Since the plot shows negative values, this is impossible.</p>
+</details>
+
+</div>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #133</h2>
+        <p>Tags: <a href='./tags/activation functions.html'>activation functions</a>, <a href='./tags/lecture-11.html'>lecture-11</a>, <a href='./tags/quiz-06.html'>quiz-06</a>, <a href='./tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider two numbers <span class="math">\(z_1 = 10\)</span>, <span class="math">\(z_2 = -5\)</span>, and the ReLU activation function <span class="math">\(f(z) = \max(0, z)\)</span>. What is <span class="math">\(f(z_1) + f(z_2)\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(f(z_1) + f(z_2) = \max(0, 10) + \max(0, -5) = 10 + 0 = 10\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #134</h2>
+        <p>Tags: <a href='./tags/lecture-11.html'>lecture-11</a>, <a href='./tags/quiz-06.html'>quiz-06</a>, <a href='./tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider a neural network with <span class="math">\(d = 6\)</span> input features, a single hidden layer of <span class="math">\(d' = 4\)</span> nodes, and one output node. There is a bias in both the hidden layer and the output layer.</p>
+<p>What is the total number of parameters in this network?</p>
+<details>
+    <summary>Solution</summary>
+<p>33.</p>
+<p>The hidden layer has <span class="math">\((6 + 1) \times 4 = 28\)</span> parameters. The output layer has <span class="math">\((4 + 1) \times 1 = 5\)</span> parameters. Total: <span class="math">\(28 + 5 = 33\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #135</h2>
+        <p>Tags: <a href='./tags/lecture-11.html'>lecture-11</a>, <a href='./tags/forward pass.html'>forward pass</a>, <a href='./tags/quiz-06.html'>quiz-06</a>, <a href='./tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider a neural network with 2 input nodes, 2 hidden nodes, and 1 output node. There is no non-linear activation function used in the network (i.e., all activations are linear). The input is <span class="math">\((x_1, x_2) = (1, 1)\)</span>.</p>
+<p>The weights and biases are as follows. Hidden layer: <span class="math">\(W^{(1)} = \begin{pmatrix} 1 & 1 \\ 1 & 1 \end{pmatrix}\)</span>, <span class="math">\(\vec b^{(1)} = (-1, -1)^T\)</span>. Output layer: <span class="math">\(\vec w^{(2)} = (-1, -1)^T\)</span>, <span class="math">\(b^{(2)} = -1\)</span>.</p>
+<p>What is the output of this neural network?</p>
+<details>
+    <summary>Solution</summary>
+<p>Hidden node 1: <span class="math">\(\psi_1 = 1(1) + 1(1) - 1 = 1\)</span>.</p>
+<p>Hidden node 2: <span class="math">\(\psi_2 = 1(1) + 1(1) - 1 = 1\)</span>.</p>
+<p>Output: <span class="math">\(H = (-1)(1) + (-1)(1) - 1 = -3\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #136</h2>
+        <p>Tags: <a href='./tags/activation functions.html'>activation functions</a>, <a href='./tags/lecture-11.html'>lecture-11</a>, <a href='./tags/quiz-06.html'>quiz-06</a>, <a href='./tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>The sigmoid function is <span class="math">\(f(x) = \dfrac{1}{1 + e^{-x}}\)</span>.</p>
+<p>Use the chain rule to find <span class="math">\(f'(x)\)</span>, and evaluate <span class="math">\(f'(0)\)</span>.</p>
+<details>
+    <summary>Solution</summary>
+<p>Using the chain rule:</p>
+<div class="math">\[
+            f'(x) = \frac{e^{-x}}{(1 + e^{-x})^2} = f(x)(1 - f(x)).
+        \]</div>
+<p>At <span class="math">\(x = 0\)</span>: <span class="math">\(f(0) = \frac{1}{1 + 1} = 0.5\)</span>, so <span class="math">\(f'(0) = 0.5 \cdot 0.5 = 0.25\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #137</h2>
+        <p>Tags: <a href='./tags/activation functions.html'>activation functions</a>, <a href='./tags/lecture-11.html'>lecture-11</a>, <a href='./tags/quiz-06.html'>quiz-06</a>, <a href='./tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Which of the following is generally true about linear activation functions in neural networks?</p>
+<div class="multiple-choices"><form><div class="choice"><label><input name="choice" class="choice" type="radio" /><p>Linear activation results in linear prediction functions, regardless of the number of hidden layers.</p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p>Linear activation can lead to non-linear prediction functions, provided we have enough hidden layers.</p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p>Linear activation functions are slower to compute than the sigmoid activation function.</p></label></div></form></div>
+<details>
+    <summary>Solution</summary>
+<p>Linear activation results in linear prediction functions, regardless of the number of hidden layers or units.</p>
+<p>If all activation functions are linear, then each layer computes a linear transformation of its input. The composition of linear transformations is itself a linear transformation, so the entire network collapses to a single linear model.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #138</h2>
+        <p>Tags: <a href='./tags/activation functions.html'>activation functions</a>, <a href='./tags/lecture-11.html'>lecture-11</a>, <a href='./tags/quiz-06.html'>quiz-06</a>, <a href='./tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>The sigmoid activation function is given as <span class="math">\(g(z) = \dfrac{1}{1 + e^{-z}}\)</span>.</p>
+<p>Consider two points <span class="math">\(z_1 > 0\)</span> and <span class="math">\(z_2 < 0\)</span>. Which of the following always holds true?</p>
+<div class="multiple-choices"><form><div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(g(z_1) > g(z_2)\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(g(z_1) < g(z_2)\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(g(z_1) = g(z_2)\)</span> if <span class="math">\(|z_1| = |z_2|\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p>The relationship depends on the exact values of <span class="math">\(z_1\)</span> and <span class="math">\(z_2\)</span>.</p></label></div></form></div>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(g(z_1) > g(z_2)\)</span>.</p>
+<p>When <span class="math">\(z > 0\)</span>, <span class="math">\(g(z) > 0.5\)</span>; when <span class="math">\(z < 0\)</span>, <span class="math">\(g(z) < 0.5\)</span>. Therefore <span class="math">\(g(z_1) > 0.5 > g(z_2)\)</span> always holds.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #139</h2>
+        <p>Tags: <a href='./tags/activation functions.html'>activation functions</a>, <a href='./tags/lecture-11.html'>lecture-11</a>, <a href='./tags/quiz-06.html'>quiz-06</a>, <a href='./tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>For the sigmoid activation function <span class="math">\(g(z) = \dfrac{1}{1 + e^{-z}}\)</span>, what is <span class="math">\(g(z) + g(-z)\)</span> for any <span class="math">\(z \in\mathbb{R}\)</span>?</p>
+<div class="multiple-choices"><form><div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(0\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(1\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\dfrac{2}{1 + e^{-z}}\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\dfrac{2}{1 + e^{z}}\)</span></p></label></div></form></div>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(g(z) + g(-z) = 1\)</span>.</p>
+<div class="math">\[
+            g(z) + g(-z) = \frac{1}{1 + e^{-z}} + \frac{1}{1 + e^{z}}
+            = \frac{e^z}{1 + e^{z}} + \frac{1}{1 + e^{z}}
+            = \frac{1 + e^z}{1 + e^z} = 1
+        \]</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #140</h2>
+        <p>Tags: <a href='./tags/activation functions.html'>activation functions</a>, <a href='./tags/lecture-11.html'>lecture-11</a>, <a href='./tags/quiz-06.html'>quiz-06</a>, <a href='./tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>The Leaky ReLU activation function is defined as <span class="math">\(g(z) = \max\{\alpha z, z\}\)</span>, where <span class="math">\(0 \leq\alpha < 1\)</span>.</p>
+<p>What is <span class="math">\(g(-5)\)</span> when <span class="math">\(\alpha = 0.01\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(g(-5) = \max\{0.01 \cdot(-5),\; -5\} = \max\{-0.05,\; -5\} = -0.05\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #141</h2>
+        <p>Tags: <a href='./tags/activation functions.html'>activation functions</a>, <a href='./tags/lecture-11.html'>lecture-11</a>, <a href='./tags/quiz-06.html'>quiz-06</a>, <a href='./tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Suppose you are modeling the percentage change in stock prices each day as a regression problem by training a neural network. On some days the percentage change is positive; on others it is negative.</p>
+<p>True or False: ReLU activation can be used in the output layer of the neural network for this task.</p>
+<details>
+    <summary>Solution</summary>
+<p>False.</p>
+<p>ReLU activation in the output layer truncates all negative values to zero, so the network could never predict a negative percentage change.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #142</h2>
+        <p>Tags: <a href='./tags/quiz-07.html'>quiz-07</a>, <a href='./tags/backpropagation.html'>backpropagation</a>, <a href='./tags/lecture-13.html'>lecture-13</a>, <a href='./tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider a neural network <span class="math">\(H(\vec x)\)</span> shown below:</p>
+<center><div class="image"><img src="images/142/fig/nn.png" /></div></center>
+<p>Assume that all hidden nodes use <b>ReLU activation</b> functions, that the output node uses a linear activation, and that there are no biases.</p>
+<p>Let the weights of the second layer of the network be: <span class="math">\(
+        W^{(2)} = \begin{pmatrix}
+            5 & 1 \\
+            1 & 2
+        \end{pmatrix}.
+    \)</span> In addition, suppose it is known that, when the network is evaluated at <span class="math">\(\vec
+    x\)</span> with weight vector <span class="math">\(\vec w\)</span>:</p>
+<div class="math">\[
+        z_1^{(1)} = 3, \qquad z_2^{(1)} = -2, \qquad\partial H / \partial z_1^{(2)} = -3, \qquad\partial H / \partial z_2^{(2)} = 1
+    \]</div>
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 1)</h3>
+<p>What is <span class="math">\(\partial H / \partial a_{1}^{(1)}\)</span>, as a number?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\dfrac{\partial H}{\partial a_1^{(1)}} = \sum_k W_{1k}^{(2)}\dfrac{\partial H}{\partial z_k^{(2)}} = 5(-3) + 1(1) = -14\)</span>.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 2)</h3>
+<p>What is <span class="math">\(\partial H / \partial a_{2}^{(1)}\)</span>, as a number?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\dfrac{\partial H}{\partial a_2^{(1)}} = \sum_k W_{2k}^{(2)}\dfrac{\partial H}{\partial z_k^{(2)}} = 1(-3) + 2(1) = -1\)</span>.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 3)</h3>
+<p>What is <span class="math">\(\partial H / \partial z_{1}^{(1)}\)</span>, as a number?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\dfrac{\partial H}{\partial z_1^{(1)}} = \dfrac{\partial H}{\partial a_1^{(1)}}\cdot g'(z_1^{(1)}) = -14 \cdot g'(3) = -14 \cdot 1 = -14\)</span>.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 4)</h3>
+<p>What is <span class="math">\(\partial H / \partial z_{2}^{(1)}\)</span>, as a number?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\dfrac{\partial H}{\partial z_2^{(1)}} = \dfrac{\partial H}{\partial a_2^{(1)}}\cdot g'(z_2^{(1)}) = -1 \cdot g'(-2) = -1 \cdot 0 = 0\)</span>.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 5)</h3>
+<p>What is <span class="math">\(\partial H / \partial W_{11}^{(2)}\)</span>, as a number?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\dfrac{\partial H}{\partial W_{11}^{(2)}} = a_1^{(1)}\cdot\dfrac{\partial H}{\partial z_1^{(2)}} = \text{ReLU}(3) \cdot(-3) = 3(-3) = -9\)</span>.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 6)</h3>
+<p>What is <span class="math">\(\partial H / \partial W_{21}^{(2)}\)</span>, as a number?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\dfrac{\partial H}{\partial W_{21}^{(2)}} = a_2^{(1)}\cdot\dfrac{\partial H}{\partial z_1^{(2)}} = \text{ReLU}(-2) \cdot(-3) = 0(-3) = 0\)</span>.</p>
+</details>
+
+</div>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #143</h2>
+        <p>Tags: <a href='./tags/quiz-07.html'>quiz-07</a>, <a href='./tags/backpropagation.html'>backpropagation</a>, <a href='./tags/lecture-13.html'>lecture-13</a>, <a href='./tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider a neural network <span class="math">\(H(\vec x)\)</span> shown below:</p>
+<center><div class="image"><img src="images/143/fig/nn.png" /></div></center>
+<p>Assume that all hidden nodes use <b>ReLU activation</b> functions, that the output node uses a linear activation, and that there are no biases.</p>
+<p>Let the weights of the second layer of the network be: <span class="math">\(
+        W^{(2)} = \begin{pmatrix}
+            3 & -1 \\
+            -1 & 2
+        \end{pmatrix}.
+    \)</span> In addition, suppose it is known that, when the network is evaluated at <span class="math">\(\vec
+    x\)</span> with weight vector <span class="math">\(\vec w\)</span>:</p>
+<div class="math">\[
+        z_1^{(1)} = 2, \qquad z_2^{(1)} = 4, \qquad\partial H / \partial z_1^{(2)} = -1, \qquad\partial H / \partial z_2^{(2)} = 2
+    \]</div>
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 1)</h3>
+<p>What is <span class="math">\(\partial H / \partial a_{1}^{(1)}\)</span>, as a number?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\dfrac{\partial H}{\partial a_1^{(1)}} = \sum_k W_{1k}^{(2)}\dfrac{\partial H}{\partial z_k^{(2)}} = 3(-1) + (-1)(2) = -5\)</span>.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 2)</h3>
+<p>What is <span class="math">\(\partial H / \partial a_{2}^{(1)}\)</span>, as a number?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\dfrac{\partial H}{\partial a_2^{(1)}} = \sum_k W_{2k}^{(2)}\dfrac{\partial H}{\partial z_k^{(2)}} = (-1)(-1) + 2(2) = 5\)</span>.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 3)</h3>
+<p>What is <span class="math">\(\partial H / \partial z_{1}^{(1)}\)</span>, as a number?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\dfrac{\partial H}{\partial z_1^{(1)}} = -5 \cdot g'(2) = -5 \cdot 1 = -5\)</span>.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 4)</h3>
+<p>What is <span class="math">\(\partial H / \partial z_{2}^{(1)}\)</span>, as a number?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\dfrac{\partial H}{\partial z_2^{(1)}} = 5 \cdot g'(4) = 5 \cdot 1 = 5\)</span>.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 5)</h3>
+<p>What is <span class="math">\(\partial H / \partial W_{11}^{(2)}\)</span>, as a number?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\dfrac{\partial H}{\partial W_{11}^{(2)}} = a_1^{(1)}\cdot\dfrac{\partial H}{\partial z_1^{(2)}} = \text{ReLU}(2) \cdot(-1) = -2\)</span>.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 6)</h3>
+<p>What is <span class="math">\(\partial H / \partial W_{21}^{(2)}\)</span>, as a number?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\dfrac{\partial H}{\partial W_{21}^{(2)}} = a_2^{(1)}\cdot\dfrac{\partial H}{\partial z_1^{(2)}} = \text{ReLU}(4) \cdot(-1) = -4\)</span>.</p>
+</details>
+
+</div>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #144</h2>
+        <p>Tags: <a href='./tags/quiz-07.html'>quiz-07</a>, <a href='./tags/backpropagation.html'>backpropagation</a>, <a href='./tags/lecture-13.html'>lecture-13</a>, <a href='./tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider a neural network <span class="math">\(H(\vec x)\)</span> shown below:</p>
+<center><div class="image"><img src="images/144/fig/nn.png" /></div></center>
+<p>Suppose that the ReLU is used on all hidden nodes, and the linear activation is used on the output node. There are no biases.</p>
+<p>Fill in the blank without making reference to any derivatives (apart from <span class="math">\(g'\)</span>, which is the derivative of the ReLU):</p>
+<div class="math">\[\frac{\partial H}{\partial W^{(1)}_{12}}
+            =
+            x_1 \, g'(z_2^{(1)}) \left(                W_{21}^{(2)}\, g'(z_1^{(2)}) \, W_{11}^{(3)}
+                +
+                \rule{3in}{0.4pt}\right)\]</div>
+<details>
+    <summary>Solution</summary>
+<p>The blank is: <span class="math">\(W_{22}^{(2)}\, g'(z_2^{(2)}) \, W_{21}^{(3)}\)</span>.</p>
+<p>The weight <span class="math">\(W_{12}^{(1)}\)</span> feeds into node 2 of layer 1, which connects to both nodes of layer 2 via <span class="math">\(W_{21}^{(2)}\)</span> and <span class="math">\(W_{22}^{(2)}\)</span>. Each of those paths then continues to the output through <span class="math">\(W_{11}^{(3)}\)</span> and <span class="math">\(W_{21}^{(3)}\)</span>, respectively.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #145</h2>
+        <p>Tags: <a href='./tags/quiz-07.html'>quiz-07</a>, <a href='./tags/backpropagation.html'>backpropagation</a>, <a href='./tags/lecture-13.html'>lecture-13</a>, <a href='./tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider a neural network <span class="math">\(H(\vec x)\)</span> shown below:</p>
+<center><div class="image"><img src="images/145/fig/nn.png" /></div></center>
+<p>Suppose that the ReLU is used on all hidden nodes, and the linear activation is used on the output node. There are no biases.</p>
+<p>Fill in the blank without making reference to any derivatives (apart from <span class="math">\(g'\)</span>, which is the derivative of the ReLU):</p>
+<div class="math">\[\frac{\partial H}{\partial x_1}
+            =
+            W_{11}^{(1)}\, g'(z_1^{(1)}) \, W_{11}^{(2)} + \rule{3in}{0.4pt}\]</div>
+<details>
+    <summary>Solution</summary>
+<p>The blank is: <span class="math">\(W_{12}^{(1)}\, g'(z_2^{(1)}) \, W_{21}^{(2)}\)</span>.</p>
+<p><span class="math">\(x_1\)</span> feeds into both hidden nodes via <span class="math">\(W_{11}^{(1)}\)</span> and <span class="math">\(W_{12}^{(1)}\)</span>. Each hidden node connects to the output. The full derivative is a sum over all paths from <span class="math">\(x_1\)</span> to <span class="math">\(H\)</span>:</p>
+<div class="math">\[\frac{\partial H}{\partial x_1} = W_{11}^{(1)}\, g'(z_1^{(1)}) \, W_{11}^{(2)} + W_{12}^{(1)}\, g'(z_2^{(1)}) \, W_{21}^{(2)}\]</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #146</h2>
+        <p>Tags: <a href='./tags/quiz-07.html'>quiz-07</a>, <a href='./tags/neural networks.html'>neural networks</a>, <a href='./tags/lecture-13.html'>lecture-13</a>, <a href='./tags/activation functions.html'>activation functions</a>, <a href='./tags/backpropagation.html'>backpropagation</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Suppose a deep network <span class="math">\(H(\vec x)\)</span> uses a sigmoid activation in its output layer. Suppose as well that for a given input, <span class="math">\(\vec x\)</span>, <span class="math">\(H(\vec x) \approx 1\)</span>.</p>
+<p>True or False: evaluated at this point <span class="math">\(\vec x\)</span>, <span class="math">\(\partial H / \partial
+    W_{ij}^{(\ell)}\approx 0\)</span> for all <span class="math">\(i, j, \ell\)</span>.</p>
+<details>
+    <summary>Solution</summary>
+<p>True.</p>
+<p>The sigmoid function <span class="math">\(\sigma(z) = 1/(1 + e^{-z})\)</span> satisfies <span class="math">\(\sigma'(z) = \sigma(z)(1 - \sigma(z))\)</span>. When <span class="math">\(H(\vec x) \approx 1\)</span>, the output of the sigmoid is near 1, so <span class="math">\(\sigma'(z) \approx 1 \cdot 0 = 0\)</span>.</p>
+<p>Since every partial derivative <span class="math">\(\partial H / \partial W_{ij}^{(\ell)}\)</span> includes the factor <span class="math">\(\sigma'(z^{(\text{out})})\)</span>(by the chain rule through the output node), all partial derivatives are approximately zero.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #147</h2>
+        <p>Tags: <a href='./tags/quiz-07.html'>quiz-07</a>, <a href='./tags/neural networks.html'>neural networks</a>, <a href='./tags/lecture-13.html'>lecture-13</a>, <a href='./tags/activation functions.html'>activation functions</a>, <a href='./tags/backpropagation.html'>backpropagation</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Suppose a deep network <span class="math">\(H(\vec x)\)</span> uses a ReLU activation in its output layer. Suppose as well that for a given input, <span class="math">\(\vec x\)</span>, <span class="math">\(H(\vec x) \approx 1\)</span>.</p>
+<p>True or False: evaluated at this point <span class="math">\(\vec x\)</span>, <span class="math">\(\partial H / \partial
+    W_{ij}^{(\ell)} = 0\)</span> for all <span class="math">\(i, j, \ell\)</span>.</p>
+<details>
+    <summary>Solution</summary>
+<p>False.</p>
+<p>Since <span class="math">\(H(\vec x) \approx 1 > 0\)</span>, the output of the ReLU is in the linear region where <span class="math">\(g'(z) = 1\)</span>. The output activation does not zero out the gradient, and the partial derivatives need not be zero.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #148</h2>
+        <p>Tags: <a href='./tags/quiz-07.html'>quiz-07</a>, <a href='./tags/backpropagation.html'>backpropagation</a>, <a href='./tags/lecture-13.html'>lecture-13</a>, <a href='./tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Suppose that the square loss is used to train a neural network <span class="math">\(H\)</span> so that the empirical risk is</p>
+<div class="math">\[
+        R(\vec{w}) = \frac{1}{n}\sum_{i=1}^n \big(H(\vec{x}^{(i)}; \vec{w}) - y_i\big)^2.
+    \]</div>
+<p>Each training point <span class="math">\((\vec x^{(i)}, y_i)\)</span> contributes to the gradient of <span class="math">\(R\)</span>.</p>
+<p>What is the contribution of the point <span class="math">\((\vec{x}^{(1)}, y^{(1)})\)</span> to the gradient of <span class="math">\(R\)</span> if <span class="math">\(H(\vec{x}^{(1)}; \vec{w}) = 1\)</span> and <span class="math">\(y^{(1)} = 1\)</span>?</p>
+<div class="multiple-choices"><form><div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(0\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(1\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\frac{1}{\|\vec{w}\|}\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\|\vec{w}\|\)</span></p></label></div></form></div>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(0\)</span>.</p>
+<p>The contribution of point <span class="math">\((\vec x^{(1)}, y^{(1)})\)</span> to the gradient involves the factor <span class="math">\((H(\vec x^{(1)}; \vec w) - y^{(1)}) = 1 - 1 = 0\)</span>. Since this factor is zero, the entire contribution to the gradient from this point is zero.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #149</h2>
+        <p>Tags: <a href='./tags/quiz-07.html'>quiz-07</a>, <a href='./tags/backpropagation.html'>backpropagation</a>, <a href='./tags/lecture-13.html'>lecture-13</a>, <a href='./tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider the neural network shown below.</p>
+<center><div class="image"><img src="images/149/fig/nn.png" /></div></center>
+<p>Assume that <span class="math">\(g\)</span> is the activation function for the hidden layers, and that the output layer uses a linear activation. There are no biases. Here <span class="math">\(W^{(\ell)}\)</span> denotes the weight matrix connecting layer <span class="math">\(\ell - 1\)</span> to layer <span class="math">\(\ell\)</span>.</p>
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 1)</h3>
+<p>True or False: <span class="math">\(\dfrac{\partial H}{\partial z_1^{(2)}} = W_{11}^{(3)}\, g'(z_1^{(2)})\)</span>.</p>
+<details>
+    <summary>Solution</summary>
+<p>True. The output is <span class="math">\(H = z_1^{(3)}\)</span>(linear activation), and <span class="math">\(z_1^{(3)} = W_{11}^{(3)} a_1^{(2)} + W_{21}^{(3)} a_2^{(2)}\)</span>. Since <span class="math">\(a_1^{(2)} = g(z_1^{(2)})\)</span>: <span class="math">\(\frac{\partial H}{\partial z_1^{(2)}} = W_{11}^{(3)}\cdot g'(z_1^{(2)})\)</span>.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 2)</h3>
+<p>True or False: <span class="math">\(\dfrac{\partial H}{\partial W_{21}^{(2)}} = W_{11}^{(3)}\, g'(z_1^{(2)}) \, a_2^{(1)}\)</span>.</p>
+<details>
+    <summary>Solution</summary>
+<p>True. By the chain rule, <span class="math">\(\frac{\partial H}{\partial W_{21}^{(2)}} = \frac{\partial H}{\partial z_1^{(2)}}\cdot\frac{\partial z_1^{(2)}}{\partial W_{21}^{(2)}}\)</span>. Since <span class="math">\(z_1^{(2)} = W_{11}^{(2)} a_1^{(1)} + W_{21}^{(2)} a_2^{(1)}\)</span>, we have <span class="math">\(\frac{\partial z_1^{(2)}}{\partial W_{21}^{(2)}} = a_2^{(1)}\)</span>. Thus <span class="math">\(\frac{\partial H}{\partial W_{21}^{(2)}} = W_{11}^{(3)}\, g'(z_1^{(2)}) \, a_2^{(1)}\)</span>.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 3)</h3>
+<p>True or False: <span class="math">\(\dfrac{\partial H}{\partial a_{2}^{(1)}} = W_{11}^{(3)}\, g'(z_1^{(2)}) \, W_{21}^{(2)}\)</span>.</p>
+<details>
+    <summary>Solution</summary>
+<p>False. The correct expression has <i>two</i> terms (one for each node in layer 2):</p>
+<div class="math">\[\frac{\partial H}{\partial a_2^{(1)}} = \frac{\partial H}{\partial z_1^{(2)}} W_{21}^{(2)} + \frac{\partial H}{\partial z_2^{(2)}} W_{22}^{(2)}.
+                \]</div>
+<p>The given expression only includes the first term.</p>
+</details>
+
+</div>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #150</h2>
+        <p>Tags: <a href='./tags/quiz-07.html'>quiz-07</a>, <a href='./tags/backpropagation.html'>backpropagation</a>, <a href='./tags/lecture-13.html'>lecture-13</a>, <a href='./tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider the neural network shown below, now with weights and inputs. Assume that the ReLU is the activation function for the hidden layers, and that the output layer uses a linear activation. There are no biases.</p>
+<center><div class="image"><img src="images/150/fig/nn.png" /></div></center>
+<p>The blue numbers on the edges denote the weights, and the blue numbers above the <span class="math">\(z\)</span>'s and <span class="math">\(a\)</span>'s denote their values. Specifically: <span class="math">\(\vec x = (-2, 3)^T\)</span>. Layer 1: <span class="math">\(z_1^{(1)} = -13\)</span>, <span class="math">\(a_1^{(1)} = 0\)</span>; <span class="math">\(z_2^{(1)} = 9\)</span>, <span class="math">\(a_2^{(1)} = 9\)</span>. Layer 2: <span class="math">\(z_1^{(2)} = 0\)</span>, <span class="math">\(a_1^{(2)} = 0\)</span>; <span class="math">\(z_2^{(2)} = 9\)</span>, <span class="math">\(a_2^{(2)} = 9\)</span>. Output: <span class="math">\(z_1^{(3)} = -18\)</span>, <span class="math">\(a_1^{(3)} = -18\)</span>.</p>
+<p>True or False: <span class="math">\(\partial H / \partial W_{ij}^{(\ell)} = 0\)</span> for all <span class="math">\(i, j, \ell\)</span>.</p>
+<details>
+    <summary>Solution</summary>
+<p>False.</p>
+<p>While <span class="math">\(z_1^{(2)} = 0\)</span> means <span class="math">\(g'(z_1^{(2)}) = 0\)</span>(treating <span class="math">\(g'(0) = 0\)</span> for ReLU), the second node in layer 2 has <span class="math">\(z_2^{(2)} = 9 > 0\)</span>, so <span class="math">\(g'(z_2^{(2)}) = 1\)</span> and gradient flows through it.</p>
+<p>In particular, <span class="math">\(a_2^{(2)} = 9 \neq 0\)</span>, so the derivative of <span class="math">\(H\)</span> with respect to the output weight <span class="math">\(W_{12}^{(3)}\)</span> is <span class="math">\(\frac{\partial H}{\partial W_{12}^{(3)}} = \frac{\partial H}{\partial z_1^{(3)}}\cdot a_2^{(2)}\)</span>, which is nonzero since <span class="math">\(a_2^{(2)} = 9\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #151</h2>
+        <p>Tags: <a href='./tags/quiz-07.html'>quiz-07</a>, <a href='./tags/backpropagation.html'>backpropagation</a>, <a href='./tags/lecture-13.html'>lecture-13</a>, <a href='./tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider the neural network shown below, now with different weights and inputs. Assume that the ReLU is the activation function for the hidden layers, and that the output layer uses a linear activation. There are no biases.</p>
+<center><div class="image"><img src="images/151/fig/nn.png" /></div></center>
+<p>The blue numbers on the edges denote the weights, and the blue numbers above the <span class="math">\(z\)</span>'s and <span class="math">\(a\)</span>'s denote their values. The weight matrices are:</p>
+<div class="math">\[
+        W^{(1)} = \begin{pmatrix} 2 & 1 \\ 3 & 1 \end{pmatrix}, \quad
+        W^{(2)} = \begin{pmatrix} 2 & 1 \\ 0 & 1 \end{pmatrix}, \quad
+        W^{(3)} = \begin{pmatrix} 3 \\ -2 \end{pmatrix}\]</div>
+<p>The input is <span class="math">\(\vec x = (1, 3)^T\)</span>. The intermediate values are: Layer 1: <span class="math">\(z_1^{(1)} = 11\)</span>, <span class="math">\(a_1^{(1)} = 11\)</span>; <span class="math">\(z_2^{(1)} = 4\)</span>, <span class="math">\(a_2^{(1)} = 4\)</span>. Layer 2: <span class="math">\(z_1^{(2)} = 22\)</span>, <span class="math">\(a_1^{(2)} = 22\)</span>; <span class="math">\(z_2^{(2)} = 15\)</span>, <span class="math">\(a_2^{(2)} = 15\)</span>. Output: <span class="math">\(H(\vec x) = 36\)</span>.</p>
+<p>Compute each of the following:</p>
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 1)</h3>
+<p><span class="math">\(\partial H / \partial z_1^{(2)}\)</span></p>
+<details>
+    <summary>Solution</summary>
+<p>The output is <span class="math">\(H = W_{11}^{(3)} a_1^{(2)} + W_{21}^{(3)} a_2^{(2)}\)</span>(linear output). So <span class="math">\(\partial H / \partial a_1^{(2)} = W_{11}^{(3)} = 3\)</span>. Since <span class="math">\(z_1^{(2)} = 22 > 0\)</span>, <span class="math">\(g'(z_1^{(2)}) = 1\)</span>. Thus:</p>
+<div class="math">\[\frac{\partial H}{\partial z_1^{(2)}} = 3 \cdot 1 = 3.
+                \]</div>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 2)</h3>
+<p><span class="math">\(\partial H / \partial a_2^{(1)}\)</span></p>
+<details>
+    <summary>Solution</summary>
+<p>We need <span class="math">\(\partial H / \partial z_k^{(2)}\)</span> for both nodes: <span class="math">\(\partial H / \partial z_1^{(2)} = 3\)</span>(from part (a)), and <span class="math">\(\partial H / \partial z_2^{(2)} = W_{21}^{(3)}\cdot g'(15) = (-2)(1) = -2\)</span>. Then:</p>
+<div class="math">\[\frac{\partial H}{\partial a_2^{(1)}} = \frac{\partial H}{\partial z_1^{(2)}} W_{21}^{(2)} + \frac{\partial H}{\partial z_2^{(2)}} W_{22}^{(2)} = 3(0) + (-2)(1) = -2.
+                \]</div>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 3)</h3>
+<p><span class="math">\(\partial H / \partial W_{11}^{(1)}\)</span></p>
+<details>
+    <summary>Solution</summary>
+<p>First, <span class="math">\(\frac{\partial H}{\partial a_1^{(1)}} = \frac{\partial H}{\partial z_1^{(2)}} W_{11}^{(2)} + \frac{\partial H}{\partial z_2^{(2)}} W_{12}^{(2)} = 3(2) + (-2)(1) = 4\)</span>. Since <span class="math">\(g'(z_1^{(1)}) = g'(11) = 1\)</span>: <span class="math">\(\frac{\partial H}{\partial z_1^{(1)}} = 4 \cdot 1 = 4\)</span>. Finally:</p>
+<div class="math">\[\frac{\partial H}{\partial W_{11}^{(1)}} = \frac{\partial H}{\partial z_1^{(1)}}\cdot x_1 = 4 \cdot 1 = 4.
+                \]</div>
+</details>
+
+</div>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #152</h2>
+        <p>Tags: <a href='./tags/vanishing gradients.html'>vanishing gradients</a>, <a href='./tags/quiz-07.html'>quiz-07</a>, <a href='./tags/lecture-14.html'>lecture-14</a>, <a href='./tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Which of the following best describes the <b>vanishing gradient</b> problem that can occur while training deep neural networks using backpropagation?</p>
+<div class="multiple-choices"><form><div class="choice"><label><input name="choice" class="choice" type="radio" /><p>Partial derivatives of parameters in layers far from the output become very small.</p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p>Partial derivatives of parameters in layers close to the output become very small.</p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p>Partial derivatives of parameters in layers far from the output become very large.</p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p>Partial derivatives of parameters in layers close to the output become very large.</p></label></div></form></div>
+<details>
+    <summary>Solution</summary>
+<p>Partial derivatives of parameters in layers far from the output become very small.</p>
+<p>During backpropagation, the chain rule multiplies many factors together as the gradient propagates from the output back through each layer. If these factors are small (e.g., because of sigmoid activations whose derivatives are at most <span class="math">\(1/4\)</span>), the product shrinks exponentially with depth. This means that parameters in early layers (far from the output) receive very small gradient updates and learn very slowly.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #153</h2>
+        <p>Tags: <a href='./tags/quiz-07.html'>quiz-07</a>, <a href='./tags/backpropagation.html'>backpropagation</a>, <a href='./tags/lecture-13.html'>lecture-13</a>, <a href='./tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Suppose <span class="math">\(H\)</span> is a fully-connected neural network with 3 input features, 4 nodes in the first hidden layer, 2 nodes in the second hidden layer, and a single output node. Assume that all hidden and output nodes have a bias.</p>
+<p>The gradient of <span class="math">\(H\)</span> with respect to the parameters is a vector. What is this vector's dimensionality?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(29\)</span>.</p>
+<p>We count the number of weights and biases in each layer. Layer 1 (<span class="math">\(3 \to 4\)</span>): <span class="math">\(3 \times 4 = 12\)</span> weights <span class="math">\(+ \; 4\)</span> biases <span class="math">\(= 16\)</span>. Layer 2 (<span class="math">\(4 \to 2\)</span>): <span class="math">\(4 \times 2 = 8\)</span> weights <span class="math">\(+ \; 2\)</span> biases <span class="math">\(= 10\)</span>. Output (<span class="math">\(2 \to 1\)</span>): <span class="math">\(2 \times 1 = 2\)</span> weights <span class="math">\(+ \; 1\)</span> bias <span class="math">\(= 3\)</span>. Total: <span class="math">\(16 + 10 + 3 = 29\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #154</h2>
+        <p>Tags: <a href='./tags/quiz-07.html'>quiz-07</a>, <a href='./tags/backpropagation.html'>backpropagation</a>, <a href='./tags/lecture-13.html'>lecture-13</a>, <a href='./tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Suppose <span class="math">\(H\)</span> is a fully-connected neural network with 2 input features, 5 nodes in the first hidden layer, 3 nodes in the second hidden layer, and a single output node. Assume that all hidden and output nodes have a bias.</p>
+<p>The gradient of <span class="math">\(H\)</span> with respect to the parameters is a vector. What is this vector's dimensionality?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(37\)</span>.</p>
+<p>We count the number of weights and biases in each layer. Layer 1 (<span class="math">\(2 \to 5\)</span>): <span class="math">\(2 \times 5 = 10\)</span> weights <span class="math">\(+ \; 5\)</span> biases <span class="math">\(= 15\)</span>. Layer 2 (<span class="math">\(5 \to 3\)</span>): <span class="math">\(5 \times 3 = 15\)</span> weights <span class="math">\(+ \; 3\)</span> biases <span class="math">\(= 18\)</span>. Output (<span class="math">\(3 \to 1\)</span>): <span class="math">\(3 \times 1 = 3\)</span> weights <span class="math">\(+ \; 1\)</span> bias <span class="math">\(= 4\)</span>. Total: <span class="math">\(15 + 18 + 4 = 37\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #155</h2>
+        <p>Tags: <a href='./tags/vanishing gradients.html'>vanishing gradients</a>, <a href='./tags/quiz-07.html'>quiz-07</a>, <a href='./tags/lecture-14.html'>lecture-14</a>, <a href='./tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>True or False: one solution to the vanishing gradient problem is to increase the learning rate <span class="math">\(\eta\)</span>.</p>
+
+<div class="true-false">
+    <input type="radio" name="true-false" value="true" /> True
+    <input type="radio" name="true-false" value="false" /> False
+</div>
+
+<details>
+    <summary>Solution</summary>
+<p>False.</p>
+<p>Increasing the learning rate does not fix the vanishing gradient problem. Vanishing gradients arise because, during backpropagation, the chain rule multiplies many small factors together, causing gradients in early layers to shrink exponentially with depth. Increasing <span class="math">\(\eta\)</span> scales all gradient updates equally, so the relative imbalance between layers remains: early-layer gradients are still exponentially smaller than later-layer gradients.</p>
+<p>Actual solutions to the vanishing gradient problem include using ReLU activations (whose derivatives are <span class="math">\(0\)</span> or <span class="math">\(1\)</span>, rather than always small), skip connections, and batch normalization.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #156</h2>
+        <p>Tags: <a href='./tags/gradient descent.html'>gradient descent</a>, <a href='./tags/quiz-07.html'>quiz-07</a>, <a href='./tags/lecture-14.html'>lecture-14</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Recall that the gradient of the square loss at a single data point <span class="math">\((\vec
+    x, y)\)</span> is:</p>
+<div class="math">\[\nabla_{\vec w} L = 2(\operatorname{Aug}(\vec x) \cdot\vec w - y) \operatorname{Aug}(\vec x)
+    \]</div>
+<p>Suppose you are running gradient descent to minimize the empirical risk with respect to the squared loss in order to train a function <span class="math">\(H(x) = w_0 +
+    w_1 x\)</span> on the following data set: <span class="math">\((x, y) \in\{(1, 3),\;(2, 3),\;(3, 6)\}\)</span>.</p>
+<p>Suppose that the initial weight vector is <span class="math">\(\vec w = (0, 0)^T\)</span> and that the learning rate <span class="math">\(\eta = 1/2\)</span>. What will be the weight vector after one iteration of gradient descent?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\((4, 9)^T\)</span>.</p>
+<p>To perform gradient descent, we need to compute the gradient of the risk. The main thing to remember is that the gradient of the risk is the <i>average</i> of the gradient of the loss on each data point.</p>
+<div class="math">\[\newcommand{\Aug}{\operatorname{Aug}}\]</div>
+<p>So to start this problem, calculate the gradient of the loss for each of the three points. Our formula for the gradient of the squared loss tells us to compute <span class="math">\(2(\Aug(\vec x) \cdot\vec w - y) \Aug(\vec x)\)</span> for each point.</p>
+<p>Now, the initial weight vector <span class="math">\(\vec w\)</span> was conveniently chosen to be <span class="math">\(\vec 0\)</span>, meaning that <span class="math">\(\operatorname{Aug}(\vec x) \cdot\vec w = 0\)</span> for all of our data points. Therefore, when we compute <span class="math">\(\operatorname{Aug}(\vec x) \cdot\vec w - y\)</span>, we get <span class="math">\(-y\)</span> for every data point. The gradient of the loss at each of the three data points is:</p>
+<p>Point <span class="math">\((1, 3)\)</span>: <span class="math">\(2(0 - 3)(1, 1)^T = (-6, -6)^T\)</span> Point <span class="math">\((2, 3)\)</span>: <span class="math">\(2(0 - 3)(1, 2)^T = (-6, -12)^T\)</span> Point <span class="math">\((3, 6)\)</span>: <span class="math">\(2(0 - 6)(1, 3)^T = (-12, -36)^T\)</span> This means that the gradient of the risk is the average of these three:</p>
+<div class="math">\[\frac{1}{3}\left(\begin{bmatrix}-6\\-6\end{bmatrix} +
+                \begin{bmatrix}-6\\-12\end{bmatrix} +
+                \begin{bmatrix}-12\\-36\end{bmatrix}\right)=
+            \frac{1}{3}\begin{bmatrix}-24\\-54\end{bmatrix} =
+            \begin{bmatrix}-8\\ -18 \end{bmatrix}\]</div>
+<p>The gradient descent update rule says that <span class="math">\(\vec w^{(1)} = \vec w^{(0)}
+        - \eta\nabla R(\vec w^{(0)})\)</span>. The learning rate <span class="math">\(\eta\)</span> was given as <span class="math">\(1/2\)</span>, so we have:</p>
+<div class="math">\[\vec w^{(1)} = \begin{bmatrix}0\\ 0\end{bmatrix} - \frac{1}{2}\begin{bmatrix}-8\\ -18 \end{bmatrix} = \begin{bmatrix}4\\ 9 \end{bmatrix}\]</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #157</h2>
+        <p>Tags: <a href='./tags/gradient descent.html'>gradient descent</a>, <a href='./tags/quiz-07.html'>quiz-07</a>, <a href='./tags/lecture-14.html'>lecture-14</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Recall that the gradient of the squared loss at a single data point <span class="math">\((\vec
+    x, y)\)</span> is:</p>
+<div class="math">\[\nabla_{\vec w} L = 2(\operatorname{Aug}(\vec x) \cdot\vec w - y) \operatorname{Aug}(\vec x)
+    \]</div>
+<p>Suppose you are running <b>stochastic</b> gradient descent to minimize the empirical risk with respect to the squared loss in order to train a function <span class="math">\(H(x) = w_0 + w_1 x\)</span> on the following data set: <span class="math">\((x, y) \in\{(1, 2),\;(3, 5),\;(2, 1),\;(4, 4),\;(5, 8)\}\)</span>.</p>
+<p>Suppose that the initial weight vector is <span class="math">\(\vec w = (0, 0)^T\)</span>, the learning rate is <span class="math">\(\eta = 1/2\)</span>, and the mini-batch size is 2. If the first mini-batch consists of the 1st and 4th data points, what will be the weight vector after one iteration of stochastic gradient descent?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\((3, 9)^T\)</span>.</p>
+<p>Stochastic gradient descent works like gradient descent, but instead of computing the gradient of the risk over the entire data set, we compute the gradient over a <i>mini-batch</i> --- a small, randomly-chosen subset of the data. The gradient of the risk on the mini-batch is the average of the gradient of the loss on each point in the mini-batch.</p>
+<div class="math">\[\newcommand{\Aug}{\operatorname{Aug}}\]</div>
+<p>The mini-batch consists of the 1st and 4th data points: <span class="math">\((1, 2)\)</span> and <span class="math">\((4, 4)\)</span>. We compute the gradient of the squared loss at each of these points using <span class="math">\(2(\Aug(\vec x) \cdot\vec w - y) \Aug(\vec x)\)</span>.</p>
+<p>Since <span class="math">\(\vec w = \vec 0\)</span>, we have <span class="math">\(\Aug(\vec x) \cdot\vec w = 0\)</span> for both points.</p>
+<p>Point <span class="math">\((1, 2)\)</span>: <span class="math">\(2(0 - 2)(1, 1)^T = (-4, -4)^T\)</span> Point <span class="math">\((4, 4)\)</span>: <span class="math">\(2(0 - 4)(1, 4)^T = (-8, -32)^T\)</span> The gradient of the risk on the mini-batch is the average:</p>
+<div class="math">\[\frac{1}{2}\left(\begin{bmatrix}-4\\-4\end{bmatrix} +
+                \begin{bmatrix}-8\\-32\end{bmatrix}\right)=
+            \frac{1}{2}\begin{bmatrix}-12\\-36\end{bmatrix} =
+            \begin{bmatrix}-6\\ -18 \end{bmatrix}\]</div>
+<p>Applying the update rule <span class="math">\(\vec w^{(1)} = \vec w^{(0)} - \eta\nabla
+        R(\vec w^{(0)})\)</span> with <span class="math">\(\eta = 1/2\)</span>:</p>
+<div class="math">\[\vec w^{(1)} = \begin{bmatrix}0\\ 0\end{bmatrix} - \frac{1}{2}\begin{bmatrix}-6\\ -18 \end{bmatrix} = \begin{bmatrix}3\\ 9 \end{bmatrix}\]</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #158</h2>
+        <p>Tags: <a href='./tags/quiz-07.html'>quiz-07</a>, <a href='./tags/SGD.html'>SGD</a>, <a href='./tags/neural networks.html'>neural networks</a>, <a href='./tags/gradient descent.html'>gradient descent</a>, <a href='./tags/lecture-14.html'>lecture-14</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>True or False: in stochastic gradient descent, each update step moves in the direction of steepest descent of the empirical risk.</p>
+
+<div class="true-false">
+    <input type="radio" name="true-false" value="true" /> True
+    <input type="radio" name="true-false" value="false" /> False
+</div>
+
+<details>
+    <summary>Solution</summary>
+<p>False.</p>
+<p>Each update step moves in the direction of steepest descent of the risk computed on the <i>mini-batch</i>, not the full training set. The mini-batch gradient is only an approximation of the true gradient of the empirical risk. This is what makes each iteration of SGD fast --- computing the gradient over a small mini-batch of <span class="math">\(m\)</span> points is much cheaper than computing it over all <span class="math">\(n\)</span> points --- but it means that the update direction is noisy.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #159</h2>
+        <p>Tags: <a href='./tags/quiz-07.html'>quiz-07</a>, <a href='./tags/SGD.html'>SGD</a>, <a href='./tags/neural networks.html'>neural networks</a>, <a href='./tags/gradient descent.html'>gradient descent</a>, <a href='./tags/lecture-14.html'>lecture-14</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>True or False: stochastic gradient descent generally requires fewer iterations than gradient descent to converge.</p>
+
+<div class="true-false">
+    <input type="radio" name="true-false" value="true" /> True
+    <input type="radio" name="true-false" value="false" /> False
+</div>
+
+<details>
+    <summary>Solution</summary>
+<p>False.</p>
+<p>SGD typically requires <i>more</i> iterations than gradient descent to converge, because each update uses a noisy approximation of the true gradient. However, each iteration of SGD is much cheaper (<span class="math">\(O(md)\)</span> vs. <span class="math">\(O(nd)\)</span> for a mini-batch of size <span class="math">\(m \ll n\)</span>), so SGD often converges faster in terms of total computation time.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #160</h2>
+        <p>Tags: <a href='./tags/gradient descent.html'>gradient descent</a>, <a href='./tags/quiz-07.html'>quiz-07</a>, <a href='./tags/lecture-14.html'>lecture-14</a>, <a href='./tags/neural networks.html'>neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>True or False: if two neural networks have the same architecture but different random initializations, they are guaranteed to converge to the same solution when trained with gradient descent on the same data.</p>
+
+<div class="true-false">
+    <input type="radio" name="true-false" value="true" /> True
+    <input type="radio" name="true-false" value="false" /> False
+</div>
+
+<details>
+    <summary>Solution</summary>
+<p>False.</p>
+<p>The loss surface of a neural network is non-convex, meaning it has many local minima. Different random initializations place the starting point at different locations on this surface, so gradient descent can follow different paths and converge to different local minima. This is one reason why initialization matters in practice.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #161</h2>
+        <p>Tags: <a href='./tags/lecture-15.html'>lecture-15</a>, <a href='./tags/convolutional neural networks.html'>convolutional neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>A grayscale image of size <span class="math">\(32 \times 32 \times 1\)</span> is convolved with a filter of size <span class="math">\(5 \times 5\)</span>. No padding is applied, and the stride is 1. What is the shape of the output response map?</p>
+<div class="multiple-choices"><form><div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(32 \times 32 \times 1\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(28 \times 28 \times 1\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(27 \times 27 \times 1\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(36 \times 36 \times 1\)</span></p></label></div></form></div>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(28 \times 28 \times 1\)</span>.</p>
+<p>With no padding and stride 1, the output height and width are each <span class="math">\(32 - 5 + 1 = 28\)</span>. The filter slides over each <span class="math">\(5 \times 5\)</span> block of the image from left to right and top to bottom, producing one output value per position.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #162</h2>
+        <p>Tags: <a href='./tags/lecture-15.html'>lecture-15</a>, <a href='./tags/convolutional neural networks.html'>convolutional neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>An input <span class="math">\(5 \times 5\)</span> grayscale image <span class="math">\((I)\)</span> is represented by the matrix below.</p>
+<div class="math">\[
+        I = \begin{pmatrix}
+            0.2 & 0.1 & 0.4 & 0   & 0.3 \\
+            0   & 0.5 & 0.2 & 0.7 & 0   \\
+            0.3 & 0   & 0.6 & 0.1 & 0.5 \\
+            0.1 & 0.4 & 0   & 0.3 & 0.2 \\
+            0   & 0.2 & 0.5 & 0   & 0.4
+        \end{pmatrix}\]</div>
+<p>Suppose you convolve <span class="math">\(I\)</span> with the <span class="math">\(3 \times 3\)</span> filter</p>
+<div class="math">\[
+        F = \begin{pmatrix}
+            1 & 0 & -1 \\
+            0 & 1 & 0 \\
+            -1 & 0 & 1
+        \end{pmatrix}\]</div>
+<p>to get the response map <span class="math">\(I'\)</span>(with stride 1 and no padding). What is the value of <span class="math">\(I'_{11}\)</span> -- the entry in the 1st row and 1st column of the output?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(I'_{11} = 0.6\)</span>.</p>
+<p>The <span class="math">\(3 \times 3\)</span> patch at the top-left corner of <span class="math">\(I\)</span> is:</p>
+<div class="math">\[\begin{pmatrix}
+                0.2 & 0.1 & 0.4 \\
+                0   & 0.5 & 0.2 \\
+                0.3 & 0   & 0.6
+            \end{pmatrix}\]</div>
+<p>Applying the filter element-wise and summing:</p>
+<div class="math">$$\begin{align*}
+            I'_{11}&= 0.2 \cdot 1 + 0.1 \cdot 0 + 0.4 \cdot(-1)
+                     + 0 \cdot 0 + 0.5 \cdot 1 + 0.2 \cdot 0 \\&\quad + 0.3 \cdot(-1) + 0 \cdot 0 + 0.6 \cdot 1 \\&= 0.2 - 0.4 + 0.5 - 0.3 + 0.6 \\&= 0.6
+        \end{align*}$$</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #163</h2>
+        <p>Tags: <a href='./tags/lecture-15.html'>lecture-15</a>, <a href='./tags/convolutional neural networks.html'>convolutional neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>An input image has shape <span class="math">\(80 \times 80 \times 11\)</span>, where <span class="math">\(11\)</span> is the number of channels. We wish to convolve this image with a 3D filter of shape <span class="math">\(5 \times 5 \times k\)</span>. What must the value of <span class="math">\(k\)</span> be for the convolution to work?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(k = 11\)</span>.</p>
+<p>A 3D convolution filter must have the same number of channels as the input. The filter slides spatially across the height and width of the image, but at each position it computes a dot product across all channels. Therefore the filter's third dimension must match the input's channel count.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #164</h2>
+        <p>Tags: <a href='./tags/lecture-15.html'>lecture-15</a>, <a href='./tags/convolutional neural networks.html'>convolutional neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider a convolutional neural network with the following architecture. The input is a <span class="math">\(10 \times 10 \times 1\)</span> grayscale image. It passes through Conv layer 1 (3 filters of size <span class="math">\(3 \times 3\)</span>, stride 1, no padding), producing an output of shape <span class="math">\(8 \times 8 \times 3\)</span>. Then <span class="math">\(2 \times 2\)</span> max pooling is applied, producing an output of shape <span class="math">\(4 \times 4 \times 3\)</span>. Next is Conv layer 2 (5 filters of size <span class="math">\(3 \times 3 \times 3\)</span>, stride 1, no padding), producing an output of shape <span class="math">\(2 \times 2 \times 5\)</span>. This is flattened and fed into a fully connected layer with <span class="math">\(n\)</span> nodes, followed by an output layer with 1 node.</p>
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 1)</h3>
+<p>What is the value of <span class="math">\(n\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(n = 20\)</span>.</p>
+<p>The output of Conv layer 2 is <span class="math">\(2 \times 2 \times 5\)</span>. Flattening this gives <span class="math">\(2 \times 2 \times 5 = 20\)</span> values, so the fully connected layer has <span class="math">\(20\)</span> nodes.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 2)</h3>
+<p>What is the total number of learnable parameters in the network, excluding biases?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(182\)</span>.</p>
+<p>Conv layer 1 has 3 filters of shape <span class="math">\(3 \times 3\)</span>, each with <span class="math">\(9\)</span> weights, for <span class="math">\(3 \times 9 = 27\)</span> parameters. Conv layer 2 has 5 filters of shape <span class="math">\(3 \times 3 \times 3\)</span>, each with <span class="math">\(27\)</span> weights, for <span class="math">\(5 \times 27 = 135\)</span> parameters. The fully connected layer connects to the output: <span class="math">\(20 \times 1 = 20\)</span> parameters. The grand total is <span class="math">\(27 + 135 + 20 = 182\)</span>.</p>
+<p>Note that max pooling has no learnable parameters.</p>
+</details>
+
+</div>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #165</h2>
+        <p>Tags: <a href='./tags/lecture-15.html'>lecture-15</a>, <a href='./tags/convolutional neural networks.html'>convolutional neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>An input <span class="math">\(4 \times 4\)</span> grayscale image <span class="math">\((I)\)</span> is represented by the matrix below.</p>
+<div class="math">\[
+        I = \begin{pmatrix}
+            0.7 & 0.2 & 0.1 & 0.8 \\
+            0.3 & 0.5 & 0.4 & 0.2 \\
+            0.6 & 0.1 & 0.9 & 0.3 \\
+            0.2 & 0.8 & 0.5 & 0.6
+        \end{pmatrix}\]</div>
+<p><span class="math">\(2 \times 2\)</span> max pooling is applied to this image. What is the resulting output?</p>
+<div class="multiple-choices"><form><div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\begin{pmatrix} 0.7 & 0.8 \\ 0.8 & 0.9 \end{pmatrix}\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\begin{pmatrix} 0.5 & 0.8 \\ 0.8 & 0.9 \end{pmatrix}\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\begin{pmatrix} 0.7 & 0.4 \\ 0.8 & 0.9 \end{pmatrix}\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\begin{pmatrix} 0.7 & 0.8 \\ 0.6 & 0.5 \end{pmatrix}\)</span></p></label></div></form></div>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\begin{pmatrix} 0.7 & 0.8 \\ 0.8 & 0.9 \end{pmatrix}\)</span>.</p>
+<p>With <span class="math">\(2 \times 2\)</span> max pooling, we divide the <span class="math">\(4 \times 4\)</span> image into four non-overlapping <span class="math">\(2 \times 2\)</span> blocks and take the maximum of each. Top-left: <span class="math">\(\max\{0.7, 0.2, 0.3, 0.5\} = 0.7\)</span>. Top-right: <span class="math">\(\max\{0.1, 0.8, 0.4, 0.2\} = 0.8\)</span>. Bottom-left: <span class="math">\(\max\{0.6, 0.1, 0.2, 0.8\} = 0.8\)</span>. Bottom-right: <span class="math">\(\max\{0.9, 0.3, 0.5, 0.6\} = 0.9\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+       </body>
+   </html>
+    </div>
+</div>
+
+    </div>
+
+    <script>
+        // Restore saved theme on page load
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else if (savedTheme === 'light') {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // Dark mode toggle
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const themeText = document.getElementById('theme-text');
+
+        // Update button to reflect current theme
+        function updateThemeButton() {
+            const isDark = document.documentElement.classList.contains('dark');
+            themeIcon.textContent = isDark ? '☀' : '☾';
+            themeText.textContent = isDark ? 'Light' : 'Dark';
+        }
+
+        // Initialize button state
+        updateThemeButton();
+
+        // Toggle theme on button click
+        themeToggleBtn.addEventListener('click', () => {
+            const isDark = document.documentElement.classList.contains('dark');
+
+            if (isDark) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+
+            updateThemeButton();
+        });
+
+        // Mobile menu toggle
+        const menuButton = document.getElementById('mobile-menu-button');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+
+        menuButton.addEventListener('click', () => {
+            sidebar.classList.toggle('-translate-x-full');
+            overlay.classList.toggle('hidden');
+        });
+
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>
