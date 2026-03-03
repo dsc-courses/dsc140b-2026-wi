@@ -431,7 +431,11 @@
                         "topic": "Autoencoders",
                         "number": 16
                     },
-                    "artifacts": {}
+                    "artifacts": {
+                        "slides.pdf": {
+                            "path": "materials/lectures/schedules/tr/16-autoencoders/slides.pdf"
+                        }
+                    }
                 }
             }
         },
@@ -601,6 +605,20 @@
                 "is_ordered": false
             },
             "publications": {
+                "project": {
+                    "metadata": null,
+                    "artifacts": {
+                        "train.py": {
+                            "path": "materials/default/project/train.py"
+                        },
+                        "predict.py": {
+                            "path": "materials/default/project/predict.py"
+                        },
+                        "project.pdf": {
+                            "path": "materials/default/project/project.pdf"
+                        }
+                    }
+                },
                 "supplementary/math_review": {
                     "metadata": {},
                     "artifacts": {
