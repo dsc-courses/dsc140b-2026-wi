@@ -120,7 +120,14 @@
                         "topic": "Training Neural Networks",
                         "number": 7
                     },
-                    "artifacts": {}
+                    "artifacts": {
+                        "quiz.pdf": {
+                            "path": "materials/quizzes/07-training_nns/quiz.pdf"
+                        },
+                        "solution.pdf": {
+                            "path": "materials/quizzes/07-training_nns/solution.pdf"
+                        }
+                    }
                 }
             }
         },
