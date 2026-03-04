@@ -185,7 +185,7 @@ def main():
             f"val_accuracy: {val_accuracy:.4f}"
         )
 
-    torch.save(model, "model.pt")
+    torch.save(model.state_dict(), "model.pt")
     print("Saved model to model.pt")
 
 if __name__ == "__main__":

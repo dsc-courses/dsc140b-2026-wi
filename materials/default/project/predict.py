@@ -97,7 +97,9 @@ def predict(test_dir):
     test_dir = pathlib.Path(test_dir)
 
     # Step 1) load the trained model.
-    model = torch.load("model.pt", weights_only=False)
+    input_dim = 3 * IMAGE_WIDTH * IMAGE_HEIGHT
+    model = LogisticRegression(input_dim, len(CLASSES))
+    model.load_state_dict(torch.load("model.pt", weights_only=True))
     model.eval()
 
     # Step 2) run prediction on every test image.
