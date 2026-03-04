@@ -1042,7 +1042,7 @@ Live Q&A
 <p>Suppose instead that the output node <i>also</i> uses a sigmoid activation. True or False: when plotted, <span class="math">\(H(x)\)</span> must look like a ReLU.</p>
 <details>
     <summary>Solution</summary>
-<p>False. Composing a piecewise linear function with a sigmoid produces a smooth, S-shaped curve, which does not look like a ReLU.</p>
+<p>False. As in part (a), the hidden layers produce a piecewise linear function, which can have many linear pieces. Composing this with a sigmoid produces a smooth function bounded in <span class="math">\((0, 1)\)</span>; not necessarily a simple S-shaped curve, but certainly not a ReLU.</p>
 </details>
 
 </div>

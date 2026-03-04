@@ -441,6 +441,9 @@
                     "artifacts": {
                         "slides.pdf": {
                             "path": "materials/lectures/schedules/tr/16-autoencoders/slides.pdf"
+                        },
+                        "marked.pdf": {
+                            "path": "materials/lectures/schedules/tr/16-autoencoders/marked.pdf"
                         }
                     }
                 }
