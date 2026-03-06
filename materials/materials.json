@@ -601,6 +601,9 @@
                     "artifacts": {
                         "homework.pdf": {
                             "path": "materials/homeworks/08-cnns/homework.pdf"
+                        },
+                        "solution.pdf": {
+                            "path": "materials/homeworks/08-cnns/solution.pdf"
                         }
                     }
                 }
