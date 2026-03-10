@@ -136,7 +136,7 @@ Live Q&A
 
     <div class="prose dark:prose-invert">
     <!DOCTYPE html> <html> <head> <meta
-                          charset="utf-8"> <title>Practice Problems</title>
+                          charset="utf-8"> <title>Problems tagged with softmax</title>
 
            <!-- MathJax -->
            <script type="text/x-mathjax-config">
@@ -167,156 +167,170 @@ Live Q&A
 
        </head>
        <body>
-           <div>
-<h1>Practice Problems</h1>
+           
+<h1>Problems tagged with "softmax"</h1>
 
 
-<div class="tagset">
-    <h2>Midterm 02</h2>
-    <p>Practice problems for topics on Midterm 02.</p>
-    <p>
-        <a href="./midterm-02.html">See all problems in this set</a>, or
-        choose a tag below to view only those problems.
-    </p>
-<ul>
-<li><a href='./tags/lecture-09.html'>lecture-09</a></li>
-<li><a href='./tags/lecture-10.html'>lecture-10</a></li>
-<li><a href='./tags/lecture-11.html'>lecture-11</a></li>
-<li><a href='./tags/lecture-12.html'>lecture-12</a></li>
-<li><a href='./tags/lecture-13.html'>lecture-13</a></li>
-<li><a href='./tags/lecture-14.html'>lecture-14</a></li>
-<li><a href='./tags/lecture-15.html'>lecture-15</a></li>
-</ul>
+        <div class="problem-outer">
+        <h2>Problem #166</h2>
+        <p>Tags: <a href='../tags/multiple outputs.html'>multiple outputs</a>, <a href='../tags/lecture-16.html'>lecture-16</a>, <a href='../tags/softmax.html'>softmax</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>A neural network with 3 output nodes uses the softmax activation function. The pre-activation values (logits) at the output layer are <span class="math">\(\vec z = (0, 2,
+    0)\)</span>. Compute the softmax output <span class="math">\(\vec h = (h_1, h_2, h_3)\)</span>.</p>
+<p>Leave your answer in terms of <span class="math">\(e\)</span>.</p>
+<details>
+    <summary>Solution</summary>
+<div class="math">\[\vec h = \left(\frac{1}{2 + e^2},\;\frac{e^2}{2 + e^2},\;\frac{1}{2 + e^2}\right)\]</div>
+<p>By the softmax formula, <span class="math">\(h_k = \frac{e^{z_k}}{\sum_{j=1}^{3} e^{z_j}}\)</span>. The denominator is:</p>
+<div class="math">\[
+            e^{0} + e^{2} + e^{0} = 1 + e^2 + 1 = 2 + e^2
+        \]</div>
+<p>Therefore:</p>
+<div class="math">$$\begin{align*}
+            h_1 &= \frac{e^0}{2 + e^2} = \frac{1}{2 + e^2}\\
+            h_2 &= \frac{e^2}{2 + e^2}\\
+            h_3 &= \frac{e^0}{2 + e^2} = \frac{1}{2 + e^2}\end{align*}$$</div>
+</details>
+
+    </div>
 </div>
 
-
-            <div class="tagset">
-                <h2>Midterm 01</h2>
-                <p>Practice problems for topics on Midterm 01.
-See also the <a href="http://dsc140b.com/materials/default/supplementary/sample_midterm_01/sample_midterm_01.pdf">Sample Midterm 01</a>
-and its <a href="http://dsc140b.com/materials/default/supplementary/sample_midterm_01/sample_midterm_01-solution.pdf">solutions</a>.</p>
-                <p>
-                    <a href="./midterm-01.html">See all problems in this set</a>, or
-                    choose a tag below to view only those problems.
-                </p>
-            <ul>
-<li><a href='./tags/lecture-02.html'>lecture-02</a></li>
-<li><a href='./tags/lecture-03.html'>lecture-03</a></li>
-<li><a href='./tags/lecture-04.html'>lecture-04</a></li>
-<li><a href='./tags/lecture-05.html'>lecture-05</a></li>
-<li><a href='./tags/lecture-06.html'>lecture-06</a></li>
-<li><a href='./tags/lecture-07.html'>lecture-07</a></li>
-<li><a href='./tags/lecture-08.html'>lecture-08</a></li>
-</ul>
-            </div>
+        </div>
 
 
-<div class="tagset">
-    <h2>Quiz 08</h2>
-    <p>Practice problems for topics on Quiz 08.</p>
-    <p>
-        <a href="./quiz-08.html">See all problems in this set</a>, or
-        choose a tag below to view only those problems.
-    </p>
-<ul>
-<li><a href='./tags/lecture-15.html'>lecture-15</a></li>
-<li><a href='./tags/lecture-16.html'>lecture-16</a></li>
-<li><a href='./tags/quiz-08.html'>quiz-08</a></li>
-</ul>
+
+
+        <div class="problem-outer">
+        <h2>Problem #167</h2>
+        <p>Tags: <a href='../tags/multiple outputs.html'>multiple outputs</a>, <a href='../tags/lecture-16.html'>lecture-16</a>, <a href='../tags/softmax.html'>softmax</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>A neural network with 4 output nodes uses the softmax activation function. The pre-activation values (logits) at the output layer are <span class="math">\(\vec z = (1, 3,
+    1, 3)\)</span>. Compute the softmax output <span class="math">\(\vec h = (h_1, h_2, h_3, h_4)\)</span>.</p>
+<p>Leave your answer in terms of <span class="math">\(e\)</span>.</p>
+<details>
+    <summary>Solution</summary>
+<div class="math">\[\vec h = \left(\frac{1}{2(1 + e^2)},\;\frac{e^2}{2(1 + e^2)},\;\frac{1}{2(1 + e^2)},\;\frac{e^2}{2(1 + e^2)}\right)\]</div>
+<p>By the softmax formula, <span class="math">\(h_k = \frac{e^{z_k}}{\sum_{j=1}^{4} e^{z_j}}\)</span>. The denominator is:</p>
+<div class="math">\[
+            e^{1} + e^{3} + e^{1} + e^{3} = 2e + 2e^3 = 2e(1 + e^2)
+        \]</div>
+<p>Therefore:</p>
+<div class="math">$$\begin{align*}
+            h_1 = h_3 &= \frac{e}{2e(1 + e^2)} = \frac{1}{2(1 + e^2)}\\
+            h_2 = h_4 &= \frac{e^3}{2e(1 + e^2)} = \frac{e^2}{2(1 + e^2)}\end{align*}$$</div>
+</details>
+
+    </div>
 </div>
 
+        </div>
 
-<div class="tagset">
-    <h2>Quiz 07</h2>
-    <p>Practice problems for topics on Quiz 07.</p>
-    <p>
-        <a href="./quiz-07.html">See all problems in this set</a>, or
-        choose a tag below to view only those problems.
-    </p>
-<ul>
-<li><a href='./tags/lecture-13.html'>lecture-13</a></li>
-<li><a href='./tags/lecture-14.html'>lecture-14</a></li>
-<li><a href='./tags/quiz-07.html'>quiz-07</a></li>
-</ul>
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #168</h2>
+        <p>Tags: <a href='../tags/multiple outputs.html'>multiple outputs</a>, <a href='../tags/lecture-16.html'>lecture-16</a>, <a href='../tags/softmax.html'>softmax</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>A neural network with 3 output nodes uses the softmax activation function. The pre-activation values (logits) at the output layer are <span class="math">\(\vec z = (1, 2,
+    3)\)</span>. Compute the softmax output <span class="math">\(\vec h = (h_1, h_2, h_3)\)</span>.</p>
+<p>Leave your answer in terms of <span class="math">\(e\)</span>.</p>
+<details>
+    <summary>Solution</summary>
+<div class="math">\[\vec h = \left(\frac{1}{1 + e + e^2},\;\frac{e}{1 + e + e^2},\;\frac{e^2}{1 + e + e^2}\right)\]</div>
+<p>By the softmax formula, <span class="math">\(h_k = \frac{e^{z_k}}{\sum_{j=1}^{3} e^{z_j}}\)</span>. The denominator is:</p>
+<div class="math">\[
+            e^{1} + e^{2} + e^{3} = e(1 + e + e^2)
+        \]</div>
+<p>Therefore:</p>
+<div class="math">$$\begin{align*}
+            h_1 &= \frac{e}{e(1 + e + e^2)} = \frac{1}{1 + e + e^2}\\
+            h_2 &= \frac{e^2}{e(1 + e + e^2)} = \frac{e}{1 + e + e^2}\\
+            h_3 &= \frac{e^3}{e(1 + e + e^2)} = \frac{e^2}{1 + e + e^2}\end{align*}$$</div>
+</details>
+
+    </div>
 </div>
 
-
-<div class="tagset">
-    <h2>Quiz 06</h2>
-    <p>Practice problems for topics on Quiz 06.</p>
-    <p>
-        <a href="./quiz-06.html">See all problems in this set</a>, or
-        choose a tag below to view only those problems.
-    </p>
-<ul>
-<li><a href='./tags/lecture-11.html'>lecture-11</a></li>
-<li><a href='./tags/lecture-12.html'>lecture-12</a></li>
-<li><a href='./tags/quiz-06.html'>quiz-06</a></li>
-</ul>
-</div>
+        </div>
 
 
-<div class="tagset">
-    <h2>Quiz 05</h2>
-    <p>Practice problems for topics on Quiz 05.</p>
-    <p>
-        <a href="./quiz-05.html">See all problems in this set</a>, or
-        choose a tag below to view only those problems.
-    </p>
-<ul>
-<li><a href='./tags/lecture-08.html'>lecture-08</a></li>
-<li><a href='./tags/lecture-09.html'>lecture-09</a></li>
-<li><a href='./tags/lecture-10.html'>lecture-10</a></li>
-<li><a href='./tags/quiz-05.html'>quiz-05</a></li>
-</ul>
-</div>
 
 
-<div class="tagset">
-    <h2>Quiz 04</h2>
-    <p>Practice problems for topics on Quiz 04.</p>
-    <p>
-        <a href="./quiz-04.html">See all problems in this set</a>, or
-        choose a tag below to view only those problems.
-    </p>
-<ul>
-<li><a href='./tags/lecture-06.html'>lecture-06</a></li>
-<li><a href='./tags/lecture-07.html'>lecture-07</a></li>
-<li><a href='./tags/quiz-04.html'>quiz-04</a></li>
-</ul>
-</div>
-
-
-<div class="tagset">
-    <h2>Quiz 03</h2>
-    <p>Practice problems for topics on Quiz 03.</p>
-    <p>
-        <a href="./quiz-03.html">See all problems in this set</a>, or
-        choose a tag below to view only those problems.
-    </p>
-<ul>
-<li><a href='./tags/lecture-04.html'>lecture-04</a></li>
-<li><a href='./tags/lecture-05.html'>lecture-05</a></li>
-<li><a href='./tags/quiz-03.html'>quiz-03</a></li>
-</ul>
-</div>
-
-
-<div class="tagset">
-    <h2>Quiz 02</h2>
-    <p>Practice problems for topics on Quiz 02.</p>
-    <p>
-        <a href="./quiz-02.html">See all problems in this set</a>, or
-        choose a tag below to view only those problems.
-    </p>
-<ul>
-<li><a href='./tags/lecture-02.html'>lecture-02</a></li>
-<li><a href='./tags/lecture-03.html'>lecture-03</a></li>
-<li><a href='./tags/quiz-02.html'>quiz-02</a></li>
-</ul>
-</div>
+        <div class="problem-outer">
+        <h2>Problem #175</h2>
+        <p>Tags: <a href='../tags/multiple outputs.html'>multiple outputs</a>, <a href='../tags/sigmoid.html'>sigmoid</a>, <a href='../tags/lecture-16.html'>lecture-16</a>, <a href='../tags/softmax.html'>softmax</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>A neural network classifies images into 5 categories.</p>
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 1)</h3>
+<p>Suppose the categories are mutually exclusive (each image belongs to exactly one category). Which activation function should be used at the output layer: sigmoid or softmax?</p>
+<details>
+    <summary>Solution</summary>
+<p>Softmax.</p>
+<p>Since the categories are mutually exclusive, we want the output probabilities to represent a single probability distribution over the 5 classes. Softmax enforces this by ensuring the outputs sum to 1.</p>
+</details>
 
 </div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 2)</h3>
+<p>True or False: with the activation from part (a), the 5 outputs must sum to 1.</p>
+
+<div class="true-false">
+    <input type="radio" name="true-false" value="true" /> True
+    <input type="radio" name="true-false" value="false" /> False
+</div>
+
+<details>
+    <summary>Solution</summary>
+<p>True.</p>
+<p>The softmax function produces outputs that sum to 1 by definition:</p>
+<div class="math">\[\sum_{k=1}^{K} h_k = \sum_{k=1}^{K}\frac{e^{z_k}}{\sum_{j} e^{z_j}} = 1
+                \]</div>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 3)</h3>
+<p>Now suppose an image can belong to multiple categories simultaneously. Which activation function should be used at the output layer: sigmoid or softmax?</p>
+<details>
+    <summary>Solution</summary>
+<p>Sigmoid.</p>
+<p>Since the categories are not mutually exclusive, each output node independently predicts the probability that the image belongs to that category. Sigmoid is applied independently to each output.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 4)</h3>
+<p>True or False: with the activation from part (c), the 5 outputs must sum to 1.</p>
+
+<div class="true-false">
+    <input type="radio" name="true-false" value="true" /> True
+    <input type="radio" name="true-false" value="false" /> False
+</div>
+
+<details>
+    <summary>Solution</summary>
+<p>False.</p>
+<p>Sigmoid is applied independently to each output node, so there is no constraint that the outputs sum to 1. For example, if the image contains both a cat and a dog, the network might output high probabilities for both.</p>
+</details>
+
+</div>
+
+    </div>
+</div>
+
+        </div>
+
+
+
        </body>
    </html>
     </div>

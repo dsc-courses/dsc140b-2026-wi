@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head data-automata-theme="default">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>DSC 140B</title>
+    <link href="/static/style.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+
+    <!-- Mobile menu button -->
+<div class="mobile-navbar lg:hidden fixed top-0 left-0 right-0 bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 z-50 flex items-center">
+    <button id="mobile-menu-button" class="py-5 pl-4 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
+        <i data-lucide="menu" class="w-6 h-5"></i>
+    </button>
+    <span class="ml-2 font-semibold">DSC 140B</span>
+</div>
+
+    <div class="flex min-h-screen">
+        <!-- Left Navigation Column -->
+        <nav id="sidebar" class="
+    w-64 flex-none
+    fixed lg:sticky
+    top-0 left-0 h-screen
+    transform -translate-x-full lg:translate-x-0 transition-transform duration-200 ease-in-out
+    bg-gray-50 dark:bg-gray-900
+    z-40
+    sidebar-mobile-spacing lg:pt-6
+    flex flex-col items-end
+    border-r lg:border-r-0 border-gray-200 dark:border-gray-700
+    ">
+
+    <div class="pt-6 pr-6 flex">
+        <ul class="space-y-2">
+            
+            <li>
+                <a href="/index.html" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="home" class="mr-2 text-slate-400"></i>
+Home
+                </a>
+            </li>
+            
+            <li>
+                <a href="/syllabus.html" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="scale" class="mr-2 text-slate-400"></i>
+Syllabus
+                </a>
+            </li>
+            
+            <li>
+                <a href="/office_hours.html" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="briefcase-business" class="mr-2 text-slate-400"></i>
+Office Hours
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://campuswire.com/p/G7C157AD2" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="message-circle-more" class="mr-2 text-slate-400"></i>
+Campuswire
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://www.gradescope.com/courses/1212103" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="spell-check" class="mr-2 text-slate-400"></i>
+Gradescope
+                </a>
+            </li>
+            
+            <li>
+                <a href="/practice/index.html" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="dumbbell" class="mr-2 text-slate-400"></i>
+Practice
+                </a>
+            </li>
+            
+            <li>
+                <a href="http://sierra.ucsd.edu/qa/dsc140b" class="flex justify-end px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium">
+                    <i data-lucide="message-circle-question-mark" class="mr-2 text-slate-400"></i>
+Live Q&A
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <div class="flex mr-9 pt-3 pb-6">
+        <button id="theme-toggle" class="inline-flex items-center px-3 py-1.5 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded-full transition-colors">
+            <span id="theme-icon" class="mr-1.5">☾</span>
+            <span id="theme-text">Dark</span>
+        </button>
+    </div>
+</nav>
+
+<!-- Overlay for mobile -->
+<div id="overlay" class="fixed inset-0 bg-gray-200/40 dark:bg-black/50 backdrop-blur-[2px] z-30 hidden"></div>
+
+        <!-- Main Content Column -->
+        
+<!-- Main Content Column -->
+<div class="
+    w-full
+    bg-white dark:bg-gray-800
+    md:border-l
+    border-gray-200 dark:border-gray-700
+    md:min-w-180
+    px-4 md:px-12
+    pt-20 lg:pt-12
+    pb-24
+    ">
+
+    <div class="
+    text-xl font-semibold
+    left-12 right-12
+    py-4 lg:pt-0 lg:pb-0 lg:mb-10
+    lg:static
+    truncate
+    flex
+    ">
+    <div class="
+        shrink
+        lg:border-b border-gray-200 dark:border-gray-700
+        ">
+        <span class="hidden lg:inline">
+            DSC 140B
+            &ndash;
+            Representation Learning
+        </span>
+    </div>
+</div>
+
+    <div class="prose dark:prose-invert">
+    <!DOCTYPE html> <html> <head> <meta
+                          charset="utf-8"> <title>Quiz 08</title>
+
+           <!-- MathJax -->
+           <script type="text/x-mathjax-config">
+             MathJax.Hub.Config({
+               tex: {
+                 inlineMath: [ ['$$','$$'], ["\\(","\\)"] ],
+                 displayMath: [             // start/end delimiter pairs for display math
+                     ['\\[', '\\]']
+                 ],
+                 processEscapes: true
+               }
+           });
+           </script>
+
+           <!-- highlightjs -->
+           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+           <!-- and it's easy to individually load additional languages -->
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+
+           <script>hljs.highlightAll();</script>
+
+           <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+           <script type="text/javascript" id="MathJax-script" async
+             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+           </script>
+
+       </head>
+       <body>
+           
+<h1>Quiz 08</h1>
+<p>Practice problems for topics on Quiz 08.</p>
+<p>Tags in this problem set:</p>
+<ul>
+<ul>
+<li><a href='./tags/lecture-15.html'>lecture-15</a></li>
+<li><a href='./tags/lecture-16.html'>lecture-16</a></li>
+<li><a href='./tags/quiz-08.html'>quiz-08</a></li>
+</ul>
+</ul>
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #161</h2>
+        <p>Tags: <a href='./tags/lecture-15.html'>lecture-15</a>, <a href='./tags/convolutional neural networks.html'>convolutional neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>A grayscale image of size <span class="math">\(32 \times 32 \times 1\)</span> is convolved with a filter of size <span class="math">\(5 \times 5\)</span>. No padding is applied, and the stride is 1. What is the shape of the output response map?</p>
+<div class="multiple-choices"><form><div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(32 \times 32 \times 1\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(28 \times 28 \times 1\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(27 \times 27 \times 1\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(36 \times 36 \times 1\)</span></p></label></div></form></div>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(28 \times 28 \times 1\)</span>.</p>
+<p>With no padding and stride 1, the output height and width are each <span class="math">\(32 - 5 + 1 = 28\)</span>. The filter slides over each <span class="math">\(5 \times 5\)</span> block of the image from left to right and top to bottom, producing one output value per position.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #162</h2>
+        <p>Tags: <a href='./tags/lecture-15.html'>lecture-15</a>, <a href='./tags/convolutional neural networks.html'>convolutional neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>An input <span class="math">\(5 \times 5\)</span> grayscale image <span class="math">\((I)\)</span> is represented by the matrix below.</p>
+<div class="math">\[
+        I = \begin{pmatrix}
+            0.2 & 0.1 & 0.4 & 0   & 0.3 \\
+            0   & 0.5 & 0.2 & 0.7 & 0   \\
+            0.3 & 0   & 0.6 & 0.1 & 0.5 \\
+            0.1 & 0.4 & 0   & 0.3 & 0.2 \\
+            0   & 0.2 & 0.5 & 0   & 0.4
+        \end{pmatrix}\]</div>
+<p>Suppose you convolve <span class="math">\(I\)</span> with the <span class="math">\(3 \times 3\)</span> filter</p>
+<div class="math">\[
+        F = \begin{pmatrix}
+            1 & 0 & -1 \\
+            0 & 1 & 0 \\
+            -1 & 0 & 1
+        \end{pmatrix}\]</div>
+<p>to get the response map <span class="math">\(I'\)</span>(with stride 1 and no padding). What is the value of <span class="math">\(I'_{11}\)</span> -- the entry in the 1st row and 1st column of the output?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(I'_{11} = 0.6\)</span>.</p>
+<p>The <span class="math">\(3 \times 3\)</span> patch at the top-left corner of <span class="math">\(I\)</span> is:</p>
+<div class="math">\[\begin{pmatrix}
+                0.2 & 0.1 & 0.4 \\
+                0   & 0.5 & 0.2 \\
+                0.3 & 0   & 0.6
+            \end{pmatrix}\]</div>
+<p>Applying the filter element-wise and summing:</p>
+<div class="math">$$\begin{align*}
+            I'_{11}&= 0.2 \cdot 1 + 0.1 \cdot 0 + 0.4 \cdot(-1)
+                     + 0 \cdot 0 + 0.5 \cdot 1 + 0.2 \cdot 0 \\&\quad + 0.3 \cdot(-1) + 0 \cdot 0 + 0.6 \cdot 1 \\&= 0.2 - 0.4 + 0.5 - 0.3 + 0.6 \\&= 0.6
+        \end{align*}$$</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #163</h2>
+        <p>Tags: <a href='./tags/lecture-15.html'>lecture-15</a>, <a href='./tags/convolutional neural networks.html'>convolutional neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>An input image has shape <span class="math">\(80 \times 80 \times 11\)</span>, where <span class="math">\(11\)</span> is the number of channels. We wish to convolve this image with a 3D filter of shape <span class="math">\(5 \times 5 \times k\)</span>. What must the value of <span class="math">\(k\)</span> be for the convolution to work?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(k = 11\)</span>.</p>
+<p>A 3D convolution filter must have the same number of channels as the input. The filter slides spatially across the height and width of the image, but at each position it computes a dot product across all channels. Therefore the filter's third dimension must match the input's channel count.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #164</h2>
+        <p>Tags: <a href='./tags/lecture-15.html'>lecture-15</a>, <a href='./tags/convolutional neural networks.html'>convolutional neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>Consider a convolutional neural network with the following architecture. The input is a <span class="math">\(10 \times 10 \times 1\)</span> grayscale image. It passes through Conv layer 1 (3 filters of size <span class="math">\(3 \times 3\)</span>, stride 1, no padding), producing an output of shape <span class="math">\(8 \times 8 \times 3\)</span>. Then <span class="math">\(2 \times 2\)</span> max pooling is applied, producing an output of shape <span class="math">\(4 \times 4 \times 3\)</span>. Next is Conv layer 2 (5 filters of size <span class="math">\(3 \times 3 \times 3\)</span>, stride 1, no padding), producing an output of shape <span class="math">\(2 \times 2 \times 5\)</span>. This is flattened and fed into a fully connected layer with <span class="math">\(n\)</span> nodes, followed by an output layer with 1 node.</p>
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 1)</h3>
+<p>What is the value of <span class="math">\(n\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(n = 20\)</span>.</p>
+<p>The output of Conv layer 2 is <span class="math">\(2 \times 2 \times 5\)</span>. Flattening this gives <span class="math">\(2 \times 2 \times 5 = 20\)</span> values, so the fully connected layer has <span class="math">\(20\)</span> nodes.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 2)</h3>
+<p>What is the total number of learnable parameters in the network, excluding biases?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(182\)</span>.</p>
+<p>Conv layer 1 has 3 filters of shape <span class="math">\(3 \times 3\)</span>, each with <span class="math">\(9\)</span> weights, for <span class="math">\(3 \times 9 = 27\)</span> parameters. Conv layer 2 has 5 filters of shape <span class="math">\(3 \times 3 \times 3\)</span>, each with <span class="math">\(27\)</span> weights, for <span class="math">\(5 \times 27 = 135\)</span> parameters. The fully connected layer connects to the output: <span class="math">\(20 \times 1 = 20\)</span> parameters. The grand total is <span class="math">\(27 + 135 + 20 = 182\)</span>.</p>
+<p>Note that max pooling has no learnable parameters.</p>
+</details>
+
+</div>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #165</h2>
+        <p>Tags: <a href='./tags/lecture-15.html'>lecture-15</a>, <a href='./tags/convolutional neural networks.html'>convolutional neural networks</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>An input <span class="math">\(4 \times 4\)</span> grayscale image <span class="math">\((I)\)</span> is represented by the matrix below.</p>
+<div class="math">\[
+        I = \begin{pmatrix}
+            0.7 & 0.2 & 0.1 & 0.8 \\
+            0.3 & 0.5 & 0.4 & 0.2 \\
+            0.6 & 0.1 & 0.9 & 0.3 \\
+            0.2 & 0.8 & 0.5 & 0.6
+        \end{pmatrix}\]</div>
+<p><span class="math">\(2 \times 2\)</span> max pooling is applied to this image. What is the resulting output?</p>
+<div class="multiple-choices"><form><div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\begin{pmatrix} 0.7 & 0.8 \\ 0.8 & 0.9 \end{pmatrix}\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\begin{pmatrix} 0.5 & 0.8 \\ 0.8 & 0.9 \end{pmatrix}\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\begin{pmatrix} 0.7 & 0.4 \\ 0.8 & 0.9 \end{pmatrix}\)</span></p></label></div>
+<div class="choice"><label><input name="choice" class="choice" type="radio" /><p><span class="math">\(\begin{pmatrix} 0.7 & 0.8 \\ 0.6 & 0.5 \end{pmatrix}\)</span></p></label></div></form></div>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(\begin{pmatrix} 0.7 & 0.8 \\ 0.8 & 0.9 \end{pmatrix}\)</span>.</p>
+<p>With <span class="math">\(2 \times 2\)</span> max pooling, we divide the <span class="math">\(4 \times 4\)</span> image into four non-overlapping <span class="math">\(2 \times 2\)</span> blocks and take the maximum of each. Top-left: <span class="math">\(\max\{0.7, 0.2, 0.3, 0.5\} = 0.7\)</span>. Top-right: <span class="math">\(\max\{0.1, 0.8, 0.4, 0.2\} = 0.8\)</span>. Bottom-left: <span class="math">\(\max\{0.6, 0.1, 0.2, 0.8\} = 0.8\)</span>. Bottom-right: <span class="math">\(\max\{0.9, 0.3, 0.5, 0.6\} = 0.9\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #166</h2>
+        <p>Tags: <a href='./tags/multiple outputs.html'>multiple outputs</a>, <a href='./tags/lecture-16.html'>lecture-16</a>, <a href='./tags/softmax.html'>softmax</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>A neural network with 3 output nodes uses the softmax activation function. The pre-activation values (logits) at the output layer are <span class="math">\(\vec z = (0, 2,
+    0)\)</span>. Compute the softmax output <span class="math">\(\vec h = (h_1, h_2, h_3)\)</span>.</p>
+<p>Leave your answer in terms of <span class="math">\(e\)</span>.</p>
+<details>
+    <summary>Solution</summary>
+<div class="math">\[\vec h = \left(\frac{1}{2 + e^2},\;\frac{e^2}{2 + e^2},\;\frac{1}{2 + e^2}\right)\]</div>
+<p>By the softmax formula, <span class="math">\(h_k = \frac{e^{z_k}}{\sum_{j=1}^{3} e^{z_j}}\)</span>. The denominator is:</p>
+<div class="math">\[
+            e^{0} + e^{2} + e^{0} = 1 + e^2 + 1 = 2 + e^2
+        \]</div>
+<p>Therefore:</p>
+<div class="math">$$\begin{align*}
+            h_1 &= \frac{e^0}{2 + e^2} = \frac{1}{2 + e^2}\\
+            h_2 &= \frac{e^2}{2 + e^2}\\
+            h_3 &= \frac{e^0}{2 + e^2} = \frac{1}{2 + e^2}\end{align*}$$</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #167</h2>
+        <p>Tags: <a href='./tags/multiple outputs.html'>multiple outputs</a>, <a href='./tags/lecture-16.html'>lecture-16</a>, <a href='./tags/softmax.html'>softmax</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>A neural network with 4 output nodes uses the softmax activation function. The pre-activation values (logits) at the output layer are <span class="math">\(\vec z = (1, 3,
+    1, 3)\)</span>. Compute the softmax output <span class="math">\(\vec h = (h_1, h_2, h_3, h_4)\)</span>.</p>
+<p>Leave your answer in terms of <span class="math">\(e\)</span>.</p>
+<details>
+    <summary>Solution</summary>
+<div class="math">\[\vec h = \left(\frac{1}{2(1 + e^2)},\;\frac{e^2}{2(1 + e^2)},\;\frac{1}{2(1 + e^2)},\;\frac{e^2}{2(1 + e^2)}\right)\]</div>
+<p>By the softmax formula, <span class="math">\(h_k = \frac{e^{z_k}}{\sum_{j=1}^{4} e^{z_j}}\)</span>. The denominator is:</p>
+<div class="math">\[
+            e^{1} + e^{3} + e^{1} + e^{3} = 2e + 2e^3 = 2e(1 + e^2)
+        \]</div>
+<p>Therefore:</p>
+<div class="math">$$\begin{align*}
+            h_1 = h_3 &= \frac{e}{2e(1 + e^2)} = \frac{1}{2(1 + e^2)}\\
+            h_2 = h_4 &= \frac{e^3}{2e(1 + e^2)} = \frac{e^2}{2(1 + e^2)}\end{align*}$$</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #168</h2>
+        <p>Tags: <a href='./tags/multiple outputs.html'>multiple outputs</a>, <a href='./tags/lecture-16.html'>lecture-16</a>, <a href='./tags/softmax.html'>softmax</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>A neural network with 3 output nodes uses the softmax activation function. The pre-activation values (logits) at the output layer are <span class="math">\(\vec z = (1, 2,
+    3)\)</span>. Compute the softmax output <span class="math">\(\vec h = (h_1, h_2, h_3)\)</span>.</p>
+<p>Leave your answer in terms of <span class="math">\(e\)</span>.</p>
+<details>
+    <summary>Solution</summary>
+<div class="math">\[\vec h = \left(\frac{1}{1 + e + e^2},\;\frac{e}{1 + e + e^2},\;\frac{e^2}{1 + e + e^2}\right)\]</div>
+<p>By the softmax formula, <span class="math">\(h_k = \frac{e^{z_k}}{\sum_{j=1}^{3} e^{z_j}}\)</span>. The denominator is:</p>
+<div class="math">\[
+            e^{1} + e^{2} + e^{3} = e(1 + e + e^2)
+        \]</div>
+<p>Therefore:</p>
+<div class="math">$$\begin{align*}
+            h_1 &= \frac{e}{e(1 + e + e^2)} = \frac{1}{1 + e + e^2}\\
+            h_2 &= \frac{e^2}{e(1 + e + e^2)} = \frac{e}{1 + e + e^2}\\
+            h_3 &= \frac{e^3}{e(1 + e + e^2)} = \frac{e^2}{1 + e + e^2}\end{align*}$$</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #169</h2>
+        <p>Tags: <a href='./tags/binary cross-entropy.html'>binary cross-entropy</a>, <a href='./tags/lecture-16.html'>lecture-16</a>, <a href='./tags/multiple outputs.html'>multiple outputs</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>A multi-label classifier has 3 output nodes with sigmoid activations. The true labels are <span class="math">\(\vec y = (1, 0, 1)\)</span> and the predicted probabilities are <span class="math">\(\vec h = (0.9, 0.2, 0.8)\)</span>.</p>
+<p>Compute the binary cross-entropy loss. Leave your answer in terms of <span class="math">\(\log\)</span>.</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(-\log(0.9) - \log(0.8) - \log(0.8) = -\log(0.9) - 2\log(0.8)\)</span>.</p>
+<p>By the binary cross-entropy formula:</p>
+<div class="math">\[\ell(\vec h, \vec y)
+            = -\sum_{k=1}^{3}\begin{cases}
+                \log h_k, & \text{if } y_k = 1 \\
+                \log(1 - h_k), & \text{if } y_k = 0
+            \end{cases}\]</div>
+<p>Evaluating each term:</p>
+<div class="math">$$\begin{align*}
+            k = 1&: \quad y_1 = 1, \text{ so } -\log(0.9) \\
+            k = 2&: \quad y_2 = 0, \text{ so } -\log(1 - 0.2) = -\log(0.8) \\
+            k = 3&: \quad y_3 = 1, \text{ so } -\log(0.8)
+        \end{align*}$$</div>
+<p>The total is <span class="math">\(-\log(0.9) - 2\log(0.8)\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #170</h2>
+        <p>Tags: <a href='./tags/binary cross-entropy.html'>binary cross-entropy</a>, <a href='./tags/lecture-16.html'>lecture-16</a>, <a href='./tags/multiple outputs.html'>multiple outputs</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>A multi-label classifier has 4 output nodes with sigmoid activations. The true labels are <span class="math">\(\vec y = (0, 1, 0, 1)\)</span> and the predicted probabilities are <span class="math">\(\vec h = (0.3, 0.7, 0.1, 0.9)\)</span>.</p>
+<p>Compute the binary cross-entropy loss. Leave your answer in terms of <span class="math">\(\log\)</span>.</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(-2\log(0.7) - 2\log(0.9)\)</span>.</p>
+<p>By the binary cross-entropy formula:</p>
+<div class="math">\[\ell(\vec h, \vec y)
+            = -\sum_{k=1}^{4}\begin{cases}
+                \log h_k, & \text{if } y_k = 1 \\
+                \log(1 - h_k), & \text{if } y_k = 0
+            \end{cases}\]</div>
+<p>Evaluating each term:</p>
+<div class="math">$$\begin{align*}
+            k = 1&: \quad y_1 = 0, \text{ so } -\log(1 - 0.3) = -\log(0.7) \\
+            k = 2&: \quad y_2 = 1, \text{ so } -\log(0.7) \\
+            k = 3&: \quad y_3 = 0, \text{ so } -\log(1 - 0.1) = -\log(0.9) \\
+            k = 4&: \quad y_4 = 1, \text{ so } -\log(0.9)
+        \end{align*}$$</div>
+<p>The total is <span class="math">\(-2\log(0.7) - 2\log(0.9)\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #171</h2>
+        <p>Tags: <a href='./tags/binary cross-entropy.html'>binary cross-entropy</a>, <a href='./tags/lecture-16.html'>lecture-16</a>, <a href='./tags/multiple outputs.html'>multiple outputs</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>A multi-label classifier has 3 output nodes with sigmoid activations. The true labels are <span class="math">\(\vec y = (1, 1, 0)\)</span> and the predicted probabilities are <span class="math">\(\vec h = (0.8, 0.6, 0.4)\)</span>.</p>
+<p>Compute the binary cross-entropy loss. Leave your answer in terms of <span class="math">\(\log\)</span>.</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(-\log(0.8) - 2\log(0.6)\)</span>.</p>
+<p>By the binary cross-entropy formula:</p>
+<div class="math">\[\ell(\vec h, \vec y)
+            = -\sum_{k=1}^{3}\begin{cases}
+                \log h_k, & \text{if } y_k = 1 \\
+                \log(1 - h_k), & \text{if } y_k = 0
+            \end{cases}\]</div>
+<p>Evaluating each term:</p>
+<div class="math">$$\begin{align*}
+            k = 1&: \quad y_1 = 1, \text{ so } -\log(0.8) \\
+            k = 2&: \quad y_2 = 1, \text{ so } -\log(0.6) \\
+            k = 3&: \quad y_3 = 0, \text{ so } -\log(1 - 0.4) = -\log(0.6)
+        \end{align*}$$</div>
+<p>The total is <span class="math">\(-\log(0.8) - 2\log(0.6)\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #172</h2>
+        <p>Tags: <a href='./tags/multiple outputs.html'>multiple outputs</a>, <a href='./tags/lecture-16.html'>lecture-16</a>, <a href='./tags/categorical cross-entropy.html'>categorical cross-entropy</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>A multi-class classifier has 4 output nodes with softmax activation. The true label is <span class="math">\(\vec y = (0, 0, 1, 0)\)</span> and the softmax outputs are <span class="math">\(\vec h
+    = (0.1, 0.2, 0.6, 0.1)\)</span>.</p>
+<p>Compute the categorical cross-entropy loss. Leave your answer in terms of <span class="math">\(\log\)</span>.</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(-\log(0.6)\)</span>.</p>
+<p>By the categorical cross-entropy formula:</p>
+<div class="math">\[\ell(\vec h, \vec y) = -\sum_{k=1}^{4}\begin{cases}
+                \log h_k, & \text{if } y_k = 1 \\
+                0, & \text{if } y_k = 0
+            \end{cases}\]</div>
+<p>Only <span class="math">\(y_3 = 1\)</span> contributes, so the loss is <span class="math">\(-\log(h_3) = -\log(0.6)\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #173</h2>
+        <p>Tags: <a href='./tags/multiple outputs.html'>multiple outputs</a>, <a href='./tags/lecture-16.html'>lecture-16</a>, <a href='./tags/categorical cross-entropy.html'>categorical cross-entropy</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>A multi-class classifier has 3 output nodes with softmax activation. The true label is <span class="math">\(\vec y = (0, 1, 0)\)</span> and the softmax outputs are <span class="math">\(\vec h =
+    (0.3, 0.5, 0.2)\)</span>.</p>
+<p>Compute the categorical cross-entropy loss. Leave your answer in terms of <span class="math">\(\log\)</span>.</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(-\log(0.5) = \log 2\)</span>.</p>
+<p>By the categorical cross-entropy formula:</p>
+<div class="math">\[\ell(\vec h, \vec y) = -\sum_{k=1}^{3}\begin{cases}
+                \log h_k, & \text{if } y_k = 1 \\
+                0, & \text{if } y_k = 0
+            \end{cases}\]</div>
+<p>Only <span class="math">\(y_2 = 1\)</span> contributes, so the loss is <span class="math">\(-\log(h_2) = -\log(0.5) =
+        \log 2\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #174</h2>
+        <p>Tags: <a href='./tags/multiple outputs.html'>multiple outputs</a>, <a href='./tags/lecture-16.html'>lecture-16</a>, <a href='./tags/categorical cross-entropy.html'>categorical cross-entropy</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>A multi-class classifier has 4 output nodes with softmax activation. The true label is <span class="math">\(\vec y = (1, 0, 0, 0)\)</span> and the softmax outputs are <span class="math">\(\vec h
+    = (0.4, 0.3, 0.2, 0.1)\)</span>.</p>
+<p>Compute the categorical cross-entropy loss. Leave your answer in terms of <span class="math">\(\log\)</span>.</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(-\log(0.4)\)</span>.</p>
+<p>By the categorical cross-entropy formula:</p>
+<div class="math">\[\ell(\vec h, \vec y) = -\sum_{k=1}^{4}\begin{cases}
+                \log h_k, & \text{if } y_k = 1 \\
+                0, & \text{if } y_k = 0
+            \end{cases}\]</div>
+<p>Only <span class="math">\(y_1 = 1\)</span> contributes, so the loss is <span class="math">\(-\log(h_1) = -\log(0.4)\)</span>.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #175</h2>
+        <p>Tags: <a href='./tags/multiple outputs.html'>multiple outputs</a>, <a href='./tags/sigmoid.html'>sigmoid</a>, <a href='./tags/lecture-16.html'>lecture-16</a>, <a href='./tags/softmax.html'>softmax</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>A neural network classifies images into 5 categories.</p>
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 1)</h3>
+<p>Suppose the categories are mutually exclusive (each image belongs to exactly one category). Which activation function should be used at the output layer: sigmoid or softmax?</p>
+<details>
+    <summary>Solution</summary>
+<p>Softmax.</p>
+<p>Since the categories are mutually exclusive, we want the output probabilities to represent a single probability distribution over the 5 classes. Softmax enforces this by ensuring the outputs sum to 1.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 2)</h3>
+<p>True or False: with the activation from part (a), the 5 outputs must sum to 1.</p>
+
+<div class="true-false">
+    <input type="radio" name="true-false" value="true" /> True
+    <input type="radio" name="true-false" value="false" /> False
+</div>
+
+<details>
+    <summary>Solution</summary>
+<p>True.</p>
+<p>The softmax function produces outputs that sum to 1 by definition:</p>
+<div class="math">\[\sum_{k=1}^{K} h_k = \sum_{k=1}^{K}\frac{e^{z_k}}{\sum_{j} e^{z_j}} = 1
+                \]</div>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 3)</h3>
+<p>Now suppose an image can belong to multiple categories simultaneously. Which activation function should be used at the output layer: sigmoid or softmax?</p>
+<details>
+    <summary>Solution</summary>
+<p>Sigmoid.</p>
+<p>Since the categories are not mutually exclusive, each output node independently predicts the probability that the image belongs to that category. Sigmoid is applied independently to each output.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 4)</h3>
+<p>True or False: with the activation from part (c), the 5 outputs must sum to 1.</p>
+
+<div class="true-false">
+    <input type="radio" name="true-false" value="true" /> True
+    <input type="radio" name="true-false" value="false" /> False
+</div>
+
+<details>
+    <summary>Solution</summary>
+<p>False.</p>
+<p>Sigmoid is applied independently to each output node, so there is no constraint that the outputs sum to 1. For example, if the image contains both a cat and a dog, the network might output high probabilities for both.</p>
+</details>
+
+</div>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #176</h2>
+        <p>Tags: <a href='./tags/multiple outputs.html'>multiple outputs</a>, <a href='./tags/lecture-16.html'>lecture-16</a>, <a href='./tags/regression.html'>regression</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>A neural network with 3 output nodes is trained to predict temperature, humidity, and wind speed simultaneously. The network uses the multi-target regression loss:</p>
+<div class="math">\[\ell(\vec h, \vec y) = \|\vec h - \vec y\|^2 = \sum_{k=1}^{3}(h_k - y_k)^2
+    \]</div>
+<p>For a particular data point, the network's predictions are <span class="math">\(\vec h = (5, 3,
+    7)\)</span> and the true values are <span class="math">\(\vec y = (3, 4, 5)\)</span>. Compute the loss.</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(9\)</span>.</p>
+<div class="math">$$\begin{align*}\ell(\vec h, \vec y)
+            &= (5 - 3)^2 + (3 - 4)^2 + (7 - 5)^2 \\&= 4 + 1 + 4 \\&= 9
+        \end{align*}$$</div>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #177</h2>
+        <p>Tags: <a href='./tags/lecture-16.html'>lecture-16</a>, <a href='./tags/autoencoders.html'>autoencoders</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>An autoencoder is trained on data in <span class="math">\(\mathbb{R}^{8}\)</span> with a bottleneck (hidden) layer of dimension 3.</p>
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 1)</h3>
+<p>What are the input and output dimensions of the encoder?</p>
+<details>
+    <summary>Solution</summary>
+<p>The encoder maps <span class="math">\(\mathbb{R}^8 \to\mathbb{R}^3\)</span>. Its input dimension is 8 and its output dimension is 3.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 2)</h3>
+<p>What are the input and output dimensions of the decoder?</p>
+<details>
+    <summary>Solution</summary>
+<p>The decoder maps <span class="math">\(\mathbb{R}^3 \to\mathbb{R}^8\)</span>. Its input dimension is 3 and its output dimension is 8.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 3)</h3>
+<p>What is the output dimension of the full autoencoder, <span class="math">\(H(\vec x) =
+            \operatorname{decode}(\operatorname{encode}(\vec x))\)</span>?</p>
+<details>
+    <summary>Solution</summary>
+<p><span class="math">\(8\)</span>, the same as the input dimension.</p>
+<p>The autoencoder maps <span class="math">\(\mathbb{R}^8 \to\mathbb{R}^8\)</span>. Its goal is to reconstruct the input, so the output must have the same dimensionality.</p>
+</details>
+
+</div>
+
+<div class="subproblem">
+    <h3 class="subproblem-id">Part 4)</h3>
+<p>True or False: training this autoencoder is a supervised learning problem.</p>
+
+<div class="true-false">
+    <input type="radio" name="true-false" value="true" /> True
+    <input type="radio" name="true-false" value="false" /> False
+</div>
+
+<details>
+    <summary>Solution</summary>
+<p>False.</p>
+<p>Training an autoencoder is an unsupervised learning problem. The network is trained to reconstruct its own input --- there are no separate labels. The loss function is the reconstruction error <span class="math">\(\sum_{i=1}^n \|\vec{x}^{(i)} - H(\vec{x}^{(i)})\|^2\)</span>.</p>
+</details>
+
+</div>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+
+        <div class="problem-outer">
+        <h2>Problem #179</h2>
+        <p>Tags: <a href='./tags/lecture-16.html'>lecture-16</a>, <a href='./tags/autoencoders.html'>autoencoders</a></p>
+        <div class="problem">
+    <div class="problem-body">
+<p>True or False: if an autoencoder has 10 input nodes, 10 hidden nodes, and 10 output nodes, the smallest reconstruction error it can possibly achieve is zero.</p>
+
+<div class="true-false">
+    <input type="radio" name="true-false" value="true" /> True
+    <input type="radio" name="true-false" value="false" /> False
+</div>
+
+<details>
+    <summary>Solution</summary>
+<p>True.</p>
+<p>Since the hidden layer has the same dimensionality as the input, the autoencoder can learn the identity function, mapping each input to itself exactly. This results in zero reconstruction error.</p>
+</details>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+       </body>
+   </html>
+    </div>
+</div>
+
+    </div>
+
+    <script>
+        // Restore saved theme on page load
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else if (savedTheme === 'light') {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // Dark mode toggle
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const themeText = document.getElementById('theme-text');
+
+        // Update button to reflect current theme
+        function updateThemeButton() {
+            const isDark = document.documentElement.classList.contains('dark');
+            themeIcon.textContent = isDark ? '☀' : '☾';
+            themeText.textContent = isDark ? 'Light' : 'Dark';
+        }
+
+        // Initialize button state
+        updateThemeButton();
+
+        // Toggle theme on button click
+        themeToggleBtn.addEventListener('click', () => {
+            const isDark = document.documentElement.classList.contains('dark');
+
+            if (isDark) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+
+            updateThemeButton();
+        });
+
+        // Mobile menu toggle
+        const menuButton = document.getElementById('mobile-menu-button');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+
+        menuButton.addEventListener('click', () => {
+            sidebar.classList.toggle('-translate-x-full');
+            overlay.classList.toggle('hidden');
+        });
+
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>
