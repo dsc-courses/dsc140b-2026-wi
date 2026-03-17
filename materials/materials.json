@@ -128,6 +128,21 @@
                             "path": "materials/quizzes/07-training_nns/solution.pdf"
                         }
                     }
+                },
+                "08-cnns_autoencoders": {
+                    "metadata": {
+                        "date": "2026-03-12",
+                        "topic": "CNNs and Autoencoders",
+                        "number": 8
+                    },
+                    "artifacts": {
+                        "quiz.pdf": {
+                            "path": "materials/quizzes/08-cnns_autoencoders/quiz.pdf"
+                        },
+                        "solution.pdf": {
+                            "path": "materials/quizzes/08-cnns_autoencoders/solution.pdf"
+                        }
+                    }
                 }
             }
         },
